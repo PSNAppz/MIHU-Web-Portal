@@ -18,4 +18,30 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+//Accomodation
 Route::get('/accomodation','AccomodationController@index');
+
+//Medical
+Route::get('/medical','MedicalController@index');
+
+//News & Media
+Route::get('/media','MediaController@index');
+
+//VCC
+Route::get('/vcc','VCCController@index');
+
+//Transportation
+Route::get('/transportation','TransportationController@index');
+
+//Special Event
+Route::get('/specialevents','SpecialEventController@index');
+
+//Food
+Route::get('/food','FoodController@index');
+
+//Darshan
+Route::get('/darshan','DarshanController@index');
+
+//Security
+Route::get('/security','SecurityController@index');

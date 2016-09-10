@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use Illuminate\Support\Facades\DB;
 
-class AccomodationController extends Controller
+use App\Http\Requests;
+
+class DarshanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,7 @@ class AccomodationController extends Controller
      */
     public function index()
     {
-        $accomodations = DB::table('accomodation_details')->get();
-        return view('Accomodation.index')->withAccomodations($accomodations);
+        return view('Darshan.index');
     }
 
     /**
