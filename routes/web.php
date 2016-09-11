@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 //Accomodation
-Route::get('/accomodation','AccomodationController@index');
+Route::resource('accomodation','AccomodationController');
 
 //Medical
 Route::get('/medical','MedicalController@index');
