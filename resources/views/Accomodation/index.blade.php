@@ -31,7 +31,6 @@
   <div id="men" class="tab-pane fade">
         <h3>Accomodation Details For Men</h3>
         <p>Accomodation details for men are shown below.</p>
-        <!--Traffic Graph shows the traffic -->
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
