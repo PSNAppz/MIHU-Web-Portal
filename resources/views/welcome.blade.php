@@ -9,9 +9,12 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <!--Bootstrap link-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <!--Transition Slide Scripts-->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="responsiveslides.min.js"></script>
+        <script src=" responsiveslides.min.js"></script>
         <script>
         $(function() {
           $(".rslides").responsiveSlides();
@@ -131,5 +134,29 @@
             </div>
         </div>
 
+        <div class="jumbotron">
+          <h1>May I Help You Portal</h1>
+          <p>Select the department</p>
+          <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Accomodation</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Transportation</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Medical</a>
+          </p>
+          <br>
+          <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">VCC</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Food</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Darshan</a>
+          </p>
+          <br>
+          <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Special Events</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Security</a>
+            <a class="btn btn-primary btn-lg" href="#" role="button">News and Media </a>
+          </p>
+        </div>
+
+        <!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
