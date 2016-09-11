@@ -8,11 +8,19 @@ use Illuminate\Support\Facades\DB;
 
 class AccomodationController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         //
+         $this->middleware('auth',['only' => 'create','store']);
+     }
+
     public function index()
     {
         $accomodations = DB::table('accomodation_details')->get();
@@ -26,7 +34,7 @@ class AccomodationController extends Controller
      */
     public function create()
     {
-        //
+        return view('Accomodation.add');
     }
 
     /**
@@ -37,7 +45,20 @@ class AccomodationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the data
+       $this->validate($request, array(
+               'areaName'        => 'required|max:255',
+               'locationofAcc'   => 'required|max:255',
+               'isFull'   => 'required|integer',
+           ));
+       // store in the database
+       $accomodations = new Post;
+       $accomodations->areaName = $request->areaName;
+       $accomodations->locationofAcc = $request->locationofAcc;
+       $accomodations->isFull = $request->isFull;
+       $accomodations->save();
+       Session::flash('success', 'Succesfully Added New Accomodation Details!');
+       return redirect()->route('accomodation.index');
     }
 
     /**
@@ -71,7 +92,6 @@ class AccomodationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
     }
 
     /**
