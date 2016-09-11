@@ -22,35 +22,16 @@
 
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<h1>Create New Post</h1>
 			<hr>
-			{!! Form::open(array('route' => 'accomodation.store', 'data-parsley-validate' => '', 'files' => true)) !!}
-				{{ Form::label('areaName', 'Area Name:') }}
-				{{ Form::text('From Location', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
-
-                {{ Form::label('locationofAcc', 'Acc Loc:') }}
-				{{ Form::text('locationofAcc', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
-
-
-				{{ Form::label('isFull', 'Accomodation Full:') }}
-				<select class="form-control" name="category_id">
-						<option value=0>No</option>
-                        <option value=1>Yes</option>
-				</select>
-
-                <div class="row">
-
-					<div class="col-sm-6">
-						{{ Form::submit('Add Details', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
-					</div>
-                    <div class="col-sm-6">
-						<button class="btn btn-danger btn-lg btn-block" style="margin-top: 20px;">Cancel</button>
-					</div>
-				</div>
-
-
-
-			{!! Form::close() !!}
+            {!! Form::open(array('route' => 'accomodation.store')) !!}
+            {{ Form::label('areaName','From Location:')}}
+            {{ Form::text('areaName',null,array('class'=> 'form-control'))}}
+            {{ Form::label('locationofAcc','Accomodation At:')}}
+            {{ Form::text('locationofAcc',null,array('class'=> 'form-control'))}}
+            {{ Form::label('isFull', 'Status:') }}
+			{{ Form::select('isFull', array('0' => 'Available', '1' => 'Not Available'), null, array('class' => 'form-control'))}}
+            {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
+            {!! Form::close() !!}
 		</div>
 	</div>
 
