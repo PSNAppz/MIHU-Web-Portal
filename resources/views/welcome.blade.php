@@ -33,7 +33,7 @@
 
             .full-height {
                   height:80vh;
-                  background-image:url(./images/homebackground.jpg)
+                  background-image:url(./images/background.jpg)
             }
 
             .flex-center {
@@ -111,13 +111,14 @@
               top:5px;
               left:5px;
             }
+            .button {
+              text-align: center;
+            }
         </style>
     </head>
     <body>
         <div class="logo">
-            <!--<div class="page-header text-center">-->
               <h1>Amritavarsham63</h1>
-          <!--  </div> -->
 
                 @if (Route::has('login'))
                     <div class="top-right links">
@@ -127,23 +128,6 @@
                 @endif
         </div>
 
-      <!--  <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                </div>
-            @endif
--->
-          <!--  <div class="content">
-                <div class="title m-b-md">
-                    May I Help You?
-                </div>
-
-                <div class="links">
-                    <a href="#"></a>
-                </div>
-            </div>-->
         <div class = "flex-center position-ref full-height">
             <div class = "content">
               <ul class="rslides">
@@ -155,26 +139,28 @@
         </div>
 
         <div class="jumbotron">
-          <h2><b>May I Help You Portal</b></h2>
-          <p>Select the department</p>
-          <p>
-            <a class="btn btn-primary btn-lg" href="/accomodation" role="button">Accomodation</a>
-            <a class="btn btn-primary btn-lg" href="/transportation" role="button">Transportation</a>
-            <a class="btn btn-primary btn-lg" href="/medical" role="button">Medical</a>
-          </p>
-          <br>
-          <p>
-            <a class="btn btn-primary btn-lg" href="/vcc" role="button">VCC</a>
-            <a class="btn btn-primary btn-lg" href="/food" role="button">Food</a>
-            <a class="btn btn-primary btn-lg" href="/darshan" role="button">Darshan</a>
-          </p>
-          <br>
-          <p>
-            <a class="btn btn-primary btn-lg" href="/specialevents" role="button">Special Events</a>
-            <a class="btn btn-primary btn-lg" href="/security" role="button">Security</a>
-            <a class="btn btn-primary btn-lg" href="/media" role="button">Media</a>
-          </p>
-        </div>
+          <div class ="button">
+            <h2><b>May I Help You Portal</b></h2>
+            <p>Select the department</p>
+            <p>
+              <a class="btn btn-primary btn-lg" href="/accomodation" role="button">Accomodation</a>
+              <a class="btn btn-primary btn-lg" href="/transportation" role="button">Transportation</a>
+              <a class="btn btn-primary btn-lg" href="/medical" role="button">Medical</a>
+            </p>
+            <br>
+            <p>
+              <a class="btn btn-primary btn-lg" href="/vcc" role="button">VCC</a>
+              <a class="btn btn-primary btn-lg" href="/food" role="button">Food</a>
+              <a class="btn btn-primary btn-lg" href="/darshan" role="button">Darshan</a>
+            </p>
+            <br>
+            <p>
+              <a class="btn btn-primary btn-lg" href="/specialevents" role="button">Special Events</a>
+              <a class="btn btn-primary btn-lg" href="/security" role="button">Security</a>
+              <a class="btn btn-primary btn-lg" href="/media" role="button">Media</a>
+            </p>
+         </div>
+       </div>
 
         <!-- Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
