@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Accomodation;
 use Illuminate\Support\Facades\DB;
-
+use App\Accomodation as Accomodate;
+use Session;
 class AccomodationController extends Controller
 {
 
@@ -17,13 +19,12 @@ class AccomodationController extends Controller
 
      public function __construct()
      {
-         //
          $this->middleware('auth',['only' => 'create','store']);
      }
 
     public function index()
     {
-        $accomodations = DB::table('accomodation_details')->get();
+        $accomodations = Accomodate::paginate(10);
         return view('Accomodation.index')->withAccomodations($accomodations);
     }
 
@@ -49,10 +50,10 @@ class AccomodationController extends Controller
        $this->validate($request, array(
                'areaName'        => 'required|max:255',
                'locationofAcc'   => 'required|max:255',
-               'isFull'   => 'required|integer',
+               'isFull'          => 'required|numeric',
            ));
        // store in the database
-       $accomodations = new Post;
+       $accomodations = new Accomodate;
        $accomodations->areaName = $request->areaName;
        $accomodations->locationofAcc = $request->locationofAcc;
        $accomodations->isFull = $request->isFull;
@@ -102,6 +103,9 @@ class AccomodationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $acc = Accomodation::find($id);
+        $acc->delete();
+        Session::flash('success', 'Accomodation details succesflly removed!');
+        return redirect()->route('accomodation.index');
     }
 }
