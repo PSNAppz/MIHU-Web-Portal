@@ -48,14 +48,18 @@ class AccomodationController extends Controller
     {
         // validate the data
        $this->validate($request, array(
+               'gender'          => 'required|numeric',
                'areaName'        => 'required|max:255',
                'locationofAcc'   => 'required|max:255',
+               'nearby'          => 'required|max:255',
                'isFull'          => 'required|numeric',
            ));
        // store in the database
        $accomodations = new Accomodate;
+       $accomodations->gender = $request->gender;
        $accomodations->areaName = $request->areaName;
        $accomodations->locationofAcc = $request->locationofAcc;
+       $accomodations->nearby = $request->nearby;
        $accomodations->isFull = $request->isFull;
        $accomodations->save();
        Session::flash('success', 'Succesfully Added New Accomodation Details!');

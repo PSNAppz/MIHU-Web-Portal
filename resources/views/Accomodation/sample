@@ -26,7 +26,7 @@
     <li><a data-toggle="tab" href="#vip">VIP</a></li>
   </ul>
 
-  <div class="tab-content">
+
   <div id="men" class="tab-pane fade">
         <h3>Accomodation Details For Men</h3>
         <p>Accomodation details for men are shown below.</p>
@@ -144,7 +144,7 @@
                 </div>
             </div>
         </div>
-</div>
+          </div>
 
           <div id="vip" class="tab-pane fade">
       <h3>VIP</h3>
@@ -157,6 +157,6 @@
 
     </div>
 
-</div>
+
 </div>
 @endsection
