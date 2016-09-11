@@ -22,20 +22,25 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
+            @if(!Auth::guest())
+            <a class="btn btn-success" href="{{ url('/accomodation/create') }}" role="button">Add New Accomodation Details</a>
+        @endif
+            <hr>
             <div class="panel panel-default">
                 <div class="panel-heading">Accomodation Details - MEN</div>
 
                 <div class="panel-body">
-                    @if(!Auth::guest())
-                        HELLO WORLD
-                    @endif
                     <table class="table">
                         <thead>
                             <th>#</th>
                             <th>From</th>
                             <th>Accomodation At</th>
-                            <th>Full</th>
+                            <th>Status</th>
                             <th>Updated at</th>
+                            @if(!Auth::guest())
+                            <th></th>
+                            <th></th>
+                        @endif
                         </thead>
                         <tbody>
                             @foreach($accomodations as $acc)
@@ -44,12 +49,18 @@
                                     <th>{{ $acc->areaName}}</th>
                                     <th>{{ $acc->locationofAcc}}</th>
                                     <th>@if ($acc->isFull == 1)
-                                            Accomodation Full
+                                            <span class="label label-danger">Accomodation Full</span>
                                         @else
-                                            No
+                                            <span class="label label-success">Available</span>
                                         @endif</th>
-                                    <th>{{ $acc->updated_at}}</th>
 
+                                    <th>{{ $acc->updated_at}}</th>
+                                    @if(!Auth::guest())
+                                    <th><a class="btn btn-warning" href="{{ url('/accomodation/up') }}" role="button">Update</a></th>
+                                    <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accomodation.destroy', $acc->id]]) }}
+                                    {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                    {{ Form::close() }}</th>
+                                @endif
                                 </tr>
                             @endforeach
                         </tbody>

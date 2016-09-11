@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccomodationDetailsTable extends Migration
+class CreateAccomodationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateAccomodationDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('accomodation_details', function (Blueprint $table) {
+        Schema::create('accomodations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('areaName');
+            $table->string('areaName')->unique();
             $table->string('locationofAcc');
-            $table->boolean('isFull');
+            $table->boolean('isFull')->default(0);
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateAccomodationDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('accomodation_details');
+        Schema::dropIfExists('accomodations');
     }
 }
