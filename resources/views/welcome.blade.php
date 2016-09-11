@@ -32,7 +32,8 @@
             }
 
             .full-height {
-                height: 100vh;
+                  height:80vh;
+                  background-image:url(./images/homebackground.jpg)
             }
 
             .flex-center {
@@ -135,7 +136,7 @@
         </div>
 
         <div class="jumbotron">
-          <h1>May I Help You Portal</h1>
+          <h2><b>May I Help You Portal</b></h2>
           <p>Select the department</p>
           <p>
             <a class="btn btn-primary btn-lg" href="#" role="button">Accomodation</a>
