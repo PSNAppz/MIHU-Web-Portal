@@ -12,6 +12,10 @@
         <!--Bootstrap link-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+        <!--footer stylesheet-->
+        <link rel="stylesheet" href="css/demo.css">
+	       <link rel="stylesheet" href="css/footer-basic-centered.css">
+
         <!--Transition Slide Scripts-->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src=" responsiveslides.min.js"></script>
@@ -138,29 +142,93 @@
             </div>
         </div>
 
-        <div class="jumbotron">
+        <!--<div class="jumbotron" style="margin-bottom: 0px">
           <div class ="button">
             <h2><b>May I Help You Portal</b></h2>
             <p>Select the department</p>
             <p>
-              <a class="btn btn-primary btn-lg" href="/accomodation" role="button">Accomodation</a>
-              <a class="btn btn-primary btn-lg" href="/transportation" role="button">Transportation</a>
-              <a class="btn btn-primary btn-lg" href="/medical" role="button">Medical</a>
+              <a class="btn btn-primary btn-lg" href="/accomodation" role="button"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
+              <a class="btn btn-primary btn-lg" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>Transportation</a>
+              <a class="btn btn-primary btn-lg" href="/medical" role="button"><span class="glyphicon glyphicon-plus-sign"></span>Medical</a>
             </p>
             <br>
             <p>
-              <a class="btn btn-primary btn-lg" href="/vcc" role="button">VCC</a>
-              <a class="btn btn-primary btn-lg" href="/food" role="button">Food</a>
-              <a class="btn btn-primary btn-lg" href="/darshan" role="button">Darshan</a>
+              <a class="btn btn-primary btn-lg" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>VCC</a>
+              <a class="btn btn-primary btn-lg" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>Food</a>
+              <a class="btn btn-primary btn-lg" href="/darshan" role="button"><span class="glyphicon glyphicon-eye-open"></span>Darshan</a>
             </p>
             <br>
             <p>
-              <a class="btn btn-primary btn-lg" href="/specialevents" role="button">Special Events</a>
-              <a class="btn btn-primary btn-lg" href="/security" role="button">Security</a>
-              <a class="btn btn-primary btn-lg" href="/media" role="button">Media</a>
+              <a class="btn btn-primary btn-lg" href="/specialevents" role="button"><span class="glyphicon glyphicon-time"></span>Special Events</a>
+              <a class="btn btn-primary btn-lg" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>Security</a>
+              <a class="btn btn-primary btn-lg" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>Media</a>
             </p>
          </div>
-       </div>
+       </div>-->
+       <div class="jumbotron" style="margin-bottom: 0px">
+         <div class ="button">
+           <h2><b>May I Help You Portal</b></h2>
+           <p>Select the department</p>
+           <div class="container">
+             <div class="row">
+               <div class="col-sm-4" >
+                 <a class="btn btn-primary btn-lg" href="/accomodation" role="button"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
+               </div>
+               <div class="col-sm-4" >
+                 <a class="btn btn-primary btn-lg" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>Transportation</a>
+               </div>
+               <div class="col-sm-4" >
+                 <a class="btn btn-primary btn-lg" href="/medical" role="button"><span class="glyphicon glyphicon-plus-sign"></span>Medical</a>
+               </div>
+             </div>
+           <br>
+           <div class ="row">
+             <div class="col-sm-4" >
+               <a class="btn btn-primary btn-lg" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>VCC</a>
+             </div>
+             <div class="col-sm-4" >
+               <a class="btn btn-primary btn-lg" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>Food</a>
+             </div>
+             <div class="col-sm-4" >
+               <a class="btn btn-primary btn-lg" href="/darshan" role="button"><span class="glyphicon glyphicon-eye-open"></span>Darshan</a>
+             </div>
+          </div>
+           <br>
+           <div class ="row">
+             <div class="col-sm-4" >
+               <a class="btn btn-primary btn-lg" href="/specialevents" role="button"><span class="glyphicon glyphicon-time"></span>Special Events</a>
+            </div>
+            <div class="col-sm-4" >
+              <a class="btn btn-primary btn-lg" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>Security</a>
+            </div>
+            <div class="col-sm-4" >
+             <a class="btn btn-primary btn-lg" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>Media</a>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+       <footer class="footer-basic-centered">
+
+			      <p class="footer-company-motto">Think with heart<span class="glyphicon glyphicon-heart"></span>. Serve with hands.</p>
+
+			         <p class="footer-links">
+				             <a href="#">Home</a>
+				                  ·
+				             <a href="#">Blog</a>
+				                  ·
+				             <a href="#">Pricing</a>
+				                  ·
+				             <a href="#">About</a>
+				                  ·
+				             <a href="#">Faq</a>
+				                  ·
+				             <a href="#">Contact</a>
+			        </p>
+
+			<p class="footer-company-name">PSN Appz &copy; 2016</p>
+
+		</footer>
 
         <!-- Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
