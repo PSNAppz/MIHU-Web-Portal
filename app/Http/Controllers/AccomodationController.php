@@ -8,6 +8,7 @@ use App\Accomodation;
 use Illuminate\Support\Facades\DB;
 use App\Accomodation as Accomodate;
 use Session;
+
 class AccomodationController extends Controller
 {
 
@@ -62,7 +63,7 @@ class AccomodationController extends Controller
        $accomodations->nearby = $request->nearby;
        $accomodations->isFull = $request->isFull;
        $accomodations->save();
-       Session::flash('success', 'Succesfully Added New Accomodation Details!');
+       $request->session()->flash('success', 'Accomodation Details successfully added!');
        return redirect()->route('accomodation.index');
     }
 

@@ -11,8 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    <link href="/css/parsley.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -76,14 +77,13 @@
             </div>
         </div>
     </nav>
-    @if(Session::has('flash_message'))
-        <div class="alert alert-success">
-            {{ Session::get('flash_message') }}
-        </div>
-    @endif
+    @include('messages');
     @yield('content')
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="/js/parsley.js"></script>
+
+
 </body>
 </html>
