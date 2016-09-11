@@ -106,17 +106,35 @@
               border: 0;
             }
 
+            #logo {
+              position:absolute;
+              top:5px;
+              left:5px;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="logo">
+            <!--<div class="page-header text-center">-->
+              <h1>Amritavarsham63</h1>
+          <!--  </div> -->
+
+                @if (Route::has('login'))
+                    <div class="top-right links">
+                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
+                    </div>
+                @endif
+        </div>
+
+      <!--  <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     <a href="{{ url('/login') }}">Login</a>
                     <a href="{{ url('/register') }}">Register</a>
                 </div>
             @endif
-
+-->
           <!--  <div class="content">
                 <div class="title m-b-md">
                     May I Help You?
@@ -126,6 +144,7 @@
                     <a href="#"></a>
                 </div>
             </div>-->
+        <div class = "flex-center position-ref full-height">
             <div class = "content">
               <ul class="rslides">
                 <li><img src="images/img_1.jpg" alt=""></li>
@@ -139,21 +158,21 @@
           <h2><b>May I Help You Portal</b></h2>
           <p>Select the department</p>
           <p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Accomodation</a>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Transportation</a>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Medical</a>
+            <a class="btn btn-primary btn-lg" href="/accomodation" role="button">Accomodation</a>
+            <a class="btn btn-primary btn-lg" href="/transportation" role="button">Transportation</a>
+            <a class="btn btn-primary btn-lg" href="/medical" role="button">Medical</a>
           </p>
           <br>
           <p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">VCC</a>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Food</a>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Darshan</a>
+            <a class="btn btn-primary btn-lg" href="/vcc" role="button">VCC</a>
+            <a class="btn btn-primary btn-lg" href="/food" role="button">Food</a>
+            <a class="btn btn-primary btn-lg" href="/darshan" role="button">Darshan</a>
           </p>
           <br>
           <p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Special Events</a>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Security</a>
-            <a class="btn btn-primary btn-lg" href="#" role="button">News and Media </a>
+            <a class="btn btn-primary btn-lg" href="/specialevents" role="button">Special Events</a>
+            <a class="btn btn-primary btn-lg" href="/security" role="button">Security</a>
+            <a class="btn btn-primary btn-lg" href="/media" role="button">Media</a>
           </p>
         </div>
 
