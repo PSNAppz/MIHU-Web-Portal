@@ -24,10 +24,14 @@
 		<div class="col-md-8 col-md-offset-2">
 			<hr>
             {!! Form::open(array('route' => 'accomodation.store')) !!}
+            {{ Form::label('gender', 'For:') }}
+            {{ Form::select('gender', array('0' => 'Men', '1' => 'Women'), null, array('class' => 'form-control'))}}
             {{ Form::label('areaName','From Location:')}}
             {{ Form::text('areaName',null,array('class'=> 'form-control'))}}
             {{ Form::label('locationofAcc','Accomodation At:')}}
             {{ Form::text('locationofAcc',null,array('class'=> 'form-control'))}}
+            {{ Form::label('nearby','Near By:')}}
+            {{ Form::text('nearby',null,array('class'=> 'form-control'))}}
             {{ Form::label('isFull', 'Status:') }}
 			{{ Form::select('isFull', array('0' => 'Available', '1' => 'Not Available'), null, array('class' => 'form-control'))}}
             {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
