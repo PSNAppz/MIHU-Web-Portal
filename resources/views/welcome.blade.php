@@ -6,10 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <!--Transition Slide Scripts-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="responsiveslides.min.js"></script>
+        <script>
+        $(function() {
+          $(".rslides").responsiveSlides();
+        });
+        </script>
         <!-- Styles -->
         <style>
             html, body {
@@ -62,6 +69,39 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .rslides {
+              position: relative;
+              list-style: none;
+              overflow: hidden;
+              width: 100%;
+              padding: 0;
+              margin: 0;
+            }
+
+            .rslides li {
+              -webkit-backface-visibility: hidden;
+              position: absolute;
+              display: none;
+              width: 100%;
+              left: 0;
+              top: 0;
+            }
+
+            .rslides li:first-child {
+              position: relative;
+              display: block;
+              float: left;
+            }
+
+            .rslides img {
+              display: block;
+              height: auto;
+              float: left;
+              width: 100%;
+              border: 0;
+            }
+
         </style>
     </head>
     <body>
@@ -73,7 +113,7 @@
                 </div>
             @endif
 
-            <div class="content">
+          <!--  <div class="content">
                 <div class="title m-b-md">
                     May I Help You?
                 </div>
@@ -81,7 +121,15 @@
                 <div class="links">
                     <a href="#"></a>
                 </div>
+            </div>-->
+            <div class = "content">
+              <ul class="rslides">
+                <li><img src="images/img_1.jpg" alt=""></li>
+                <li><img src="images/img_2.jpg" alt=""></li>
+                <li><img src="images/img_3.jpg" alt=""></li>
+              </ul>
             </div>
         </div>
+
     </body>
 </html>
