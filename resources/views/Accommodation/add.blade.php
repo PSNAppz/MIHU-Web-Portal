@@ -15,7 +15,7 @@
 </style>
     <div class="content">
         <div class="title m-b-md">
-            Add Accomodation Details
+            Add Accommodation Details
         </div>
     </div>
 

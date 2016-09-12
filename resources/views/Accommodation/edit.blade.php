@@ -15,19 +15,19 @@
 </style>
     <div class="content">
         <div class="title m-b-md">
-            Edit Accomodation Details
+            Edit Accommodation Details
         </div>
     </div>
 
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<hr>
-            {{ Form::model($acc, array('route' => array('accomodation.update', $acc->id),'data-parsley-validate' => '', 'method' => 'PUT')) }}
+            {{ Form::model($acc, array('route' => array('acommodation.update', $acc->id),'data-parsley-validate' => '', 'method' => 'PUT')) }}
             {{ Form::label('gender', 'For:') }}
             {{ Form::select('gender', array('0' => 'Men', '1' => 'Women'), $acc->gender, array('class' => 'form-control'))}}
             {{ Form::label('areaName','From Location:')}}
             {{ Form::text('areaName',$acc->areaName,array('class'=> 'form-control','required' => ''))}}
-            {{ Form::label('locationofAcc','Accomodation At:')}}
+            {{ Form::label('locationofAcc','Accommodation At:')}}
             {{ Form::text('locationofAcc',$acc->locationofAcc,array('class'=> 'form-control','required'=> ''))}}
             {{ Form::label('nearby','Near By:')}}
             {{ Form::text('nearby',$acc->nearby,array('class'=> 'form-control','required'=> ''))}}

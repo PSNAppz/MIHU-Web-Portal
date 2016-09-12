@@ -149,7 +149,7 @@
            <div class="container">
              <div class="row">
                <div class="col-sm-4" >
-                 <a class="btn btn-primary btn-lg btn-block" href="/accomodation" role="button"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
+                 <a class="btn btn-primary btn-lg btn-block" href="/accommodation" role="button"><span class="glyphicon glyphicon-home"></span>Accommodation</a>
                </div>
                <div class="col-sm-4" >
                  <a class="btn btn-primary btn-lg btn-block" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>Transportation</a>
