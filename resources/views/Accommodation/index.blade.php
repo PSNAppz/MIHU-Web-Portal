@@ -41,7 +41,6 @@
                     <div class="panel-body">
                         <table class="table">
                             <thead>
-                                <th>#</th>
                                 <th>From</th>
                                 <th>Accommodation At</th>
                                 <th>Near By</th>
@@ -56,7 +55,6 @@
                                 @foreach($accommodations as $acc)
                                     <tr>
                                         @if($acc->gender==0)
-                                        <th>{{ $acc->id}}</th>
                                         <th>{{ $acc->areaName}}</th>
                                         <th>{{ $acc->locationofAcc}}</th>
                                         <th>{{ $acc->nearby}}</th>
@@ -100,7 +98,6 @@
                         <div class="panel-body">
                             <table class="table">
                                 <thead>
-                                    <th>#</th>
                                     <th>From</th>
                                     <th>Accommodation At</th>
                                     <th>Near By</th>
@@ -115,7 +112,6 @@
                                     @foreach($accommodations as $acc)
                                         <tr>
                                         @if($acc->gender==1)
-                                            <th>{{ $acc->id}}</th>
                                             <th>{{ $acc->areaName}}</th>
                                             <th>{{ $acc->locationofAcc}}</th>
                                             <th>{{ $acc->nearby}}</th>
