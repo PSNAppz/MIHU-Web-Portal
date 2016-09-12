@@ -110,27 +110,6 @@
     @include('messages');
     @yield('content')
   </div>
-    <footer class="footer-basic-centered">
-
-         <p class="footer-company-motto">Think with heart<span class="glyphicon glyphicon-heart"></span>. Serve with hands.</p>
-
-            <p class="footer-links">
-                  <a href="#">Home</a>
-                       ·
-                  <a href="#">Blog</a>
-                       ·
-                  <a href="#">Pricing</a>
-                       ·
-                  <a href="#">About</a>
-                       ·
-                  <a href="#">Faq</a>
-                       ·
-                  <a href="#">Contact</a>
-           </p>
-
-           <p class="footer-company-name">ASAS &copy; 2016</p>
-
-    </footer>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="/js/parsley.js"></script>
