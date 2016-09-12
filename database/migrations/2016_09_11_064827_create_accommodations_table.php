@@ -16,7 +16,7 @@ class CreateAccommodationsTable extends Migration
         Schema::create('accommodations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('gender');
-            $table->string('areaName')->unique();
+            $table->string('areaName');
             $table->string('locationofAcc');
             $table->string('nearby');
             $table->boolean('isFull')->default(0);
