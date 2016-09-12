@@ -135,9 +135,9 @@
         <div class = "flex-center position-ref full-height">
             <div class = "content">
               <ul class="rslides">
-                <li><img src="images/img_1.jpg" alt=""></li>
-                <li><img src="images/img_2.jpg" alt=""></li>
-                <li><img src="images/img_3.jpg" alt=""></li>
+                <li><img src="images/amma1.jpg" alt=""></li>
+                <li><img src="images/amma2.jpg" alt=""></li>
+                <li><img src="images/amma3.jpg" alt=""></li>
               </ul>
             </div>
         </div>
@@ -203,7 +203,7 @@
 				             <a href="#">Contact</a>
 			        </p>
 
-			<p class="footer-company-name">PSN Appz &copy; 2016</p>
+			<p class="footer-company-name">ASAS &copy; 2016</p>
 
 		</footer>
 
