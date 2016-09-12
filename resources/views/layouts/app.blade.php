@@ -31,8 +31,16 @@
          color: #636b6f;
          font-family: 'Raleway', sans-serif;
          font-weight: 100;
-         height: 100vh;
+         height: 100%;
          margin: 0;
+     }
+     footer{
+     	bottom: 0;
+     }
+     .wrapper{
+      min-height: 100%;
+      height: 100%;
+      margin: 0 auto -200px;
      }
    </style>
     <!-- Scripts -->
@@ -98,8 +106,10 @@
             </div>
         </div>
     </nav>
+<div class ="wrapper">
     @include('messages');
     @yield('content')
+  </div>
     <footer class="footer-basic-centered">
 
          <p class="footer-company-motto">Think with heart<span class="glyphicon glyphicon-heart"></span>. Serve with hands.</p>

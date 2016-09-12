@@ -149,7 +149,7 @@
            <div class="container">
              <div class="row">
                <div class="col-sm-4" >
-                 <a class="btn btn-primary btn-lg btn-block" href="/accomodation" role="button"><span class="glyphicon glyphicon-home"></span>&nbsp Accomodation</a>
+                 <a class="btn btn-primary btn-lg btn-block" href="/accommodation" role="button"><span class="glyphicon glyphicon-home"></span>&nbsp Accommodation</a>
                </div>
                <div class="col-sm-4" >
                  <a class="btn btn-primary btn-lg btn-block" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>&nbsp Transportation</a>
@@ -208,6 +208,6 @@
 		</footer>
 
         <!-- Bootstrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
