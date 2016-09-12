@@ -18,7 +18,7 @@
 
         <!--Transition Slide Scripts-->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src=" responsiveslides.min.js"></script>
+        <script src="js/responsiveslides.min.js"></script>
         <script>
         $(function() {
           $(".rslides").responsiveSlides();
@@ -149,37 +149,37 @@
            <div class="container">
              <div class="row">
                <div class="col-sm-4" >
-                 <a class="btn btn-primary btn-lg btn-block" href="/accomodation" role="button"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
+                 <a class="btn btn-primary btn-lg btn-block" href="/accomodation" role="button"><span class="glyphicon glyphicon-home"></span>&nbsp Accomodation</a>
                </div>
                <div class="col-sm-4" >
-                 <a class="btn btn-primary btn-lg btn-block" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>Transportation</a>
+                 <a class="btn btn-primary btn-lg btn-block" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>&nbsp Transportation</a>
                </div>
                <div class="col-sm-4" >
-                 <a class="btn btn-primary btn-lg btn-block" href="/medical" role="button"><span class="glyphicon glyphicon-plus-sign"></span>Medical</a>
+                 <a class="btn btn-primary btn-lg btn-block" href="/medical" role="button"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp&nbsp Medical</a>
                </div>
              </div>
            <br>
            <div class ="row">
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg btn-block" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>VCC</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp&nbsp&nbspVCC</a>
              </div>
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg btn-block" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>Food</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>&nbsp&nbsp Food</a>
              </div>
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg btn-block" href="/darshan" role="button"><span class="glyphicon glyphicon-eye-open"></span>Darshan</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/darshan" role="button"><span class="glyphicon glyphicon-eye-open"></span>&nbsp Darshan</a>
              </div>
           </div>
            <br>
            <div class ="row">
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg btn-block" href="/specialevents" role="button"><span class="glyphicon glyphicon-time"></span>Special Events</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/specialevents" role="button"><span class="glyphicon glyphicon-time"></span> Special Events</a>
             </div>
             <div class="col-sm-4" >
-              <a class="btn btn-primary btn-lg btn-block" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>Security</a>
+              <a class="btn btn-primary btn-lg btn-block" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>&nbsp Security</a>
             </div>
             <div class="col-sm-4" >
-             <a class="btn btn-primary btn-lg btn-block" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>Media</a>
+             <a class="btn btn-primary btn-lg btn-block" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp Media</a>
            </div>
         </div>
       </div>
