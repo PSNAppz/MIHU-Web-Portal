@@ -142,29 +142,6 @@
             </div>
         </div>
 
-        <!--<div class="jumbotron" style="margin-bottom: 0px">
-          <div class ="button">
-            <h2><b>May I Help You Portal</b></h2>
-            <p>Select the department</p>
-            <p>
-              <a class="btn btn-primary btn-lg" href="/accomodation" role="button"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
-              <a class="btn btn-primary btn-lg" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>Transportation</a>
-              <a class="btn btn-primary btn-lg" href="/medical" role="button"><span class="glyphicon glyphicon-plus-sign"></span>Medical</a>
-            </p>
-            <br>
-            <p>
-              <a class="btn btn-primary btn-lg" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>VCC</a>
-              <a class="btn btn-primary btn-lg" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>Food</a>
-              <a class="btn btn-primary btn-lg" href="/darshan" role="button"><span class="glyphicon glyphicon-eye-open"></span>Darshan</a>
-            </p>
-            <br>
-            <p>
-              <a class="btn btn-primary btn-lg" href="/specialevents" role="button"><span class="glyphicon glyphicon-time"></span>Special Events</a>
-              <a class="btn btn-primary btn-lg" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>Security</a>
-              <a class="btn btn-primary btn-lg" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>Media</a>
-            </p>
-         </div>
-       </div>-->
        <div class="jumbotron" style="margin-bottom: 0px">
          <div class ="button">
            <h2><b>May I Help You Portal</b></h2>
@@ -172,37 +149,37 @@
            <div class="container">
              <div class="row">
                <div class="col-sm-4" >
-                 <a class="btn btn-primary btn-lg" href="/accomodation" role="button"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
+                 <a class="btn btn-primary btn-lg btn-block" href="/accomodation" role="button"><span class="glyphicon glyphicon-home"></span>Accomodation</a>
                </div>
                <div class="col-sm-4" >
-                 <a class="btn btn-primary btn-lg" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>Transportation</a>
+                 <a class="btn btn-primary btn-lg btn-block" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>Transportation</a>
                </div>
                <div class="col-sm-4" >
-                 <a class="btn btn-primary btn-lg" href="/medical" role="button"><span class="glyphicon glyphicon-plus-sign"></span>Medical</a>
+                 <a class="btn btn-primary btn-lg btn-block" href="/medical" role="button"><span class="glyphicon glyphicon-plus-sign"></span>Medical</a>
                </div>
              </div>
            <br>
            <div class ="row">
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>VCC</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>VCC</a>
              </div>
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>Food</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>Food</a>
              </div>
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg" href="/darshan" role="button"><span class="glyphicon glyphicon-eye-open"></span>Darshan</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/darshan" role="button"><span class="glyphicon glyphicon-eye-open"></span>Darshan</a>
              </div>
           </div>
            <br>
            <div class ="row">
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg" href="/specialevents" role="button"><span class="glyphicon glyphicon-time"></span>Special Events</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/specialevents" role="button"><span class="glyphicon glyphicon-time"></span>Special Events</a>
             </div>
             <div class="col-sm-4" >
-              <a class="btn btn-primary btn-lg" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>Security</a>
+              <a class="btn btn-primary btn-lg btn-block" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>Security</a>
             </div>
             <div class="col-sm-4" >
-             <a class="btn btn-primary btn-lg" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>Media</a>
+             <a class="btn btn-primary btn-lg btn-block" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>Media</a>
            </div>
         </div>
       </div>
