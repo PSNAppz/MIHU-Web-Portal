@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Accomodation;
+use App\Accommodation;
 use Illuminate\Support\Facades\DB;
-use App\Accomodation as Accomodate;
+use App\Accommodation as Accommodate;
 use Session;
 use View;
 
-class AccomodationController extends Controller
+class AccommodationController extends Controller
 {
 
     /**
@@ -26,8 +26,8 @@ class AccomodationController extends Controller
 
     public function index()
     {
-        $accomodations = Accomodate::paginate(15);
-        return view('Accommodation.index')->withAccomodations($accomodations);
+        $accommodations = Accommodate::paginate(15);
+        return view('Accommodation.index')->withAccommodations($accommodations);
     }
 
     /**
@@ -37,7 +37,7 @@ class AccomodationController extends Controller
      */
     public function create()
     {
-        return view('Accomodation.add');
+        return view('Accommodation.add');
     }
 
     /**
@@ -57,15 +57,15 @@ class AccomodationController extends Controller
                'isFull'          => 'required|numeric',
            ));
        // store in the database
-       $accomodations = new Accomodate;
-       $accomodations->gender = $request->gender;
-       $accomodations->areaName = $request->areaName;
-       $accomodations->locationofAcc = $request->locationofAcc;
-       $accomodations->nearby = $request->nearby;
-       $accomodations->isFull = $request->isFull;
-       $accomodations->save();
-       $request->session()->flash('success', 'Accomodation Details successfully added!');
-       return redirect()->route('accomodation.index');
+       $accommodations = new Accommodate;
+       $accommodations->gender = $request->gender;
+       $accommodations->areaName = $request->areaName;
+       $accommodations->locationofAcc = $request->locationofAcc;
+       $accommodations->nearby = $request->nearby;
+       $accommodations->isFull = $request->isFull;
+       $accommodations->save();
+       $request->session()->flash('success', 'Accommodation Details successfully added!');
+       return redirect()->route('accommodation.index');
     }
 
     /**
@@ -87,8 +87,8 @@ class AccomodationController extends Controller
      */
     public function edit($id)
     {
-        $acc = Accomodate::find($id);
-        return view('Accomodation.edit')->withAcc($acc);
+        $acc = Accommodate::find($id);
+        return view('Accommodation.edit')->withAcc($acc);
     }
 
     /**
@@ -100,7 +100,7 @@ class AccomodationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $acc = Accomodation::find($id);
+        $acc = Accommodation::find($id);
 
         $this->validate($request, array(
                 'gender'          => 'required|numeric',
@@ -112,8 +112,8 @@ class AccomodationController extends Controller
 
     $input = $request->all();
     $acc->fill($input)->save();
-    Session::flash('success', 'Accomodation details successfully edited!');
-    return redirect()->route('accomodation.index');
+    Session::flash('success', 'Accommodation details successfully edited!');
+    return redirect()->route('accommodation.index');
     }
 
     /**
@@ -124,9 +124,9 @@ class AccomodationController extends Controller
      */
     public function destroy($id)
     {
-        $acc = Accomodation::find($id);
+        $acc = Accommodation::find($id);
         $acc->delete();
-        Session::flash('success', 'Accomodation details succesfully removed!');
-        return redirect()->route('accomodation.index');
+        Session::flash('success', 'Accommodation details succesfully removed!');
+        return redirect()->route('accommodation.index');
     }
 }

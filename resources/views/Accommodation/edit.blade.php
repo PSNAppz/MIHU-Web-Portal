@@ -22,7 +22,7 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<hr>
-            {{ Form::model($acc, array('route' => array('acommodation.update', $acc->id),'data-parsley-validate' => '', 'method' => 'PUT')) }}
+            {{ Form::model($acc, array('route' => array('accommodation.update', $acc->id),'data-parsley-validate' => '', 'method' => 'PUT')) }}
             {{ Form::label('gender', 'For:') }}
             {{ Form::select('gender', array('0' => 'Men', '1' => 'Women'), $acc->gender, array('class' => 'form-control'))}}
             {{ Form::label('areaName','From Location:')}}
