@@ -85,6 +85,7 @@
               width: 100%;
               padding: 0;
               margin: 0;
+              border-radius: 10px;
             }
 
             .rslides li {
@@ -185,29 +186,8 @@
       </div>
     </div>
   </div>
-       <footer class="footer-basic-centered">
-
-			      <p class="footer-company-motto">Think with heart<span class="glyphicon glyphicon-heart"></span>. Serve with hands.</p>
-
-			         <p class="footer-links">
-				             <a href="#">Home</a>
-				                  ·
-				             <a href="#">Blog</a>
-				                  ·
-				             <a href="#">Pricing</a>
-				                  ·
-				             <a href="#">About</a>
-				                  ·
-				             <a href="#">Faq</a>
-				                  ·
-				             <a href="#">Contact</a>
-			        </p>
-
-			<p class="footer-company-name">ASAS &copy; 2016</p>
-
-		</footer>
-
-        <!-- Bootstrap JavaScript -->
+  @include('layouts.footer')
+    <!-- Bootstrap JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
