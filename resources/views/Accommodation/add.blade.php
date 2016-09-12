@@ -24,7 +24,7 @@
 			<hr>
             {!! Form::open(array('route' => 'accommodation.store','data-parsley-validate' => '')) !!}
             {{ Form::label('gender', 'For:') }}
-            {{ Form::select('gender', array('0' => 'Men', '1' => 'Women'), null, array('class' => 'form-control'))}}
+            {{ Form::select('gender', array('0' => 'Men', '1' => 'Women','2' => 'Police Men','3' => 'Ploice Women'), null, array('class' => 'form-control'))}}
             {{ Form::label('areaName','From Location:')}}
             {{ Form::text('areaName',null,array('class'=> 'form-control','required' => ''))}}
             {{ Form::label('locationofAcc','Accommodation At:')}}

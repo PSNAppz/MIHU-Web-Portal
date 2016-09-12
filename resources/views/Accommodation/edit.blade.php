@@ -24,7 +24,7 @@
 			<hr>
             {{ Form::model($acc, array('route' => array('accommodation.update', $acc->id),'data-parsley-validate' => '', 'method' => 'PUT')) }}
             {{ Form::label('gender', 'For:') }}
-            {{ Form::select('gender', array('0' => 'Men', '1' => 'Women'), $acc->gender, array('class' => 'form-control'))}}
+            {{ Form::select('gender', array('0' => 'Men', '1' => 'Women','2' => 'Police Men','3' => 'Ploice Women'), $acc->gender, array('class' => 'form-control'))}}
             {{ Form::label('areaName','From Location:')}}
             {{ Form::text('areaName',$acc->areaName,array('class'=> 'form-control','required' => ''))}}
             {{ Form::label('locationofAcc','Accommodation At:')}}
