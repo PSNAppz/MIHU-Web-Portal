@@ -10,10 +10,31 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+    <!--Bootstrap link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <!-- Styles -->
     <link href="/css/parsley.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <!--footer stylesheet-->
+    <link rel="stylesheet" href="css/demo.css">
+     <link rel="stylesheet" href="css/footer-basic-centered.css">
+
+     <style>
+     html, body {
+         background-color: #fff;
+         color: #636b6f;
+         font-family: 'Raleway', sans-serif;
+         font-weight: 100;
+         height: 100vh;
+         margin: 0;
+     }
+   </style>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -79,7 +100,27 @@
     </nav>
     @include('messages');
     @yield('content')
+    <footer class="footer-basic-centered">
 
+         <p class="footer-company-motto">Think with heart<span class="glyphicon glyphicon-heart"></span>. Serve with hands.</p>
+
+            <p class="footer-links">
+                  <a href="#">Home</a>
+                       ·
+                  <a href="#">Blog</a>
+                       ·
+                  <a href="#">Pricing</a>
+                       ·
+                  <a href="#">About</a>
+                       ·
+                  <a href="#">Faq</a>
+                       ·
+                  <a href="#">Contact</a>
+           </p>
+
+           <p class="footer-company-name">ASAS &copy; 2016</p>
+
+    </footer>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="/js/parsley.js"></script>

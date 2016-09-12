@@ -22,9 +22,9 @@
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#men">Men</a></li>
-    <li><a data-toggle="tab" href="#women">Women</a></li>
-    <li><a data-toggle="tab" href="#vip">VIP</a></li>
+    <li class="active"><a data-toggle="tab" href="#men"><b>Men</b></a></li>
+    <li><a data-toggle="tab" href="#women"><b>Women</b></a></li>
+    <li><a data-toggle="tab" href="#vip"><b>VIP</b></a></li>
   </ul>
 
   <div class="tab-content">
