@@ -37,6 +37,5 @@
             {!! Form::close() !!}
 		</div>
 	</div>
-
-@endsection
 <script src="/js/parsley.js"></script>
+@endsection

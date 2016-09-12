@@ -38,9 +38,9 @@
      	bottom: 0;
      }
      .wrapper{
-      min-height: 100%;
-      height: 100%;
-      margin: 0 auto -200px;
+      --min-height: 100%;
+      height: 100% - 200px;
+      margin: 0 auto ;
      }
    </style>
     <!-- Scripts -->
