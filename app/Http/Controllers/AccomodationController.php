@@ -8,6 +8,7 @@ use App\Accomodation;
 use Illuminate\Support\Facades\DB;
 use App\Accomodation as Accomodate;
 use Session;
+use View;
 
 class AccomodationController extends Controller
 {
@@ -20,12 +21,12 @@ class AccomodationController extends Controller
 
      public function __construct()
      {
-         $this->middleware('auth',['only' => 'create','store']);
+         $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
      }
 
     public function index()
     {
-        $accomodations = Accomodate::paginate(10);
+        $accomodations = Accomodate::paginate(15);
         return view('Accomodation.index')->withAccomodations($accomodations);
     }
 
@@ -86,7 +87,8 @@ class AccomodationController extends Controller
      */
     public function edit($id)
     {
-        //
+        $acc = Accomodate::find($id);
+        return view('Accomodation.edit')->withAcc($acc);
     }
 
     /**
@@ -98,6 +100,20 @@ class AccomodationController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $acc = Accomodation::find($id);
+
+        $this->validate($request, array(
+                'gender'          => 'required|numeric',
+                'areaName'        => 'required|max:255',
+                'locationofAcc'   => 'required|max:255',
+                'nearby'          => 'required|max:255',
+                'isFull'          => 'required|numeric',
+            ));
+
+    $input = $request->all();
+    $acc->fill($input)->save();
+    Session::flash('success', 'Accomodation details successfully edited!');
+    return redirect()->route('accomodation.index');
     }
 
     /**
@@ -110,7 +126,7 @@ class AccomodationController extends Controller
     {
         $acc = Accomodation::find($id);
         $acc->delete();
-        Session::flash('success', 'Accomodation details succesflly removed!');
+        Session::flash('success', 'Accomodation details succesfully removed!');
         return redirect()->route('accomodation.index');
     }
 }

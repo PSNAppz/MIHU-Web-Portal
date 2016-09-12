@@ -26,9 +26,8 @@
     <li><a data-toggle="tab" href="#women"><b>Women</b></a></li>
     <li><a data-toggle="tab" href="#vip"><b>VIP</b></a></li>
   </ul>
-
   <div class="tab-content">
-  <div id="men" class="tab-pane fade">
+  <div id="men" class="tab-pane active">
         <h3>Accomodation Details For Men</h3>
         <p>Accomodation details for men are shown below.</p>
     <div class="container">
@@ -69,11 +68,11 @@
 
                                         <th>{{ $acc->updated_at}}</th>
                                         @if(!Auth::guest())
-                                        <th><a class="btn btn-warning" href="{{ url('/accomodation/up') }}" role="button">Update</a></th>
+                                        <th><a class="btn btn-warning" href="{{ route('accomodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
                                         <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accomodation.destroy', $acc->id]]) }}
                                         {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
                                         {{ Form::close() }}</th>
-                                    @endif
+                                        @endif
                                 @endif
                                     </tr>
                                 @endforeach
@@ -85,11 +84,11 @@
             </div>
         </div>
     </div>
+    {{$accomodations->links()}}
 </div>
         <div id="women" class="tab-pane fade">
             <h3>Accomodation Details For Women</h3>
             <p>Accomodation details for Women are shown below.</p>
-            <!--Traffic Graph shows the traffic -->
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -128,7 +127,7 @@
 
                                             <th>{{ $acc->updated_at}}</th>
                                             @if(!Auth::guest())
-                                            <th><a class="btn btn-warning" href="{{ url('/accomodation/up') }}" role="button">Update</a></th>
+                                            <th><a class="btn btn-warning" href="{{ route('accomodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
                                             <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accomodation.destroy', $acc->id]]) }}
                                             {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
                                             {{ Form::close() }}</th>
@@ -144,6 +143,7 @@
                 </div>
             </div>
         </div>
+        {{$accomodations->links()}}
 </div>
 
           <div id="vip" class="tab-pane fade">
