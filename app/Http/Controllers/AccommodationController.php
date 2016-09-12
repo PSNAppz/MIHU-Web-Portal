@@ -26,7 +26,7 @@ class AccommodationController extends Controller
 
     public function index()
     {
-        $accommodations = Accommodate::paginate(15);
+        $accommodations = Accommodate::orderBy('areaName')->paginate(15);
         return view('Accommodation.index')->withAccommodations($accommodations);
     }
 
@@ -128,5 +128,25 @@ class AccommodationController extends Controller
         $acc->delete();
         Session::flash('success', 'Accommodation details succesfully removed!');
         return redirect()->route('accommodation.index');
+    }
+
+    /**
+     * Search the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function search()
+    {
+        // Sets the parameters from the get request to the variables.
+        $loc = Request::get('loc');
+
+        // Perform the query using Query Builder
+        $result = DB::table('accommodations')
+            ->select(DB::raw("*"))
+            ->where('areaName', '=', $loc)
+            ->get();
+
+        return $result;
     }
 }
