@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Accomodation extends Model
+class Accommodation extends Model
 {
     protected $fillable = array('gender', 'areaName','locationofAcc','nearby','isFull');
 }

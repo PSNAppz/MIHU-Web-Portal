@@ -17,7 +17,7 @@
 </style>
     <div class="content">
         <div class="title m-b-md">
-            Accomodation
+            Accommodation
         </div>
     </div>
 <div class="container">
@@ -28,13 +28,13 @@
   </ul>
   <div class="tab-content">
   <div id="men" class="tab-pane active">
-        <h3>Accomodation Details For Men</h3>
-        <p>Accomodation details for men are shown below.</p>
+        <h3>Accommodation Details For Men</h3>
+        <p>Accommodation details for men are shown below.</p>
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 @if(!Auth::guest())
-                <a class="btn btn-success" href="{{ url('/accomodation/create') }}" role="button">Add New Accomodation Details</a>
+                <a class="btn btn-success" href="{{ url('/accommodation/create') }}" role="button">Add New Accommodation Details</a>
             @endif
                 <hr>
                 <div class="panel panel-default">
@@ -43,7 +43,7 @@
                             <thead>
                                 <th>#</th>
                                 <th>From</th>
-                                <th>Accomodation At</th>
+                                <th>Accommodation At</th>
                                 <th>Near By</th>
                                 <th>Status</th>
                                 <th>Updated at</th>
@@ -53,7 +53,7 @@
                             @endif
                             </thead>
                             <tbody>
-                                @foreach($accomodations as $acc)
+                                @foreach($accommodations as $acc)
                                     <tr>
                                         @if($acc->gender==0)
                                         <th>{{ $acc->id}}</th>
@@ -61,15 +61,15 @@
                                         <th>{{ $acc->locationofAcc}}</th>
                                         <th>{{ $acc->nearby}}</th>
                                         <th>@if ($acc->isFull == 1)
-                                                <span class="label label-danger">Accomodation Full</span>
+                                                <span class="label label-danger">Accommodation Full</span>
                                             @else
                                                 <span class="label label-success">Available</span>
                                             @endif</th>
 
                                         <th>{{ $acc->updated_at}}</th>
                                         @if(!Auth::guest())
-                                        <th><a class="btn btn-warning" href="{{ route('accomodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
-                                        <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accomodation.destroy', $acc->id]]) }}
+                                        <th><a class="btn btn-warning" href="{{ route('accommodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
+                                        <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accommodation.destroy', $acc->id]]) }}
                                         {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
                                         {{ Form::close() }}</th>
                                         @endif
@@ -84,16 +84,16 @@
             </div>
         </div>
     </div>
-    {{$accomodations->links()}}
+    {{$accommodations->links()}}
 </div>
         <div id="women" class="tab-pane fade">
-            <h3>Accomodation Details For Women</h3>
-            <p>Accomodation details for Women are shown below.</p>
+            <h3>Accommodation Details For Women</h3>
+            <p>Accommodation details for Women are shown below.</p>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     @if(!Auth::guest())
-                    <a class="btn btn-success" href="{{ url('/accomodation/create') }}" role="button">Add New Accomodation Details</a>
+                    <a class="btn btn-success" href="{{ url('/accommodation/create') }}" role="button">Add New Accommodation Details</a>
                 @endif
                     <hr>
                     <div class="panel panel-default">
@@ -102,7 +102,7 @@
                                 <thead>
                                     <th>#</th>
                                     <th>From</th>
-                                    <th>Accomodation At</th>
+                                    <th>Accommodation At</th>
                                     <th>Near By</th>
                                     <th>Status</th>
                                     <th>Updated at</th>
@@ -112,7 +112,7 @@
                                 @endif
                                 </thead>
                                 <tbody>
-                                    @foreach($accomodations as $acc)
+                                    @foreach($accommodations as $acc)
                                         <tr>
                                         @if($acc->gender==1)
                                             <th>{{ $acc->id}}</th>
@@ -120,15 +120,15 @@
                                             <th>{{ $acc->locationofAcc}}</th>
                                             <th>{{ $acc->nearby}}</th>
                                             <th>@if ($acc->isFull == 1)
-                                                    <span class="label label-danger">Accomodation Full</span>
+                                                    <span class="label label-danger">Accommodation Full</span>
                                                 @else
                                                     <span class="label label-success">Available</span>
                                                 @endif</th>
 
                                             <th>{{ $acc->updated_at}}</th>
                                             @if(!Auth::guest())
-                                            <th><a class="btn btn-warning" href="{{ route('accomodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
-                                            <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accomodation.destroy', $acc->id]]) }}
+                                            <th><a class="btn btn-warning" href="{{ route('accommodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
+                                            <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accommodation.destroy', $acc->id]]) }}
                                             {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
                                             {{ Form::close() }}</th>
                                             @endif
@@ -143,7 +143,7 @@
                 </div>
             </div>
         </div>
-        {{$accomodations->links()}}
+        {{$accommodations->links()}}
 </div>
 
           <div id="vip" class="tab-pane fade">
