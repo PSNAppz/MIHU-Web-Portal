@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Transportation as Transport;
+use Session;
+use View;
 use App\Http\Requests;
 
 class TransportationController extends Controller
@@ -13,10 +15,16 @@ class TransportationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
+     }
+
     public function index()
     {
-        return view('Transportation.index');
-
+        $transportations = Transport::orderBy('dest')->paginate(15);
+        return view('Transportation.index')->withTransportations($transportations);
     }
 
     /**

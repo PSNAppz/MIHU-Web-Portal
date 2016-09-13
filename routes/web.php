@@ -32,7 +32,7 @@ Route::get('/media','MediaController@index');
 Route::get('/vcc','VCCController@index');
 
 //Transportation
-Route::get('/transportation','TransportationController@index');
+Route::resource('transportation','TransportationController');
 
 //Special Event
 Route::get('/specialevents','SpecialEventController@index');
