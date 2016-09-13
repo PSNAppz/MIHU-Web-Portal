@@ -39,6 +39,7 @@
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-body">
+                        <div style="overflow-x:auto;">
                         <table class="table">
                             <thead>
                                 <th>Bus No</th>
@@ -77,7 +78,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-
+                    </div>
                     </div>
                 </div>
             </div>
