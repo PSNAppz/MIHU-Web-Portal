@@ -67,7 +67,6 @@
                                             @else
                                                 <span class="label label-success">Available</span>
                                             @endif</th>
-                                        <th>{{ $tr->updated_at}}</th>
                                         @if(!Auth::guest())
                                         <th><a class="btn btn-warning" href="{{ route('transportation.edit', $tr->id,'/edit') }}" role="button">Update</a></th>
                                         <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['transportation.destroy', $tr->id]]) }}

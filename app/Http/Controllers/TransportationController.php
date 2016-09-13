@@ -34,7 +34,8 @@ class TransportationController extends Controller
      */
     public function create()
     {
-        //
+        return view('Transportation.add');
+
     }
 
     /**
@@ -45,7 +46,28 @@ class TransportationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the data
+       $this->validate($request, array(
+               'busno'           => 'required|max:255',
+               'contact'         => 'required|numeric',
+               'from'            => 'required|max:255',
+               'dest'            => 'required|max:255',
+               'deptime'         => 'required|max:255',
+               'parking'         => 'required|max:255',
+               'status'          => 'required|numeric',
+           ));
+       // store in the database
+       $transportations = new Transport;
+       $transportations->busno = $request->busno;
+       $transportations->contact = $request->contact;
+       $transportations->from = $request->from;
+       $transportations->dest = $request->dest;
+       $transportations->deptime = $request->deptime;
+       $transportations->parking = $request->parking;
+       $transportations->status = $request->status;
+       $transportations->save();
+       $request->session()->flash('success', 'Transportation Details successfully added!');
+       return redirect()->route('transportation.index');
     }
 
     /**
@@ -65,31 +87,49 @@ class TransportationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+     public function edit($id)
+     {
+         $tr = Transport::find($id);
+         return view('Transportation.edit')->withTr($tr);
+     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+     /**
+      * Update the specified resource in storage.
+      *
+      * @param  \Illuminate\Http\Request  $request
+      * @param  int  $id
+      * @return \Illuminate\Http\Response
+      */
+     public function update(Request $request, $id)
+     {
+         $tr = Transport::find($id);
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+         $this->validate($request, array(
+                 'busno'           => 'required|max:255',
+                 'contact'         => 'required|numeric',
+                 'from'            => 'required|max:255',
+                 'dest'            => 'required|max:255',
+                 'deptime'         => 'required|max:255',
+                 'parking'         => 'required|max:255',
+                 'status'          => 'required|numeric',
+             ));
+     $input = $request->all();
+     $tr->fill($input)->save();
+     Session::flash('success', 'Transportation details successfully edited!');
+     return redirect()->route('transportation.index');
+     }
+
+     /**
+      * Remove the specified resource from storage.
+      *
+      * @param  int  $id
+      * @return \Illuminate\Http\Response
+      */
+     public function destroy($id)
+     {
+         $tr = Transport::find($id);
+         $tr->delete();
+         Session::flash('success', 'Transportation details succesfully removed!');
+         return redirect()->route('transportation.index');
+     }
 }
