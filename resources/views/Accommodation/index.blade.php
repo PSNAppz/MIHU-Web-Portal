@@ -41,6 +41,7 @@
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-body">
+                        <div style="overflow-x:auto;">
                         <table class="table">
                             <thead>
                                 <th>From</th>
@@ -78,7 +79,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-
+                    </div>
                     </div>
                 </div>
             </div>
@@ -98,6 +99,7 @@
                     <hr>
                     <div class="panel panel-default">
                         <div class="panel-body">
+                            <div style="overflow-x:auto;">
                             <table class="table">
                                 <thead>
                                     <th>From</th>
@@ -135,7 +137,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -156,6 +158,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Police Men</div>
                 <div class="panel-body">
+                    <div style="overflow-x:auto;">
                     <table class="table">
                         <thead>
                             <th>From</th>
@@ -193,7 +196,7 @@
                             @endforeach
                         </tbody>
                     </table>
-
+                </div>
                 </div>
             </div>
             {{$accommodations->links()}}
@@ -201,6 +204,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Police Women</div>
                 <div class="panel-body">
+                    <div style="overflow-x:auto;">
                     <table class="table">
                         <thead>
                             <th>From</th>
@@ -238,7 +242,7 @@
                             @endforeach
                         </tbody>
                     </table>
-
+                </div>
                 </div>
             </div>
             {{$accommodations->links()}}
