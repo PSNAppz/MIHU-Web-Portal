@@ -8,7 +8,7 @@
 }
 
 .title {
-    font-size: 84px;
+    font-size: 6vw;
 }
 
 .m-b-md {
