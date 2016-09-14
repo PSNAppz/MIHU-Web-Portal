@@ -18,6 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+//Coordinator
+Route::resource('coordinator','CoordinatorController');
 
 //Accomodation
 Route::resource('accommodation','AccommodationController');
