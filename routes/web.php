@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
 //Coordinator
 Route::resource('coordinator','CoordinatorController');
 
@@ -47,3 +48,6 @@ Route::resource('darshan','DarshanController');
 
 //Security
 Route::get('/security','SecurityController@index');
+
+//Faq
+Route::resource('faq','FaqController');
