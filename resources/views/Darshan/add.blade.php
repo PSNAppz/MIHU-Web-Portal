@@ -23,12 +23,18 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                     {!! Form::open(array('route' => 'darshan.store','data-parsley-validate' => '')) !!}
-                    {{ Form::label('time_from','From :')}}
-                    {{ Form::text('time_from',null,array('class'=> 'form-control','required' => ''))}}
-                    {{ Form::label('time_till','To :')}}
-                    {{ Form::text('time_till',null,array('class'=> 'form-control','required'=> ''))}}
-                    {{ Form::label('date','Date:')}}
+                    {{ Form::label('darshan_time','Darshan time :')}}
+                    {{ Form::text('darshan_time',null,array('class'=> 'form-control','required' => ''))}}
+                    {{ Form::label('date','Date :')}}
                     {{ Form::text('date',null,array('class'=> 'form-control','required'=> ''))}}
+                    {{ Form::label('token_loc','Token location:')}}
+                    {{ Form::text('token_loc',null,array('class'=> 'form-control','required'=> ''))}}
+                    {{ Form::label('token_time','Token time:')}}
+                    {{ Form::text('token_time',null,array('class'=> 'form-control','required'=> ''))}}
+                    {{ Form::label('contact_name','Contact name:')}}
+                    {{ Form::text('contact_name',null,array('class'=> 'form-control','required'=> ''))}}
+                    {{ Form::label('contact_no','Contact no:')}}
+                    {{ Form::text('contact_no',null,array('class'=> 'form-control','required'=> ''))}}
                     {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
                     <a class="btn btn-danger btn-block" href="{{ url('/darshan') }}" role="button">Cancel</a>
 
