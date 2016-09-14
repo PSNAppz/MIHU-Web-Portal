@@ -186,7 +186,7 @@
          <br>
            <div class="row">
              <div class="col-sm-4 col-md-offset-4" >
-               <a class="btn btn-danger btn-lg btn-block" href="/coordinator" role="button"><span class="glyphicon glyphicon-plane"></span>&nbsp Coordinators</a>
+               <a class="btn btn-danger btn-lg btn-block" href="/coordinator" role="button"><span class="glyphicon glyphicon-star-empty"></span>&nbsp Coordinators</a>
              </div>
            </div>
         </div>

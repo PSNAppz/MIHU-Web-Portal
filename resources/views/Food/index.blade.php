@@ -39,16 +39,16 @@
                         <div class="panel-body">
                              <thead>
                                 <th>data here </th>
-                              
+
                             </thead>
                             <tbody>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
 </div>
- 
+
         <div id="nc" class="tab-pane fade">
             <h3 align='center'>Food details</h3>
         <div class="container">
@@ -59,7 +59,7 @@
                         <div class="panel-body">
                              <thead>
                                 <th>data here </th>
-                              
+
                             </thead>
                             <tbody>
                         </div>
@@ -67,8 +67,8 @@
                 </div>
             </div>
         </div>
+</div>
 
- 
         <div id="lm" class="tab-pane fade">
             <h3 align='center'>Food details</h3>
         <div class="container">
@@ -79,7 +79,7 @@
                         <div class="panel-body">
                              <thead>
                                 <th>data here </th>
-                              
+
                             </thead>
                             <tbody>
                         </div>
@@ -87,6 +87,7 @@
                 </div>
             </div>
         </div>
+</div>
 
   <div id="mm" class="tab-pane fade">
             <h3 align='center'>Food details</h3>
@@ -98,7 +99,7 @@
                         <div class="panel-body">
                              <thead>
                                 <th>data here </th>
-                              
+
                             </thead>
                             <tbody>
                         </div>
@@ -106,5 +107,7 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 @include('layouts.footer')
 @endsection
