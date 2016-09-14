@@ -33,7 +33,7 @@
     <script>
     $(document).ready(
      function() {
-        $('#example').dataTable();
+        $('#cord').dataTable();
      }
     )
 </script>
@@ -140,7 +140,7 @@ html, body {
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div style="overflow-x:auto;">
-                        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <table id="cord" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                               <tr>
                                 <th>Name</th>
