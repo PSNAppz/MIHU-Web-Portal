@@ -11,7 +11,7 @@
                    ·
               <a href="/media">Media</a>
                    ·
-              <a href="#">Faq</a>
+              <a href="/faq">Faq</a>
                    ·
               <a href="#">Contact</a>
        </p>
