@@ -8,7 +8,7 @@
 }
 
 .title {
-    font-size: 84px;
+    font-size: 6vw;
 }
 
 .m-b-md {
@@ -39,6 +39,7 @@
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-body">
+                        <div style="overflow-x:auto;">
                         <table class="table">
                             <thead>
                                 <th>Bus No</th>
@@ -67,7 +68,6 @@
                                             @else
                                                 <span class="label label-success">Available</span>
                                             @endif</th>
-                                        <th>{{ $tr->updated_at}}</th>
                                         @if(!Auth::guest())
                                         <th><a class="btn btn-warning" href="{{ route('transportation.edit', $tr->id,'/edit') }}" role="button">Update</a></th>
                                         <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['transportation.destroy', $tr->id]]) }}
@@ -78,7 +78,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-
+                    </div>
                     </div>
                 </div>
             </div>
