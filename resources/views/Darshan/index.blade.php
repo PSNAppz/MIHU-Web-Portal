@@ -24,16 +24,16 @@
 <br/>
 <br/>
 <div class="container">
-  <div class="col-md-10 col-md-offset-1">
+  <div class="col-md-12 ">
     <div class="panel panel-default">
       <div class="panel-body">
         <table class ="table">
           <thead>
             <tr>
-              <th>From</th>
-              <th>To</th>
+              <th>Darshan timings</th>
               <th>Date</th>
-              <th>Token Distribution</th>
+              <th>Token distribution</th>
+              <th>Token timing</th>
               <th>Contact name</th>
               <th>Contact no:</th>
             </tr>
