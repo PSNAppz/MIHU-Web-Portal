@@ -139,6 +139,7 @@ html, body {
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-body">
+                        <div style="overflow-x:auto;">
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                               <tr>
@@ -177,7 +178,7 @@ html, body {
                                 @endforeach
                           </tbody>
                           </table>
-
+                      </div>
                     </div>
                 </div>
             </div>
