@@ -7,7 +7,7 @@
                    ·
               <a href="/vcc">VCC</a>
                    ·
-              <a href="/security">security</a>
+              <a href="/coordinator">Coordinators</a>
                    ·
               <a href="/media">Media</a>
                    ·
