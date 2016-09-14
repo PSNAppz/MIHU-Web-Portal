@@ -126,7 +126,7 @@ class AccommodationController extends Controller
     {
         $acc = Accommodation::find($id);
         $acc->delete();
-        Session::flash('success', 'Accommodation details succesfully removed!');
+        Session::flash('success', 'Accommodation details successfully removed!');
         return redirect()->route('accommodation.index');
     }
 
