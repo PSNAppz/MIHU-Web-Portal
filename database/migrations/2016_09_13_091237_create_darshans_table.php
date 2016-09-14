@@ -15,9 +15,12 @@ class CreateDarshansTable extends Migration
     {
         Schema::create('darshans', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('time_from')->default("not defined");
-            $table->string('time_till')->default("not defined");
+            $table->string('darshan_time')->default("not defined");
             $table->string('date')->default("not defined");
+            $table->string('token_loc')->default("not defined");
+            $table->string('token_time')->default("not defined");
+            $table->string('contact_name')->default("not defined");
+            $table->string('contact_no',10)->default("XXXXXXXXXX");
         });
     }
 
