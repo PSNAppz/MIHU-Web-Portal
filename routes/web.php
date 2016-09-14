@@ -41,7 +41,7 @@ Route::get('/specialevents','SpecialEventController@index');
 Route::get('/food','FoodController@index');
 
 //Darshan
-Route::get('/darshan','DarshanController@index');
+Route::resource('darshan','DarshanController');
 
 //Security
 Route::get('/security','SecurityController@index');
