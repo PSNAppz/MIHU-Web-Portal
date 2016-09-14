@@ -13,11 +13,16 @@ class CoordinatorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct()
+     {
+         $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
+     }
+
     public function index()
     {
-        return view('Coordinator.index');
+        $coordinators = Coordinator::paginate(15);
+        return view('Coordinator.index')->withCoordinators($coordinators);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +30,7 @@ class CoordinatorController extends Controller
      */
     public function create()
     {
-        //
+        return view('Coordinator.add');
     }
 
     /**
@@ -36,7 +41,22 @@ class CoordinatorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the data
+       $this->validate($request, array(
+               'name'          => 'required|max:255',
+               'seva'        => 'required|max:255',
+               'occupation'   => 'required|max:255',
+               'contact'          => 'required|numeric',
+           ));
+       // store in the database
+       $coordinators = new Coordinator;
+       $coordinators->name = $request->name;
+       $coordinators->seva = $request->seva;
+       $coordinators->occupation = $request->occupation;
+       $coordinators->contact = $request->contact;
+       $coordinators->save();
+       $request->session()->flash('success', 'Coordinator Details successfully added!');
+       return redirect()->route('coordinator.index');
     }
 
     /**
@@ -58,7 +78,7 @@ class CoordinatorController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('Coordinator.edit');
     }
 
     /**
