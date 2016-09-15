@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Food as Foo;
+
+use Session;
+
 class FoodController extends Controller
 {
     /**
@@ -15,7 +19,8 @@ class FoodController extends Controller
      */
     public function index()
     {
-        return view('Food.index');
+        $food = Foo::paginate(15);
+        return view('Food.index')->withFood($food);
 
     }
 
@@ -26,7 +31,7 @@ class FoodController extends Controller
      */
     public function create()
     {
-        //
+      return view('Food.add');
     }
 
     /**
@@ -37,7 +42,25 @@ class FoodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      // validate the data
+     $this->validate($request, array(
+             'category'    => 'required|numeric',
+             'meal'        => 'required|max:255',
+             'time'        => 'required|max:255',
+             'nearby'      => 'required|max:255',
+             'counter'     => 'required|max:255',
+         ));
+      // store in the database
+
+      $food = new Foo;
+      $food->category = $request->category;
+      $food->meal = $request->meal;
+      $food->time = $request->time;
+      $food->nearby = $request->nearby;
+      $food->counter = $request->counter;
+      $food->save();
+      $request->session()->flash('success', 'Food Details successfully added!');
+      return redirect()->route('food.index');
     }
 
     /**
@@ -59,7 +82,8 @@ class FoodController extends Controller
      */
     public function edit($id)
     {
-        //
+      $food = Foo::find($id);
+      return view('Food.edit')->withFood($food);
     }
 
     /**
@@ -71,7 +95,20 @@ class FoodController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $food = Foo::find($id);
+
+      $this->validate($request, array(
+              'category'    => 'required|numeric',
+              'meal'        => 'required|max:255',
+              'time'        => 'required|max:255',
+              'nearby'      => 'required|max:255',
+              'counter'     => 'required|max:255',
+          ));
+
+      $input = $request->all();
+      $food->fill($input)->save();
+      Session::flash('success', 'Food details successfully edited!');
+      return redirect()->route('food.index');
     }
 
     /**
@@ -82,6 +119,9 @@ class FoodController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $food = Foo::find($id);
+      $food->delete();
+      Session::flash('success', 'Food details successfully removed!');
+      return redirect()->route('food.index');
     }
 }
