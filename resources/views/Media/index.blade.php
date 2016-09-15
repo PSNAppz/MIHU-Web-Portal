@@ -26,12 +26,13 @@ img {
 </style>
     <div class="content">
         <div class="title m-b-md">
-            News & Media
+            Medical Assistance
         </div>
     </div>
     <br>
 <div class="container">
     <ul class="nav nav-tabs">
+<<<<<<< HEAD
         <li class="active"><a data-toggle="tab" href="#media_room"><b>Media Room</b></a></li>
         <li><a data-toggle="tab" href="#mess"><b>Mess</b></a></li>
         <li><a data-toggle="tab" href="#location"><b>Location</b></a></li>
@@ -105,6 +106,44 @@ img {
                                 Type location details here......
                             </span>
                         </div>
+=======
+    <li class="active"><a data-toggle="tab" href="#biotech"><b>Biotech</b></a></li>
+    <li><a data-toggle="tab" href="#stage"><b>Main Stage</b></a></li>
+
+
+  </ul>
+  <div class="tab-content">
+  <div id="biotech" class="tab-pane active">
+        <h3>Biotech</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <hr>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <div class="glyphicon glyphicon-plus">Medical AidPost 1</div>
+                        <div id="carbonads-container">
+                            <div class="carbonad">
+                                <div id="azcarbon">
+                                    <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/32130" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
+                                    <span class="carbonad-text">Medical Aid Post 1 near Biotech Canteen</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glyphicon glyphicon-plus">Medical AidPost 2</div>
+                        <div id="carbonads-container">
+                            <div class="carbonad">
+                                <div id="azcarbon">
+                                    <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/32130" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
+                                    <span class="carbonad-text">Medical Aid Post 2  left side Biotech cannteen</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+>>>>>>> 3db974c2ffe5f025e657df0cbca11ff881a8d766
                     </div>
                 </div>
             </div>
@@ -112,7 +151,46 @@ img {
     </div>
     </div>
 </div>
+<<<<<<< HEAD
 
+=======
+        <div id="stage" class="tab-pane fade">
+            <h3>Main Stage</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <hr>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+
+                            <div class="glyphicon glyphicon-plus">Medical AidPost 1</div>
+                            <div id="carbonads-container">
+                                <div class="carbonad">
+                                    <div id="azcarbon">
+                                        <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/32130" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
+                                        <span class="carbonad-text">Medical Aid Post 1  left side Main stage</span>
+                                    </div>
+                                </div>
+                            </div><div class="glyphicon glyphicon-plus">Medical AidPost 1</div>
+                            <div id="carbonads-container">
+                                <div class="carbonad">
+                                    <div id="azcarbon">
+                                        <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/32130" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
+                                        <span class="carbonad-text">Medical Aid Post 2  right side Main stage</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+</div>
+</div>
+>>>>>>> 3db974c2ffe5f025e657df0cbca11ff881a8d766
 @include('layouts.footer')
 
 @endsection

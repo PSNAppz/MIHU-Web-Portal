@@ -47,7 +47,7 @@ Route::get('/food','FoodController@index');
 Route::resource('darshan','DarshanController');
 
 //Security
-Route::get('/security','SecurityController@index');
+Route::resource('security','SecurityController');
 
 //Faq
 Route::resource('faq','FaqController');

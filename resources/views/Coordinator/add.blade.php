@@ -24,7 +24,7 @@
             <div class="col-md-8 col-md-offset-2">
                     {!! Form::open(array('route' => 'coordinator.store','data-parsley-validate' => '')) !!}
                     {{ Form::label('occupation', 'For:') }}
-                    {{ Form::select('occupation', array('0' => 'Student', '1' => 'Faculty','2' => 'Others'), null, array('class' => 'form-control'))}}
+                    {{ Form::select('occupation', array('1' => 'Student', '2' => 'Faculty','3' => 'Others'), null, array('class' => 'form-control'))}}
                     {{ Form::label('name','Name:')}}
                     {{ Form::text('name',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('seva','Seva:')}}
