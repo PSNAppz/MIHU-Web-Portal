@@ -98,7 +98,6 @@ class FoodController extends Controller
       $food = Foo::find($id);
 
       $this->validate($request, array(
-              'category'    => 'required|numeric',
               'meal'        => 'required|max:255',
               'time'        => 'required|max:255',
               'nearby'      => 'required|max:255',
