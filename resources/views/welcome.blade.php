@@ -5,13 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>MIHU</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <!--Bootstrap link-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!--footer stylesheet-->
+        <link rel="stylesheet" href="css/demo.css">
+	       <link rel="stylesheet" href="css/footer-basic-centered.css">
+
         <!--Transition Slide Scripts-->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="responsiveslides.min.js"></script>
+        <script src="js/responsiveslides.min.js"></script>
         <script>
         $(function() {
           $(".rslides").responsiveSlides();
@@ -29,7 +36,11 @@
             }
 
             .full-height {
-                height: 100vh;
+                  height:80vh;
+                  background-image:url(./images/background.jpg);
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-position: center;
             }
 
             .flex-center {
@@ -53,7 +64,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 6vw;
             }
 
             .links > a {
@@ -77,6 +88,7 @@
               width: 100%;
               padding: 0;
               margin: 0;
+              border-radius: 10px;
             }
 
             .rslides li {
@@ -102,34 +114,90 @@
               border: 0;
             }
 
+            #logo {
+              position:absolute;
+              top:5px;
+              left:5px;
+            }
+            .button {
+              text-align: center;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                </div>
-            @endif
+        <div class="logo">
+              <h1>Amritavarsham63</h1>
 
-          <!--  <div class="content">
-                <div class="title m-b-md">
-                    May I Help You?
-                </div>
+                @if (Route::has('login'))
+                    <div class="top-right links">
+                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/register') }}">Register</a>
+                    </div>
+                @endif
+        </div>
 
-                <div class="links">
-                    <a href="#"></a>
-                </div>
-            </div>-->
+        <div class = "flex-center position-ref full-height">
             <div class = "content">
               <ul class="rslides">
-                <li><img src="images/img_1.jpg" alt=""></li>
-                <li><img src="images/img_2.jpg" alt=""></li>
-                <li><img src="images/img_3.jpg" alt=""></li>
+                <li><img src="images/amma1.jpg" alt=""></li>
+                <li><img src="images/amma2.jpg" alt=""></li>
+                <li><img src="images/amma3.jpg" alt=""></li>
               </ul>
             </div>
         </div>
 
+       <div class="jumbotron" style="margin-bottom: 0px">
+         <div class ="button">
+           <h2><b>May I Help You Portal</b></h2>
+           <p>Select the department</p>
+           <div class="container">
+             <div class="row">
+               <div class="col-sm-4" >
+                 <a class="btn btn-primary btn-lg btn-block" href="/accommodation" role="button"><span class="glyphicon glyphicon-home"></span>&nbsp Accommodation</a>
+               </div>
+               <div class="col-sm-4" >
+                 <a class="btn btn-primary btn-lg btn-block" href="/transportation" role="button"><span class="glyphicon glyphicon-plane"></span>&nbsp Transportation</a>
+               </div>
+               <div class="col-sm-4" >
+                 <a class="btn btn-primary btn-lg btn-block" href="/medical" role="button"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp&nbsp Medical</a>
+               </div>
+             </div>
+           <br>
+           <div class ="row">
+             <div class="col-sm-4" >
+               <a class="btn btn-primary btn-lg btn-block" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp&nbsp&nbspVCC</a>
+             </div>
+             <div class="col-sm-4" >
+               <a class="btn btn-primary btn-lg btn-block" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>&nbsp&nbsp Food</a>
+             </div>
+             <div class="col-sm-4" >
+               <a class="btn btn-primary btn-lg btn-block" href="/darshan" role="button"><span class="glyphicon glyphicon-eye-open"></span>&nbsp Darshan</a>
+             </div>
+          </div>
+           <br>
+           <div class ="row">
+             <div class="col-sm-4" >
+               <a class="btn btn-primary btn-lg btn-block" href="/specialevents" role="button"><span class="glyphicon glyphicon-time"></span> Special Events</a>
+            </div>
+            <div class="col-sm-4" >
+              <a class="btn btn-primary btn-lg btn-block" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>&nbsp Security</a>
+            </div>
+            <div class="col-sm-4" >
+             <a class="btn btn-primary btn-lg btn-block" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp Media</a>
+           </div>
+         </div>
+         <br>
+           <div class="row">
+             <div class="col-sm-4 col-md-offset-4" >
+               <a class="btn btn-danger btn-lg btn-block" href="/coordinator" role="button"><span class="glyphicon glyphicon-star-empty"></span>&nbsp Coordinators</a>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  @include('layouts.footer')
+    <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>

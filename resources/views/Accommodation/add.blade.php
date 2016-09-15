@@ -16,7 +16,7 @@
 </style>
     <div class="content">
         <div class="title m-b-md">
-            Security
+            Add Accommodation Details
         </div>
     </div>
     <div class="container">
@@ -41,6 +41,8 @@
         </div>
     </div>
     <hr>
-    @include('layouts.footer')
 @endsection
+<footer>
+    <footer>
+
 <script src="/js/parsley.js"></script>

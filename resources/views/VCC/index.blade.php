@@ -7,7 +7,7 @@
 }
 
 .title {
-    font-size: 84px;
+    font-size: 6vw;
 }
 
 .m-b-md {
@@ -24,7 +24,15 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
-
+                Use the below variables for displaying data.
+                use foreach ,if ,else etc using blade template.
+                 
+            @foreach($vcc as $vcc)
+                {{$vcc->id}}
+                {{$vcc->food}}
+                {{$vcc->time}}
+                {{$vcc->place}}
+            @endforeach
                 <div class="panel-body">
                     You are logged in!
                 </div>
@@ -32,4 +40,5 @@
         </div>
     </div>
 </div>
+@include('layouts.footer')
 @endsection

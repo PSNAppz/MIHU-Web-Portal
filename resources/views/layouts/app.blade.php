@@ -10,9 +10,39 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+    <!--Bootstrap link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link href="/css/parsley.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <!--footer stylesheet-->
+    <link rel="stylesheet" href="css/demo.css">
+     <link rel="stylesheet" href="css/footer-basic-centered.css">
+
+     <style>
+     html, body {
+         background-color: #fff;
+         color: #636b6f;
+         font-family: 'Raleway', sans-serif;
+         font-weight: 100;
+         height: 100%;
+         margin: 0;
+     }
+     footer{
+     	bottom: 0;
+     }
+     .wrapper{
+      --min-height: 100%;
+      height: 100% - 200px;
+      margin: 0 auto ;
+     }
+   </style>
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
@@ -76,10 +106,14 @@
             </div>
         </div>
     </nav>
-
+<div class ="wrapper">
+    @include('messages');
     @yield('content')
-
+  </div>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="/js/parsley.js"></script>
+
+
 </body>
 </html>

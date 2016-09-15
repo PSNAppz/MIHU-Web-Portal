@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccomodationDetailsTable extends Migration
+class CreateVccsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateAccomodationDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('accomodation_details', function (Blueprint $table) {
+        Schema::create('vccs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('areaName');
-            $table->string('locationofAcc');
-            $table->boolean('isFull');
+            $table->string('food');
+            $table->string('time');
+            $table->string('place');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateAccomodationDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('accomodation_details');
+        Schema::dropIfExists('vccs');
     }
 }
