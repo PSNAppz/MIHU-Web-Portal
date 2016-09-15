@@ -15,7 +15,7 @@ class SecurityController extends Controller
      */
     public function index()
     {
-        //
+        return view('Security.index');
     }
 
     /**

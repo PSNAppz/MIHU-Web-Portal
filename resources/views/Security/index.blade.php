@@ -20,7 +20,6 @@
         </div>
     </div>
     <div class="container">
-    <ul class="nav nav-tabs">
      <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#secpoint"><b>Security Points</b></a></li>
         <li><a data-toggle="tab" href="#seccordinator"><b>Security Coordinators</b></a></li>
@@ -28,64 +27,108 @@
         <li><a data-toggle="tab" href="#secbatch"><b>Security Batch</b></a></li>
 
      </ul>
-      <div class="tab-content">
-      <div class="panel panel-default">
-       <div id="secpoint" class="tab-pane active">
-        <h3>Security Points Details</h3>
-            <p>Security Points Details are shown below.</p>
-        <div class="container">
+ </div>
+<div class="tab-content">
+<div id="secpoint" class="tab-pane active">
+    <h3 align='center'>Security Points Details</h3>
+      <div class="container">
           <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-             <hr>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <table class="table">
-                            <thead>
-                                <th></th>
-                                <th>Location</th>
-                                <th>Near By</th>
-                                <th>Person In Charge</th>
-                                <th>Contact No</th>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-            </hr>
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <div style="overflow-x:auto;">
+                          <table class="table">
+                          <thead>
+                              <th></th>
+                              <th>Location</th>
+                              <th>Near By</th>
+                              <th>Person In Charge</th>
+                              <th>Contact No</th>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                      </table>
+                  </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-      </div>
-      </div>
-      </div>
-    </ul>
 </div>
 
-<div id="seccordinator" class="tab-pane fade">
-        <h3>Security Coordinator Details</h3>
-            <p>Security Coordinator Details are shown below.</p>
-         <div class="container">
+      <div id="seccordinator" class="tab-pane fade">
+    <h3 align='center'>Security Coordinator Details</h3>
+      <div class="container">
           <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <hr>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <table class="table">
-                            <thead>
-                                <th></th>
-                                <th>Name</th>
-                                <th>In Chrge Of</th>
-                                <th>Contact No</th>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-            </hr>
-        </div>
-    </div>
-</div>
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <div style="overflow-x:auto;">
+                          <table class="table">
+                          <thead>
+                              <th></th>
+                              <th>Name</th>
+                              <th>In Chrge Of</th>
+                              <th>Contact No</th>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                      </table>
+                  </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 </div>
 
+      <div id="secshift" class="tab-pane fade">
+          <h3 align='center'>Security Shifts</h3>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <div style="overflow-x:auto;">
+                          <table class="table">
+                           <thead>
+                              <th>data here </th>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                      </table>
+                  </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</div>
 
-    @include('layouts.footer')
+<div id="secbatch" class="tab-pane fade">
+          <h3 align='center'>Security Batch</h3>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <div style="overflow-x:auto;">
+                          <table class="table">
+                           <thead>
+                              <th>data here </th>
+
+                          </thead>
+                          <tbody>
+                          </tbody>
+                      </table>
+                  </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+@include('layouts.footer')
 @endsection
-<script src="/js/parsley.js"></script>
