@@ -25,6 +25,10 @@
 <br/>
 <div class="container">
   <div class="col-md-12 ">
+    @if(!Auth::guest())
+    <a class="btn btn-success" href="{{ url('/darshan/create') }}" role="button">Add New Timing</a>
+    @endif
+    <hr>
     <div class="panel panel-default">
       <div class="panel-body">
         <table class ="table">
@@ -57,9 +61,6 @@
             @endforeach
           </tbody>
         </table>
-        @if(!Auth::guest())
-        <a class="btn btn-success" href="{{ url('/darshan/create') }}" role="button">Add New Timing</a>
-        @endif
       </div>
     </div>
   </div>
