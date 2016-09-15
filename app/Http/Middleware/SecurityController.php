@@ -3,28 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use Illuminate\Support\Facades\DB;
-use App\Vcc as Vcc;
-use Session;
-use View;
 
-class VccController extends Controller
+use App\Http\Requests;
+
+class SecurityController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-     public function __construct()
-     {
-         $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
-     }
-
     public function index()
     {
-        $vcc = Vcc::orderBy('id')->paginate(15);
-        return view('VCC.index')->withVcc($vcc);
+        return view('Security.index');
+
     }
 
     /**

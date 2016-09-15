@@ -4,18 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Faq as Faq;
 use Illuminate\Support\Facades\DB;
-use App\Vcc as Vcc;
 use Session;
 use View;
 
-class VccController extends Controller
+class FaqController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
      public function __construct()
      {
          $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
@@ -23,9 +24,9 @@ class VccController extends Controller
 
     public function index()
     {
-        $vcc = Vcc::orderBy('id')->paginate(15);
-        return view('VCC.index')->withVcc($vcc);
-    }
+        $faq = Faq::paginate(15);
+        return view('Faq.index')->withFaq($faq);
+      }
 
     /**
      * Show the form for creating a new resource.
@@ -34,7 +35,8 @@ class VccController extends Controller
      */
     public function create()
     {
-        //
+        return view('Faq.add');
+
     }
 
     /**
@@ -45,7 +47,18 @@ class VccController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the data
+       $this->validate($request, array(
+               'ques'          => 'required|max:255',
+               'ans'           => 'required',
+           ));
+       // store in the database
+       $faq = new Faq;
+       $faq->ques = $request->ques;
+       $faq->ans = $request->ans;
+       $faq->save();
+       $request->session()->flash('success', 'FAQ successfully added!');
+       return redirect()->route('faq.index');
     }
 
     /**
@@ -67,7 +80,8 @@ class VccController extends Controller
      */
     public function edit($id)
     {
-        //
+        $faq = Faq::find($id);
+        return view('Faq.edit')->withFaq($faq);
     }
 
     /**
@@ -79,8 +93,17 @@ class VccController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+        $faq = Faq::find($id);
+
+        $this->validate($request, array(
+                'ques'          => 'required|max:255',
+                'ans'           => 'required',
+            ));
+
+    $input = $request->all();
+    $faq->fill($input)->save();
+    Session::flash('success', 'FAQ successfully edited!');
+    return redirect()->route('faq.index');    }
 
     /**
      * Remove the specified resource from storage.
@@ -90,6 +113,9 @@ class VccController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $faq = Faq::find($id);
+        $faq->delete();
+        Session::flash('success', 'FAQ successfully removed!');
+        return redirect()->route('faq.index');
     }
 }

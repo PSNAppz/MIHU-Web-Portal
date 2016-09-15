@@ -7,7 +7,7 @@
 }
 
 .title {
-    font-size: 84px;
+    font-size: 6vw;
 }
 
 .m-b-md {
@@ -44,5 +44,5 @@
 @endsection
 <footer>
     <footer>
-        
+
 <script src="/js/parsley.js"></script>

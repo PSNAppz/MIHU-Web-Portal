@@ -37,7 +37,10 @@
 
             .full-height {
                   height:80vh;
-                  background-image:url(./images/background.jpg)
+                  background-image:url(./images/background.jpg);
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-position: center;
             }
 
             .flex-center {
@@ -61,7 +64,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 6vw;
             }
 
             .links > a {
@@ -181,6 +184,13 @@
             </div>
             <div class="col-sm-4" >
              <a class="btn btn-primary btn-lg btn-block" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp Media</a>
+           </div>
+         </div>
+         <br>
+           <div class="row">
+             <div class="col-sm-4 col-md-offset-4" >
+               <a class="btn btn-danger btn-lg btn-block" href="/coordinator" role="button"><span class="glyphicon glyphicon-star-empty"></span>&nbsp Coordinators</a>
+             </div>
            </div>
         </div>
       </div>

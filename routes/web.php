@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+//Coordinator
+Route::resource('coordinator','CoordinatorController');
+
 //Accomodation
 Route::resource('accommodation','AccommodationController');
 
@@ -41,7 +44,10 @@ Route::get('/specialevents','SpecialEventController@index');
 Route::get('/food','FoodController@index');
 
 //Darshan
-Route::get('/darshan','DarshanController@index');
+Route::resource('darshan','DarshanController');
 
 //Security
 Route::get('/security','SecurityController@index');
+
+//Faq
+Route::resource('faq','FaqController');

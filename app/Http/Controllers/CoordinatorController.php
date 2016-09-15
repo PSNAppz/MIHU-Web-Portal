@@ -4,12 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use Illuminate\Support\Facades\DB;
-use App\Vcc as Vcc;
-use Session;
-use View;
+use App\Coordinator as Coordinator;
 
-class VccController extends Controller
+class CoordinatorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,10 +20,9 @@ class VccController extends Controller
 
     public function index()
     {
-        $vcc = Vcc::orderBy('id')->paginate(15);
-        return view('VCC.index')->withVcc($vcc);
+        $coordinators = Coordinator::paginate(15);
+        return view('Coordinator.index')->withCoordinators($coordinators);
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -34,7 +30,7 @@ class VccController extends Controller
      */
     public function create()
     {
-        //
+        return view('Coordinator.add');
     }
 
     /**
@@ -45,7 +41,22 @@ class VccController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the data
+       $this->validate($request, array(
+               'name'          => 'required|max:255',
+               'seva'        => 'required|max:255',
+               'occupation'   => 'required|max:255',
+               'contact'          => 'required|numeric',
+           ));
+       // store in the database
+       $coordinators = new Coordinator;
+       $coordinators->name = $request->name;
+       $coordinators->seva = $request->seva;
+       $coordinators->occupation = $request->occupation;
+       $coordinators->contact = $request->contact;
+       $coordinators->save();
+       $request->session()->flash('success', 'Coordinator Details successfully added!');
+       return redirect()->route('coordinator.index');
     }
 
     /**
@@ -67,7 +78,7 @@ class VccController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('Coordinator.edit');
     }
 
     /**
