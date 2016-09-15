@@ -29,7 +29,7 @@ Route::resource('accommodation','AccommodationController');
 Route::get('/medical','MedicalController@index');
 
 //News & Media
-Route::get('/media','MediaController@index');
+Route::resource('media','MediaController');
 
 //VCC
 Route::get('/vcc','VCCController@index');
