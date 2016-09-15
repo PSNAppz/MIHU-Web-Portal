@@ -90,7 +90,18 @@ class CoordinatorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cord = Coordinator::find($id);
+
+        $this->validate($request, array(
+                'name'          => 'required|max:255',
+                'seva'        => 'required|max:255',
+                'occupation'   => 'required|max:255',
+                'contact'          => 'required|numeric',
+            ));
+            $input = $request->all();
+            $cord->fill($input)->save();
+            Session::flash('success', 'Coordinator details successfully edited!');
+            return redirect()->route('coordinator.index');
     }
 
     /**
@@ -101,6 +112,9 @@ class CoordinatorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cord = Coordinator::find($id);
+        $cord->delete();
+        Session::flash('success', 'Coordinator details successfully removed!');
+        return redirect()->route('coordinator.index');
     }
 }
