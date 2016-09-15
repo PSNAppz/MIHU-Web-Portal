@@ -32,7 +32,6 @@ img {
     <br>
 <div class="container">
     <ul class="nav nav-tabs">
-<<<<<<< HEAD
         <li class="active"><a data-toggle="tab" href="#media_room"><b>Media Room</b></a></li>
         <li><a data-toggle="tab" href="#mess"><b>Mess</b></a></li>
         <li><a data-toggle="tab" href="#location"><b>Location</b></a></li>
@@ -106,7 +105,6 @@ img {
                                 Type location details here......
                             </span>
                         </div>
-=======
     <li class="active"><a data-toggle="tab" href="#biotech"><b>Biotech</b></a></li>
     <li><a data-toggle="tab" href="#stage"><b>Main Stage</b></a></li>
 
@@ -143,7 +141,6 @@ img {
                         </div>
 
 
->>>>>>> 3db974c2ffe5f025e657df0cbca11ff881a8d766
                     </div>
                 </div>
             </div>
@@ -151,9 +148,7 @@ img {
     </div>
     </div>
 </div>
-<<<<<<< HEAD
 
-=======
         <div id="stage" class="tab-pane fade">
             <h3>Main Stage</h3>
         <div class="container">
@@ -190,7 +185,6 @@ img {
 
 </div>
 </div>
->>>>>>> 3db974c2ffe5f025e657df0cbca11ff881a8d766
 @include('layouts.footer')
 
 @endsection
