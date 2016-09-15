@@ -164,9 +164,9 @@ html, body {
 
                                         <th>{{ $cord->name}}</th>
                                         <th>{{ $cord->seva}}</th>
-                                        @if($cord->occupation == 2)
+                                        @if($cord->occupation == 1)
                                         <th>Faculty</th>
-                                    @elseif($cord->occupation==1)
+                                    @elseif($cord->occupation==2)
                                         <th>Student</th>
                                     @else
                                         <th>Other</th>
