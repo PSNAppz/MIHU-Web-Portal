@@ -32,7 +32,7 @@
             {{ Form::label('nearby','Near By:')}}
             {{ Form::text('nearby',$food->nearby,array('class'=> 'form-control','required'=> ''))}}
             {{ Form::submit('Edit Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
-            <a class="btn btn-danger btn-block" href="{{ url('/accommodation') }}" role="button">Cancel</a>
+            <a class="btn btn-danger btn-block" href="{{ url('/food') }}" role="button">Cancel</a>
             {!! Form::close() !!}
 		</div>
 	</div>
