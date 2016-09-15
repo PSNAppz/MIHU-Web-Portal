@@ -26,7 +26,7 @@ class MediaController extends Controller
      */
     public function create()
     {
-        //
+        //return view('Media.add');
     }
 
     /**
