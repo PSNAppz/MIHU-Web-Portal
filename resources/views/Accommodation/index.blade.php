@@ -37,7 +37,7 @@
             <div class="col-md-10 col-md-offset-1">
                 @if(!Auth::guest())
                 <a class="btn btn-success" href="{{ url('/accommodation/create') }}" role="button">Add New Accommodation Details</a>
-            @endif
+                @endif
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-body">
