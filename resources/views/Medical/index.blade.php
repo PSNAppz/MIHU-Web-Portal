@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @extends('layouts.app')
 
 @section('content')
@@ -104,4 +102,3 @@
 @include('layouts.footer')
 
 @endsection
->>>>>>> 01e7836ed1d9f7650a3b455aefdaec7ba3c68858
