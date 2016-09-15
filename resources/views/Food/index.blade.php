@@ -16,92 +16,169 @@
 </style>
        <div class="content">
         <div class="title m-b-md">
-            Food
+            Food Details
         </div>
+        @if(!Auth::guest())
+        <a class="btn btn-success" href="{{ url('/food/create') }}" role="button">Add New Food Details</a>
+        @endif
+        <hr>
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#pm"><b>Police Mess</b></a></li>
-    <li><a data-toggle="tab" href="#nc"><b>Canteens</b></a></li>
-    <li><a data-toggle="tab" href="#lm"><b>Prasad Making</b></a></li>
-    <li><a data-toggle="tab" href="#mm"><b>Media Mess</b></a></li>
+    <li class="active"><a data-toggle="tab" href="#cm"><b>Common Mess</b></a></li>
+    <li><a data-toggle="tab" href="#pm"><b>Police mess</b></a></li>
+    <li><a data-toggle="tab" href="#si"><b>Special Invitees</b></a></li>
+    <li><a data-toggle="tab" href="#c"><b>Canteens</b></a></li>
 
   </ul>
 </div>
   <div class="tab-content">
-  <div id="pm" class="tab-pane active">
-            <h3 align='center'>Food details</h3>
+  <div id="cm" class="tab-pane active">
+        <h3 align='center'>Timings</h3>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <hr>
                     <div class="panel panel-default">
                         <div class="panel-body">
+                          <table class="table">
                              <thead>
-                                <th>data here </th>
-
+                                <th>Meal</th>
+                                <th>Time</th>
+                                <th>Counter</th>
+                                <th>Near by</th>
                             </thead>
                             <tbody>
+                              @foreach($food as $f)
+                                    <tr>
+                                      @if($f->category == 0)
+                                        <th>{{ $f->meal }}</th>
+                                        <th>{{ $f->time }}</th>
+                                        <th>{{ $f->counter }}</th>
+                                        <th>{{ $f->nearby }}</th>
+                                        @if(!Auth::guest())
+                                        <th><a class="btn btn-warning" href="{{ route('food.edit', $f->id,'/edit') }}" role="button">Update</a></th>
+                                        <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['food.destroy', $f->id]]) }}
+                                        {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                        {{ Form::close() }}</th>
+                                        @endif
+                                      @endif
+                                    </tr>
+                              @endforeach
+                            </tbody>
+                          </table>
                         </div>
                     </div>
+                    <strong>Contact: Davis<br>Contact no:9495XXXXXX</strong>
                 </div>
             </div>
         </div>
 </div>
 
-        <div id="nc" class="tab-pane fade">
-            <h3 align='center'>Food details</h3>
+        <div id="pm" class="tab-pane fade">
+            <h3 align='center'>Timings</h3>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <hr>
                     <div class="panel panel-default">
                         <div class="panel-body">
+                          <table class="table">
                              <thead>
-                                <th>data here </th>
-
+                                <th>Meal</th>
+                                <th>Time</th>
+                                <th>Counter</th>
+                                <th>Near by</th>
                             </thead>
                             <tbody>
+                              @foreach($food as $f)
+                                    <tr>
+                                      @if($f->category == 1)
+                                        <th>{{ $f->meal }}</th>
+                                        <th>{{ $f->time }}</th>
+                                        <th>{{ $f->counter }}</th>
+                                        <th>{{ $f->nearby }}</th>
+                                        @if(!Auth::guest())
+                                        <th><a class="btn btn-warning" href="{{ route('food.edit', $f->id,'/edit') }}" role="button">Update</a></th>
+                                        <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['food.destroy', $f->id]]) }}
+                                        {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                        {{ Form::close() }}</th>
+                                        @endif
+                                      @endif
+                                    </tr>
+                              @endforeach
+                            </tbody>
+                          </table>
                         </div>
                     </div>
+                    <strong>Contact: Ferguson<br>Contact no:9495XXXXXX</strong>
                 </div>
             </div>
         </div>
 </div>
 
-        <div id="lm" class="tab-pane fade">
-            <h3 align='center'>Food details</h3>
+        <div id="si" class="tab-pane fade">
+            <h3 align='center'>Timings</h3>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <hr>
                     <div class="panel panel-default">
                         <div class="panel-body">
+                          <table class="table">
                              <thead>
-                                <th>data here </th>
-
+                                <th>Meal</th>
+                                <th>Time</th>
+                                <th>Counter</th>
+                                <th>Near by</th>
                             </thead>
                             <tbody>
+                              @foreach($food as $f)
+                                    <tr>
+                                      @if($f->category == 2)
+                                        <th>{{ $f->meal }}</th>
+                                        <th>{{ $f->time }}</th>
+                                        <th>{{ $f->counter }}</th>
+                                        <th>{{ $f->nearby }}</th>
+                                        @if(!Auth::guest())
+                                        <th><a class="btn btn-warning" href="{{ route('food.edit', $f->id,'/edit') }}" role="button">Update</a></th>
+                                        <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['food.destroy', $f->id]]) }}
+                                        {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                        {{ Form::close() }}</th>
+                                        @endif
+                                      @endif
+                                    </tr>
+                              @endforeach
+                            </tbody>
+                          </table>
                         </div>
                     </div>
+                    <strong>Contact: Mourinho<br>Contact no:9495XXXXXX</strong>
                 </div>
             </div>
         </div>
 </div>
 
-  <div id="mm" class="tab-pane fade">
-            <h3 align='center'>Food details</h3>
+  <div id="c" class="tab-pane fade">
+            <h3 align='center'>Locations</h3>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <hr>
                     <div class="panel panel-default">
                         <div class="panel-body">
+                          <table class="table">
                              <thead>
-                                <th>data here </th>
-
+                                <th>Name</th>
+                                <th>Location</th>
                             </thead>
                             <tbody>
+                              <tr>
+                                <th>North Indian Canteen</th>
+                                <th>Near Stage</th>
+                              </tr>
+                              <tr>
+                                <th>Western Canteen</th>
+                                <th>Ashram</th>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                     </div>
                 </div>
@@ -109,5 +186,6 @@
         </div>
     </div>
 </div>
+<br>
 @include('layouts.footer')
 @endsection

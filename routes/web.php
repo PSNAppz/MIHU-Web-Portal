@@ -41,7 +41,7 @@ Route::resource('transportation','TransportationController');
 Route::get('/specialevents','SpecialEventController@index');
 
 //Food
-Route::get('/food','FoodController@index');
+Route::resource('food','FoodController');
 
 //Darshan
 Route::resource('darshan','DarshanController');
