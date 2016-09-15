@@ -20,27 +20,72 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                    {!! Form::open(array('route' => 'accommodation.store','data-parsley-validate' => '')) !!}
-                    {{ Form::label('gender', 'For:') }}
-                    {{ Form::select('gender', array('0' => 'Men', '1' => 'Women','2' => 'Police Men','3' => 'Ploice Women'), null, array('class' => 'form-control'))}}
-                    {{ Form::label('areaName','From Location:')}}
-                    {{ Form::text('areaName',null,array('class'=> 'form-control','required' => ''))}}
-                    {{ Form::label('locationofAcc','Accommodation At:')}}
-                    {{ Form::text('locationofAcc',null,array('class'=> 'form-control','required'=> ''))}}
-                    {{ Form::label('nearby','Near By:')}}
-                    {{ Form::text('nearby',null,array('class'=> 'form-control','required'=> ''))}}
-                    {{ Form::label('isFull', 'Status:') }}
-        			{{ Form::select('isFull', array('0' => 'Available', '1' => 'Not Available'), null, array('class' => 'form-control'))}}
-                    {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
-                    <a class="btn btn-danger btn-block" href="{{ url('/accommodation') }}" role="button">Cancel</a>
+    <ul class="nav nav-tabs">
+     <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#secpoint"><b>Security Points</b></a></li>
+        <li><a data-toggle="tab" href="#seccordinator"><b>Security Coordinators</b></a></li>
+        <li><a data-toggle="tab" href="#secshift"><b>Security Shifts</b></a></li>
+        <li><a data-toggle="tab" href="#secbatch"><b>Security Batch</b></a></li>
 
-                    {!! Form::close() !!}
-            </div>
+     </ul>
+      <div class="tab-content">
+      <div class="panel panel-default">
+       <div id="secpoint" class="tab-pane active">
+        <h3>Security Points Details</h3>
+            <p>Security Points Details are shown below.</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+             <hr>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th>Location</th>
+                                <th>Near By</th>
+                                <th>Person In Charge</th>
+                                <th>Contact No</th>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </hr>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </ul>
+</div>
+
+<div id="seccordinator" class="tab-pane fade">
+        <h3>Security Coordinator Details</h3>
+            <p>Security Coordinator Details are shown below.</p>
+         <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <hr>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                                <th></th>
+                                <th>Name</th>
+                                <th>In Chrge Of</th>
+                                <th>Contact No</th>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </hr>
         </div>
     </div>
-    <hr>
+</div>
+</div>
+
+
     @include('layouts.footer')
 @endsection
 <script src="/js/parsley.js"></script>
