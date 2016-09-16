@@ -31,6 +31,7 @@
     <hr>
     <div class="panel panel-default">
       <div class="panel-body">
+        <div style="overflow-x:auto;">
         <table class ="table">
           <thead>
             <tr>
@@ -61,6 +62,7 @@
             @endforeach
           </tbody>
         </table>
+    </div>
       </div>
     </div>
   </div>
