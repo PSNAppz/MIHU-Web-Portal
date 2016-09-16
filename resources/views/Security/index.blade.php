@@ -21,10 +21,9 @@
     </div>
     <div class="container">
      <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#secpoint"><b>Security Points</b></a></li>
-        <li><a data-toggle="tab" href="#seccordinator"><b>Security Coordinators</b></a></li>
-        <li><a data-toggle="tab" href="#secshift"><b>Security Shifts</b></a></li>
-        <li><a data-toggle="tab" href="#secbatch"><b>Security Batch</b></a></li>
+        <li class="active"><a data-toggle="tab" href="#secpoint"><b>Points</b></a></li>
+        <li><a data-toggle="tab" href="#seccordinator"><b>Coordinators</b></a></li>
+        <li><a data-toggle="tab" href="#secshift"><b>Shifts</b></a></li>
 
      </ul>
 <div class="tab-content">
