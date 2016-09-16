@@ -49,17 +49,20 @@ img {
                              <thead>
                                 <th>Media Room</th>
                                 <th>Media Enclosure</th>
+                                @if(!Auth::guest())<th></th>@endif
                             </thead>
                             <tbody>
                               @foreach($media as $m)
+                                <tr>
                               <th>{{ $m->mediaroom}}</th>
                               <th>{{ $m->mediaenc}}</th>
+                              @if(!Auth::guest())
+                              <th><a class="btn btn-success" href="{{ route('media.edit', $m->id,'/edit') }}" role="button">Update media details</a><th>
+                              @endif
+                                </tr>
                               @endforeach
                             </tbody>
                           </table>
-                          @if(!Auth::guest())
-                          <a class="btn btn-success" href="{{ route('media.edit', $media->id,'/edit') }}" role="button">Update media details</a>
-                          @endif
                           <div class="panel-body">
                             <div class="row">
                               <div class="col-sm-6">
@@ -99,8 +102,10 @@ img {
                             </thead>
                             <tbody>
                               @foreach($media as $m)
+                                <tr>
                               <th>{{ $m->name}}</th>
                               <th>{{ $m->phone}}</th>
+                                </tr>
                               @endforeach
                             </tbody>
                           </table>

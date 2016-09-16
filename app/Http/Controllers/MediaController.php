@@ -17,11 +17,15 @@ class MediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
+     }
     public function index()
     {
-        $media =  Medi::paginate(1);
-        return view('Media.index')->withMedia($media);
-
+     $media=Medi::paginate(15);
+     return view('Media.index')->withMedia($media);
     }
 
     /**

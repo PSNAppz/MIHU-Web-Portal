@@ -13,6 +13,10 @@ class MedicalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct()
+     {
+         $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
+     }
     public function index()
     {
         return view('Medical.index');
