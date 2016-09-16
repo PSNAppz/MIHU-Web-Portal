@@ -58,7 +58,7 @@ img {
                             </tbody>
                           </table>
                           @if(!Auth::guest())
-                          <a class="btn btn-success" href="{{ route('media.edit', $m->id,'/edit') }}" role="button">Update media details</a>
+                          <a class="btn btn-success" href="{{ route('media.edit', $media->id,'/edit') }}" role="button">Update media details</a>
                           @endif
                           <div class="panel-body">
                             <div class="row">
@@ -78,6 +78,7 @@ img {
                         </div>
                         </div>
                     </div>
+                    {{$media->links()}}
                 </div>
             </div>
             <div>
