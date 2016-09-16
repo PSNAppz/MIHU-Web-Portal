@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Media extends Model
 {
-  protected $fillable = ['mediaroom', 'mediaenc', 'location', 'time', 'contact', 'phone'];
+  protected $fillable = ['mediaroom', 'mediaenc', 'name', 'phone'];
   public $timestamps = false;
 }

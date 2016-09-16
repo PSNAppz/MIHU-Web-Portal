@@ -17,8 +17,6 @@ class CreateMediaTable extends Migration
             $table->increments('id');
             $table->string('mediaroom');
             $table->string('mediaenc');
-            $table->string('location');
-            $table->string('timing');
             $table->string('name');
             $table->string('phone');
         });
