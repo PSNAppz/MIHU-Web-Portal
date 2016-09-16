@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
+use App\Security as Sec;
+use Session;
+use View;
 
 class SecurityController extends Controller
 {
@@ -19,7 +22,8 @@ class SecurityController extends Controller
      }
     public function index()
     {
-        return view('Security.index');
+        $sec= Sec::paginate(10);
+        return view('Security.index')->withSec($sec);
     }
 
     /**
@@ -29,7 +33,7 @@ class SecurityController extends Controller
      */
     public function create()
     {
-        //
+        return view('Security.add');
     }
 
     /**
@@ -40,7 +44,30 @@ class SecurityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate the data
+       $this->validate($request, array(
+               'name'          => 'required|max:255',
+               'iscord'          => 'required|numeric',
+               'location'          => 'required|max:255',
+               'nearby'          => 'required|max:255',
+               'from'          => 'required|max:255',
+               'to'          => 'required|max:255',
+               'batch'          => 'required|max:255',
+               'contact'          => 'required|max:255',
+           ));
+       // store in the database
+       $sec = new Sec;
+       $sec->name = $request->name;
+       $sec->iscord = $request->iscord;
+       $sec->location = $request->location;
+       $sec->nearby = $request->nearby;
+       $sec->from = $request->from;
+       $sec->to = $request->to;
+       $sec->batch = $request->batch;
+       $sec->contact = $request->contact;
+       $sec->save();
+       $request->session()->flash('success', 'Security details successfully added!');
+       return redirect()->route('security.index');
     }
 
     /**
@@ -62,7 +89,8 @@ class SecurityController extends Controller
      */
     public function edit($id)
     {
-        //
+        $sec = Sec::find($id);
+        return view('Security.edit')->withSec($sec);
     }
 
     /**
@@ -74,7 +102,21 @@ class SecurityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $sec = Sec::find($id);
+        $this->validate($request, array(
+                'name'          => 'required|max:255',
+                'iscord'          => 'required|numeric',
+                'location'          => 'required|max:255',
+                'nearby'          => 'required|max:255',
+                'from'          => 'required|max:255',
+                'to'          => 'required|max:255',
+                'batch'          => 'required|max:255',
+                'contact'          => 'required|max:255',
+            ));
+            $input = $request->all();
+            $sec->fill($input)->save();
+            Session::flash('success', 'Security details successfully edited!');
+            return redirect()->route('security.index');
     }
 
     /**
@@ -85,6 +127,9 @@ class SecurityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $sec = Sec::find($id);
+        $sec->delete();
+        Session::flash('success', 'Security details successfully removed!');
+        return redirect()->route('security.index');
     }
 }

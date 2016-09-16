@@ -42,6 +42,9 @@
       height: 100% - 200px;
       margin: 0 auto ;
      }
+     tbody > tr:hover{
+         background-color: lightgrey;
+     }
    </style>
     <!-- Scripts -->
     <script>
