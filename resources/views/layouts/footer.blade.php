@@ -1,6 +1,8 @@
 <footer class="footer-basic-centered">
 
-     <p class="footer-company-motto">Think with heart <span style="color:red;" class="glyphicon glyphicon-heart"></span> Serve with hands.</p>
+
+     <p class="footer-company-motto">Think with heart <span style="color:#F84C70;" class="glyphicon glyphicon-heart"></span> Serve with hands.</p>
+
 
         <p class="footer-links">
               <a href="/">Home</a>
@@ -16,6 +18,6 @@
               <a href="#">Contact</a>
        </p>
 
-       <p class="footer-company-name">ASAS &copy; 2016</p>
+       <p class="footer-company-name">MIHU &copy; 2016</p>
 
 </footer>
