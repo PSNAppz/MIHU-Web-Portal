@@ -32,59 +32,29 @@ img {
     <br>
 <div class="container">
     <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#media_room"><b>Media Room</b></a></li>
-        <li><a data-toggle="tab" href="#mess"><b>Mess</b></a></li>
-        <li><a data-toggle="tab" href="#location"><b>Location</b></a></li>
+        <li class="active"><a data-toggle="tab" href="#loc"><b>Location</b></a></li>
         <li><a data-toggle="tab" href="#contact"><b>Contact</b></a></li>
     </ul>
     <div class="tab-content">
-    <div id="media_room" class="tab-pane active">
-        <h3>Media Room</h3>
+    <div id="loc" class="tab-pane active">
+        <h3>Location</h3>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <hr>
                     <div class="panel panel-default">
                         <div class="panel-body">
+                          <table class="table">
+                             <thead>
+                                <th>Media Room</th>
+                                <th>Media Enclosure</th>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
                             <img src="{{asset('images/dummyimage.png')}}" alt="image" width="450" height="300">
                             <span class="color">
                                 Near CIR Office......
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="mess" class="tab-pane fade">
-        <h3>Mess Location and timing</h3>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <hr>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img src="{{asset('images/dummyimage.png')}}" alt="image" width="450" height="300">
-                            <span class="color">
-                                Type location details and mess timings here......
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="location" class="tab-pane fade">
-        <h3>Media Location</h3>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <hr>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img src="{{asset('images/dummyimage.png')}}" alt="image" width="450" height="300">
-                            <span class="color">
-                                Type location details here......
                             </span>
                         </div>
                     </div>
@@ -99,6 +69,15 @@ img {
                 <div class="col-md-10 col-md-offset-1">
                     <hr>
                     <div class="panel panel-default">
+                      <table class="table">
+                         <thead>
+                            <th>Name</th>
+                            <th>Phone</th>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                      </table>
                         <div class="panel-body">
                             <img src="{{asset('images/dummyimage.png')}}" alt="image" width="450" height="300">
                             <span class="color">
