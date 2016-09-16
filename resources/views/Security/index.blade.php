@@ -130,6 +130,7 @@
                           <div style="overflow-x:auto;">
                           <table class="table">
                            <thead>
+                              <th>Location</th>
                               <th>From Time</th>
                               <th>To Time</th>
                               <th>Person In Charge</th>
@@ -142,6 +143,7 @@
                           <tbody>
                               @foreach($sec as $s)
                                   <tr>
+                                      <th>{{$s->location}}</th>
                                       <th>{{$s->from}}</th>
                                       <th>{{$s->to}}</th>
                                       <th>{{$s->name}}</th>
