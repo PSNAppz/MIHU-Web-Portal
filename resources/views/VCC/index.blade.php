@@ -19,26 +19,30 @@
             Volunteer Care Committee
         </div>
     </div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-                Use the below variables for displaying data.
-                use foreach ,if ,else etc using blade template.
-                 
-            @foreach($vcc as $vcc)
-                {{$vcc->id}}
-                {{$vcc->food}}
-                {{$vcc->time}}
-                {{$vcc->place}}
-            @endforeach
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
+    <div class="container">
+      <div class="col-md-12 ">
+        @if(!Auth::guest())
+        <a class="btn btn-success" href="{{ url('/darshan/create') }}" role="button">Add New Timing</a>
+        @endif
+        <hr>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <table class ="table">
+              <thead>
+                <tr>
+                  <th><center/>Date</th>
+                  <th><center/><center/>Food Items</th>
+                  <th><center/><center/><center/>Timing</th>
+                  <th><center/>Available At</th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 @include('layouts.footer')
 @endsection
