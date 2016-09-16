@@ -74,6 +74,7 @@
               </div>
           </div>
       </div>
+      {{$sec->links()}}
 </div>
 
       <div id="seccordinator" class="tab-pane fade">
@@ -118,6 +119,8 @@
               </div>
           </div>
       </div>
+      {{$sec->links()}}
+
 </div>
 
       <div id="secshift" class="tab-pane fade">
@@ -164,51 +167,10 @@
               </div>
           </div>
       </div>
+      {{$sec->links()}}
+
 </div>
 
-<div id="secbatch" class="tab-pane fade">
-          <h3>Security Batch Details</h3>
-      <div class="container">
-          <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                  <div class="panel panel-default">
-                      <div class="panel-body">
-                          <div style="overflow-x:auto;">
-                          <table class="table">
-                           <thead>
-                              <th>Batches</th>
-                              <th>Coordinators</th>
-                              <th>Contact No</th>
-                              @if(!Auth::guest())
-                                  <th></th>
-                                  <th></th>
-                              @endif
-                          </thead>
-                          <tbody>
-                              @foreach($sec as $s)
-                                  <tr>
-                                    @if($s->iscord==1)
-                                      <th>{{$s->batch}}</th>
-                                      <th>{{$s->name}}</th>
-                                      <th>{{$s->contact}}</th>
-                                      @if(!Auth::guest())
-                                      <th><a class="btn btn-warning" href="{{ route('security.edit', $s->id,'/edit') }}" role="button">Update</a></th>
-                                      <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['security.destroy', $s->id]]) }}
-                                      {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-                                      {{ Form::close() }}</th>
-                                      @endif
-                                  @endif
-                                  </tr>
-                              @endforeach
-                          </tbody>
-                      </table>
-                  </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
 </div>
 </div>
 
