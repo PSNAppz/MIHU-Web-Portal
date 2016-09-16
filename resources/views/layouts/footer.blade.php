@@ -1,6 +1,8 @@
 <footer class="footer-basic-centered">
 
-     <p class="footer-company-motto">Think with heart <span class="glyphicon glyphicon-heart"></span>. Serve with hands.</p>
+
+     <p class="footer-company-motto">Think with heart <span style="color:red;" class="glyphicon glyphicon-heart"></span> Serve with hands.</p>
+
 
         <p class="footer-links">
               <a href="/">Home</a>
