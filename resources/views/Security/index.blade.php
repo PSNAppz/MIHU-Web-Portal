@@ -83,7 +83,7 @@
 </div>
 
       <div id="secshift" class="tab-pane fade">
-          <h3 align='center'>Security Shifts</h3>
+          <h3 align='center'>Security Shifts Details</h3>
       <div class="container">
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
@@ -92,7 +92,9 @@
                           <div style="overflow-x:auto;">
                           <table class="table">
                            <thead>
-                              <th>data here </th>
+                              <th>Time</th>
+                              <th>Person In Charge</th>
+                              <th>Contact No</th>
                           </thead>
                           <tbody>
                           </tbody>
@@ -106,7 +108,7 @@
 </div>
 
 <div id="secbatch" class="tab-pane fade">
-          <h3 align='center'>Security Batch</h3>
+          <h3 align='center'>Security Batch Details</h3>
       <div class="container">
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
@@ -115,7 +117,9 @@
                           <div style="overflow-x:auto;">
                           <table class="table">
                            <thead>
-                              <th>data here </th>
+                              <th>Batches</th>
+                              <th>Coordinators</th>
+                              <th>Contact No</th>
 
                           </thead>
                           <tbody>
