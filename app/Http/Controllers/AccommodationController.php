@@ -130,23 +130,4 @@ class AccommodationController extends Controller
         return redirect()->route('accommodation.index');
     }
 
-    /**
-     * Search the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function search()
-    {
-        // Sets the parameters from the get request to the variables.
-        $loc = Request::get('loc');
-
-        // Perform the query using Query Builder
-        $result = DB::table('accommodations')
-            ->select(DB::raw("*"))
-            ->where('areaName', '=', $loc)
-            ->get();
-
-        return $result;
-    }
 }

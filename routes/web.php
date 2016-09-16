@@ -26,19 +26,19 @@ Route::resource('coordinator','CoordinatorController');
 Route::resource('accommodation','AccommodationController');
 
 //Medical
-Route::get('/medical','MedicalController@index');
+Route::resource('medical','MedicalController');
 
 //News & Media
 Route::resource('media','MediaController');
 
 //VCC
-Route::get('/vcc','VCCController@index');
+Route::resource('vcc','VCCController');
 
 //Transportation
 Route::resource('transportation','TransportationController');
 
 //Special Event
-Route::get('/specialevents','SpecialEventController@index');
+Route::resource('specialevents','SpecialEventController');
 
 //Food
 Route::resource('food','FoodController');
