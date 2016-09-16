@@ -21,8 +21,8 @@
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#biotech"><b>Biotech</b></a></li>
-    <li><a data-toggle="tab" href="#stage"><b>Main Stage</b></a></li>
+    <li class="active"><a data-toggle="tab" href="#biotech"><b>Ashram Side</b></a></li>
+    <li><a data-toggle="tab" href="#stage"><b>College Side</b></a></li>
 
 
   </ul>

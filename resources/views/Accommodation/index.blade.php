@@ -255,7 +255,7 @@
           <div id="vip" class="tab-pane fade">
       <h3>VIP</h3>
       <p>The below chart shows the no of visits calculated in months of present year.</p>
-      <!--Traffic Graph shows the traffic -->
+      
       <br>
       <br>
       <br>
