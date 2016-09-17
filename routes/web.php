@@ -51,3 +51,7 @@ Route::resource('security','SecurityController');
 
 //Faq
 Route::resource('faq','FaqController');
+
+Route::get('impexp', 'FaqController@importExport');
+Route::get('downloadExcel/{type}', 'FaqController@downloadExcel');
+Route::post('importExcel', 'FaqController@importExcel');
