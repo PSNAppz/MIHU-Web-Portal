@@ -123,7 +123,7 @@
         </style>
     </head>
     <body>
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top" style="margin-bottom:0px">
     <div class="container">
         <div class="navbar-header">
 
