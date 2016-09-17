@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Medical as Medical;
+
+use Session;
+
 class MedicalController extends Controller
 {
     /**
@@ -19,7 +23,8 @@ class MedicalController extends Controller
      }
     public function index()
     {
-        return view('Medical.index');
+      $medical = Medical::paginate(15);
+      return view('Medical.index')->withMedical($medical);
 
     }
 
@@ -30,7 +35,7 @@ class MedicalController extends Controller
      */
     public function create()
     {
-        //
+        return view('Medical.add');
     }
 
     /**
@@ -41,7 +46,25 @@ class MedicalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      // validate the data
+     $this->validate($request, array(
+             'loc'      => 'required|max:255',
+             'doc'      => 'required|max:255',
+             'contact'  => 'required|max:255',
+             'dis'      => 'required|max:255',
+             'side'     => 'required|max:255',
+         ));
+      // store in the database
+
+      $medical = new Medical;
+      $medical->loc = $request->loc;
+      $medical->doc = $request->doc;
+      $medical->contact = $request->contact;
+      $medical->dis = $request->dis;
+      $medical->side = $request->side;
+      $medical->save();
+      //$medical->session()->flash('success', 'Medical Details successfully added!');
+      return redirect()->route('medical.index');
     }
 
     /**
@@ -63,7 +86,8 @@ class MedicalController extends Controller
      */
     public function edit($id)
     {
-        //
+      $medical = Medical::find($id);
+      return view('Medical.edit')->withMedical($medical);
     }
 
     /**
@@ -75,7 +99,19 @@ class MedicalController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $medical = Medical::find($id);
+
+      $this->validate($request, array(
+              'loc'      => 'required|max:255',
+              'doc'      => 'required|max:255',
+              'contact'  => 'required|max:255',
+              'dis'      => 'required|max:255',
+          ));
+
+      $input = $request->all();
+      $medical->fill($input)->save();
+      Session::flash('success', 'Medical details successfully edited!');
+      return redirect()->route('medical.index');
     }
 
     /**
@@ -86,6 +122,9 @@ class MedicalController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $medical = Medical::find($id);
+      $medical->delete();
+      Session::flash('success', 'Medical details successfully removed!');
+      return redirect()->route('medical.index');
     }
 }
