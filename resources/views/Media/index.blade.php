@@ -22,6 +22,8 @@
 img {
     border-radius: 4px;
     box-shadow: 0 0 10px 3px #bbb;
+    width:100%;
+    height:auto;
 }
 
 </style>
