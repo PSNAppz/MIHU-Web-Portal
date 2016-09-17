@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Faq as Faq;
-use Illuminate\Support\Facades\Input;
-use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\DB;
 use Session;
 use View;
@@ -21,7 +19,7 @@ class FaqController extends Controller
 
      public function __construct()
      {
-         $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
+         $this->middleware('auth',['only' => 'create','store','edit','update','destroy','importExport','downloadExcel','importExcel']);
      }
 
     public function index()
@@ -121,38 +119,4 @@ class FaqController extends Controller
         return redirect()->route('faq.index');
     }
 
-
-    public function importExport()
-	{
-		return view('Faq.importExport');
-	}
-	public function downloadExcel($type)
-	{
-		$data = Faq::get()->toArray();
-		return Excel::create('faq', function($excel) use ($data) {
-			$excel->sheet('mySheet', function($sheet) use ($data)
-	        {
-				$sheet->fromArray($data);
-	        });
-		})->download($type);
-	}
-	public function importExcel()
-	{
-		if(Input::hasFile('import_file')){
-			$path = Input::file('import_file')->getRealPath();
-			$data = Excel::load($path, function($reader) {
-			})->get();
-			if(!empty($data) && $data->count()){
-				foreach ($data as $key => $value) {
-					$insert[] = ['ques' => $value->ques, 'ans' => $value->ans];
-				}
-				if(!empty($insert)){
-					DB::table('faqs')->insert($insert);
-					dd('Insert Record successfully.');
-                    redirect()->route('impexp');
-				}
-			}
-		}
-		return back();
-	}
 }

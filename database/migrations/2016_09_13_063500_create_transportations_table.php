@@ -21,7 +21,7 @@ class CreateTransportationsTable extends Migration
             $table->string('dest');
             $table->string('deptime');
             $table->string('parking');
-            $table->string('status');
+            $table->string('status')->default(1);
             $table->timestamps();
         });
     }
