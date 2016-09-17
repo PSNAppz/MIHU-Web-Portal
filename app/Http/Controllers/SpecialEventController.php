@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use App\Accommodation;
+use Illuminate\Support\Facades\DB;
+use App\SpecialEvent as SE;
+use Session;
+use View;
 
 class SpecialEventController extends Controller
 {
@@ -19,8 +23,8 @@ class SpecialEventController extends Controller
      }
     public function index()
     {
-        return view('SpecialEvent.index');
-
+        $se = SE::paginate(15);
+        return view('SpecialEvent.index')->withSe($se);
     }
 
     /**
@@ -30,7 +34,7 @@ class SpecialEventController extends Controller
      */
     public function create()
     {
-        //
+        return view('SpecialEvent.add');
     }
 
     /**
@@ -41,7 +45,25 @@ class SpecialEventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, array(
+                'category'          => 'required|numeric',
+                'date'              => 'required|max:255',
+                'time'              => 'required|max:255',
+                'location'          => 'required|max:255',
+                'coordinator'       => 'required|max:255',
+                'contact'           => 'required|max:255',
+            ));
+        // store in the database
+        $se = new SE;
+        $se->category = $request->category;
+        $se->date = $request->date;
+        $se->time = $request->time;
+        $se->location = $request->location;
+        $se->coordinator = $request->coordinator;
+        $se->contact = $request->contact;
+        $se->save();
+        $request->session()->flash('success', 'Special Event successfully added!');
+        return redirect()->route('specialevents.index');
     }
 
     /**
@@ -63,7 +85,8 @@ class SpecialEventController extends Controller
      */
     public function edit($id)
     {
-        //
+        $se = SE::find($id);
+        return view('SpecialEvent.edit')->withSe($se);
     }
 
     /**
@@ -75,7 +98,19 @@ class SpecialEventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $se = SE::find($id);
+        $this->validate($request, array(
+                'category'          => 'required|numeric',
+                'date'              => 'required|max:255',
+                'time'              => 'required|max:255',
+                'location'          => 'required|max:255',
+                'coordinator'       => 'required|max:255',
+                'contact'           => 'required|max:255',
+            ));
+        $input = $request->all();
+        $se->fill($input)->save();
+        Session::flash('success', 'Special Event successfully edited!');
+        return redirect()->route('specialevents.index');
     }
 
     /**
@@ -86,6 +121,9 @@ class SpecialEventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $se = SE::find($id);
+        $se->delete();
+        Session::flash('success', 'Special Event successfully removed!');
+        return redirect()->route('specialevents.index');
     }
 }
