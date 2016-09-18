@@ -15,7 +15,7 @@
                    ·
               <a href="/faq">Faq</a>
                    ·
-              <a href="#">Contact</a>
+              <a href="/about">About</a>
        </p>
 
        <p class="footer-company-name">MIHU &copy; 2016</p>
