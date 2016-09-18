@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-
 use App\Food as Foo;
-
+use App\Log;
+use Auth;
 use Session;
 
 class FoodController extends Controller
@@ -64,6 +63,11 @@ class FoodController extends Controller
       $food->nearby = $request->nearby;
       $food->counter = $request->counter;
       $food->save();
+      $log = new Log;
+      $log->user_id=Auth::user()->id;
+      $log->action="Added a Food";
+      $log->actionval = 1;
+      $log->save();
       $request->session()->flash('success', 'Food Details successfully added!');
       return redirect()->route('food.index');
     }
@@ -111,6 +115,11 @@ class FoodController extends Controller
 
       $input = $request->all();
       $food->fill($input)->save();
+      $log = new Log;
+      $log->user_id=Auth::user()->id;
+      $log->action="Updated a Food";
+      $log->actionval = 2;
+      $log->save();
       Session::flash('success', 'Food details successfully edited!');
       return redirect()->route('food.index');
     }
@@ -125,6 +134,11 @@ class FoodController extends Controller
     {
       $food = Foo::find($id);
       $food->delete();
+      $log = new Log;
+      $log->user_id=Auth::user()->id;
+      $log->action="Deleted a Food";
+      $log->actionval = 3;
+      $log->save();
       Session::flash('success', 'Food details successfully removed!');
       return redirect()->route('food.index');
     }

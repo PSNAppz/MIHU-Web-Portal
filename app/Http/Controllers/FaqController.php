@@ -8,6 +8,8 @@ use App\Faq as Faq;
 use Illuminate\Support\Facades\DB;
 use Session;
 use View;
+use App\Log;
+use Auth;
 
 class FaqController extends Controller
 {
@@ -19,7 +21,7 @@ class FaqController extends Controller
 
      public function __construct()
      {
-         $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
+         $this->middleware('auth',['only' => 'create','store','edit','update','destroy','importExport','downloadExcel','importExcel']);
      }
 
     public function index()
@@ -53,6 +55,11 @@ class FaqController extends Controller
                'ans'           => 'required',
            ));
        // store in the database
+       $log = new Log;
+       $log->user_id=Auth::user()->id;
+       $log->action="Created a FAQ";
+       $log->actionval = 1;
+       $log->save();
        $faq = new Faq;
        $faq->ques = $request->ques;
        $faq->ans = $request->ans;
@@ -101,6 +108,11 @@ class FaqController extends Controller
             ));
 
     $input = $request->all();
+    $log = new Log;
+    $log->user_id=Auth::user()->id;
+    $log->action="Updated a FAQ";
+    $log->actionval = 2;
+    $log->save();
     $faq->fill($input)->save();
     Session::flash('success', 'FAQ successfully edited!');
     return redirect()->route('faq.index');
@@ -115,8 +127,14 @@ class FaqController extends Controller
     public function destroy($id)
     {
         $faq = Faq::find($id);
+        $log = new Log;
+        $log->user_id=Auth::user()->id;
+        $log->action="Deleted a FAQ";
+        $log->actionval = 3;
+        $log->save();
         $faq->delete();
         Session::flash('success', 'FAQ successfully removed!');
         return redirect()->route('faq.index');
     }
+
 }

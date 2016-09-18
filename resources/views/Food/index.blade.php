@@ -19,8 +19,12 @@
             Food Details
         </div>
         @if(!Auth::guest())
-        <a class="btn btn-success" href="{{ url('/food/create') }}" role="button">Add New Food Details</a>
-        @endif
+        <a class="btn btn-success" href="{{ url('/food/create') }}" role="button">Add New</a>
+        <a  id="xlsf" href="{{ URL::to('downloadExcel/food/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
+        <a id="xlsxf" href="{{ URL::to('downloadExcel/food/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
+        <a id="csvf" href="{{ URL::to('downloadExcel/food/csv') }}"><button class="btn btn-info">Download CSV</button></a>
+    @endif
+
         <hr>
     </div>
 <div class="container">

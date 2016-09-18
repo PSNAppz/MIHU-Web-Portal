@@ -135,13 +135,16 @@ html, body {
   <div class="tab-content">
   <div id="students" class="tab-pane active">
         <h3><i>While Carrying Responsibilities Never Forget to Smile.</i></h3>
+        @if(!Auth::guest())
+        <a class="btn btn-success" href="{{ url('/coordinator/create') }}" role="button">Add a Coordinator</a>
+        <a  id="xlsf" href="{{ URL::to('downloadExcel/coordinator/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
+        <a id="xlsxf" href="{{ URL::to('downloadExcel/coordinator/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
+        <a id="csvf" href="{{ URL::to('downloadExcel/coordinator/csv') }}"><button class="btn btn-info">Download CSV</button></a>
+    @endif
+        <hr>
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                @if(!Auth::guest())
-                <a class="btn btn-success" href="{{ url('/coordinator/create') }}" role="button">Add a Coordinator</a>
-            @endif
-                <hr>
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div style="overflow-x:auto;">
