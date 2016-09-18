@@ -32,6 +32,10 @@
       <div class="container">
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
+                  @if(!Auth::guest())
+                  <a class="btn btn-success" href="{{ url('/specialevents/create') }}" role="button">Add Event</a>
+                  @endif
+                  <hr>
                   <div class="panel panel-default">
                       <div class="panel-body">
                           <div style="overflow-x:auto;">
@@ -43,8 +47,29 @@
                               <th>Location</th>
                               <th>Coordinator</th>
                               <th>ContactNo</th>
+                              @if(!Auth::guest())
+                              <th></th>
+                              <th></th>
+                          @endif
                           </thead>
                           <tbody>
+                              @foreach($se as $s)
+                                  <tr>
+                                      @if($s->category==0)
+                                      <th>{{ $s->date}}</th>
+                                      <th>{{ $s->time}}</th>
+                                      <th>{{ $s->location}}</th>
+                                      <th>{{ $s->coordinator}}</th>
+                                      <th>{{ $s->contact}}</th>
+                                      @if(!Auth::guest())
+                                      <th><a class="btn btn-warning" href="{{ route('specialevents.edit', $s->id,'/edit') }}" role="button">Update</a></th>
+                                      <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['specialevents.destroy', $s->id]]) }}
+                                      {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                      {{ Form::close() }}</th>
+                                      @endif
+                              @endif
+                                  </tr>
+                              @endforeach
                           </tbody>
                       </table>
                   </div>
@@ -53,6 +78,7 @@
               </div>
           </div>
       </div>
+      {{$se->links()}}
 </div>
 
       <div id="seventpension" class="tab-pane fade">
@@ -60,6 +86,10 @@
       <div class="container">
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
+                  @if(!Auth::guest())
+                  <a class="btn btn-success" href="{{ url('/specialevents/create') }}" role="button">Add New Accommodation Details</a>
+                  @endif
+                  <hr>
                   <div class="panel panel-default">
                       <div class="panel-body">
                           <div style="overflow-x:auto;">
@@ -71,8 +101,29 @@
                               <th>Location</th>
                               <th>Coordinator</th>
                               <th>ContactNo</th>
+                              @if(!Auth::guest())
+                              <th></th>
+                              <th></th>
+                          @endif
                           </thead>
                           <tbody>
+                              @foreach($se as $s)
+                                  <tr>
+                                      @if($s->category==1)
+                                      <th>{{ $s->date}}</th>
+                                      <th>{{ $s->time}}</th>
+                                      <th>{{ $s->location}}</th>
+                                      <th>{{ $s->coordinator}}</th>
+                                      <th>{{ $s->contact}}</th>
+                                      @if(!Auth::guest())
+                                      <th><a class="btn btn-warning" href="{{ route('specialevents.edit', $s->id,'/edit') }}" role="button">Update</a></th>
+                                      <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['specialevents.destroy', $s->id]]) }}
+                                      {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                      {{ Form::close() }}</th>
+                                      @endif
+                              @endif
+                                  </tr>
+                              @endforeach
                           </tbody>
                       </table>
                   </div>
@@ -81,6 +132,8 @@
               </div>
           </div>
       </div>
+      {{$se->links()}}
+
 </div>
 
       <div id="seventmarriage" class="tab-pane fade">
@@ -88,6 +141,10 @@
       <div class="container">
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
+                  @if(!Auth::guest())
+                  <a class="btn btn-success" href="{{ url('/specialevents/create') }}" role="button">Add New Accommodation Details</a>
+                  @endif
+                  <hr>
                   <div class="panel panel-default">
                       <div class="panel-body">
                           <div style="overflow-x:auto;">
@@ -99,8 +156,29 @@
                               <th>Location</th>
                               <th>Coordinator</th>
                               <th>ContactNo</th>
+                              @if(!Auth::guest())
+                              <th></th>
+                              <th></th>
+                          @endif
                           </thead>
                           <tbody>
+                              @foreach($se as $s)
+                                  <tr>
+                                      @if($s->category==2)
+                                      <th>{{ $s->date}}</th>
+                                      <th>{{ $s->time}}</th>
+                                      <th>{{ $s->location}}</th>
+                                      <th>{{ $s->coordinator}}</th>
+                                      <th>{{ $s->contact}}</th>
+                                      @if(!Auth::guest())
+                                      <th><a class="btn btn-warning" href="{{ route('specialevents.edit', $s->id,'/edit') }}" role="button">Update</a></th>
+                                      <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['specialevents.destroy', $s->id]]) }}
+                                      {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                      {{ Form::close() }}</th>
+                                      @endif
+                              @endif
+                                  </tr>
+                              @endforeach
                           </tbody>
                       </table>
                   </div>
@@ -109,6 +187,8 @@
               </div>
           </div>
       </div>
+      {{$se->links()}}
+
 </div>
 @include('layouts.footer')
 @endsection

@@ -26,7 +26,7 @@ class FaqController extends Controller
     {
         $faq = Faq::paginate(15);
         return view('Faq.index')->withFaq($faq);
-      }
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -103,7 +103,8 @@ class FaqController extends Controller
     $input = $request->all();
     $faq->fill($input)->save();
     Session::flash('success', 'FAQ successfully edited!');
-    return redirect()->route('faq.index');    }
+    return redirect()->route('faq.index');
+ }
 
     /**
      * Remove the specified resource from storage.
