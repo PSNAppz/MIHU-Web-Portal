@@ -57,6 +57,7 @@ class MedicalController extends Controller
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->action="Added a Medic";
+      $log->actionval = 1;
       $log->save();
       $medical = new Medical;
       $medical->loc = $request->loc;
@@ -112,6 +113,7 @@ class MedicalController extends Controller
           $log = new Log;
           $log->user_id=Auth::user()->id;
           $log->action="Updated a Medic";
+          $log->actionval = 2;
           $log->save();
       $input = $request->all();
       $medical->fill($input)->save();
@@ -130,6 +132,7 @@ class MedicalController extends Controller
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->action="Deleted a Medic";
+        $log->actionval = 3;
         $log->save();
       $medical = Medical::find($id);
       $medical->delete();

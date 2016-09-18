@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/home/clearlogs', 'HomeController@destroy');
 
 //Coordinator
 Route::resource('coordinator','CoordinatorController');

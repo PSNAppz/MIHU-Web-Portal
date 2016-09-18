@@ -66,6 +66,7 @@ class SpecialEventController extends Controller
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->action="Added a Special Event";
+        $log->actionval = 1;
         $log->save();
         $se->save();
         $request->session()->flash('success', 'Special Event successfully added!');
@@ -118,6 +119,7 @@ class SpecialEventController extends Controller
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->action="Updated a Special Event";
+        $log->actionval = 2;
         $log->save();
         Session::flash('success', 'Special Event successfully edited!');
         return redirect()->route('specialevents.index');
@@ -136,6 +138,7 @@ class SpecialEventController extends Controller
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->action="Deleted a Special Event";
+        $log->actionval = 3;
         $log->save();
         Session::flash('success', 'Special Event successfully removed!');
         return redirect()->route('specialevents.index');

@@ -58,6 +58,7 @@ class FaqController extends Controller
        $log = new Log;
        $log->user_id=Auth::user()->id;
        $log->action="Created a FAQ";
+       $log->actionval = 1;
        $log->save();
        $faq = new Faq;
        $faq->ques = $request->ques;
@@ -110,6 +111,7 @@ class FaqController extends Controller
     $log = new Log;
     $log->user_id=Auth::user()->id;
     $log->action="Updated a FAQ";
+    $log->actionval = 2;
     $log->save();
     $faq->fill($input)->save();
     Session::flash('success', 'FAQ successfully edited!');
@@ -128,6 +130,7 @@ class FaqController extends Controller
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->action="Deleted a FAQ";
+        $log->actionval = 3;
         $log->save();
         $faq->delete();
         Session::flash('success', 'FAQ successfully removed!');

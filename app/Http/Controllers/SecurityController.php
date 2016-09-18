@@ -60,6 +60,7 @@ class SecurityController extends Controller
            $log = new Log;
            $log->user_id=Auth::user()->id;
            $log->action="Added a Security";
+           $log->actionval = 1;
            $log->save();
        // store in the database
        $sec = new Sec;
@@ -122,6 +123,7 @@ class SecurityController extends Controller
             $log = new Log;
             $log->user_id=Auth::user()->id;
             $log->action="Updated a Security";
+            $log->actionval = 2;
             $log->save();
             $input = $request->all();
             $sec->fill($input)->save();
@@ -141,6 +143,7 @@ class SecurityController extends Controller
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->action="Deleted a Security";
+        $log->actionval = 3;
         $log->save();
         $sec->delete();
         Session::flash('success', 'Security details successfully removed!');

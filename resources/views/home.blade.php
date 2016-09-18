@@ -15,7 +15,6 @@
 
                 </div>
             </div>
-
             <div class="panel panel-primary">
                 <div class="panel-heading">Import / Export</div>
                 <div class="panel-body">
@@ -38,6 +37,26 @@
                     <input type="file" name="import_file" />
                     <button class="btn btn-primary">Import File</button>
                 </form>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading"><span class="glyphicon glyphicon-barcode">Admin-Logs</span></div>
+
+            <div class="panel-body">
+                <div class="well well-sm">
+                    <th><a href="{{ URL::to('home/clearlogs') }}"><button class="btn btn-danger">Clear Logs</button></a></th>
+                    <hr>
+                    @foreach($logs as $log)
+                        <p>#{{$log->id}}  {{Auth::user($log->user_id)->name}}  @if($log->actionval == 1)<span class="label label-success">{{$log->action}}</span>
+                        @elseif($log->actionval == 2)
+                            <span class="label label-warning">{{$log->action}}</span>
+                        @else
+                            <span class="label label-danger">{{$log->action}}</span>
+                        @endif
+                              {{ $log->created_at}}</p>
+                    @endforeach
+            </div>
+
             </div>
         </div>
             </div>

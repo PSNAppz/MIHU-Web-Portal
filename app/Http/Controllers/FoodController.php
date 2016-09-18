@@ -66,6 +66,7 @@ class FoodController extends Controller
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->action="Added a Food";
+      $log->actionval = 1;
       $log->save();
       $request->session()->flash('success', 'Food Details successfully added!');
       return redirect()->route('food.index');
@@ -117,6 +118,7 @@ class FoodController extends Controller
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->action="Updated a Food";
+      $log->actionval = 2;
       $log->save();
       Session::flash('success', 'Food details successfully edited!');
       return redirect()->route('food.index');
@@ -135,6 +137,7 @@ class FoodController extends Controller
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->action="Deleted a Food";
+      $log->actionval = 3;
       $log->save();
       Session::flash('success', 'Food details successfully removed!');
       return redirect()->route('food.index');

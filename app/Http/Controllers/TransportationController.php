@@ -71,6 +71,7 @@ class TransportationController extends Controller
        $log = new Log;
        $log->user_id=Auth::user()->id;
        $log->action="Added a Transportation";
+       $log->actionval = 1;
        $log->save();
        $request->session()->flash('success', 'Transportation Details successfully added!');
        return redirect()->route('transportation.index');
@@ -124,6 +125,7 @@ class TransportationController extends Controller
      $log = new Log;
      $log->user_id=Auth::user()->id;
      $log->action="Updated a Transportation";
+     $log->actionval = 2;
      $log->save();
      Session::flash('success', 'Transportation details successfully edited!');
      return redirect()->route('transportation.index');
@@ -142,6 +144,7 @@ class TransportationController extends Controller
          $log = new Log;
          $log->user_id=Auth::user()->id;
          $log->action="Deleted a Transportation";
+         $log->actionval = 3;
          $log->save();
          Session::flash('success', 'Transportation details succesfully removed!');
          return redirect()->route('transportation.index');

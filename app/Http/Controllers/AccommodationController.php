@@ -68,6 +68,7 @@ class AccommodationController extends Controller
        $accommodations->isFull = $request->isFull;
        $log->user_id=Auth::user()->id;
        $log->action="Added Accommodation";
+       $log->actionval = 1;
        $log->save();
        $accommodations->save();
        $request->session()->flash('success', 'Accommodation Details successfully added!');
@@ -119,6 +120,7 @@ class AccommodationController extends Controller
     $input = $request->all();
     $log->user_id=Auth::user()->id;
     $log->action="Updated an accommodation";
+    $log->actionval = 2;
     $log->save();
     $acc->fill($input)->save();
     Session::flash('success', 'Accommodation details successfully edited!');
@@ -137,6 +139,7 @@ class AccommodationController extends Controller
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->action="Deleted an Accommodation";
+        $log->actionval = 3;
         $log->save();
         $acc->delete();
         Session::flash('success', 'Accommodation details successfully removed!');

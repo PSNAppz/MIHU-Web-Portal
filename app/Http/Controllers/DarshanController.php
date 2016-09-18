@@ -66,6 +66,7 @@ class DarshanController extends Controller
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->action="Created Darshan Timing";
+        $log->actionval = 1;
         $log->save();
         $darshan->save();
         $request->session()->flash('success', 'Darshan Timings successfully added!');
@@ -117,6 +118,7 @@ class DarshanController extends Controller
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->action="Updated Darshan Timing";
+      $log->actionval = 2;
       $log->save();
       $dar->fill($input)->save();
       Session::flash('success', 'Darshan details successfully edited!');
@@ -135,6 +137,7 @@ class DarshanController extends Controller
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->action="Deleted Darshan Timing";
+      $log->actionval = 3;
       $log->save();
       $dar->delete();
       Session::flash('success', 'Darshan details successfully removed!');

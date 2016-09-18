@@ -64,6 +64,7 @@ class CoordinatorController extends Controller
        $log = new Log;
        $log->user_id=Auth::user()->id;
        $log->action="Created a Coordinator";
+       $log->actionval = 1;
        $log->save();
        $coordinators->save();
        $request->session()->flash('success', 'Coordinator Details successfully added!');
@@ -113,6 +114,7 @@ class CoordinatorController extends Controller
             $log = new Log;
             $log->user_id=Auth::user()->id;
             $log->action="Updated a Coordinator";
+            $log->actionval = 2;
             $log->save();
             $cord->fill($input)->save();
             Session::flash('success', 'Coordinator details successfully edited!');
@@ -131,6 +133,7 @@ class CoordinatorController extends Controller
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->action="Deleted a Coordinator";
+        $log->actionval = 3;
         $log->save();
         $cord->delete();
         Session::flash('success', 'Coordinator details successfully removed!');
