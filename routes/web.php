@@ -16,6 +16,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/about',function() {
+    return view('about');
+});
 
 Route::get('/home', 'HomeController@index');
 Route::get('/home/clearlogs', 'HomeController@destroy');
