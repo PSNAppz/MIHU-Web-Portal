@@ -25,17 +25,20 @@
         <li><a data-toggle="tab" href="#seventpension"><b>Pension Distribution</b></a></li>
         <li><a data-toggle="tab" href="#seventmarriage"><b>Marriage</b></a></li>
      </ul>
- </div>
 <div class="tab-content">
 <div id="seventsaree" class="tab-pane active">
-    <h3 align='center'>Saree Distribution Details</h3>
+    <h3>Saree Distribution Details</h3>
+    @if(!Auth::guest())
+    <a class="btn btn-success" href="{{ url('/specialevent/create') }}" role="button">Add New</a>
+    <a  id="xlsf" href="{{ URL::to('downloadExcel/specialevent/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
+    <a id="xlsxf" href="{{ URL::to('downloadExcel/specialevent/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
+    <a id="csvf" href="{{ URL::to('downloadExcel/specialevent/csv') }}"><button class="btn btn-info">Download CSV</button></a>
+@endif
+
+    <hr>
       <div class="container">
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
-                  @if(!Auth::guest())
-                  <a class="btn btn-success" href="{{ url('/specialevents/create') }}" role="button">Add Event</a>
-                  @endif
-                  <hr>
                   <div class="panel panel-default">
                       <div class="panel-body">
                           <div style="overflow-x:auto;">
@@ -188,7 +191,8 @@
           </div>
       </div>
       {{$se->links()}}
-
+  </div>
+  </div>
 </div>
 @include('layouts.footer')
 @endsection

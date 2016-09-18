@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Faq extends Model
+class ImportExport extends Model
 {
-    protected $fillable = ['ques', 'ans'];
+    //
 }

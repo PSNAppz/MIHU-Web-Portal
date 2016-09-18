@@ -19,7 +19,7 @@
             Medical Assistance
         </div>
         @if(!Auth::guest())
-        <a class="btn btn-success" href="{{ url('/medical/create') }}" role="button">Add New Medical Details</a>
+        <a class="btn btn-success" href="{{ url('/medical/create') }}" role="button">Add New</a>
         @endif
     </div>
 <div class="container">

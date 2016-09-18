@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 use App\Darshan as Darshu;
 use Session;
 use View;
+use App\Log;
+use Auth;
 
 class DarshanController extends Controller
 {
@@ -21,7 +23,7 @@ class DarshanController extends Controller
      {
          $this->middleware('auth',['only' => 'create','store','edit','update','destroy']);
      }
-      
+
     public function index()
     {
       $darshan = Darshu::paginate(15);
@@ -61,6 +63,11 @@ class DarshanController extends Controller
         $darshan->token_time = $request->token_time;
         $darshan->contact_name = $request->contact_name;
         $darshan->contact_no = $request->contact_no;
+        $log = new Log;
+        $log->user_id=Auth::user()->id;
+        $log->action="Created Darshan Timing";
+        $log->actionval = 1;
+        $log->save();
         $darshan->save();
         $request->session()->flash('success', 'Darshan Timings successfully added!');
         return redirect()->route('darshan.index');
@@ -108,6 +115,11 @@ class DarshanController extends Controller
           ));
 
       $input = $request->all();
+      $log = new Log;
+      $log->user_id=Auth::user()->id;
+      $log->action="Updated Darshan Timing";
+      $log->actionval = 2;
+      $log->save();
       $dar->fill($input)->save();
       Session::flash('success', 'Darshan details successfully edited!');
       return redirect()->route('darshan.index');
@@ -122,6 +134,11 @@ class DarshanController extends Controller
     public function destroy($id)
     {
       $dar = Darshu::find($id);
+      $log = new Log;
+      $log->user_id=Auth::user()->id;
+      $log->action="Deleted Darshan Timing";
+      $log->actionval = 3;
+      $log->save();
       $dar->delete();
       Session::flash('success', 'Darshan details successfully removed!');
       return redirect()->route('darshan.index');

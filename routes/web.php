@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/home/clearlogs', 'HomeController@destroy');
 
 //Coordinator
 Route::resource('coordinator','CoordinatorController');
@@ -51,3 +52,6 @@ Route::resource('security','SecurityController');
 
 //Faq
 Route::resource('faq','FaqController');
+
+Route::get('downloadExcel/{database}/{type}', 'ImportExportController@downloadExcel');
+Route::post('importExcel/{database}', 'ImportExportController@importExcel');
