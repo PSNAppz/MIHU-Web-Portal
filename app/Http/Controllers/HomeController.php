@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Log;
 use Session;
 use DB;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -26,8 +27,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $logs = Log::paginate(15);
-        return view('home')->withLogs($logs);
+        $logs = Log::all();
+        $users = User::all();
+        return view('home',compact('logs','users'));
     }
     public function destroy()
     {
