@@ -29,7 +29,7 @@
 <div id="seventsaree" class="tab-pane active">
     <h3>Saree Distribution Details</h3>
     @if(!Auth::guest())
-    <a class="btn btn-success" href="{{ url('/specialevent/create') }}" role="button">Add New</a>
+    <a class="btn btn-success" href="{{ url('/specialevents/create') }}" role="button">Add New</a>
     <a  id="xlsf" href="{{ URL::to('downloadExcel/specialevent/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
     <a id="xlsxf" href="{{ URL::to('downloadExcel/specialevent/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
     <a id="csvf" href="{{ URL::to('downloadExcel/specialevent/csv') }}"><button class="btn btn-info">Download CSV</button></a>
@@ -44,7 +44,6 @@
                           <div style="overflow-x:auto;">
                           <table class="table">
                           <thead>
-                              <th></th>
                               <th>Date</th>
                               <th>Time</th>
                               <th>Location</th>
@@ -90,7 +89,7 @@
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
                   @if(!Auth::guest())
-                  <a class="btn btn-success" href="{{ url('/specialevents/create') }}" role="button">Add New Accommodation Details</a>
+                  <a class="btn btn-success" href="{{ url('/specialevents/create') }}" role="button">Add New</a>
                   @endif
                   <hr>
                   <div class="panel panel-default">
@@ -98,7 +97,6 @@
                           <div style="overflow-x:auto;">
                           <table class="table">
                           <thead>
-                              <th></th>
                               <th>Date</th>
                               <th>Time</th>
                               <th>Location</th>
@@ -145,7 +143,7 @@
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
                   @if(!Auth::guest())
-                  <a class="btn btn-success" href="{{ url('/specialevents/create') }}" role="button">Add New Accommodation Details</a>
+                  <a class="btn btn-success" href="{{ url('/specialevents/create') }}" role="button">Add New</a>
                   @endif
                   <hr>
                   <div class="panel panel-default">
@@ -153,7 +151,6 @@
                           <div style="overflow-x:auto;">
                           <table class="table">
                            <thead>
-                              <th></th>
                               <th>Date</th>
                               <th>Time</th>
                               <th>Location</th>
