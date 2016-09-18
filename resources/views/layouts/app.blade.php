@@ -110,7 +110,7 @@
         </div>
     </nav>
 <div class ="wrapper">
-    @include('messages');
+    @include('messages')
     @yield('content')
   </div>
     <!-- Scripts -->
