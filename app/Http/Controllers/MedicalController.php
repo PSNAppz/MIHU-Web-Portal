@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-
 use App\Medical as Medical;
-
+use App\Log;
+use Auth;
 use Session;
 
 class MedicalController extends Controller
@@ -55,7 +54,10 @@ class MedicalController extends Controller
              'side'     => 'required|max:255',
          ));
       // store in the database
-
+      $log = new Log;
+      $log->user_id=Auth::user()->id;
+      $log->action="Added a Medic";
+      $log->save();
       $medical = new Medical;
       $medical->loc = $request->loc;
       $medical->doc = $request->doc;
@@ -107,7 +109,10 @@ class MedicalController extends Controller
               'contact'  => 'required|max:255',
               'dis'      => 'required|max:255',
           ));
-
+          $log = new Log;
+          $log->user_id=Auth::user()->id;
+          $log->action="Updated a Medic";
+          $log->save();
       $input = $request->all();
       $medical->fill($input)->save();
       Session::flash('success', 'Medical details successfully edited!');
@@ -122,6 +127,10 @@ class MedicalController extends Controller
      */
     public function destroy($id)
     {
+        $log = new Log;
+        $log->user_id=Auth::user()->id;
+        $log->action="Deleted a Medic";
+        $log->save();
       $medical = Medical::find($id);
       $medical->delete();
       Session::flash('success', 'Medical details successfully removed!');

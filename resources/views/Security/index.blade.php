@@ -29,13 +29,17 @@
 <div class="tab-content">
 <div id="secpoint" class="tab-pane active">
     <h3>Security Points Details</h3>
+    @if(!Auth::guest())
+    <a class="btn btn-success" href="{{ url('/security/create') }}" role="button">Add New</a>
+    <a  id="xlsf" href="{{ URL::to('downloadExcel/security/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
+    <a id="xlsxf" href="{{ URL::to('downloadExcel/security/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
+    <a id="csvf" href="{{ URL::to('downloadExcel/security/csv') }}"><button class="btn btn-info">Download CSV</button></a>
+@endif
+
+    <hr>
       <div class="container">
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
-                  @if(!Auth::guest())
-                  <a class="btn btn-success" href="{{ url('/security/create') }}" role="button">Add New Security Details</a>
-                  <hr>
-                  @endif
                   <div class="panel panel-default">
                       <div class="panel-body">
                           <div style="overflow-x:auto;">

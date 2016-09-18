@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 use App\Media as Medi;
 use View;
 use Session;
+use App\Log;
+use Auth;
 
 class MediaController extends Controller
 {
@@ -91,6 +93,10 @@ class MediaController extends Controller
           ));
 
       $input = $request->all();
+      $log = new Log;
+      $log->user_id=Auth::user()->id;
+      $log->action="Updated a Media";
+      $log->save();
       $media->fill($input)->save();
       Session::flash('success', 'Media details updated!');
       return redirect()->route('media.index');

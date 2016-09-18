@@ -9,13 +9,15 @@ use App\Darshan as Darshu;
 use App\Food as Foo;
 use App\Security as Sec;
 use App\Coordinator as Cord;
-use Illute\Support\Facades\Input;
+use App\SpecialEvent as SE;
+use App\Medical as Med;
 use App\Http\Requests;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\DB;
 use Session;
 use View;
 use App\Darshan;
+use Illuminate\Support\Facades\Input;
 
 class ImportExportController extends Controller
 {
@@ -23,17 +25,11 @@ class ImportExportController extends Controller
     {
         $this->middleware('auth');
     }
-
-
-        public function importExport()
-    	{
-    		return view('ImportExport.index');
-    	}
     	public function downloadExcel($database,$type)
     	{
             if($database=="accommodations"){
     		$data = Acc::get()->toArray();
-    		return Excel::create('accommodations', function($excel) use ($data) {
+    		return Excel::create('AccommodationMIHU', function($excel) use ($data) {
     			$excel->sheet('mySheet', function($sheet) use ($data)
     	        {
     				$sheet->fromArray($data);
@@ -42,7 +38,7 @@ class ImportExportController extends Controller
             }
             if($database=="transport"){
     		$data = Trans::get()->toArray();
-    		return Excel::create('transportations', function($excel) use ($data) {
+    		return Excel::create('TransportationMIHU', function($excel) use ($data) {
     			$excel->sheet('mySheet', function($sheet) use ($data)
     	        {
     				$sheet->fromArray($data);
@@ -50,8 +46,8 @@ class ImportExportController extends Controller
     		})->download($type);
             }
             if($database=="darshan"){
-    		$data = Faq::get()->toArray();
-    		return Excel::create('darshans', function($excel) use ($data) {
+    		$data = Darshu::get()->toArray();
+    		return Excel::create('DarshanMIHU', function($excel) use ($data) {
     			$excel->sheet('mySheet', function($sheet) use ($data)
     	        {
     				$sheet->fromArray($data);
@@ -59,8 +55,8 @@ class ImportExportController extends Controller
     		})->download($type);
             }
             if($database=="security"){
-    		$data = Faq::get()->toArray();
-    		return Excel::create('securities', function($excel) use ($data) {
+    		$data = Sec::get()->toArray();
+    		return Excel::create('SecurityMIHU', function($excel) use ($data) {
     			$excel->sheet('mySheet', function($sheet) use ($data)
     	        {
     				$sheet->fromArray($data);
@@ -68,17 +64,8 @@ class ImportExportController extends Controller
     		})->download($type);
             }
             if($database=="specialevent"){
-            $data = Trans::get()->toArray();
-            return Excel::create('specialevents', function($excel) use ($data) {
-                $excel->sheet('mySheet', function($sheet) use ($data)
-                {
-                    $sheet->fromArray($data);
-                });
-            })->download($type);
-            }
-            if($database=="medical"){
-            $data = Trans::get()->toArray();
-            return Excel::create('medicals', function($excel) use ($data) {
+            $data = SE::get()->toArray();
+            return Excel::create('SpecialeventsMIHU', function($excel) use ($data) {
                 $excel->sheet('mySheet', function($sheet) use ($data)
                 {
                     $sheet->fromArray($data);
@@ -86,8 +73,8 @@ class ImportExportController extends Controller
             })->download($type);
             }
             if($database=="food"){
-            $data = Trans::get()->toArray();
-            return Excel::create('foods', function($excel) use ($data) {
+            $data = Foo::get()->toArray();
+            return Excel::create('FoodMIHU', function($excel) use ($data) {
                 $excel->sheet('mySheet', function($sheet) use ($data)
                 {
                     $sheet->fromArray($data);
@@ -95,8 +82,8 @@ class ImportExportController extends Controller
             })->download($type);
             }
             if($database=="coordinator"){
-            $data = Trans::get()->toArray();
-            return Excel::create('coordinators', function($excel) use ($data) {
+            $data = Cord::get()->toArray();
+            return Excel::create('CoordinatorsMIHU', function($excel) use ($data) {
                 $excel->sheet('mySheet', function($sheet) use ($data)
                 {
                     $sheet->fromArray($data);
@@ -143,7 +130,7 @@ class ImportExportController extends Controller
                         'dest' => $value->dest,
                         'deptime' => $value->deptime,
                         'parking'=> $value->parking,
-                        'status'=>$value->status;
+                        'status'=>$value->status
                     ]);
                     }
                         dd('Insert Record successfully.');
@@ -221,7 +208,7 @@ class ImportExportController extends Controller
                         Sec::create([
                         'name' => $value->name,
                         'iscord' => $value->iscord,
-                        'location' => $value->from,
+                        'location' => $value->location,
                         'nearby' => $value->nearby,
                         'from' => $value->from,
                         'to'=> $value->to,
@@ -234,21 +221,21 @@ class ImportExportController extends Controller
                 }
             }
         }
-        elseif($database == 'medical'){
+        elseif($database == 'specialevent'){
             if(Input::hasFile('import_file')){
                 $path = Input::file('import_file')->getRealPath();
                 $data = Excel::load($path, function($reader) {
                 })->get();
                 if(!empty($data) && $data->count()){
                     foreach ($data as $key => $value) {
-                        Acc::create([
+                        SE::create([
                         'busno' => $value->busno,
                         'contact' => $value->contact,
                         'from' => $value->from,
                         'dest' => $value->dest,
                         'deptime' => $value->deptime,
                         'parking'=> $value->parking,
-                        'status'=>$value->status;
+                        'status'=>$value->status
                     ]);
                     }
                         dd('Insert Record successfully.');
