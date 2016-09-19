@@ -65,6 +65,7 @@ class SpecialEventController extends Controller
         $se->contact = $request->contact;
         $log = new Log;
         $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
         $log->action="Added a Special Event";
         $log->actionval = 1;
         $log->save();
@@ -118,6 +119,7 @@ class SpecialEventController extends Controller
         $se->fill($input)->save();
         $log = new Log;
         $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
         $log->action="Updated a Special Event";
         $log->actionval = 2;
         $log->save();
@@ -137,6 +139,7 @@ class SpecialEventController extends Controller
         $se->delete();
         $log = new Log;
         $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
         $log->action="Deleted a Special Event";
         $log->actionval = 3;
         $log->save();

@@ -63,6 +63,7 @@ class CoordinatorController extends Controller
        $coordinators->contact = $request->contact;
        $log = new Log;
        $log->user_id=Auth::user()->id;
+       $log->name=Auth::user()->name;
        $log->action="Created a Coordinator";
        $log->actionval = 1;
        $log->save();
@@ -113,6 +114,7 @@ class CoordinatorController extends Controller
             $input = $request->all();
             $log = new Log;
             $log->user_id=Auth::user()->id;
+            $log->name=Auth::user()->name;
             $log->action="Updated a Coordinator";
             $log->actionval = 2;
             $log->save();
@@ -132,6 +134,7 @@ class CoordinatorController extends Controller
         $cord = Coordinator::find($id);
         $log = new Log;
         $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
         $log->action="Deleted a Coordinator";
         $log->actionval = 3;
         $log->save();

@@ -70,6 +70,7 @@ class TransportationController extends Controller
        $transportations->save();
        $log = new Log;
        $log->user_id=Auth::user()->id;
+       $log->name=Auth::user()->name;
        $log->action="Added a Transportation";
        $log->actionval = 1;
        $log->save();
@@ -124,6 +125,7 @@ class TransportationController extends Controller
      $tr->fill($input)->save();
      $log = new Log;
      $log->user_id=Auth::user()->id;
+     $log->name=Auth::user()->name;
      $log->action="Updated a Transportation";
      $log->actionval = 2;
      $log->save();
@@ -143,6 +145,7 @@ class TransportationController extends Controller
          $tr->delete();
          $log = new Log;
          $log->user_id=Auth::user()->id;
+         $log->name=Auth::user()->name;
          $log->action="Deleted a Transportation";
          $log->actionval = 3;
          $log->save();

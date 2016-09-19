@@ -65,6 +65,7 @@ class DarshanController extends Controller
         $darshan->contact_no = $request->contact_no;
         $log = new Log;
         $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
         $log->action="Created Darshan Timing";
         $log->actionval = 1;
         $log->save();
@@ -117,6 +118,7 @@ class DarshanController extends Controller
       $input = $request->all();
       $log = new Log;
       $log->user_id=Auth::user()->id;
+      $log->name=Auth::user()->name;
       $log->action="Updated Darshan Timing";
       $log->actionval = 2;
       $log->save();
@@ -136,6 +138,7 @@ class DarshanController extends Controller
       $dar = Darshu::find($id);
       $log = new Log;
       $log->user_id=Auth::user()->id;
+      $log->name=Auth::user()->name;
       $log->action="Deleted Darshan Timing";
       $log->actionval = 3;
       $log->save();

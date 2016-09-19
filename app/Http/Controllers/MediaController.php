@@ -95,6 +95,7 @@ class MediaController extends Controller
       $input = $request->all();
       $log = new Log;
       $log->user_id=Auth::user()->id;
+      $log->name=Auth::user()->name;
       $log->action="Updated a Media";
       $log->actionval = 2;
       $log->save();

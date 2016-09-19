@@ -47,20 +47,13 @@
                     <th><a href="{{ URL::to('home/clearlogs') }}"><button class="btn btn-danger">Clear Logs</button></a></th>
                     <hr>
                     @foreach($logs as $log)
-                        @if($users->where('id','=',$log->user_id))
-                            @foreach($users as $u)
-                                @if($log->user_id==$u->id)
-                        <p><b>#{{$log->id}}</b> {{ $u->name}} @if($log->actionval == 1)<span class="label label-success">{{$log->action}}</span>
+                        <p><b>#{{$log->id}}</b> {{ $log->name}} @if($log->actionval == 1)<span class="label label-success">{{$log->action}}</span>
                         @elseif($log->actionval == 2)
                             <span class="label label-warning">{{$log->action}}</span>
                         @else
                             <span class="label label-danger">{{$log->action}}</span>
                         @endif
                               {{ $log->created_at}}</p>
-                          @endif
-                          @endforeach
-
-                          @endif
                     @endforeach
             </div>
 

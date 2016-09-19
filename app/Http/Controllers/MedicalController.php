@@ -56,6 +56,7 @@ class MedicalController extends Controller
       // store in the database
       $log = new Log;
       $log->user_id=Auth::user()->id;
+      $log->name=Auth::user()->name;
       $log->action="Added a Medic";
       $log->actionval = 1;
       $log->save();
@@ -112,6 +113,7 @@ class MedicalController extends Controller
           ));
           $log = new Log;
           $log->user_id=Auth::user()->id;
+          $log->name=Auth::user()->name;
           $log->action="Updated a Medic";
           $log->actionval = 2;
           $log->save();
@@ -131,6 +133,7 @@ class MedicalController extends Controller
     {
         $log = new Log;
         $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
         $log->action="Deleted a Medic";
         $log->actionval = 3;
         $log->save();
