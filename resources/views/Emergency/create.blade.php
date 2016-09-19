@@ -1,4 +1,4 @@
-@extends('layouts.app')
+  @extends('layouts.app')
 
 @section('content')
 <style>
@@ -16,23 +16,19 @@
 </style>
     <div class="content">
         <div class="title m-b-md">
-            Add Doctor Details
+            Add Emergency Details
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                    {!! Form::open(array('route' => 'medical.store','data-parsley-validate' => '')) !!}
-                    {{ Form::label('side', 'Select area:') }}
-                    {{ Form::select('side', array('0' => 'Ashram', '1' => 'College'), null, array('class' => 'form-control'))}}
-                    {{ Form::label('loc','Location:')}}
-                    {{ Form::text('loc',null,array('class'=> 'form-control','required' => ''))}}
-                    {{ Form::label('doc','Doctor name:')}}
-                    {{ Form::text('doc',null,array('class'=> 'form-control','required'=> ''))}}
+                    {!! Form::open(array('route' => 'emergency.store','data-parsley-validate' => '')) !!}
+                    {{ Form::label('service', 'Select service:') }}
+                    {{ Form::select('service', array('Ambulance' => 'Ambulance', 'Wheelchair' => 'Wheelchair'), null, array('class' => 'form-control'))}}
+                    {{ Form::label('name','Name:')}}
+                    {{ Form::text('name',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('contact','Phone:')}}
                     {{ Form::text('contact',null,array('class'=> 'form-control','required'=> ''))}}
-                    {{ Form::label('dis', 'Discipline:') }}
-        			      {{ Form::select('dis', array('Allopathy' => 'Allopathy', 'Ayurveda' => 'Ayurveda'), null, array('class' => 'form-control'))}}
                     {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
                     <a class="btn btn-danger btn-block" href="{{ url('/medical') }}" role="button">Cancel</a>
 

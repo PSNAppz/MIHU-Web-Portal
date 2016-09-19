@@ -28,6 +28,21 @@ Route::resource('accommodation','AccommodationController');
 //Medical
 Route::resource('medical','MedicalController');
 
+//Emergency
+//Route::get('emergency/create','EmergencyController@create');
+//Route::post('emergency/store','EmergencyController@store');
+//Route::get('emergency/edit','EmergencyController@edit');
+Route::resource('emergency','EmergencyController',
+                  ['names'=>[
+                              'index'=>'medical.index',
+                              'store'=>'emergency.store',
+                              'edit'=>'emergency.edit',
+                              'update'=>'emergency.update',
+                              'destroy'=>'emergency.destroy'
+                            ]
+
+                  ]);
+
 //News & Media
 Route::resource('media','MediaController');
 

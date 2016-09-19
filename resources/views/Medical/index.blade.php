@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -19,14 +20,17 @@
             Medical Assistance
         </div>
         @if(!Auth::guest())
-        <a class="btn btn-success" href="{{ url('/medical/create') }}" role="button">Add New Medical Details</a>
+        <a class="btn btn-success" href="{{ url('/medical/create') }}" role="button">Add New Doctor Details</a>
+        @endif
+        @if(!Auth::guest())
+        <a class="btn btn-success" href="{{ url('/emergency/create') }}" role="button">Add New Emergency Details</a>
         @endif
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#biotech"><b>Ashram Side</b></a></li>
     <li><a data-toggle="tab" href="#stage"><b>College Side</b></a></li>
-
+    <li><a data-toggle="tab" href="#emer"><b>Emergency</b></a></li>
 
   </ul>
   <div class="tab-content">
@@ -148,6 +152,73 @@
                 </div>
             </div>
         </div>
+</div>
+<div id="emer" class="tab-pane fade">
+    <h3></h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <hr>
+            <center style="font-size:20px"><strong>Ambulance</strong></center>
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+
+                  <table class="table">
+                    <thead>
+                      <th>Name</th>
+                      <th>Contact</th>
+                    </thead>
+                    <tbody>
+                      @foreach($emergency as $emer)
+                          <tr>
+                            @if($emer->service=='Ambulance')
+                              <th>{{ $emer->name}}</th>
+                              <th>{{ $emer->contact}}</th>
+                              @if(!Auth::guest())
+                              <th><a class="btn btn-warning" href="{{ route('emergency.edit', $emer->id,'/edit') }}" role="button">Update</a></th>
+                              <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['emergency.destroy', $emer->id]]) }}
+                              {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                              {{ Form::close() }}</th>
+                              @endif
+                            @endif
+                          </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <hr>
+              <center style="font-size:20px"><strong>Wheelchair</strong></center>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <table class="table">
+                    <thead>
+                      <th>Name</th>
+                      <th>Contact</th>
+                    </thead>
+                    <tbody>
+                      @foreach($emergency as $emer)
+                          <tr>
+                            @if($emer->service=='Wheelchair')
+                              <th>{{ $emer->name}}</th>
+                              <th>{{ $emer->contact}}</th>
+                              @if(!Auth::guest())
+                              <th><a class="btn btn-warning" href="{{ route('emergency.edit', $emer->id,'/edit') }}" role="button">Update</a></th>
+                              <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['emergency.destroy', $emer->id]]) }}
+                              {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                              {{ Form::close() }}</th>
+                              @endif
+                            @endif
+                          </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 </div>
