@@ -91,7 +91,7 @@ class ImportExportController extends Controller
                 });
             })->download($type);
             }
-            if($database=="volunteers"){
+            if($database=="volunteer"){
             $data = Vol::get()->toArray();
             return Excel::create('VolunteersMIHU', function($excel) use ($data) {
                 $excel->sheet('mySheet', function($sheet) use ($data)
@@ -125,7 +125,7 @@ class ImportExportController extends Controller
     			}
     		}
         }
-            elseif($database =='volunteers'){
+            elseif($database =='volunteer'){
                 if(Input::hasFile('import_file')){
                     $path = Input::file('import_file')->getRealPath();
                     $data = Excel::load($path, function($reader) {

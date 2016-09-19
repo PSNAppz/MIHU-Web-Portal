@@ -54,7 +54,7 @@ class VolunteerController extends Controller
                     'batch'         => 'required|max:255',
                     'campus'        => 'required|max:255',
                     'contact'       => 'required|numeric',
-                    'seva'          => 'required|numeric',
+                    'seva'          => 'required|max:255',
                     'cordname'      => 'required|max:255',
                     'cordcontact'   => 'required|numeric',
 
@@ -117,7 +117,7 @@ class VolunteerController extends Controller
                      'batch'         => 'required|max:255',
                      'campus'        => 'required|max:255',
                      'contact'       => 'required|numeric',
-                     'seva'          => 'required|numeric',
+                     'seva'          => 'required|max:255',
                      'cordname'      => 'required|max:255',
                      'cordcontact'   => 'required|numeric',
 

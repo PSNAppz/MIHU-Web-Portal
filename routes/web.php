@@ -26,6 +26,9 @@ Route::get('/home/clearlogs', 'HomeController@destroy');
 //Coordinator
 Route::resource('coordinator','CoordinatorController');
 
+//Coordinator
+Route::resource('volunteer','VolunteerController');
+
 //Accomodation
 Route::resource('accommodation','AccommodationController');
 

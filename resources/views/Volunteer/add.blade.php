@@ -16,23 +16,29 @@
 </style>
     <div class="content">
         <div class="title m-b-md">
-            Add Coordinator Details
+            Add Volunteer Details
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                     {!! Form::open(array('route' => 'volunteer.store','data-parsley-validate' => '')) !!}
-                    {{ Form::label('occupation', 'For:') }}
-                    {{ Form::select('occupation', array('1' => 'Student', '2' => 'Faculty','3' => 'Others'), null, array('class' => 'form-control'))}}
-                    {{ Form::label('name','Name:')}}
+                    {{ Form::label('name', 'Name:') }}
                     {{ Form::text('name',null,array('class'=> 'form-control','required' => ''))}}
+                    {{ Form::label('campus','Campus:')}}
+                    {{ Form::select('campus', array('1' => 'Amritapuri', '2' => 'Kochi','3' => 'Coimbatore','4' => 'Mysore'), null, array('class' => 'form-control'))}}
+                    {{ Form::label('batch','Batch:')}}
+                    {{ Form::text('batch',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('seva','Seva:')}}
-                    {{ Form::text('seva',null,array('class'=> 'form-control','required'=> ''))}}
-                    {{ Form::label('contact','Contact No:')}}
+                    {{ Form::text('seva',null,array('class'=> 'form-control','required' => ''))}}
+                    {{ Form::label('contact','Contact:')}}
                     {{ Form::text('contact',null,array('class'=> 'form-control','required'=> ''))}}
+                    {{ Form::label('cordname','Coordinator:')}}
+                    {{ Form::text('cordname',null,array('class'=> 'form-control','required'=> ''))}}
+                    {{ Form::label('cordcontact','Coordinator Contact:')}}
+                    {{ Form::text('cordcontact',null,array('class'=> 'form-control','required'=> ''))}}
                     {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
-                    <a class="btn btn-danger btn-block" href="{{ url('/coordinator') }}" role="button">Cancel</a>
+                    <a class="btn btn-danger btn-block" href="{{ url('/volunteer') }}" role="button">Cancel</a>
 
                     {!! Form::close() !!}
             </div>
