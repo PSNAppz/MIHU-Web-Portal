@@ -57,6 +57,7 @@ class FaqController extends Controller
        // store in the database
        $log = new Log;
        $log->user_id=Auth::user()->id;
+       $log->name=Auth::user()->name;
        $log->action="Created a FAQ";
        $log->actionval = 1;
        $log->save();
@@ -110,6 +111,7 @@ class FaqController extends Controller
     $input = $request->all();
     $log = new Log;
     $log->user_id=Auth::user()->id;
+    $log->name=Auth::user()->name;
     $log->action="Updated a FAQ";
     $log->actionval = 2;
     $log->save();
@@ -129,6 +131,7 @@ class FaqController extends Controller
         $faq = Faq::find($id);
         $log = new Log;
         $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
         $log->action="Deleted a FAQ";
         $log->actionval = 3;
         $log->save();

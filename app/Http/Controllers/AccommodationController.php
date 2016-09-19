@@ -67,6 +67,7 @@ class AccommodationController extends Controller
        $accommodations->nearby = $request->nearby;
        $accommodations->isFull = $request->isFull;
        $log->user_id=Auth::user()->id;
+       $log->name=Auth::user()->name;
        $log->action="Added Accommodation";
        $log->actionval = 1;
        $log->save();
@@ -119,6 +120,7 @@ class AccommodationController extends Controller
 
     $input = $request->all();
     $log->user_id=Auth::user()->id;
+    $log->name=Auth::user()->name;
     $log->action="Updated an accommodation";
     $log->actionval = 2;
     $log->save();
@@ -138,6 +140,7 @@ class AccommodationController extends Controller
         $acc = Accommodation::find($id);
         $log = new Log;
         $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
         $log->action="Deleted an Accommodation";
         $log->actionval = 3;
         $log->save();

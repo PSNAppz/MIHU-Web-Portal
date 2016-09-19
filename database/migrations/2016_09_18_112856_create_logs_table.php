@@ -18,6 +18,7 @@ class CreateLogsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')
             ->onDelete('cascade')->onUpdate('cascade');
+            $table->string('name');
             $table->string('action');
             $table->integer('actionval');
             $table->timestamps();
@@ -31,6 +32,6 @@ class CreateLogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('loggers');
+        Schema::dropIfExists('logs');
     }
 }

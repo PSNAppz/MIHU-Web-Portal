@@ -65,6 +65,7 @@ class FoodController extends Controller
       $food->save();
       $log = new Log;
       $log->user_id=Auth::user()->id;
+      $log->name=Auth::user()->name;
       $log->action="Added a Food";
       $log->actionval = 1;
       $log->save();
@@ -117,6 +118,7 @@ class FoodController extends Controller
       $food->fill($input)->save();
       $log = new Log;
       $log->user_id=Auth::user()->id;
+      $log->name=Auth::user()->name;
       $log->action="Updated a Food";
       $log->actionval = 2;
       $log->save();
@@ -136,6 +138,7 @@ class FoodController extends Controller
       $food->delete();
       $log = new Log;
       $log->user_id=Auth::user()->id;
+      $log->name=Auth::user()->name;
       $log->action="Deleted a Food";
       $log->actionval = 3;
       $log->save();
