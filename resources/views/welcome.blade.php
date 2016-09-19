@@ -198,7 +198,7 @@
            <br>
            <div class ="row">
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg btn-block" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp&nbsp&nbspVCC</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/vcc" role="button"><span class="glyphicon glyphicon-heart"></span>&nbsp&nbsp&nbspVCC</a>
              </div>
              <div class="col-sm-4" >
                <a class="btn btn-primary btn-lg btn-block" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>&nbsp&nbsp Food</a>
@@ -222,13 +222,13 @@
          <br>
          <div class ="row">
            <div class="col-sm-4" >
-             <a class="btn btn-primary btn-lg btn-block" href="/schedules" role="button"><span class="glyphicon glyphicon-time"></span> Special Events</a>
+             <a class="btn btn-primary btn-lg btn-block" href="/schedules" role="button"><span class="glyphicon glyphicon-calendar"></span> Schedules</a>
           </div>
           <div class="col-sm-4" >
               <a class="btn btn-danger btn-lg btn-block" href="/coordinator" role="button"><span class="glyphicon glyphicon-star-empty"></span>&nbsp Coordinators</a>
           </div>
           <div class="col-sm-4" >
-           <a class="btn btn-primary btn-lg btn-block" href="/volunteer" role="button"><span class="glyphicon glyphicon-face"></span>&nbsp Volunteers</a>
+           <a class="btn btn-primary btn-lg btn-block" href="/volunteer" role="button"><span class="glyphicon glyphicon-user"></span>&nbsp Volunteers</a>
          </div>
        </div>
        <br>
