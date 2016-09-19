@@ -216,7 +216,7 @@
               <a class="btn btn-primary btn-lg btn-block" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>&nbsp Security</a>
             </div>
             <div class="col-sm-4" >
-             <a class="btn btn-primary btn-lg btn-block" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp Media</a>
+             <a class="btn btn-primary btn-lg btn-block" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp Press & Media</a>
            </div>
          </div>
          <br>
