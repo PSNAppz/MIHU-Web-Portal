@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use App\Security as Sec;
 use Session;
 use View;
+use App\Log;
+use Auth;
 
 class SecurityController extends Controller
 {
@@ -55,6 +57,12 @@ class SecurityController extends Controller
                'batch'          => 'required|max:255',
                'contact'          => 'required|max:255',
            ));
+           $log = new Log;
+           $log->user_id=Auth::user()->id;
+           $log->name=Auth::user()->name;
+           $log->action="Added a Security";
+           $log->actionval = 1;
+           $log->save();
        // store in the database
        $sec = new Sec;
        $sec->name = $request->name;
@@ -113,6 +121,12 @@ class SecurityController extends Controller
                 'batch'          => 'required|max:255',
                 'contact'          => 'required|max:255',
             ));
+            $log = new Log;
+            $log->user_id=Auth::user()->id;
+            $log->name=Auth::user()->name;
+            $log->action="Updated a Security";
+            $log->actionval = 2;
+            $log->save();
             $input = $request->all();
             $sec->fill($input)->save();
             Session::flash('success', 'Security details successfully edited!');
@@ -128,6 +142,12 @@ class SecurityController extends Controller
     public function destroy($id)
     {
         $sec = Sec::find($id);
+        $log = new Log;
+        $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
+        $log->action="Deleted a Security";
+        $log->actionval = 3;
+        $log->save();
         $sec->delete();
         Session::flash('success', 'Security details successfully removed!');
         return redirect()->route('security.index');

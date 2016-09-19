@@ -4,7 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Coordinator as Coordinator;
+use App\Accommodation;
+use Illuminate\Support\Facades\DB;
+use App\Coordinator;
+use Session;
+use View;
+use App\Log;
+use Auth;
+
 
 class CoordinatorController extends Controller
 {
@@ -54,6 +61,12 @@ class CoordinatorController extends Controller
        $coordinators->seva = $request->seva;
        $coordinators->occupation = $request->occupation;
        $coordinators->contact = $request->contact;
+       $log = new Log;
+       $log->user_id=Auth::user()->id;
+       $log->name=Auth::user()->name;
+       $log->action="Created a Coordinator";
+       $log->actionval = 1;
+       $log->save();
        $coordinators->save();
        $request->session()->flash('success', 'Coordinator Details successfully added!');
        return redirect()->route('coordinator.index');
@@ -78,8 +91,8 @@ class CoordinatorController extends Controller
      */
     public function edit($id)
     {
-        return view('Coordinator.edit');
-    }
+        $cord = Coordinator::find($id);
+        return view('Coordinator.edit')->withCord($cord);    }
 
     /**
      * Update the specified resource in storage.
@@ -99,6 +112,12 @@ class CoordinatorController extends Controller
                 'contact'          => 'required|numeric',
             ));
             $input = $request->all();
+            $log = new Log;
+            $log->user_id=Auth::user()->id;
+            $log->name=Auth::user()->name;
+            $log->action="Updated a Coordinator";
+            $log->actionval = 2;
+            $log->save();
             $cord->fill($input)->save();
             Session::flash('success', 'Coordinator details successfully edited!');
             return redirect()->route('coordinator.index');
@@ -113,6 +132,12 @@ class CoordinatorController extends Controller
     public function destroy($id)
     {
         $cord = Coordinator::find($id);
+        $log = new Log;
+        $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
+        $log->action="Deleted a Coordinator";
+        $log->actionval = 3;
+        $log->save();
         $cord->delete();
         Session::flash('success', 'Coordinator details successfully removed!');
         return redirect()->route('coordinator.index');

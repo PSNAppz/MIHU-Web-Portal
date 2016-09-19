@@ -7,6 +7,8 @@ use App\Transportation as Transport;
 use Session;
 use View;
 use App\Http\Requests;
+use App\Log;
+use Auth;
 
 class TransportationController extends Controller
 {
@@ -66,6 +68,12 @@ class TransportationController extends Controller
        $transportations->parking = $request->parking;
        $transportations->status = $request->status;
        $transportations->save();
+       $log = new Log;
+       $log->user_id=Auth::user()->id;
+       $log->name=Auth::user()->name;
+       $log->action="Added a Transportation";
+       $log->actionval = 1;
+       $log->save();
        $request->session()->flash('success', 'Transportation Details successfully added!');
        return redirect()->route('transportation.index');
     }
@@ -115,6 +123,12 @@ class TransportationController extends Controller
              ));
      $input = $request->all();
      $tr->fill($input)->save();
+     $log = new Log;
+     $log->user_id=Auth::user()->id;
+     $log->name=Auth::user()->name;
+     $log->action="Updated a Transportation";
+     $log->actionval = 2;
+     $log->save();
      Session::flash('success', 'Transportation details successfully edited!');
      return redirect()->route('transportation.index');
      }
@@ -129,6 +143,12 @@ class TransportationController extends Controller
      {
          $tr = Transport::find($id);
          $tr->delete();
+         $log = new Log;
+         $log->user_id=Auth::user()->id;
+         $log->name=Auth::user()->name;
+         $log->action="Deleted a Transportation";
+         $log->actionval = 3;
+         $log->save();
          Session::flash('success', 'Transportation details succesfully removed!');
          return redirect()->route('transportation.index');
      }

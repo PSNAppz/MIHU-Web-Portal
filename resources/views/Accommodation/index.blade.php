@@ -32,13 +32,17 @@
   <div id="men" class="tab-pane active">
         <h3>Accommodation Details For Men</h3>
         <p>Accommodation details for men are shown below.</p>
+        @if(!Auth::guest())
+        <a class="btn btn-success" href="{{ url('/accommodation/create') }}" role="button">Add New Accommodation Details</a>
+        <a  id="xlsf" href="{{ URL::to('downloadExcel/accommodations/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
+        <a id="xlsxf" href="{{ URL::to('downloadExcel/accommodations/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
+        <a id="csvf" href="{{ URL::to('downloadExcel/accommodations/csv') }}"><button class="btn btn-info">Download CSV</button></a>
+    @endif
+
+        <hr>
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                @if(!Auth::guest())
-                <a class="btn btn-success" href="{{ url('/accommodation/create') }}" role="button">Add New Accommodation Details</a>
-                @endif
-                <hr>
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div style="overflow-x:auto;">
@@ -255,7 +259,7 @@
           <div id="vip" class="tab-pane fade">
       <h3>VIP</h3>
       <p>The below chart shows the no of visits calculated in months of present year.</p>
-      
+
       <br>
       <br>
       <br>

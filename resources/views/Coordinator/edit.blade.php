@@ -16,13 +16,13 @@
 </style>
     <div class="content">
         <div class="title m-b-md">
-            Add Coordinator Details
+            Edit Coordinator Details
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                {{ Form::model($cord, array('route' => array('coordination.update', $cord->id),'data-parsley-validate' => '', 'method' => 'PUT')) }}
+                {{ Form::model($cord, array('route' => array('coordinator.update', $cord->id),'data-parsley-validate' => '', 'method' => 'PUT')) }}
                     {{ Form::label('occupation', 'For:') }}
                     {{ Form::select('occupation', array('1' => 'Student', '2' => 'Faculty','3' => 'Others'),$cord->occupation , array('class' => 'form-control'))}}
                     {{ Form::label('name','Name:')}}
@@ -31,7 +31,7 @@
                     {{ Form::text('seva',$cord->seva,array('class'=> 'form-control','required'=> ''))}}
                     {{ Form::label('contact','Contact No:')}}
                     {{ Form::text('contact',$cord->contact,array('class'=> 'form-control','required'=> ''))}}
-                    {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
+                    {{ Form::submit('Edit Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
                     <a class="btn btn-danger btn-block" href="{{ url('/coordinator') }}" role="button">Cancel</a>
 
                     {!! Form::close() !!}

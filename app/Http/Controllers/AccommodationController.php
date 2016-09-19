@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 use App\Accommodation as Accommodate;
 use Session;
 use View;
+use App\Log;
+use Auth;
 
 class AccommodationController extends Controller
 {
@@ -57,12 +59,18 @@ class AccommodationController extends Controller
                'isFull'          => 'required|numeric',
            ));
        // store in the database
+       $log = new Log;
        $accommodations = new Accommodate;
        $accommodations->gender = $request->gender;
        $accommodations->areaName = $request->areaName;
        $accommodations->locationofAcc = $request->locationofAcc;
        $accommodations->nearby = $request->nearby;
        $accommodations->isFull = $request->isFull;
+       $log->user_id=Auth::user()->id;
+       $log->name=Auth::user()->name;
+       $log->action="Added Accommodation";
+       $log->actionval = 1;
+       $log->save();
        $accommodations->save();
        $request->session()->flash('success', 'Accommodation Details successfully added!');
        return redirect()->route('accommodation.index');
@@ -101,7 +109,7 @@ class AccommodationController extends Controller
     public function update(Request $request, $id)
     {
         $acc = Accommodation::find($id);
-
+        $log = new Log;
         $this->validate($request, array(
                 'gender'          => 'required|numeric',
                 'areaName'        => 'required|max:255',
@@ -111,6 +119,11 @@ class AccommodationController extends Controller
             ));
 
     $input = $request->all();
+    $log->user_id=Auth::user()->id;
+    $log->name=Auth::user()->name;
+    $log->action="Updated an accommodation";
+    $log->actionval = 2;
+    $log->save();
     $acc->fill($input)->save();
     Session::flash('success', 'Accommodation details successfully edited!');
     return redirect()->route('accommodation.index');
@@ -125,9 +138,16 @@ class AccommodationController extends Controller
     public function destroy($id)
     {
         $acc = Accommodation::find($id);
+        $log = new Log;
+        $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
+        $log->action="Deleted an Accommodation";
+        $log->actionval = 3;
+        $log->save();
         $acc->delete();
         Session::flash('success', 'Accommodation details successfully removed!');
         return redirect()->route('accommodation.index');
     }
+
 
 }

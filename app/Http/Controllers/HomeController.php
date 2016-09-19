@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Log;
+use Session;
+use DB;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $logs = Log::all();
+        $users = User::all();
+        return view('home',compact('logs','users'));
+    }
+    public function destroy()
+    {
+      DB::table('logs')->truncate();
+      Session::flash('success', 'Logs Cleared');
+      return redirect()->back();
     }
 }

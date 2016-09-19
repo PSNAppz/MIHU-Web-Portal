@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Faq extends Model
+class Log extends Model
 {
-    protected $fillable = ['ques', 'ans'];
+    //
 }
