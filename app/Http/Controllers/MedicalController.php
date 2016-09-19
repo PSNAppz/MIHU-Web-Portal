@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Medical as Medical;
+use App\Emergency as Emergency;
 use App\Log;
 use Auth;
 use Session;
@@ -23,7 +24,8 @@ class MedicalController extends Controller
     public function index()
     {
       $medical = Medical::paginate(15);
-      return view('Medical.index')->withMedical($medical);
+      $emergency = Emergency::paginate(15);
+      return view('Medical.index')->withMedical($medical)->withEmergency($emergency);
 
     }
 
@@ -47,13 +49,18 @@ class MedicalController extends Controller
     {
       // validate the data
      $this->validate($request, array(
-             'loc'      => 'required|max:255',
-             'doc'      => 'required|max:255',
+             'service'      => 'required|max:255',
+             'name'      => 'required|max:255',
              'contact'  => 'required|max:255',
-             'dis'      => 'required|max:255',
-             'side'     => 'required|max:255',
          ));
       // store in the database
+<<<<<<< HEAD
+
+      $emergency = new Emergency;
+      $emergency->service = $request->service;
+      $emergency->name = $request->name;
+      $emergency->contact = $request->contact;
+=======
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->name=Auth::user()->name;
@@ -66,6 +73,7 @@ class MedicalController extends Controller
       $medical->contact = $request->contact;
       $medical->dis = $request->dis;
       $medical->side = $request->side;
+>>>>>>> origin/master
       $medical->save();
       //$medical->session()->flash('success', 'Medical Details successfully added!');
       return redirect()->route('medical.index');
@@ -90,8 +98,8 @@ class MedicalController extends Controller
      */
     public function edit($id)
     {
-      $medical = Medical::find($id);
-      return view('Medical.edit')->withMedical($medical);
+      $emergency = Emergency::find($id);
+      return view('Emergency/edit')->withEmergency($emergency);
     }
 
     /**
@@ -103,13 +111,12 @@ class MedicalController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $medical = Medical::find($id);
+      $emergency = Emergency::find($id);
 
       $this->validate($request, array(
-              'loc'      => 'required|max:255',
-              'doc'      => 'required|max:255',
+              'service'      => 'required|max:255',
+              'name'      => 'required|max:255',
               'contact'  => 'required|max:255',
-              'dis'      => 'required|max:255',
           ));
           $log = new Log;
           $log->user_id=Auth::user()->id;
@@ -118,8 +125,8 @@ class MedicalController extends Controller
           $log->actionval = 2;
           $log->save();
       $input = $request->all();
-      $medical->fill($input)->save();
-      Session::flash('success', 'Medical details successfully edited!');
+      $emergency->fill($input)->save();
+      Session::flash('success', 'Emergency details successfully edited!');
       return redirect()->route('medical.index');
     }
 
@@ -131,6 +138,11 @@ class MedicalController extends Controller
      */
     public function destroy($id)
     {
+<<<<<<< HEAD
+      $emergency = Emergency::find($id);
+      $emergency->delete();
+      Session::flash('success', 'Emergency details successfully removed!');
+=======
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->name=Auth::user()->name;
@@ -140,6 +152,7 @@ class MedicalController extends Controller
       $medical = Medical::find($id);
       $medical->delete();
       Session::flash('success', 'Medical details successfully removed!');
+>>>>>>> origin/master
       return redirect()->route('medical.index');
     }
 }
