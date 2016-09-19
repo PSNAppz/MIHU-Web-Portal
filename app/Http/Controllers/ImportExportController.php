@@ -11,6 +11,7 @@ use App\Security as Sec;
 use App\Coordinator as Cord;
 use App\SpecialEvent as SE;
 use App\Medical as Med;
+use App\Volunteer as Vol;
 use App\Http\Requests;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\DB;
@@ -90,6 +91,15 @@ class ImportExportController extends Controller
                 });
             })->download($type);
             }
+            if($database=="volunteers"){
+            $data = Vol::get()->toArray();
+            return Excel::create('VolunteersMIHU', function($excel) use ($data) {
+                $excel->sheet('mySheet', function($sheet) use ($data)
+                {
+                    $sheet->fromArray($data);
+                });
+            })->download($type);
+            }
     	}
 
     	public function importExcel($database)
@@ -110,11 +120,33 @@ class ImportExportController extends Controller
                         'isFull' => $value->isfull
                     ]);
     				}
-    					dd('Insert Record successfully.');
-                        redirect()->route('impexp');
+    					Session::flash('success', 'Insert Record successfully.');
+                        return redirect()->view('home');
     			}
     		}
         }
+            elseif($database =='volunteers'){
+                if(Input::hasFile('import_file')){
+                    $path = Input::file('import_file')->getRealPath();
+                    $data = Excel::load($path, function($reader) {
+                    })->get();
+                    if(!empty($data) && $data->count()){
+                        foreach ($data as $key => $value) {
+                            Vol::create([
+                                'name' => $value->name,
+                                'batch' => $value->areaname,
+                                'campus' => $value->locationofacc,
+                                'contact' => $value->contact,
+                                'seva' => $value->seva,
+                                'cordname' => $value->cordname,
+                                'cordcontact' => $value->cordcontact
+                            ]);
+                        }
+                        Session::flash('success', 'Insert Record successfully.');
+                        return redirect()->view('home');
+                    }
+                }
+            }
         //Faq
         elseif ($database == 'transport') {
             if(Input::hasFile('import_file')){
@@ -133,8 +165,8 @@ class ImportExportController extends Controller
                         'status'=>$value->status
                     ]);
                     }
-                        dd('Insert Record successfully.');
-                        redirect()->route('impexp');
+                        Session::flash('success', 'Insert Record successfully.');
+                        return redirect()->view('home');
                 }
             }
         }
@@ -154,8 +186,8 @@ class ImportExportController extends Controller
                         'contact_no'=> $value->contact_no
                     ]);
                     }
-                        dd('Insert Record successfully.');
-                        redirect()->route('impexp');
+                        Session::flash('success', 'Insert Record successfully.');
+                        return redirect()->view('home');
                 }
             }
         }
@@ -173,8 +205,8 @@ class ImportExportController extends Controller
                         'contact' => $value->contact
                     ]);
                     }
-                        dd('Insert Record successfully.');
-                        redirect()->route('impexp');
+                        Session::flash('success', 'Insert Record successfully.');
+                        return redirect()->view('home');
                 }
             }
         }
@@ -193,8 +225,8 @@ class ImportExportController extends Controller
                         'category' => $value->category
                     ]);
                     }
-                        dd('Insert Record successfully.');
-                        redirect()->route('impexp');
+                        Session::flash('success', 'Insert Record successfully.');
+                        return redirect()->view('home');
                 }
             }
         }
@@ -216,8 +248,8 @@ class ImportExportController extends Controller
                         'contact'=> $value->contact
                     ]);
                     }
-                        dd('Insert Record successfully.');
-                        redirect()->route('impexp');
+                        Session::flash('success', 'Insert Record successfully.');
+                        return redirect()->view('home');
                 }
             }
         }
@@ -238,13 +270,13 @@ class ImportExportController extends Controller
                         'status'=>$value->status
                     ]);
                     }
-                        dd('Insert Record successfully.');
-                        redirect()->route('impexp');
+                        Session::flash('success', 'Insert Record successfully.');
+                        return redirect()->view('home');
                 }
             }
         }
         else{
-            redirect()->route('impexp');
+            return redirect()->view('home');
         }
 
 
