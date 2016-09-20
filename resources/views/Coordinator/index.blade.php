@@ -154,7 +154,7 @@ html, body {
                               <tr>
                                 <th>Name</th>
                                 <th>Seva</th>
-                                <th>Occupation</th>
+                                <th>Department</th>
                                 <th>Contact</th>
                                 @if(!Auth::guest())
                                 <th>Update</th>
@@ -168,13 +168,7 @@ html, body {
 
                                         <th>{{ $cord->name}}</th>
                                         <th>{{ $cord->seva}}</th>
-                                        @if($cord->occupation == 1)
-                                        <th>Faculty</th>
-                                    @elseif($cord->occupation==2)
-                                        <th>Student</th>
-                                    @else
-                                        <th>Other</th>
-                                    @endif
+                                        <th>{{$cord->department}}</th>
                                         <th>{{ $cord->contact}}</th>
 
                                         @if(!Auth::guest())

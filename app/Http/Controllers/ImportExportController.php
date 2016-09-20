@@ -191,7 +191,7 @@ class ImportExportController extends Controller
                 }
             }
         }
-        elseif($database == 'coordinators'){
+        elseif($database == 'coordinator'){
             if(Input::hasFile('import_file')){
                 $path = Input::file('import_file')->getRealPath();
                 $data = Excel::load($path, function($reader) {
@@ -201,12 +201,12 @@ class ImportExportController extends Controller
                         Cord::create([
                         'name' => $value->name,
                         'seva' => $value->seva,
-                        'occupation' => $value->occupation,
+                        'department' => $value->department,
                         'contact' => $value->contact
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                    dd('Insert Record successfully.');
+-                        redirect()->route('coordinator');
                 }
             }
         }
@@ -276,7 +276,7 @@ class ImportExportController extends Controller
             }
         }
         else{
-            return redirect()->view('home');
+            return view('home');
         }
 
 

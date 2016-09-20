@@ -17,7 +17,7 @@ class CreateCoordinatorsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('seva');
-            $table->string('occupation');
+            $table->string('department');
             $table->string('contact');
             $table->timestamps();
         });

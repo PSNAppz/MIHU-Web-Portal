@@ -22,9 +22,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                {{ Form::model($cord, array('route' => array('coordinator.update', $cord->id),'data-parsley-validate' => '', 'method' => 'PUT')) }}
-                    {{ Form::label('occupation', 'For:') }}
-                    {{ Form::select('occupation', array('1' => 'Student', '2' => 'Faculty','3' => 'Others'),$cord->occupation , array('class' => 'form-control'))}}
+                    {{ Form::model($cord, array('route' => array('coordinator.update', $cord->id),'data-parsley-validate' => '', 'method' => 'PUT')) }}
+                    {{ Form::label('department', 'Department:') }}
+                    {{ Form::text('department',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('name','Name:')}}
                     {{ Form::text('name',$cord->name,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('seva','Seva:')}}
