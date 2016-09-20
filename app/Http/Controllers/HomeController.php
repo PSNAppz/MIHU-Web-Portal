@@ -7,6 +7,7 @@ use App\Log;
 use Session;
 use DB;
 use App\User;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -34,6 +35,12 @@ class HomeController extends Controller
     public function destroy()
     {
       DB::table('logs')->truncate();
+      $log = new Log;
+      $log->user_id=Auth::user()->id;
+      $log->name=Auth::user()->name;
+      $log->action="Cleared Logs";
+      $log->actionval = 3;
+      $log->save();
       Session::flash('success', 'Logs Cleared');
       return redirect()->back();
     }
