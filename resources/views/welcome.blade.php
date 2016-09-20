@@ -45,7 +45,7 @@
                   height:80vh;
                   background-image:url(./images/background.jpg);
                   background-repeat: no-repeat;
-                  background-attachment: fixed;
+                  //background-attachment: fixed;
                   background-position: center;
             }
 
