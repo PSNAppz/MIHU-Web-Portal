@@ -169,14 +169,14 @@
 </nav>
 
 
-        <div class = "flex-center position-ref full-height">
-            <div class = "content">
+   <div class = "flex-center position-ref full-height">
+                <!-- <div class = "content">
               <ul class="rslides">
                 <li><img src="images/amma1.jpg" alt=""></li>
                 <li><img src="images/amma2.jpg" alt=""></li>
                 <li><img src="images/amma3.jpg" alt=""></li>
               </ul>
-            </div>
+            </div>-->
         </div>
 
        <div class="jumbotron" style="margin-bottom: 0px">
