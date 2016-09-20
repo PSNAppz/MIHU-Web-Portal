@@ -51,14 +51,14 @@ class CoordinatorController extends Controller
        $this->validate($request, array(
                'name'          => 'required|max:255',
                'seva'        => 'required|max:255',
-               'occupation'   => 'required|max:255',
+               'department'   => 'required|max:255',
                'contact'          => 'required|numeric',
            ));
        // store in the database
        $coordinators = new Coordinator;
        $coordinators->name = $request->name;
        $coordinators->seva = $request->seva;
-       $coordinators->occupation = $request->occupation;
+       $coordinators->department = $request->department;
        $coordinators->contact = $request->contact;
        $log = new Log;
        $log->user_id=Auth::user()->id;
@@ -107,7 +107,7 @@ class CoordinatorController extends Controller
         $this->validate($request, array(
                 'name'          => 'required|max:255',
                 'seva'        => 'required|max:255',
-                'occupation'   => 'required|max:255',
+                'department'   => 'required|max:255',
                 'contact'          => 'required|numeric',
             ));
             $input = $request->all();
