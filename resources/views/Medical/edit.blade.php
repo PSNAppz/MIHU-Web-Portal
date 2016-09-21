@@ -29,8 +29,10 @@
             {{ Form::text('doc',$medical->locationofAcc,array('class'=> 'form-control','required'=> ''))}}
             {{ Form::label('contact','Phone:')}}
             {{ Form::text('contact',$medical->nearby,array('class'=> 'form-control','required'=> ''))}}
+            {{ Form::label('shift','Shift:')}}
+            {{ Form::select('shift', array('Day' => 'Day', 'Night' => 'Night'), $medical->shift, array('class' => 'form-control'))}}
             {{ Form::label('dis', 'Discipline:') }}
-			      {{ Form::select('dis', array('Allopathy' => 'Allopathy', 'Ayurveda' => 'Ayurveda'), $medical->isFull, array('class' => 'form-control'))}}
+			      {{ Form::select('dis', array('Allopathy' => 'Allopathy', 'Ayurveda' => 'Ayurveda'), $medical->dis, array('class' => 'form-control'))}}
             {{ Form::submit('Edit Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
             <a class="btn btn-danger btn-block" href="{{ url('/medical') }}" role="button">Cancel</a>
             {!! Form::close() !!}

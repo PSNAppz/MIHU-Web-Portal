@@ -48,17 +48,19 @@ class MedicalController extends Controller
     public function store(Request $request)
     {
       // validate the data
-     $this->validate($request, array(
-             'service'      => 'required|max:255',
-             'name'      => 'required|max:255',
+     /*$this->validate($request, array(
+             'service'  => 'required|max:255',
              'contact'  => 'required|max:255',
-         ));
+         ));*/
       // store in the database
+<<<<<<< HEAD
+=======
 
       $emergency = new Emergency;
       $emergency->service = $request->service;
       $emergency->name = $request->name;
       $emergency->contact = $request->contact;
+>>>>>>> master
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->name=Auth::user()->name;
@@ -71,7 +73,12 @@ class MedicalController extends Controller
       $medical->contact = $request->contact;
       $medical->dis = $request->dis;
       $medical->side = $request->side;
+<<<<<<< HEAD
+      $medical->shift = $request->shift;
+=======
+>>>>>>> master
       $medical->save();
+      Session::flash('success', 'Medical Details successfully added!');
       //$medical->session()->flash('success', 'Medical Details successfully added!');
       return redirect()->route('medical.index');
     }
@@ -95,8 +102,8 @@ class MedicalController extends Controller
      */
     public function edit($id)
     {
-      $emergency = Emergency::find($id);
-      return view('Emergency/edit')->withEmergency($emergency);
+      $medical = Medical::find($id);
+      return view('Medical.edit')->withMedical($medical);
     }
 
     /**
@@ -108,13 +115,14 @@ class MedicalController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $emergency = Emergency::find($id);
+      $medical = Medical::find($id);
 
-      $this->validate($request, array(
-              'service'      => 'required|max:255',
+      /*$this->validate($request, array(
+              'service'      => 'required|max:50',
               'name'      => 'required|max:255',
               'contact'  => 'required|max:255',
-          ));
+              'shift'  => 'required|max:50'
+          ));*/
           $log = new Log;
           $log->user_id=Auth::user()->id;
           $log->name=Auth::user()->name;
@@ -122,8 +130,8 @@ class MedicalController extends Controller
           $log->actionval = 2;
           $log->save();
       $input = $request->all();
-      $emergency->fill($input)->save();
-      Session::flash('success', 'Emergency details successfully edited!');
+      $medical->fill($input)->save();
+      Session::flash('success', 'Medical details successfully edited!');
       return redirect()->route('medical.index');
     }
 
@@ -135,9 +143,13 @@ class MedicalController extends Controller
      */
     public function destroy($id)
     {
+<<<<<<< HEAD
+
+=======
       $emergency = Emergency::find($id);
       $emergency->delete();
       Session::flash('success', 'Emergency details successfully removed!');
+>>>>>>> master
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->name=Auth::user()->name;
@@ -147,6 +159,10 @@ class MedicalController extends Controller
       $medical = Medical::find($id);
       $medical->delete();
       Session::flash('success', 'Medical details successfully removed!');
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
       return redirect()->route('medical.index');
     }
 }

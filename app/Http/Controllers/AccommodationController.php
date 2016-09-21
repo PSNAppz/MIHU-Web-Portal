@@ -66,6 +66,8 @@ class AccommodationController extends Controller
        $accommodations->locationofAcc = $request->locationofAcc;
        $accommodations->nearby = $request->nearby;
        $accommodations->isFull = $request->isFull;
+       $accommodations->coord = $request->coord;
+       $accommodations->contact = $request->contact;
        $log->user_id=Auth::user()->id;
        $log->name=Auth::user()->name;
        $log->action="Added Accommodation";

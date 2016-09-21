@@ -48,6 +48,7 @@
                           <th>Doctor</th>
                           <th>Contact</th>
                           <th>Discipline</th>
+                          <th>Shift</th>
                         </thead>
                         <tbody>
                           @foreach($medical as $med)
@@ -57,6 +58,7 @@
                                   <th>{{ $med->doc}}</th>
                                   <th>{{ $med->contact}}</th>
                                   <th>{{ $med->dis}}</th>
+                                  <th>{{ $med->shift}}</th>
                                   @if(!Auth::guest())
                                   <th><a class="btn btn-warning" href="{{ route('medical.edit', $med->id,'/edit') }}" role="button">Update</a></th>
                                   <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['medical.destroy', $med->id]]) }}
@@ -109,6 +111,7 @@
                               <th>Doctor</th>
                               <th>Contact</th>
                               <th>Discipline</th>
+                              <th>Shift</th>
                             </thead>
                             <tbody>
                               @foreach($medical as $med)
@@ -118,6 +121,7 @@
                                       <th>{{ $med->doc}}</th>
                                       <th>{{ $med->contact}}</th>
                                       <th>{{ $med->dis}}</th>
+                                      <th>{{ $med->shift}}</th>
                                       @if(!Auth::guest())
                                       <th><a class="btn btn-warning" href="{{ route('medical.edit', $med->id,'/edit') }}" role="button">Update</a></th>
                                       <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['medical.destroy', $med->id]]) }}
@@ -189,7 +193,7 @@
                 </div>
               </div>
               <hr>
-              <center style="font-size:20px"><strong>Wheelchair</strong></center>
+              <center style="font-size:20px"><strong>Wheelchair & Equipments</strong></center>
               <div class="panel panel-default">
                 <div class="panel-body">
                   <table class="table">
