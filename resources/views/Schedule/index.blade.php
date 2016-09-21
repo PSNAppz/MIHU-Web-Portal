@@ -17,7 +17,7 @@
   </style>
     <div class="content">
         <div class="title m-b-md">
-            Schedule 
+            Schedule
         </div>
     </div>
     <div class="container">
@@ -37,10 +37,10 @@
                     <div class="panel panel-default">
                       <div class="panel-body">
                         <div style="overflow-x:auto;">
-                          <a href="http://www.example.com/myfile.pdf#glossary">
-                        
-                            Click Here To See The Schedule 
-                        
+                          <a href="#">
+
+                            Click Here To See The Schedule
+
                           </a>
                         </div>
                       </div>
@@ -48,12 +48,10 @@
                   </div>
                 </div>
               </div>
-              
+
             </hr>
       </div>
-    </div>
 
-  <div class="tab-content">
     <div id="s26" class="tab-pane fade">
       <h3 align='center'>Details About Programs On 26-09-2016</h3>
         <div class="container">
@@ -63,10 +61,10 @@
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <div style="overflow-x:auto;">
-                      <a href="http://www.example.com/myfile.pdf#glossary">
-                          Click Here To See The Schedule 
-                      </a>  
-                       
+                      <a href="#">
+                          Click Here To See The Schedule
+                      </a>
+
                     </div>
                   </div>
                 </div>
@@ -75,9 +73,7 @@
           </div>
         </div>
     </div>
-  </div>
 
-  <div class="tab-content">
     <div id="s27" class="tab-pane fade">
       <h3 align='center'>Details About Programs On 27-09-2016</h3>
         <div class="container">
@@ -87,10 +83,10 @@
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <div style="overflow-x:auto;">
-                      <a href="http://www.example.com/myfile.pdf#glossary">
-                          Click Here To See The Schedule 
-                      </a>  
-                       
+                      <a href="#">
+                          Click Here To See The Schedule
+                      </a>
+
                     </div>
                   </div>
                 </div>
@@ -98,8 +94,9 @@
             </div>
           </div>
         </div>
-    </div>
   </div>
-</div>>
+</div>
+</div>
+
 @include('layouts.footer')
 @endsection
