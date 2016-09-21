@@ -54,10 +54,10 @@
 
     <div id="s26" class="tab-pane fade">
       <h3 align='center'>Details About Programs On 26-09-2016</h3>
+      <hr>
         <div class="container">
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-              <hr>
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <div style="overflow-x:auto;">
@@ -76,10 +76,10 @@
 
     <div id="s27" class="tab-pane fade">
       <h3 align='center'>Details About Programs On 27-09-2016</h3>
+      <hr>
         <div class="container">
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
-              <hr>
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <div style="overflow-x:auto;">
