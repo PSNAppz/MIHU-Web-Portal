@@ -74,5 +74,11 @@ Route::resource('security','SecurityController');
 //Faq
 Route::resource('faq','FaqController');
 
+//Import Export
 Route::get('downloadExcel/{database}/{type}', 'ImportExportController@downloadExcel');
 Route::post('importExcel/{database}', 'ImportExportController@importExcel');
+
+//Schedule
+Route::get('/schedules',function(){
+    return view('Schedule.index');
+});

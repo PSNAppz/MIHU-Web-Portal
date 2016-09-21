@@ -19,6 +19,8 @@ class CreateAccommodationsTable extends Migration
             $table->string('areaName');
             $table->string('locationofAcc');
             $table->string('nearby');
+            $table->string('coord');
+            $table->string('contact');
             $table->boolean('isFull')->default(0);
             $table->timestamps();
         });
