@@ -42,8 +42,23 @@
             }
 
             .full-height {
-                  height:80vh;
+                  height:60vh;
                   background-image:url(./images/background.jpg);
+                  background-repeat: no-repeat;
+                  //background-attachment: fixed;
+                  background-position:center;
+                  background-size:cover;
+            }
+            .full-height2 {
+                  height:130vh;
+                  background-image:url(./images/general.jpg);
+                  background-repeat: no-repeat;
+                  //background-attachment: fixed;
+                  background-position: center;
+            }
+            .full-height3 {
+                  height:130vh;
+                  background-image:url(./images/general2.jpg);
                   background-repeat: no-repeat;
                   //background-attachment: fixed;
                   background-position: center;
@@ -237,7 +252,11 @@
     </div>
 
     <div class ="row">
-
+        <div class = "flex-center position-ref full-height2">
+       </div>
+       <hr>
+       <div class = "flex-center position-ref full-height3">
+      </div>
    </div>
 
      </div>
