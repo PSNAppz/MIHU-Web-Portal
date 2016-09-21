@@ -53,14 +53,6 @@ class MedicalController extends Controller
              'contact'  => 'required|max:255',
          ));*/
       // store in the database
-<<<<<<< HEAD
-=======
-
-      $emergency = new Emergency;
-      $emergency->service = $request->service;
-      $emergency->name = $request->name;
-      $emergency->contact = $request->contact;
->>>>>>> master
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->name=Auth::user()->name;
@@ -73,10 +65,7 @@ class MedicalController extends Controller
       $medical->contact = $request->contact;
       $medical->dis = $request->dis;
       $medical->side = $request->side;
-<<<<<<< HEAD
       $medical->shift = $request->shift;
-=======
->>>>>>> master
       $medical->save();
       Session::flash('success', 'Medical Details successfully added!');
       //$medical->session()->flash('success', 'Medical Details successfully added!');
@@ -143,13 +132,6 @@ class MedicalController extends Controller
      */
     public function destroy($id)
     {
-<<<<<<< HEAD
-
-=======
-      $emergency = Emergency::find($id);
-      $emergency->delete();
-      Session::flash('success', 'Emergency details successfully removed!');
->>>>>>> master
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->name=Auth::user()->name;
@@ -159,10 +141,6 @@ class MedicalController extends Controller
       $medical = Medical::find($id);
       $medical->delete();
       Session::flash('success', 'Medical details successfully removed!');
-<<<<<<< HEAD
-
-=======
->>>>>>> master
       return redirect()->route('medical.index');
     }
 }
