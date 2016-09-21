@@ -29,11 +29,15 @@
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
+<<<<<<< HEAD
     <li class="active"><a data-toggle="tab" href="#cm"><b>General food Counter</b></a></li>
+=======
+    <li class="active"><a data-toggle="tab" href="#cm"><b>General Food Counter</b></a></li>
+>>>>>>> master
     <li><a data-toggle="tab" href="#pm"><b>Police mess</b></a></li>
     <li><a data-toggle="tab" href="#mm"><b>Media mess</b></a></li>
     <li><a data-toggle="tab" href="#si"><b>Special Invitees</b></a></li>
-    <li><a data-toggle="tab" href="#c"><b>Canteens</b></a></li>
+    <li><a data-toggle="tab" href="#c"><b>Locate Mess/Canteen</b></a></li>
 
   </ul>
 </div>

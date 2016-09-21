@@ -126,21 +126,21 @@ html, body {
 </style>
     <div class="content">
         <div class="title m-b-md">
-            Our Proud Coordinators
+            Volunteers
         </div>
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#students"><b>Coordinators</b></a></li>
+    <li class="active"><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
   </ul>
   <div class="tab-content">
   <div id="students" class="tab-pane active">
         <h3><i>While Carrying Responsibilities Never Forget to Smile.</i></h3>
         @if(!Auth::guest())
-        <a class="btn btn-success" href="{{ url('/coordinator/create') }}" role="button">Add a Coordinator</a>
-        <a  id="xlsf" href="{{ URL::to('downloadExcel/coordinator/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
-        <a id="xlsxf" href="{{ URL::to('downloadExcel/coordinator/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
-        <a id="csvf" href="{{ URL::to('downloadExcel/coordinator/csv') }}"><button class="btn btn-info">Download CSV</button></a>
+        <a class="btn btn-success" href="{{ url('/volunteer/create') }}" role="button">Add a Volunteer</a>
+        <a  id="xlsf" href="{{ URL::to('downloadExcel/volunteer/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
+        <a id="xlsxf" href="{{ URL::to('downloadExcel/volunteer/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
+        <a id="csvf" href="{{ URL::to('downloadExcel/volunteer/csv') }}"><button class="btn btn-info">Download CSV</button></a>
     @endif
         <hr>
     <div class="container">
@@ -153,9 +153,12 @@ html, body {
                             <thead>
                               <tr>
                                 <th>Name</th>
-                                <th>Seva</th>
-                                <th>Department</th>
+                                <th>Batch</th>
+                                <th>Campus</th>
                                 <th>Contact</th>
+                                <th>Seva</th>
+                                <th>Coordinator</th>
+                                <th>Coordinator Contact</th>
                                 @if(!Auth::guest())
                                 <th>Update</th>
                                 <th>Delete</th>
@@ -163,17 +166,28 @@ html, body {
                               </tr>
                             </thead>
                             <tbody>
-                                @foreach($coordinators as $cord)
+                                @foreach($volunteers as $vol)
                                     <tr>
 
-                                        <th>{{ $cord->name}}</th>
-                                        <th>{{ $cord->seva}}</th>
-                                        <th>{{$cord->department}}</th>
-                                        <th>{{ $cord->contact}}</th>
+                                        <th>{{ $vol->name}}</th>
+                                        <th>{{ $vol->batch}}</th>
+                                        @if($vol->campus == 1)
+                                        <th>Amritapuri</th>
+                                    @elseif($vol->campus==2)
+                                        <th>Kochi</th>
+                                    @elseif($vol->campus==3)
+                                        <th>Coimbatore</th>
+                                    @else
+                                        <th>Mysore</th>
+                                    @endif
+                                    <th>{{$vol->contact}}</th>
+                                    <th>{{ $vol->seva}}</th>
+                                    <th>{{ $vol->cordname}}</th>
+                                    <th>{{ $vol->cordcontact}}</th>
 
                                         @if(!Auth::guest())
-                                        <th><a class="btn btn-warning" href="{{ route('coordinator.edit', $cord->id,'/edit') }}" role="button">Update</a></th>
-                                        <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['coordinator.destroy', $cord->id]]) }}
+                                        <th><a class="btn btn-warning" href="{{ route('volunteer.edit', $vol->id,'/edit') }}" role="button">Update</a></th>
+                                        <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['volunteer.destroy', $vol->id]]) }}
                                         {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
                                         {{ Form::close() }}</th>
                                         @endif

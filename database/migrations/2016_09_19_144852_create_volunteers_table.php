@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCoordinatorsTable extends Migration
+class CreateVolunteersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreateCoordinatorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('coordinators', function (Blueprint $table) {
+        Schema::create('volunteers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('seva');
-            $table->string('department');
+            $table->string('batch');
+            $table->string('campus');
             $table->string('contact');
+            $table->string('seva');
+            $table->string('cordname');
+            $table->string('cordcontact');
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ class CreateCoordinatorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coordinators');
+        Schema::dropIfExists('volunteers');
     }
 }

@@ -45,7 +45,7 @@
                   height:80vh;
                   background-image:url(./images/background.jpg);
                   background-repeat: no-repeat;
-                  background-attachment: fixed;
+                  //background-attachment: fixed;
                   background-position: center;
             }
 
@@ -169,14 +169,14 @@
 </nav>
 
 
-        <div class = "flex-center position-ref full-height">
-            <div class = "content">
+   <div class = "flex-center position-ref full-height">
+                <!-- <div class = "content">
               <ul class="rslides">
                 <li><img src="images/amma1.jpg" alt=""></li>
                 <li><img src="images/amma2.jpg" alt=""></li>
                 <li><img src="images/amma3.jpg" alt=""></li>
               </ul>
-            </div>
+            </div>-->
         </div>
 
        <div class="jumbotron" style="margin-bottom: 0px">
@@ -198,7 +198,7 @@
            <br>
            <div class ="row">
              <div class="col-sm-4" >
-               <a class="btn btn-primary btn-lg btn-block" href="/vcc" role="button"><span class="glyphicon glyphicon-user"></span>&nbsp&nbsp&nbsp&nbspVCC</a>
+               <a class="btn btn-primary btn-lg btn-block" href="/vcc" role="button"><span class="glyphicon glyphicon-heart"></span>&nbsp&nbsp&nbspVCC</a>
              </div>
              <div class="col-sm-4" >
                <a class="btn btn-primary btn-lg btn-block" href="/food" role="button"><span class="glyphicon glyphicon-cutlery"></span>&nbsp&nbsp Food</a>
@@ -216,19 +216,31 @@
               <a class="btn btn-primary btn-lg btn-block" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>&nbsp Security</a>
             </div>
             <div class="col-sm-4" >
-             <a class="btn btn-primary btn-lg btn-block" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp Media</a>
+             <a class="btn btn-primary btn-lg btn-block" href="/media" role="button"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp Press & Media</a>
            </div>
          </div>
          <br>
-           <div class="row">
-             <div class="col-sm-4 col-md-offset-4" >
-               <a class="btn btn-danger btn-lg btn-block" href="/coordinator" role="button"><span class="glyphicon glyphicon-star-empty"></span>&nbsp Coordinators</a>
-             </div>
-           </div>
+         <div class ="row">
+           <div class="col-sm-4" >
+             <a class="btn btn-primary btn-lg btn-block" href="/schedules" role="button"><span class="glyphicon glyphicon-calendar"></span> Schedules</a>
+          </div>
+          <div class="col-sm-4" >
+              <a class="btn btn-danger btn-lg btn-block" href="/coordinator" role="button"><span class="glyphicon glyphicon-star-empty"></span>&nbsp Coordinators</a>
+          </div>
+          <div class="col-sm-4" >
+           <a class="btn btn-primary btn-lg btn-block" href="/volunteer" role="button"><span class="glyphicon glyphicon-user"></span>&nbsp Volunteers</a>
+         </div>
+       </div>
+       <br>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class ="row">
+
+   </div>
+
+     </div>
   @include('layouts.footer')
     </body>
 </html>
