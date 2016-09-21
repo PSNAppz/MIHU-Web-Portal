@@ -24,6 +24,8 @@
     <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#bus"><b>Bus</b></a></li>
     <li><a data-toggle="tab" href="#train"><b>Train</b></a></li>
+    <li><a data-toggle="tab" href="#parking"><b>Parking Locations</b></a></li>
+
 
 
   </ul>
@@ -105,6 +107,34 @@
                 </div>
             </div>
         </div>
+</div>
+<div id="parking" class="tab-pane fade">
+    <h3>Parking</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <hr>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div style="overflow-x:auto;">
+                    <table class="table">
+                        <thead>
+                            <th>General</th>
+                            <th>Bus</th>
+                            <th>VIP</th>
+                            <th>VVIP</th>
+
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 </div>
