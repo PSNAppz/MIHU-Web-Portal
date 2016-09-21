@@ -19,26 +19,103 @@
             Schedules
         </div>
     </div>
-    <div class="container">
-      <div class="col-md-12 ">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <table class ="table">
-              <thead>
-                <tr>
-                  <th><center/>Date</th>
-                  <th><center/><center/>Test</th>
-                  <th><center/><center/><center/>Timing</th>
-                  <th><center/>Available At</th>
-                </tr>
-              </thead>
-              <tbody>
+   <div class="container">
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#26"><b>26th Sept</b></a></li>
+    <li><a data-toggle="tab" href="#27"><b>27th Sept</b></a></li>
+    <li><a data-toggle="tab" href="#28"><b>28th Sept</b></a></li>
 
-              </tbody>
-            </table>
-          </div>
+
+  </ul>
+  <div class="tab-content">
+  <div id="26" class="tab-pane active">
+        <h3>Events</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div style="overflow-x:auto;">
+                        <table class="table">
+                            <thead>
+                                <th>Program</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                @if(!Auth::guest())
+                                <th></th>
+                                <th></th>
+                            @endif
+                            </thead>
+                            <tbody>
+      
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <!--{{$Schedules->links()}}-->
+</div>
+        <div id="27" class="tab-pane fade">
+            <h3>Events</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+     <div style="overflow-x:auto;">
+                        <table class="table">
+                            <thead>
+                                <th>Program</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                @if(!Auth::guest())
+                                <th></th>
+                                <th></th>
+                            @endif
+                            </thead>
+                            
+                            
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--{{$Schedules->links()}}-->
+</div>
+ <div id="28" class="tab-pane fade">
+            <h3>Events</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+     <div style="overflow-x:auto;">
+                        <table class="table">
+                            <thead>
+                                <th>Program</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                @if(!Auth::guest())
+                                <th></th>
+                                <th></th>
+                            @endif
+                            </thead>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--{{$Schedules->links()}}-->
+</div>
 @include('layouts.footer')
 @endsection
