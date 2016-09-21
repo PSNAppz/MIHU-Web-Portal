@@ -82,3 +82,9 @@ Route::post('importExcel/{database}', 'ImportExportController@importExcel');
 Route::get('/schedules',function(){
     return view('Schedule.index');
 });
+
+//General Info
+
+Route::get('/generalinfo', function () {
+    return view('Generalinfo.index');
+});

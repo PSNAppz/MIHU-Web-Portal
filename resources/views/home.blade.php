@@ -50,11 +50,29 @@
                         <p><b>#{{$log->id}}</b> {{ $log->name}} @if($log->actionval == 1)<span class="label label-success">{{$log->action}}</span>
                         @elseif($log->actionval == 2)
                             <span class="label label-warning">{{$log->action}}</span>
+                        @elseif($log->action == "Cleared Logs")
+                            <span class="label label-info">{{$log->action}}</span>
                         @else
                             <span class="label label-danger">{{$log->action}}</span>
                         @endif
                               {{ $log->created_at}}</p>
                     @endforeach
+            </div>
+
+            </div>
+        </div>
+
+        <div class="panel panel-warning">
+            <div class="panel-heading"><span class="glyphicon glyphicon-barcode">Announcements</span></div>
+
+            <div class="panel-body">
+                                {!! Form::open(array('route' => 'faq.store','data-parsley-validate' => '')) !!}
+                                {{ Form::label('type', 'Type:') }}
+                                {{ Form::select('type', array('0' => 'General', '1' => 'Lost & Found','2' => 'Special'), null, array('class' => 'form-control'))}}
+                                {{ Form::label('description','Description:')}}
+                                {{ Form::textarea('description',null,array('class'=> 'form-control','required'=> ''))}}
+                                {{ Form::submit('Announce!',array('class'=>'btn btn-success','style' =>'margin-top:20px;'))}}
+                                {!! Form::close() !!}
             </div>
 
             </div>
