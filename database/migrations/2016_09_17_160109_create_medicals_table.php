@@ -18,6 +18,7 @@ class CreateMedicalsTable extends Migration
             $table->string('loc');
             $table->string('doc');
             $table->string('contact');
+            $table->string('shift');
             $table->string('dis');
             $table->string('side');
         });

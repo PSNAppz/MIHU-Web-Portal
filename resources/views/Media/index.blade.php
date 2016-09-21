@@ -29,7 +29,7 @@ img {
 </style>
     <div class="content">
         <div class="title m-b-md">
-            News & Media
+            Press & Media
         </div>
     </div>
 
