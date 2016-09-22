@@ -124,9 +124,31 @@
             .button {
               text-align: center;
             }
+
+            .news {
+              width:100%;
+              margin-top:0px;
+              background-image: url(./images/orangepink.jpg);
+              background-position:center;
+              background-attachment: fixed;
+              background-size:cover;
+              background-repeat: no-repeat;
+              text-align: center;
+            }
+
+            div.col-sm-9 div {
+              height: 250px;
+              font-size: 28px;
+            }
+
+            @media screen and (max-width: 810px) {
+              #section1, #section2, #section3, #section41, #section42  {
+                margin-left: 150px;
+              }
+            }
         </style>
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
     <nav class="navbar navbar-default navbar-static-top" style="margin-bottom:0px">
     <div class="container">
         <div class="navbar-header">
@@ -236,7 +258,29 @@
         </div>
       </div>
     </div>
-
+    <div class="news">
+      <br>
+    <!--    <iframe class="embed-responsive-item">-->
+    <div id="" style="overflow-y: scroll; height:400px;">
+      <div class="col-sm-9">
+          @foreach($newsfeed as $news)
+          <div class="alert alert-info" role="alert">{{$news->message}}</div>
+            @if (!Auth::guest())
+            <span>
+              {{ Form::open(['method' => 'DELETE', 'route' => ['welcome.destroy', $news->id]]) }}
+              {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+              {{ Form::close() }}
+            </span>
+            @endif
+          @endforeach
+      </div>
+    </div>
+    <!--    </iframe>-->
+    @if (!Auth::guest())
+      <br>
+      <a class="btn btn-success" href="{{ route('welcome.create') }}" role="button"><b>Add New<b></a>
+    @endif
+  </div>
      </div>
   @include('layouts.footer')
     </body>
