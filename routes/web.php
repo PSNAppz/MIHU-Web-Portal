@@ -91,6 +91,9 @@ Route::resource('darshan','DarshanController');
 //Security
 Route::resource('security','SecurityController');
 
+//StaffVolunteer
+Route::resource('staffvolunteer','StaffVolunteerController');
+
 //Faq
 Route::resource('faq','FaqController');
 
