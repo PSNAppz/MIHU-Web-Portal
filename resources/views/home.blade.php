@@ -75,7 +75,6 @@
                                 {{ Form::submit('Announce!',array('class'=>'btn btn-success','style' =>'margin-top:20px;'))}}
                                 {!! Form::close() !!}
             </div>
-
             </div>
         </div>
             </div>
