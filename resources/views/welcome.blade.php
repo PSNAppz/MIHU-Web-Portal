@@ -117,11 +117,11 @@
             }
 
             .newsbody {
-              width: 900px;
+              width: 100%;
               float:right;
               height: 300px;
-              margin: 10px;
-              background-image: url('./images/note.jpg');
+              margin: 0px;
+              --background-image: url('./images/note.jpg');
             }
 
             @media screen and (max-width: 810px) {
@@ -235,8 +235,6 @@
       </div>
     </div>
     <div class="news">
-      <br>
-
     <div class="newsbody">
       <h2><b>News Feeds</b></h2>
       <br>
@@ -248,8 +246,8 @@
      <p style="font-size:30px;font-family: 'Tangerine', cursive;"><b>#BeInformed</b></p>
    </div>
     </div>
-    <div id="" style="overflow-y: scroll; height:400px; width:400px;">
-      <div class="col-sm-9">
+    <div id="" style="overflow-y: scroll; height:400px; width:100%;">
+      <div class="col-md-2 col-md-offset-5">
           @foreach($newsfeed as $news)
           <div class="alert alert-info" role="alert"><b style="font-size:15px">{{$news->message}}</b></div>
             @if (!Auth::guest())
