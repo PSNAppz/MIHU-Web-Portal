@@ -15,7 +15,8 @@ class CreateNewsFeedsTable extends Migration
     {
         Schema::create('newsfeeds', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('message')->default('Wrong');
+            $table->string('type');
+            $table->string('message');
             $table->timestamps();
         });
     }

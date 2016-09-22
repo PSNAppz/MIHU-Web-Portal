@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Newsfeed extends Model
 {
-    protected $fillable = array('message');
+    protected $fillable = array('message','type');
 }

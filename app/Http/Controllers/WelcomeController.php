@@ -44,10 +44,12 @@ class WelcomeController extends Controller
     public function store(Request $request)
     {
       $this->validate($request, array(
-        'message'=>'required|max:255'
+          'type'=>'required|max:255',
+        'message'=>'required|max:255',
       ));
       //store
       $newsfeed = new Newsfee;
+      $newsfeed->type = $request->type;
       $newsfeed->message = $request->message;
       $log = new Log;
       $log->user_id=Auth::user()->id;
