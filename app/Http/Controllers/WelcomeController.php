@@ -21,7 +21,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-         $newsfeed = Newsfee::orderBy('id', 'DESC')->get();
+         $newsfeed = Newsfee::orderBy('id', 'desc')->get();
          return view('welcome')->withNewsfeed($newsfeed);
     }
 
@@ -44,11 +44,11 @@ class WelcomeController extends Controller
     public function store(Request $request)
     {
       $this->validate($request, array(
-        'message'=>'required'
+        'message'=>'required|max:255'
       ));
       //store
       $newsfeed = new Newsfee;
-      $newsfeed->message = $newsfeed->message;
+      $newsfeed->message = $request->message;
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->name=Auth::user()->name;
