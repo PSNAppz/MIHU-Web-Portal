@@ -11,9 +11,29 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+//welcome
+Route::resource('/','WelcomeController',
+                  ['names'=>[
+                              'index'=>'welcome.index',
+                              'create'=>'welcome.create',
+                              'store'=>'welcome.store',
+                              'destroy'=>'welcome.destroy'
+                            ]
+
+                  ]);
+                  Route::resource('welcome','WelcomeController',
+                                    ['names'=>[
+                                                'index'=>'welcome.index',
+                                                'create'=>'welcome.create',
+                                                'store'=>'welcome.store',
+                                                'destroy'=>'welcome.destroy'
+                                              ]
+
+                                    ]);
+
 
 Auth::routes();
 Route::get('/about',function() {

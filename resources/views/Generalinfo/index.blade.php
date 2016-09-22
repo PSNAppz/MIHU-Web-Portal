@@ -33,7 +33,7 @@
         <div class="title m-b-md">
           General Info
         </div>
-
+        <hr>
   </ul>
   <div class ="row">
       <div class = "flex-center position-ref full-height2">
