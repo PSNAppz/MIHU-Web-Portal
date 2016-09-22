@@ -12,6 +12,7 @@ use App\Coordinator as Cord;
 use App\SpecialEvent as SE;
 use App\Medical as Med;
 use App\Volunteer as Vol;
+use App\StaffVolunteer;
 use App\Http\Requests;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\DB;
@@ -94,6 +95,15 @@ class ImportExportController extends Controller
             if($database=="volunteer"){
             $data = Vol::get()->toArray();
             return Excel::create('VolunteersMIHU', function($excel) use ($data) {
+                $excel->sheet('mySheet', function($sheet) use ($data)
+                {
+                    $sheet->fromArray($data);
+                });
+            })->download($type);
+            }
+            if($database=="staff"){
+            $data = StaffVolunteer::get()->toArray();
+            return Excel::create('StaffMIHU', function($excel) use ($data) {
                 $excel->sheet('mySheet', function($sheet) use ($data)
                 {
                     $sheet->fromArray($data);
@@ -207,6 +217,24 @@ class ImportExportController extends Controller
                     }
                     dd('Insert Record successfully.');
 -                        redirect()->route('coordinator');
+                }
+            }
+        }
+        elseif($database == 'staff'){
+            if(Input::hasFile('import_file')){
+                $path = Input::file('import_file')->getRealPath();
+                $data = Excel::load($path, function($reader) {
+                })->get();
+                if(!empty($data) && $data->count()){
+                    foreach ($data as $key => $value) {
+                        StaffVolunteer::create([
+                        'name' => $value->name,
+                        'seva' => $value->seva,
+                        'department' => $value->department,
+                    ]);
+                    }
+                    dd('Insert Record successfully.');
+-                        redirect()->route('staffvolunteer');
                 }
             }
         }
