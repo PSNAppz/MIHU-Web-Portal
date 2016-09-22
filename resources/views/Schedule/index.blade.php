@@ -20,83 +20,101 @@
             Schedule
         </div>
     </div>
-    <div class="container">
-     <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#s25"><b>Schedules On 25</b></a></li>
-        <li><a data-toggle="tab" href="#s26"><b>Schedules On 26</b></a></li>
-        <li><a data-toggle="tab" href="#s27"><b>Schedules On 27</b></a></li>
-     </ul>
 
-    <div class="tab-content">
-      <div id="s25" class="tab-pane active">
-          <h3 align='center'>Details About Programs On 25-09-2016</h3>
-            <hr>
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-10 col-md-offset-1">
-                    <div class="panel panel-default">
-                      <div class="panel-body">
-                        <div style="overflow-x:auto;">
-                          <a href="#">
+   <div class="container">
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#26"><b>26th Sept</b></a></li>
+    <li><a data-toggle="tab" href="#27"><b>27th Sept</b></a></li>
+    <li><a data-toggle="tab" href="#28"><b>28th Sept</b></a></li>
 
-                            Click Here To See The Schedule
 
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </hr>
-      </div>
-
-    <div id="s26" class="tab-pane fade">
-      <h3 align='center'>Details About Programs On 26-09-2016</h3>
-      <hr>
+  </ul>
+  </div>
+  <div class="tab-content">
+    <div id="26" class="tab-pane active">
+        <h3 align="center">Events</h3>
         <div class="container">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <div style="overflow-x:auto;">
-                      <a href="#">
-                          Click Here To See The Schedule
-                      </a>
-
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div style="overflow-x:auto;">
+                            <table class="table">
+                            <thead>
+                                <th>Program</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                @if(!Auth::guest())
+                                <th></th>
+                                <th></th>
+                            @endif
+                            </thead>
+                            <tbody>
+      
+                        </table>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </hr>
             </div>
-          </div>
         </div>
     </div>
-
-    <div id="s27" class="tab-pane fade">
-      <h3 align='center'>Details About Programs On 27-09-2016</h3>
-      <hr>
+    <div id="27" class="tab-pane fade">
+            <h3 align="center">Events</h3>
         <div class="container">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <div style="overflow-x:auto;">
-                      <a href="#">
-                          Click Here To See The Schedule
-                      </a>
-
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div style="overflow-x:auto;">
+                            <table class="table">
+                            <thead>
+                                <th>Program</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                @if(!Auth::guest())
+                                <th></th>
+                                <th></th>
+                            @endif
+                            </thead>
+                            
+                            
+                            </table>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </hr>
             </div>
-          </div>
         </div>
-  </div>
+    </div>
+    <div id="28" class="tab-pane fade">
+            <h3 align="center">Events</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div style="overflow-x:auto;">
+                            <table class="table">
+                            <thead>
+                                <th>Program</th>
+                                <th>Time</th>
+                                <th>Venue</th>
+                                @if(!Auth::guest())
+                                <th></th>
+                                <th></th>
+                            @endif
+                            </thead>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
-
 @include('layouts.footer')
 @endsection
