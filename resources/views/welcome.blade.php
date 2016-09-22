@@ -10,6 +10,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
 
         <!--Bootstrap link-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -20,8 +21,7 @@
         <link rel="stylesheet" href="css/demo.css">
 	       <link rel="stylesheet" href="css/footer-basic-centered.css">
 
-        <!--Transition Slide Scripts-->
-        <script src="js/responsiveslides.min.js"></script>
+
         <script>
         $(function() {
           $(".rslides").responsiveSlides();
@@ -88,38 +88,7 @@
                 margin-bottom: 30px;
             }
 
-            .rslides {
-              position: relative;
-              list-style: none;
-              overflow: hidden;
-              width: 100%;
-              padding: 0;
-              margin: 0;
-              border-radius: 10px;
-            }
 
-            .rslides li {
-              -webkit-backface-visibility: hidden;
-              position: absolute;
-              display: none;
-              width: 100%;
-              left: 0;
-              top: 0;
-            }
-
-            .rslides li:first-child {
-              position: relative;
-              display: block;
-              float: left;
-            }
-
-            .rslides img {
-              display: block;
-              height: auto;
-              float: left;
-              width: 100%;
-              border: 0;
-            }
 
             .button {
               text-align: center;
@@ -139,6 +108,20 @@
             div.col-sm-9 div {
               height: 250px;
               font-size: 28px;
+            }
+            .heading   {
+              height:100px;
+              width:200px;
+              position:absolute;
+              margin-left: 500px;
+            }
+
+            .newsbody {
+              width: 900px;
+              float:right;
+              height: 300px;
+              margin: 10px;
+              background-image: url('./images/note.jpg');
             }
 
             @media screen and (max-width: 810px) {
@@ -193,13 +176,6 @@
 
 
    <div class = "flex-center position-ref full-height">
-                <!-- <div class = "content">
-              <ul class="rslides">
-                <li><img src="images/amma1.jpg" alt=""></li>
-                <li><img src="images/amma2.jpg" alt=""></li>
-                <li><img src="images/amma3.jpg" alt=""></li>
-              </ul>
-            </div>-->
         </div>
 
        <div class="jumbotron" style="margin-bottom: 0px">
@@ -260,11 +236,22 @@
     </div>
     <div class="news">
       <br>
-    <!--    <iframe class="embed-responsive-item">-->
-    <div id="" style="overflow-y: scroll; height:400px;">
+
+    <div class="newsbody">
+      <h2><b>News Feeds</b></h2>
+      <br>
+      <br><br>
+      <div>
+      <p style="font-size:40px;font-family: 'Tangerine', cursive;">
+      <b>Watch out for this space for the latest announcements!</b>
+     </p>
+     <p style="font-size:30px;font-family: 'Tangerine', cursive;"><b>#BeInformed</b></p>
+   </div>
+    </div>
+    <div id="" style="overflow-y: scroll; height:400px; width:400px;">
       <div class="col-sm-9">
           @foreach($newsfeed as $news)
-          <div class="alert alert-info" role="alert">{{$news->message}}</div>
+          <div class="alert alert-info" role="alert"><b style="font-size:15px">{{$news->message}}</b></div>
             @if (!Auth::guest())
             <span>
               {{ Form::open(['method' => 'DELETE', 'route' => ['welcome.destroy', $news->id]]) }}
@@ -275,7 +262,6 @@
           @endforeach
       </div>
     </div>
-    <!--    </iframe>-->
     @if (!Auth::guest())
       <br>
       <a class="btn btn-success" href="{{ route('welcome.create') }}" role="button"><b>Add New<b></a>
