@@ -247,9 +247,9 @@
    </div>
     </div>
     <div id="" style="overflow-y: scroll; height:400px; width:100%;">
-      <div class="col-md-2 col-md-offset-5">
+      <div class="col-sm-4 col-md-offset-4">
           @foreach($newsfeed as $news)
-          <div class="alert alert-info" role="alert"><b style="font-size:15px">{{$news->message}}</b></div>
+          <div class="well"><b style="font-size:15px">{{$news->message}}</b></div>
             @if (!Auth::guest())
             <span>
               {{ Form::open(['method' => 'DELETE', 'route' => ['welcome.destroy', $news->id]]) }}
@@ -260,10 +260,6 @@
           @endforeach
       </div>
     </div>
-    @if (!Auth::guest())
-      <br>
-      <a class="btn btn-success" href="{{ route('welcome.create') }}" role="button"><b>Add New<b></a>
-    @endif
   </div>
      </div>
   @include('layouts.footer')
