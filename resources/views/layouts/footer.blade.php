@@ -5,9 +5,9 @@
 
 
         <p class="footer-links">
-              <a href="/">Home</a>
+              <a href="/">Map</a>
                    ·
-              <a href="/vcc">VCC</a>
+              <a href="/staffvolunteer">Staff</a>
                    ·
               <a href="/coordinator">Coordinators</a>
                    ·

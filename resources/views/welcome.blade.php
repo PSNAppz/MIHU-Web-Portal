@@ -11,6 +11,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
 
         <!--Bootstrap link-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -43,6 +45,8 @@
 
             .full-height {
                   height:60vh;
+                  width: 100%;
+                  background-size: cover;
                   background-image:url(./images/background.jpg);
                   background-repeat: no-repeat;
                   //background-attachment: fixed;
@@ -114,6 +118,9 @@
               width:200px;
               position:absolute;
               margin-left: 500px;
+            }
+            .well{
+                font-family: 'Muli',sans-serif;
             }
 
             .newsbody {
@@ -247,21 +254,29 @@
    </div>
     </div>
     <div id="" style="overflow-y: scroll; height:400px; width:100%;">
-      <div class="col-sm-4 col-md-offset-4">
+      <div class="col-sm-10 col-md-offset-1">
           @foreach($newsfeed as $news)
-          <div class="well"><b style="font-size:15px">{{$news->message}}</b></div>
+              @if($news->type==1)
+                  <div class="well" style="background-color:#00E5FF;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>
+          @elseif($news->type==0)
+          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>
+          @else
+              <div class="well" style="background-color:#ff5252;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;color:white;">{{$news->message}}</b>
+          @endif
             @if (!Auth::guest())
             <span>
               {{ Form::open(['method' => 'DELETE', 'route' => ['welcome.destroy', $news->id]]) }}
               {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
               {{ Form::close() }}
             </span>
+            </div>
             @endif
           @endforeach
       </div>
     </div>
   </div>
      </div>
+ </div>
   @include('layouts.footer')
     </body>
 </html>
