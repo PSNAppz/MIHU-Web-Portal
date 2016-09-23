@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 use App\Vcc as Vcc;
+use App\Newsfeed as News;
 use Session;
 use View;
 
@@ -24,7 +25,8 @@ class VccController extends Controller
     public function index()
     {
         $vcc = Vcc::orderBy('id')->paginate(15);
-        return view('VCC.index')->withVcc($vcc);
+        $news = News::paginate(15);
+        return view('VCC.index')->withVcc($vcc)->withNews($news);
     }
 
     /**

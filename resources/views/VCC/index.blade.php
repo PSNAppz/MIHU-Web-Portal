@@ -28,6 +28,17 @@
           <a id="csvf" href="{{ URL::to('downloadExcel/vcc/csv') }}"><button class="btn btn-info">Download CSV</button></a>
       @endif
           <hr>
+          <div class="panel panel-warning">
+              <div class="panel-heading"><span class="glyphicon glyphicon-barcode">VCC Announcements</span></div>
+
+                <marquee><b>
+                @foreach($news as $news)
+                @if($news->type==3)
+                    {{$news->message}}&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                @endif
+                @endforeach
+            </b></marquee>
+            </div>
         <div class="panel panel-default">
           <div class="panel-body">
             <table class ="table">
