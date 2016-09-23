@@ -48,7 +48,27 @@ class MediaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, array(
+                'mediaroom'    => 'required|max:255',
+                'mediaenc'     => 'required|max:255',
+                'name'         => 'required|max:255',
+                'phone'        => 'required|numeric',
+            ));
+
+            $media = new Medi;
+            $media->meadiaroom = $request->mediaroom;
+            $media->mediaenc = $request->mediaenc;
+            $media->name = $request->name;
+            $media->contact = $request->contact;
+            $log = new Log;
+            $log->user_id=Auth::user()->id;
+            $log->name=Auth::user()->name;
+            $log->action="Created a Media";
+            $log->actionval = 1;
+            $log->save();
+            $media->save();
+            $request->session()->flash('success', 'Media Details successfully added!');
+            return redirect()->route('media.index');
     }
 
     /**
@@ -89,7 +109,7 @@ class MediaController extends Controller
               'mediaroom'    => 'required|max:255',
               'mediaenc'     => 'required|max:255',
               'name'         => 'required|max:255',
-              'phone'        => 'required|max:255',
+              'phone'        => 'required|numeric',
           ));
 
       $input = $request->all();
@@ -112,6 +132,15 @@ class MediaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $log = new Log;
+        $log->user_id=Auth::user()->id;
+        $log->name=Auth::user()->name;
+        $log->action="Deleted a Media";
+        $log->actionval = 3;
+        $log->save();
+        $media = Medi::find($id);
+        $media->delete();
+      Session::flash('success', 'Media details successfully removed!');
+      return redirect()->route('medical.index');
     }
 }

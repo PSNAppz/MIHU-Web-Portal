@@ -92,6 +92,9 @@ img {
     </div>
     <div id="contact" class="tab-pane fade">
         <h3 align="center">Contact info</h3>
+        @if(!Auth::guest())
+        <a class="btn btn-success" href="{{ url('/media/create') }}" role="button">Add Media</a>
+    @endif
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -101,12 +104,20 @@ img {
                              <thead>
                                 <th>Name</th>
                                 <th>Phone</th>
+                                <th>Update</th>
+                                <th>Delete</th>
                             </thead>
                             <tbody>
                               @foreach($media as $m)
                                 <tr>
                               <th>{{ $m->name}}</th>
                               <th>{{ $m->phone}}</th>
+                              @if(!Auth::guest())
+                              <th><a class="btn btn-warning" href="{{ route('darshan.edit', $m->id,'/edit') }}" role="button">Update</a></th>
+                              <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['darshan.destroy', $m->id]]) }}
+                              {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                              {{ Form::close() }}</th>
+                              @endif
                                 </tr>
                               @endforeach
                             </tbody>
