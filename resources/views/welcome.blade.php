@@ -42,7 +42,6 @@
             .navbar-brand{
                 font-size: 30px;
             }
-
             .full-height {
                   height:60vh;
                   width: 100%;
@@ -53,31 +52,25 @@
                   background-position:center;
                   background-size:cover;
             }
-
             .flex-center {
                 align-items: center;
                 display: flex;
                 justify-content: center;
             }
-
             .position-ref {
                 position: relative;
             }
-
             .top-right {
                 position: absolute;
                 right: 10px;
                 top: 18px;
             }
-
             .content {
                 text-align: center;
             }
-
             .title {
                 font-size: 6vw;
             }
-
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -87,17 +80,12 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
-
-
-
             .button {
               text-align: center;
             }
-
             .news {
               width:100%;
               margin-top:0px;
@@ -108,7 +96,6 @@
               background-repeat: no-repeat;
               text-align: center;
             }
-
             div.col-sm-9 div {
               height: 250px;
               font-size: 28px;
@@ -122,7 +109,6 @@
             .well{
                 font-family: 'Muli',sans-serif;
             }
-
             .newsbody {
               width: 100%;
               float:right;
@@ -130,7 +116,6 @@
               margin: 0px;
               --background-image: url('./images/note.jpg');
             }
-
             @media screen and (max-width: 810px) {
               #section1, #section2, #section3, #section41, #section42  {
                 margin-left: 150px;
@@ -171,8 +156,18 @@
                             <span class="glyphicon glyphicon-user">&nbsp;</span>{{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/home') }}">Home</a></li>
-                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            <li>
+                                <a href="{{ url('/home') }}">Home</a>
+                                <a href="{{ url('/logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
                         </ul>
                     </li>
                 @endif
@@ -257,13 +252,13 @@
       <div class="col-sm-10 col-md-offset-1">
           @foreach($newsfeed as $news)
               @if($news->type==1)
-                  <div class="well" style="background-color:#00E5FF;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>
+                  <div class="well" style="background-color:#00E5FF;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b> </div>
           @elseif($news->type==0)
-          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>
+          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>    </div>
           @elseif($news->type==3)
-          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>
+          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>    </div>
           @else
-              <div class="well" style="background-color:#ff5252;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;color:white;">{{$news->message}}</b>
+              <div class="well" style="background-color:#ff5252;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;color:white;">{{$news->message}}</b></div>
           @endif
             @if (!Auth::guest())
             <span>
@@ -271,12 +266,10 @@
               {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
               {{ Form::close() }}
             </span>
-            </div>
             @endif
           @endforeach
       </div>
-    </div>
-  </div>
+      </div>
      </div>
  </div>
   @include('layouts.footer')
