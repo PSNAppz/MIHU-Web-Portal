@@ -71,7 +71,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
-                @if (Auth::guest())
+                @if(Auth::guest())
                     <li><a href="{{ url('/login') }}">Login</a></li>
                 @else
                     <li class="dropdown">
@@ -125,21 +125,21 @@ html, body {
 </style>
     <div class="content">
         <div class="title m-b-md">
-            Our Proud Coordinators
+            Seva Details
         </div>
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#students"><b>Coordinators</b></a></li>
+    <li class="active"><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
   </ul>
   <div class="tab-content">
   <div id="students" class="tab-pane active">
         <h3><i>While Carrying Responsibilities Never Forget to Smile.</i></h3>
         @if(!Auth::guest())
-        <a class="btn btn-success" href="{{ url('/coordinator/create') }}" role="button">Add a Coordinator</a>
-        <a  id="xlsf" href="{{ URL::to('downloadExcel/coordinator/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
-        <a id="xlsxf" href="{{ URL::to('downloadExcel/coordinator/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
-        <a id="csvf" href="{{ URL::to('downloadExcel/coordinator/csv') }}"><button class="btn btn-info">Download CSV</button></a>
+        <a class="btn btn-success" href="{{ url('/seva/create') }}" role="button">Add a Seva</a>
+        <a  id="xlsf" href="{{ URL::to('downloadExcel/seva/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
+        <a id="xlsxf" href="{{ URL::to('downloadExcel/seva/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
+        <a id="csvf" href="{{ URL::to('downloadExcel/seva/csv') }}"><button class="btn btn-info">Download CSV</button></a>
     @endif
         <hr>
     <div class="container">
@@ -151,9 +151,10 @@ html, body {
                         <table id="cord" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                               <tr>
-                                <th>Name</th>
+                                <th>Place</th>
                                 <th>Seva</th>
-                                <th>Department</th>
+                                <th>Location</th>
+                                <th>Coordinator</th>
                                 <th>Contact</th>
                                 @if(!Auth::guest())
                                 <th>Update</th>
@@ -162,17 +163,16 @@ html, body {
                               </tr>
                             </thead>
                             <tbody>
-                                @foreach($coordinators as $cord)
+                                @foreach($seva as $seva)
                                     <tr>
-
-                                        <th>{{ $cord->name}}</th>
-                                        <th>{{ $cord->seva}}</th>
-                                        <th>{{$cord->department}}</th>
-                                        <th>{{ $cord->contact}}</th>
-
+                                        <th>{{ $seva->place}}</th>
+                                        <th>{{ $seva->seva}}</th>
+                                        <th>{{$seva->location}}</th>
+                                        <th>{{$seva->coordinator}}</th>
+                                        <th>{{$seva->contact}}</th>
                                         @if(!Auth::guest())
-                                        <th><a class="btn btn-warning" href="{{ route('coordinator.edit', $cord->id,'/edit') }}" role="button">Update</a></th>
-                                        <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['coordinator.destroy', $cord->id]]) }}
+                                        <th><a class="btn btn-warning" href="{{ route('seva.edit', $seva->id,'/edit') }}" role="button">Update</a></th>
+                                        <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['seva.destroy', $seva->id]]) }}
                                         {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
                                         {{ Form::close() }}</th>
                                         @endif

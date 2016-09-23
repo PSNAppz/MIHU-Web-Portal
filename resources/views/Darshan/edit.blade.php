@@ -31,10 +31,6 @@
       {{ Form::text('token_loc',$dar->token_loc,array('class'=> 'form-control','required'=> ''))}}
       {{ Form::label('token_time','Token time:')}}
       {{ Form::text('token_time',$dar->token_time,array('class'=> 'form-control','required'=> ''))}}
-      {{ Form::label('contact_name','Contact name:')}}
-      {{ Form::text('contact_name',$dar->contact_name,array('class'=> 'form-control','required'=> ''))}}
-      {{ Form::label('contact_no','Contact no:')}}
-      {{ Form::text('contact_no',$dar->contact_no,array('class'=> 'form-control','required'=> ''))}}
       {{ Form::submit('Edit Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
       <a class="btn btn-danger btn-block" href="{{ url('/accommodation') }}" role="button">Cancel</a>
       {!! Form::close() !!}

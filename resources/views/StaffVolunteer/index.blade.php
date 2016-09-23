@@ -73,7 +73,6 @@
                 <!-- Authentication Links -->
                 @if(Auth::guest())
                     <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -137,7 +136,7 @@ html, body {
   <div id="students" class="tab-pane active">
         <h3><i>While Carrying Responsibilities Never Forget to Smile.</i></h3>
         @if(!Auth::guest())
-        <a class="btn btn-success" href="{{ url('/staffvolunteer/create') }}" role="button">Add</a>
+        <a class="btn btn-success" href="{{ url('/staffvolunteer/create') }}" role="button">Add Staff</a>
         <a  id="xlsf" href="{{ URL::to('downloadExcel/staff/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
         <a id="xlsxf" href="{{ URL::to('downloadExcel/staff/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
         <a id="csvf" href="{{ URL::to('downloadExcel/staff/csv') }}"><button class="btn btn-info">Download CSV</button></a>

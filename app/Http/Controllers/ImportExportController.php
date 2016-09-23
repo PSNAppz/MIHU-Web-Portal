@@ -11,6 +11,7 @@ use App\Security as Sec;
 use App\Coordinator as Cord;
 use App\SpecialEvent as SE;
 use App\Medical as Med;
+use App\Seva;
 use App\Volunteer as Vol;
 use App\StaffVolunteer;
 use App\Http\Requests;
@@ -40,6 +41,15 @@ class ImportExportController extends Controller
             }
             if($database=="transport"){
     		$data = Trans::get()->toArray();
+    		return Excel::create('TransportationMIHU', function($excel) use ($data) {
+    			$excel->sheet('mySheet', function($sheet) use ($data)
+    	        {
+    				$sheet->fromArray($data);
+    	        });
+    		})->download($type);
+            }
+            if($database=="seva"){
+    		$data = Seva::get()->toArray();
     		return Excel::create('TransportationMIHU', function($excel) use ($data) {
     			$excel->sheet('mySheet', function($sheet) use ($data)
     	        {
@@ -180,6 +190,26 @@ class ImportExportController extends Controller
                 }
             }
         }
+        elseif ($database == 'seva') {
+            if(Input::hasFile('import_file')){
+                $path = Input::file('import_file')->getRealPath();
+                $data = Excel::load($path, function($reader) {
+                })->get();
+                if(!empty($data) && $data->count()){
+                    foreach ($data as $key => $value) {
+                        Seva::create([
+                        'place' => $value->place,
+                        'seva' => $value->seva,
+                        'location' => $value->location,
+                        'coordinator' => $value->coordinator,
+                        'contact' => $value->contact
+                    ]);
+                    }
+                        Session::flash('success', 'Insert Record successfully.');
+                        return redirect()->view('home');
+                }
+            }
+        }
         elseif($database == 'darshan'){
             if(Input::hasFile('import_file')){
                 $path = Input::file('import_file')->getRealPath();
@@ -191,9 +221,7 @@ class ImportExportController extends Controller
                         'darshan_time' => $value->darshan_time,
                         'date' => $value->date,
                         'token_loc' => $value->token_loc,
-                        'token_time' => $value->token_time,
-                        'contact_name' => $value->contact_name,
-                        'contact_no'=> $value->contact_no
+                        'token_time' => $value->token_time
                     ]);
                     }
                         Session::flash('success', 'Insert Record successfully.');

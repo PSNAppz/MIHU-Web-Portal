@@ -60,8 +60,6 @@ class DarshanController extends Controller
         $darshan->date = $request->date;
         $darshan->token_loc = $request->token_loc;
         $darshan->token_time = $request->token_time;
-        $darshan->contact_name = $request->contact_name;
-        $darshan->contact_no = $request->contact_no;
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->name=Auth::user()->name;

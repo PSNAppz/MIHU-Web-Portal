@@ -28,13 +28,13 @@
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#biotech"><b>Ashram Side</b></a></li>
-    <li><a data-toggle="tab" href="#stage"><b>College Side</b></a></li>
+        <li class="active"><a data-toggle="tab" href="#stage"><b>College Side</b></a></li>
+    <li ><a data-toggle="tab" href="#biotech"><b>Ashram Side</b></a></li>
     <li><a data-toggle="tab" href="#emer"><b>Emergency</b></a></li>
 
   </ul>
   <div class="tab-content">
-  <div id="biotech" class="tab-pane active">
+  <div id="biotech" class="tab-pane fade">
         <h3>Doctor Details</h3>
     <div class="container">
         <div class="row">
@@ -70,34 +70,13 @@
                           @endforeach
                         </tbody>
                       </table>
-                        <div class="glyphicon glyphicon-plus">Medical AidPost 1</div>
-                        <div id="carbonads-container">
-                            <div class="carbonad">
-                                <div id="azcarbon">
-                                    <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/32130" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
-                                    <span class="carbonad-text">Medical Aid Post 1 near Biotech Canteen</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="glyphicon glyphicon-plus">Medical AidPost 2</div>
-                        <div id="carbonads-container">
-                            <div class="carbonad">
-                                <div id="azcarbon">
-                                    <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/32130" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
-                                    <span class="carbonad-text">Medical Aid Post 2  left side Biotech cannteen</span>
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-        <div id="stage" class="tab-pane fade">
+        <div id="stage" class="tab-pane active">
             <h3>Doctor Details</h3>
         <div class="container">
             <div class="row">
@@ -137,20 +116,10 @@
                             <div id="carbonads-container">
                                 <div class="carbonad">
                                     <div id="azcarbon">
-                                        <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/32130" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
+                                        <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="{{asset('images/')}}" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
                                         <span class="carbonad-text">Medical Aid Post 1  left side Main stage</span>
                                     </div>
                                 </div>
-                            </div><div class="glyphicon glyphicon-plus">Medical AidPost 1</div>
-                            <div id="carbonads-container">
-                                <div class="carbonad">
-                                    <div id="azcarbon">
-                                        <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="https://assets.servedby-buysellads.com/p/manage/asset/id/32130" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
-                                        <span class="carbonad-text">Medical Aid Post 2  right side Main stage</span>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
