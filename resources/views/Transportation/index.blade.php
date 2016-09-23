@@ -33,7 +33,7 @@
   <div class="tab-content">
   <div id="bus" class="tab-pane active">
         <h3>Bus Timings</h3>
-        <p>Contact:944xxxxxx Name:David</p>
+        <p>Contact:944xxxxxx Name:N/A</p>
         @if(!Auth::guest())
         <a class="btn btn-success" href="{{ url('/transportation/create') }}" role="button">Add New Bus</a>
         <a  id="xlsf" href="{{ URL::to('downloadExcel/transportation/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>

@@ -52,6 +52,9 @@ Route::resource('volunteer','VolunteerController');
 //Accomodation
 Route::resource('accommodation','AccommodationController');
 
+//SevaDetails
+Route::resource('seva','SevaController');
+
 //Medical
 Route::resource('medical','MedicalController');
 

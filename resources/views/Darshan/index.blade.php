@@ -42,10 +42,8 @@
             <tr>
               <th>Darshan timings</th>
               <th>Date</th>
-              <th>Token distribution</th>
+              <th>Location of Dist</th>
               <th>Token timing</th>
-              <th>Contact name</th>
-              <th>Contact no:</th>
             </tr>
           </thead>
           <tbody>
@@ -55,8 +53,6 @@
               <th>{{ $d->date}}</th>
               <th>{{ $d->token_loc}}</th>
               <th>{{ $d->token_time}}</th>
-              <th>{{ $d->contact_name}}</th>
-              <th>{{ $d->contact_no}}</th>
               @if(!Auth::guest())
               <th><a class="btn btn-warning" href="{{ route('darshan.edit', $d->id,'/edit') }}" role="button">Update</a></th>
               <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['darshan.destroy', $d->id]]) }}
