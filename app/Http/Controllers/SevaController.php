@@ -20,7 +20,7 @@ class SevaController extends Controller
 
     public function index()
     {
-        $seva = Seva::paginate(15);
+        $seva = Seva::get();
         return view('Seva.index')->withSeva($seva);
     }
     /**

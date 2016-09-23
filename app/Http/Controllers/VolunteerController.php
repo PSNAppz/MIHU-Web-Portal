@@ -27,7 +27,7 @@ class VolunteerController extends Controller
 
          public function index()
          {
-             $volunteers = Volunteer::paginate(15);
+             $volunteers = Volunteer::get();
              return view('Volunteer.index')->withVolunteers($volunteers);
          }
          /**

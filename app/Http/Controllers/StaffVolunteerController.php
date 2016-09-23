@@ -25,7 +25,7 @@ class StaffVolunteerController extends Controller
 
     public function index()
     {
-        $staff = StaffVolunteer::paginate(15);
+        $staff = StaffVolunteer::get();
         return view('StaffVolunteer.index')->withStaff($staff);
     }
     /**
