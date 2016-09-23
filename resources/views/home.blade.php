@@ -27,7 +27,7 @@
                 <input type="radio" name="redirect"  onClick="changeVal(6)"><span>Food</span><br>
                 <input type="radio" name="redirect"  onClick="changeVal(7)"><span>Coordinator</span><br>
                 <input type="radio" name="redirect"  onClick="changeVal(8)"><span>Staff Volunteer</span><br>
-                <input type="radio" name="redirect"  onClick="changeVal(9)"><span>VCC</span><br>
+                <input type="radio" name="redirect"  onClick="changeVal(9)"><span>Seva</span><br>
                 </form>
                 <a  id="xlsf" href=""><button class="btn btn-success">Download Excel xls</button></a>
                 <a id="xlsxf" href="{{ URL::to('downloadExcel/xlsx') }}"><button class="btn btn-success">Download Excel xlsx</button></a>
@@ -69,7 +69,7 @@
             <div class="panel-body">
                                 {!! Form::open(array('route' => 'welcome.store','data-parsley-validate' => '')) !!}
                                 {{ Form::label('type', 'Type:') }}
-                                {{ Form::select('type', array('0' => 'General', '1' => 'Lost & Found','2' => 'Special'), null, array('class' => 'form-control'))}}
+                                {{ Form::select('type', array('0' => 'General', '1' => 'Lost & Found','2' => 'Special','3'=>'VCC'), null, array('class' => 'form-control'))}}
                                 {{ Form::label('message','Description:')}}
                                 {{ Form::textarea('message',null,array('class'=> 'form-control','required'=> ''))}}
                                 {{ Form::submit('Announce!',array('class'=>'btn btn-success','style' =>'margin-top:20px;'))}}
@@ -185,12 +185,12 @@ function changeVal(value){
         var xls = document.getElementById("xlsf");
         var xlsx = document.getElementById("xlsxf");
 
-        csv.href = "{{ URL::to('downloadExcel/vcc/csv') }}";
-        xls.href = "{{ URL::to('downloadExcel/vcc/xls') }}";
-        xlsx.href = "{{ URL::to('downloadExcel/vcc/xlsx') }}";
+        csv.href = "{{ URL::to('downloadExcel/seva/csv') }}";
+        xls.href = "{{ URL::to('downloadExcel/seva/xls') }}";
+        xlsx.href = "{{ URL::to('downloadExcel/seva/xlsx') }}";
 
         var x = document.getElementById("import");
-        x.action="{{ URL::to('importExcel/vcc') }}";
+        x.action="{{ URL::to('importExcel/seva') }}";
     }
 
 }

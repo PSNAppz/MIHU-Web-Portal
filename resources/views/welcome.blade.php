@@ -260,6 +260,8 @@
                   <div class="well" style="background-color:#00E5FF;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>
           @elseif($news->type==0)
           <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>
+          @elseif($news->type==3)
+          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>
           @else
               <div class="well" style="background-color:#ff5252;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;color:white;">{{$news->message}}</b>
           @endif
