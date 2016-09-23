@@ -73,7 +73,7 @@
                           </table>
                         </div>
                     </div>
-                    <strong>Contact: Davis<br>Contact no:9495XXXXXX</strong>
+                    <strong>Contact:Narayanan RS<br>Contact no:9995235819</strong>
                 </div>
             </div>
         </div>
@@ -114,7 +114,7 @@
                           </table>
                         </div>
                     </div>
-                    <strong>Contact: Ferguson<br>Contact no:9495XXXXXX</strong>
+                    <strong>Contact:Narayanan RS<br>Contact no:9995235819</strong>
                 </div>
             </div>
         </div>
@@ -155,7 +155,7 @@
                   </table>
                 </div>
             </div>
-            <strong>Contact: Davidson<br>Contact no:9495XXXXXX</strong>
+            <strong>Contact:Narayanan RS<br>Contact no:9995235819</strong>
         </div>
     </div>
 </div>
@@ -196,7 +196,7 @@
                           </table>
                         </div>
                     </div>
-                    <strong>Contact: Mourinho<br>Contact no:9495XXXXXX</strong>
+                    <strong>Contact:Narayanan RS<br>Contact no:9995235819</strong>
                 </div>
             </div>
         </div>

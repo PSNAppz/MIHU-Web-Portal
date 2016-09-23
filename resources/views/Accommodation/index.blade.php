@@ -90,6 +90,7 @@
                     </div>
                     </div>
                 </div>
+                <strong>Contact:Anu K Manappuram RS<br>Contact no: 9446406800</strong>
             </div>
         </div>
     </div>

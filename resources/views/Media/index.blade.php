@@ -113,8 +113,8 @@ img {
                               <th>{{ $m->name}}</th>
                               <th>{{ $m->phone}}</th>
                               @if(!Auth::guest())
-                              <th><a class="btn btn-warning" href="{{ route('darshan.edit', $m->id,'/edit') }}" role="button">Update</a></th>
-                              <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['darshan.destroy', $m->id]]) }}
+                              <th><a class="btn btn-warning" href="{{ route('media.edit', $m->id,'/edit') }}" role="button">Update</a></th>
+                              <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['media.destroy', $m->id]]) }}
                               {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
                               {{ Form::close() }}</th>
                               @endif
