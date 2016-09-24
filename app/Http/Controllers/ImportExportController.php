@@ -136,8 +136,10 @@ class ImportExportController extends Controller
                         'gender' => $value->gender,
                         'areaName' => $value->areaname,
                         'locationofAcc' => $value->locationofacc,
-                        'nearby' => $value->nearby,
-                        'isFull' => $value->isfull
+                        'category' => $value->category,
+                        'coord' => $value->coord,
+                        'isFull' => $value->isfull,
+                        'contact' => $value->contact
                     ]);
     				}
     					dd('Insert Record successfully.');
