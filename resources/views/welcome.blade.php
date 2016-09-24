@@ -217,7 +217,8 @@
               <a class="btn btn-primary btn-lg btn-block" href="/security" role="button"><span class="glyphicon glyphicon-lock"></span>&nbsp Security</a>
             </div>
             <div class="col-sm-4" >
-             <a class="btn btn-primary btn-lg btn-block" href="/seva" role="button"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp Seva</a>
+             <a class="btn btn-primary btn-lg btn-block" href="/seva" role="button"><span class="
+                 glyphicon glyphicon-heart"></span>&nbsp Seva</a>
            </div>
          </div>
          <br>
@@ -238,7 +239,7 @@
     </div>
     <div class="news">
     <div class="newsbody">
-      <h2><b>News Feeds</b></h2>
+      <h1><b>News Feed</b></h1>
       <br>
       <br><br>
       <div>

@@ -20,9 +20,6 @@
         </div>
     </div>
 <br/>
-<br/>
-<br/>
-<br/>
 <div class="container">
   <div class="col-md-12 ">
       <p>Darshan Time Schedule</p>
@@ -68,5 +65,20 @@
     </div>
   </div>
 </div>
+<center>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div style="overflow-x:auto;">
+<div id="carbonads-container">
+    <div class="carbonad">
+        <div id="azcarbon">
+<img src="{{asset('images/darshan.png')}}" class="carbonad-image carbonad-img"></span>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</center>
 @include('layouts.footer')
 @endsection

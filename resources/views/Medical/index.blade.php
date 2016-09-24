@@ -29,12 +29,13 @@
 <div class="container">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#stage"><b>College Side</b></a></li>
-    <li ><a data-toggle="tab" href="#biotech"><b>Ashram Side</b></a></li>
+    <li ><a data-toggle="tab" href="#ashram"><b>Ashram Side</b></a></li>
     <li><a data-toggle="tab" href="#emer"><b>Emergency</b></a></li>
 
   </ul>
   <div class="tab-content">
-  <div id="biotech" class="tab-pane fade">
+  <div id="ashram" class="tab-pane fade">
+        <h3>Amritakripa Hospital</h3>
         <h3>Doctor Details</h3>
     <div class="container">
         <div class="row">
@@ -112,20 +113,30 @@
                               @endforeach
                             </tbody>
                           </table>
-                            <div class="glyphicon glyphicon-plus">Medical AidPost 1</div>
-                            <div id="carbonads-container">
-                                <div class="carbonad">
-                                    <div id="azcarbon">
-                                        <span><span class="carbonad-image"><a href="location1" target="_blank"><img width="130" height="100" border="0" src="{{asset('images/')}}" class="carbonad-image carbonad-img" style="max-width:130px;"></a></span>
-                                        <span class="carbonad-text">Medical Aid Post 1  left side Main stage</span>
-                                    </div>
-                                </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div style="overflow-x:auto;">
+    <div id="carbonads-container">
+        <div class="carbonad">
+            <div id="azcarbon">
+                <span><span class="carbonad-image">
+                    <h3>Medical Aid Post   left side Main stage Near Police Control Room.</h3>
+                    <h3>Medical Clinic Near Cloak Room.</h3>
+
+    <img src="{{asset('images/medical.jpg')}}" class="carbonad-image carbonad-img"></span>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
 </div>
+
 <div id="emer" class="tab-pane fade">
     <h3></h3>
 <div class="container">
@@ -134,9 +145,7 @@
             <hr>
             <center style="font-size:20px"><strong>Ambulance</strong></center>
             <div class="panel panel-default">
-
                 <div class="panel-body">
-
                   <table class="table">
                     <thead>
                       <th>Name</th>
@@ -193,7 +202,6 @@
     </div>
 </div>
 </div>
-
 </div>
 </div>
 @include('layouts.footer')

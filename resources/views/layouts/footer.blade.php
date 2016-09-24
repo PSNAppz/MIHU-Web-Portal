@@ -5,7 +5,7 @@
 
 
         <p class="footer-links">
-              <a href="/">Map</a>
+              <a href="/map">Map</a>
                    ·
               <a href="/staffvolunteer">Staff</a>
                    ·
