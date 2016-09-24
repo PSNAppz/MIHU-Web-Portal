@@ -41,6 +41,11 @@ Route::get('/about',function() {
 });
 
 Route::get('/home', 'HomeController@index');
+//map
+Route::get('/map', function(){
+    return view('map');
+});
+
 Route::get('/home/clearlogs', 'HomeController@destroy');
 
 //Coordinator

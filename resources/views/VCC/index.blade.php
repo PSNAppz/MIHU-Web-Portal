@@ -41,19 +41,7 @@
             </div>
         <div class="panel panel-default">
           <div class="panel-body">
-            <table class ="table">
-              <thead>
-                <tr>
-                  <th><center/>Date</th>
-                  <th><center/><center/>Food Items</th>
-                  <th><center/><center/><center/>Timing</th>
-                  <th><center/>Available At</th>
-                </tr>
-              </thead>
-              <tbody>
-
-              </tbody>
-            </table>
+            TEST
           </div>
         </div>
       </div>

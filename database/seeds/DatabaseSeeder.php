@@ -22,19 +22,19 @@ class DatabaseSeeder extends Seeder
                     'password' => bcrypt('Sooraj@123'),
                         ]);
         DB::table('users')->insert([
-                    'name' => 'HariKrishnan',
-                    'email' => 'mihuadmin@gmail.com',
-                    'password' => bcrypt('secret'),
+                    'name' => 'HariKrishna AJ',
+                    'email' => 'hkk710@gmail.com',
+                    'password' => bcrypt('hkk710*'),
                                 ]);
         DB::table('users')->insert([
                     'name' => 'HariVishnu',
-                    'email' => 'mihuadmin2@gmail.com',
-                    'password' => bcrypt('secret'),
+                    'email' => 'hvmp2012@gmail.com',
+                    'password' => bcrypt('Shillong2'),
                                         ]);
         DB::table('users')->insert([
                     'name' => 'Vineeth',
-                    'email' => 'mihuadmin3@gmail.com',
-                    'password' => bcrypt('secret'),
+                    'email' => 'vineethkumar6469@gmail.com',
+                    'password' => bcrypt('Vineeth1234'),
                                         ]);
         DB::table('users')->insert([
                     'name' => 'Test',
@@ -47,9 +47,9 @@ class DatabaseSeeder extends Seeder
                     'password' => bcrypt('Elit3Hack3r'),
                                     ]);
         DB::table('users')->insert([
-                    'name' => 'debug',
-                    'email' => 'debug@gmail.com',
-                    'password' => bcrypt('secret'),
+                    'name' => 'Krishna Chandran',
+                    'email' => 'ks.krishnan1996@gmail.com',
+                    'password' => bcrypt('krishnan1996'),
                                 ]);
     }
 }

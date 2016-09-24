@@ -65,22 +65,6 @@ img {
                               @endforeach
                             </tbody>
                           </table>
-                          <div class="panel-body">
-                            <div class="row">
-                              <div class="col-sm-6">
-                                <img src="{{asset('images/dummyimage.png')}}" alt="image" width="450" height="300">
-                                <span class="color">
-                                    Type location details here......
-                                </span>
-                              </div>
-                              <div class="col-sm-6">
-                                <img src="{{asset('images/dummyimage.png')}}" alt="image" width="450" height="300">
-                                <span class="color">
-                                    Type location details here......
-                                </span>
-                            </div>
-                          </div>
-                        </div>
                         </div>
                     </div>
                     {{$media->links()}}
