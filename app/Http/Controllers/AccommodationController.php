@@ -28,7 +28,7 @@ class AccommodationController extends Controller
 
     public function index()
     {
-        $accommodations = Accommodate::orderBy('areaName')->paginate(15);
+        $accommodations = Accommodate::orderBy('areaName')->get();
         return view('Accommodation.index')->withAccommodations($accommodations);
     }
 
@@ -55,7 +55,9 @@ class AccommodationController extends Controller
                'gender'          => 'required|numeric',
                'areaName'        => 'required|max:255',
                'locationofAcc'   => 'required|max:255',
-               'nearby'          => 'required|max:255',
+               'category'          => 'required|max:255',
+               'coord'          => 'required|max:255',
+               'contact'          => 'required|numeric',
                'isFull'          => 'required|numeric',
            ));
        // store in the database
@@ -64,7 +66,7 @@ class AccommodationController extends Controller
        $accommodations->gender = $request->gender;
        $accommodations->areaName = $request->areaName;
        $accommodations->locationofAcc = $request->locationofAcc;
-       $accommodations->nearby = $request->nearby;
+       $accommodations->category = $request->category;
        $accommodations->isFull = $request->isFull;
        $accommodations->coord = $request->coord;
        $accommodations->contact = $request->contact;
@@ -113,11 +115,13 @@ class AccommodationController extends Controller
         $acc = Accommodation::find($id);
         $log = new Log;
         $this->validate($request, array(
-                'gender'          => 'required|numeric',
-                'areaName'        => 'required|max:255',
-                'locationofAcc'   => 'required|max:255',
-                'nearby'          => 'required|max:255',
-                'isFull'          => 'required|numeric',
+            'gender'          => 'required|numeric',
+            'areaName'        => 'required|max:255',
+            'locationofAcc'   => 'required|max:255',
+            'category'          => 'required|max:255',
+            'coord'          => 'required|max:255',
+            'contact'          => 'required|numeric',
+            'isFull'          => 'required|numeric',
             ));
 
     $input = $request->all();
