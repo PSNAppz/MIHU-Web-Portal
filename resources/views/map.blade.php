@@ -13,23 +13,28 @@
 .m-b-md {
     margin-bottom: 30px;
 }
+img {
+    border-radius: 4px;
+    box-shadow: 0 0 10px 3px #bbb;
+    width:100%;
+    height:auto;
+}
 </style>
     <div class="content">
         <div class="title m-b-md">
             MAP
         </div>
     </div>
-    <div class="container">
-      <div class="col-md-12 ">
-        <div class="panel panel-default">
-          <div class="panel-body">
-              <div style="overflow-x:auto;">
-
-            <img src="{{asset('/images/map.jpeg')}}">
-        </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <img src="{{asset('/images/map.jpeg')}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 @include('layouts.footer')
 @endsection

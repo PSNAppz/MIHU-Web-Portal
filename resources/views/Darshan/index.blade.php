@@ -13,14 +13,18 @@
 .m-b-md {
     margin-bottom: 30px;
 }
+img {
+    border-radius: 4px;
+    box-shadow: 0 0 10px 3px #bbb;
+    width:100%;
+    height:auto;
+}
 </style>
     <div class="content">
         <div class="title m-b-md">
             Darshan Details
         </div>
-    </div>
 <br/>
-<div class="container">
   <div class="col-md-12 ">
       <p>Darshan Time Schedule</p>
       @if(!Auth::guest())
@@ -31,6 +35,20 @@
   @endif
 
       <hr>
+  </div>
+  <div class="container">
+      <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#darshan"><b>Darshan</b></a></li>
+      <li><a data-toggle="tab" href="#mal"><b>Malayalam</b></a></li>
+      <li><a data-toggle="tab" href="#eng"><b>English</b></a></li>
+    <li><a data-toggle="tab" href="#tamil"><b>Tamil</b></a></li>
+    </ul>
+  <div class="tab-content">
+  <div id="cm" class="tab-pane active">
+<h3 align='center'></h3>
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
     <div class="panel panel-default">
       <div class="panel-body">
         <div style="overflow-x:auto;">
@@ -63,22 +81,53 @@
     </div>
       </div>
     </div>
+</div>
+</div>
+</div>
+  </div>
+  <div id="mal" class="tab-pane fade">
+      <h3 align="center"></h3>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <img src="{{asset('/pdf/mal.pdf')}}">
+                      </div>
+                  </div>
+          </div>
+      </div>
   </div>
 </div>
-<center>
-<div class="panel panel-default">
-    <div class="panel-body">
-        <div style="overflow-x:auto;">
-<div id="carbonads-container">
-    <div class="carbonad">
-        <div id="azcarbon">
-<img src="{{asset('images/darshan.png')}}" class="carbonad-image carbonad-img"></span>
+<div id="eng" class="tab-pane fade">
+    <h3 align="center"></h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img src="{{asset('/pdf/eng.pdf')}}">
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+<div id="tamil" class="tab-pane fade">
+    <h3 align="center"></h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img src="{{asset('/pdf/tamil.pdf')}}">
+                    </div>
+                </div>
         </div>
     </div>
 </div>
 </div>
 </div>
 </div>
-</center>
 @include('layouts.footer')
 @endsection

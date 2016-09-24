@@ -154,8 +154,8 @@ class ImportExportController extends Controller
                         foreach ($data as $key => $value) {
                             Vol::create([
                                 'name' => $value->name,
-                                'batch' => $value->areaname,
-                                'campus' => $value->locationofacc,
+                                'batch' => $value->batch,
+                                'campus' => $value->campus,
                                 'contact' => $value->contact,
                                 'seva' => $value->seva,
                                 'cordname' => $value->cordname,

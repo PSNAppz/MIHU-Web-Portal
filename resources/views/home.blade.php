@@ -28,6 +28,7 @@
                 <input type="radio" name="redirect"  onClick="changeVal(7)"><span>Coordinator</span><br>
                 <input type="radio" name="redirect"  onClick="changeVal(8)"><span>Staff Volunteer</span><br>
                 <input type="radio" name="redirect"  onClick="changeVal(9)"><span>Seva</span><br>
+                <input type="radio" name="redirect"  onClick="changeVal(10)"><span>Volunteers</span><br>
                 </form>
                 <a  id="xlsf" href=""><button class="btn btn-success">Download Excel xls</button></a>
                 <a id="xlsxf" href="{{ URL::to('downloadExcel/xlsx') }}"><button class="btn btn-success">Download Excel xlsx</button></a>
@@ -191,6 +192,18 @@ function changeVal(value){
 
         var x = document.getElementById("import");
         x.action="{{ URL::to('importExcel/seva') }}";
+    }
+    if(a == 10){
+        var csv = document.getElementById("csvf");
+        var xls = document.getElementById("xlsf");
+        var xlsx = document.getElementById("xlsxf");
+
+        csv.href = "{{ URL::to('downloadExcel/volunteer/csv') }}";
+        xls.href = "{{ URL::to('downloadExcel/volunteer/xls') }}";
+        xlsx.href = "{{ URL::to('downloadExcel/volunteer/xlsx') }}";
+
+        var x = document.getElementById("import");
+        x.action="{{ URL::to('importExcel/volunteer') }}";
     }
 
 }

@@ -74,7 +74,6 @@
                           </table>
                         </div>
                     </div>
-                    <strong>Contact:Narayanan RS<br>Contact no:9995235819</strong>
                 </div>
             </div>
         </div>
@@ -155,7 +154,6 @@
                           </table>
                         </div>
                     </div>
-                    <strong>Contact:Narayanan RS<br>Contact no:9995235819</strong>
                 </div>
             </div>
         </div>
@@ -237,7 +235,6 @@
                           </table>
                         </div>
                     </div>
-                    <strong>Contact:Narayanan RS<br>Contact no:9995235819</strong>
                 </div>
             </div>
         </div>
