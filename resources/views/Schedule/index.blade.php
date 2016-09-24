@@ -68,9 +68,9 @@ img {
                             <img src="{{asset('/images/26.jpg')}}">
                         </div>
                     </div>
-                </div>
             </div>
         </div>
+    </div>
 </div>
     <div id="27" class="tab-pane fade">
         <h3 align="center"></h3>
