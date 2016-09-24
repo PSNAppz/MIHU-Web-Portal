@@ -38,13 +38,13 @@ img {
   </div>
   <div class="container">
       <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#darshan"><b>Darshan</b></a></li>
+      <li class="active"><a data-toggle="tab" href="#english"><b>English</b></a></li>
       <li><a data-toggle="tab" href="#mal"><b>Malayalam</b></a></li>
-      <li><a data-toggle="tab" href="#eng"><b>English</b></a></li>
-    <li><a data-toggle="tab" href="#tamil"><b>Tamil</b></a></li>
+      <li><a data-toggle="tab" href="#eng"><b>Tamil</b></a></li>
+    <li><a data-toggle="tab" href="#darshan"><b>Darshan</b></a></li>
     </ul>
   <div class="tab-content">
-  <div id="cm" class="tab-pane active">
+  <div id="darshan" class="tab-pane fade">
 <h3 align='center'></h3>
 <div class="container">
 <div class="row">
@@ -99,7 +99,7 @@ img {
       </div>
   </div>
 </div>
-<div id="eng" class="tab-pane fade">
+<div id="eng" class="tab-pane active">
     <h3 align="center"></h3>
     <div class="container">
         <div class="row">
