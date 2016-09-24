@@ -14,6 +14,12 @@
 .m-b-md {
     margin-bottom: 30px;
 }
+img {
+    border-radius: 4px;
+    box-shadow: 0 0 10px 3px #bbb;
+    width:100%;
+    height:auto;
+}
 </style>
     <div class="content">
         <div class="title m-b-md">
@@ -43,6 +49,7 @@
                 <hr>
                 <div class="panel panel-default">
                     <div class="panel-body">
+                        <div style="overflow-x:auto;">
                       <table class="table">
                         <thead>
                           <th>Location</th>
@@ -71,6 +78,7 @@
                           @endforeach
                         </tbody>
                       </table>
+                  </div>
                     </div>
                 </div>
             </div>
@@ -85,6 +93,7 @@
                     <hr>
                     <div class="panel panel-default">
                         <div class="panel-body">
+                            <div style="overflow-x:auto;">
                           <table class="table">
                             <thead>
                               <th>Location</th>
@@ -113,6 +122,7 @@
                               @endforeach
                             </tbody>
                           </table>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -146,6 +156,7 @@
             <center style="font-size:20px"><strong>Ambulance</strong></center>
             <div class="panel panel-default">
                 <div class="panel-body">
+                    <div style="overflow-x:auto;">
                   <table class="table">
                     <thead>
                       <th>Name</th>
@@ -168,6 +179,7 @@
                       @endforeach
                     </tbody>
                   </table>
+              </div>
                 </div>
               </div>
               <hr>

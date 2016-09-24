@@ -13,108 +13,81 @@
 .m-b-md {
     margin-bottom: 30px;
 }
+.color {
+    color: black;
+    font-weight: bold;
+    padding: 15px;
+    border-left: 2px solid #ccc;
+}
+img {
+    border-radius: 4px;
+    box-shadow: 0 0 10px 3px #bbb;
+    width:100%;
+    height:auto;
+}
+
 </style>
-  </style>
     <div class="content">
         <div class="title m-b-md">
-            Schedule
+            Event Schedule
         </div>
     </div>
 
-   <div class="container">
+    <br>
+<div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#26"><b>26th Sept</b></a></li>
-    <li><a data-toggle="tab" href="#27"><b>27th Sept</b></a></li>
-    <li><a data-toggle="tab" href="#28"><b>28th Sept</b></a></li>
+        <li class="active"><a data-toggle="tab" href="#25"><b>25th</b></a></li>
+        <li><a data-toggle="tab" href="#26"><b>26th</b></a></li>
+        <li><a data-toggle="tab" href="#27"><b>27th</b></a></li>
 
-
-  </ul>
-  </div>
-  <div class="tab-content">
-    <div id="26" class="tab-pane active">
-        <h3 align="center">Events</h3>
+    </ul>
+    <div class="tab-content">
+    <div id="25" class="tab-pane active">
+        <h3 align="center"></h3>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <div style="overflow-x:auto;">
-                            <table class="table">
-                            <thead>
-                                <th>Program</th>
-                                <th>Time</th>
-                                <th>Venue</th>
-                                @if(!Auth::guest())
-                                <th></th>
-                                <th></th>
-                            @endif
-                            </thead>
-                            <tbody>
-      
-                        </table>
-                            </div>
+                            <img src="{{asset('/images/25.jpg')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <div id="26" class="tab-pane fade">
+        <h3 align="center"></h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="{{asset('/images/26.jpg')}}">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+</div>
     <div id="27" class="tab-pane fade">
-            <h3 align="center">Events</h3>
+        <h3 align="center"></h3>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <div style="overflow-x:auto;">
-                            <table class="table">
-                            <thead>
-                                <th>Program</th>
-                                <th>Time</th>
-                                <th>Venue</th>
-                                @if(!Auth::guest())
-                                <th></th>
-                                <th></th>
-                            @endif
-                            </thead>
-                            
-                            
-                            </table>
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="28" class="tab-pane fade">
-            <h3 align="center">Events</h3>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div style="overflow-x:auto;">
-                            <table class="table">
-                            <thead>
-                                <th>Program</th>
-                                <th>Time</th>
-                                <th>Venue</th>
-                                @if(!Auth::guest())
-                                <th></th>
-                                <th></th>
-                            @endif
-                            </thead>
-                            </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
 </div>
 @include('layouts.footer')
+
 @endsection
