@@ -14,6 +14,12 @@
 .m-b-md {
     margin-bottom: 30px;
 }
+img {
+    border-radius: 4px;
+    box-shadow: 0 0 10px 3px #bbb;
+    width:100%;
+    height:auto;
+}
 </style>
     <div class="content">
         <div class="title m-b-md">
@@ -22,16 +28,13 @@
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#bus"><b>Bus</b></a></li>
-    <li><a data-toggle="tab" href="#train"><b>Train</b></a></li>
+        <li  class="active"><a data-toggle="tab" href="#train"><b>Train</b></a></li>
+    <li><a data-toggle="tab" href="#bus"><b>Bus</b></a></li>
     <li><a data-toggle="tab" href="#other"><b>Other</b></a></li>
     <li><a data-toggle="tab" href="#parking"><b>Parking Locations</b></a></li>
-
-
-
   </ul>
   <div class="tab-content">
-  <div id="bus" class="tab-pane active">
+  <div id="bus" class="tab-pane fade">
         <h3>Bus Timings</h3>
         @if(!Auth::guest())
         <a class="btn btn-success" href="{{ url('/transportation/create') }}" role="button">Add New Bus</a>
@@ -140,22 +143,68 @@
 </div>
 </div>
 
-        <div id="train" class="tab-pane fade">
+        <div id="train" class="tab-pane active">
             <h3>Train Timings</h3>
+            <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#south"><b>Towards TVM</b></a></li>
+            <li><a data-toggle="tab" href="#north"><b>Towards Ernakulam</b></a></li>
+          </ul>
         <div class="container">
             <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <hr>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            DATA HERE
+              <div class="tab-content">
+              <div id="south" class="tab-pane active">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-10 col-md-offset-1">
+                          <hr>
+                          <div class="panel panel-default">
+                              <div class="panel-heading"><b>From Kayankulam Towards TVM </b></div>
+                              <div class="panel-body">
+                                  <div style="overflow-x:auto;">
+                                      <img src="{{asset('/pdf/kayan.pdf')}}">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="panel panel-default">
+                              <div class="panel-heading"><b>From Karunagapally Towards TVM </b></div>
+                              <div class="panel-body">
+                                  <div style="overflow-x:auto;">
+                                      <img src="{{asset('/pdf/karutvc.pdf')}}">
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="north" class="tab-pane fade">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-10 col-md-offset-1">
+                          <hr>
+                          <div class="panel panel-default">
+                              <div class="panel-heading"><b>From Kayankulam Towards EKM via Alleppy </b></div>
+                              <div class="panel-body">
+                                  <div style="overflow-x:auto;">
+                                      <img src="{{asset('/pdf/kayanal.pdf')}}"></div>
 
-                        </div>
+                              </div>
+                          </div>
+                          <div class="panel panel-default">
+                              <div class="panel-heading"><b>From Karunagapally Towards EKM via Kottayam</b></div>
+                              <div class="panel-body">
+                                  <div style="overflow-x:auto;">
+                                      <img src="{{asset('/pdf/kayanktym.pdf')}}"></div>
+                              </div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
                     </div>
                 </div>
             </div>
-        </div>
-</div>
 <div id="parking" class="tab-pane fade">
     <h3>Parking</h3>
 <div class="container">

@@ -32,7 +32,7 @@
         <br>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                @foreach($faq as $faq)
+                @foreach($faqs as $faq)
                 <div class="panel panel-default">
                     <div class="panel-heading" ><b>#{{$faq->id}} {{$faq->ques}}</b>
                         @if(!Auth::guest())
@@ -49,7 +49,9 @@
             @endforeach
             </div>
         </div>
+        {{$faqs->links()}}
     </div>
+
 @include('layouts.footer')
 
 @endsection
