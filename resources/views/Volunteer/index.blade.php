@@ -138,6 +138,7 @@ img {
     <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
     <li><a data-toggle="tab" href="#other"><b>Other Campus</b></a></li>
+    <li><a data-toggle="tab" href="#devotee"><b>Devotee Volunteers</b></a></li>
 
   </ul>
   <div class="tab-content">
@@ -218,6 +219,25 @@ img {
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <img src="{{asset('/images/26.jpg')}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="devotee" class="tab-pane fade">
+    <h3 align="center"></h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="alert alert-success" role="alert">
+                            <h2>ID Card distribution</h2>
+                            <p>Room No : N002, Engineering College</p>
+                            <p>Contact : Br. Vivek</p>
+                            <p>Ph: 9446405900 </p>
+                        </div>
                     </div>
                 </div>
             </div>

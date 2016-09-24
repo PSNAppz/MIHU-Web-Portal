@@ -41,24 +41,25 @@
             </div>
         <div class="panel panel-default">
           <div class="panel-body">
+              <div class="alert alert-danger" role="alert">
+                  <h2>VCC Food will be available 24/7 only for Amrita University Students and Staff Volunteers.</h2>
+              </div>
+              <div class="alert alert-info" role="alert">
+
             <h2><u>Refreshment Distribution Timings</u></h2>
             <h4>The Following are the preferable timings to collect refreshments:
                 <b> 2 am, 6 am, 11 am, 2 pm, 4 pm, 9 pm, 11 pm.</b>
             </h4>
+            </div>
+            <div class="alert alert-info" role="alert">
             <h2><u>Refreshment Counter</u></h2>
-            <h4>Opposite to<em> Amritavarsham </em>Police Mess Hall.</h4>
+            <h3>Opposite to<em> Amritavarsham </em>Police Mess Hall.(Anugraha Mess - West of Engg. College Canteen)</h3>
+        </div>
+        <div class="alert alert-info" role="alert">
             <h2><u>Student Mess Food Details</u></h2>
-            <h4>Location: Biotech Mess Hall <br> This mess hall will be only available for University Staffs and Students.<br>
-                <br><h3><u>Schedule</u></h3>
-                Sept 25th : Lunch, Dinner<br>
-                Sept 26th : Breakfast, Lunch, Dinner<br>
-                Sept 27th : Breakfast <b>(Lunch and Dinner will be served in the food counters inside the main venue and not in biotech mess).</b><br>
-                Sept 28th : Breakfast, Lunch<br><br>
-                Mess Timings<br>
-                Breakfast : 7am - 9am<br>
-                Lunch : 11:30am - 2pm<br>
-                Dinner : 7pm - 9:30pm<br>
-<h3> VCC HELPLINE: TO Be Updated</h3>
+            <h3>Location: Biotech Mess Hall <br> This mess hall will be only available for University Staffs and Students.<br></h3>
+        </div>
+<h3> VCC HELPLINE:0476-2806001</h3>
             </h4>
           </div>
         </div>
