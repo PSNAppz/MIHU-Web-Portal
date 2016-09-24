@@ -65,7 +65,7 @@ img {
               <div class="col-md-10 col-md-offset-1">
                   <div class="panel panel-default">
                       <div class="panel-body">
-                          <img src="{{asset('/images/mal.pdf')}}">
+                          <img src="{{asset('/images/mal.jpg')}}">
                       </div>
                   </div>
           </div>
@@ -79,7 +79,7 @@ img {
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img src="{{asset('/images/tamil.pdf')}}">
+                        <img src="{{asset('/images/tamil.jpg')}}">
                     </div>
                 </div>
         </div>
