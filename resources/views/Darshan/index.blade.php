@@ -38,53 +38,26 @@ img {
   </div>
   <div class="container">
       <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#english"><b>English</b></a></li>
+      <li class="active"><a data-toggle="tab" href="#eng"><b>English</b></a></li>
       <li><a data-toggle="tab" href="#mal"><b>Malayalam</b></a></li>
-      <li><a data-toggle="tab" href="#eng"><b>Tamil</b></a></li>
-    <li><a data-toggle="tab" href="#darshan"><b>Darshan</b></a></li>
+      <li><a data-toggle="tab" href="#tamil"><b>Tamil</b></a></li>
+      <li><a data-toggle="tab" href="#darshan"><b>Darshan</b></a></li>
     </ul>
   <div class="tab-content">
-  <div id="darshan" class="tab-pane fade">
-<h3 align='center'></h3>
-<div class="container">
-<div class="row">
-<div class="col-md-10 col-md-offset-1">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div style="overflow-x:auto;">
-        <table class ="table">
-          <thead>
-            <tr>
-              <th>Darshan timings</th>
-              <th>Date</th>
-              <th>Location of Dist</th>
-              <th>Token timing</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach($darshan as $d)
-            <tr>
-              <th>{{ $d->darshan_time}}</th>
-              <th>{{ $d->date}}</th>
-              <th>{{ $d->token_loc}}</th>
-              <th>{{ $d->token_time}}</th>
-              @if(!Auth::guest())
-              <th><a class="btn btn-warning" href="{{ route('darshan.edit', $d->id,'/edit') }}" role="button">Update</a></th>
-              <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['darshan.destroy', $d->id]]) }}
-              {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-              {{ Form::close() }}</th>
-              @endif
-            </tr>
-            @endforeach
-          </tbody>
-        </table>
-    </div>
+      <div id="eng" class="tab-pane active">
+          <h3 align="center"></h3>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                      <div class="panel panel-default">
+                          <div class="panel-body">
+                              <img src="{{asset('/images/eng.jpg')}}">
+                          </div>
+                      </div>
+              </div>
+          </div>
       </div>
-    </div>
-</div>
-</div>
-</div>
-  </div>
+      </div>
   <div id="mal" class="tab-pane fade">
       <h3 align="center"></h3>
       <div class="container">
@@ -92,26 +65,12 @@ img {
               <div class="col-md-10 col-md-offset-1">
                   <div class="panel panel-default">
                       <div class="panel-body">
-                          <img src="{{asset('/pdf/mal.pdf')}}">
+                          <img src="{{asset('/images/mal.pdf')}}">
                       </div>
                   </div>
           </div>
       </div>
   </div>
-</div>
-<div id="eng" class="tab-pane active">
-    <h3 align="center"></h3>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <img src="{{asset('/pdf/eng.pdf')}}">
-                    </div>
-                </div>
-        </div>
-    </div>
-</div>
 </div>
 <div id="tamil" class="tab-pane fade">
     <h3 align="center"></h3>
@@ -120,11 +79,52 @@ img {
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img src="{{asset('/pdf/tamil.pdf')}}">
+                        <img src="{{asset('/images/tamil.pdf')}}">
                     </div>
                 </div>
         </div>
     </div>
+</div>
+</div>
+<div id="darshan" class="tab-pane fade">
+<h3 align='center'></h3>
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div style="overflow-x:auto;">
+      <table class ="table">
+        <thead>
+          <tr>
+            <th>Darshan timings</th>
+            <th>Date</th>
+            <th>Location of Dist</th>
+            <th>Token timing</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach($darshan as $d)
+          <tr>
+            <th>{{ $d->darshan_time}}</th>
+            <th>{{ $d->date}}</th>
+            <th>{{ $d->token_loc}}</th>
+            <th>{{ $d->token_time}}</th>
+            @if(!Auth::guest())
+            <th><a class="btn btn-warning" href="{{ route('darshan.edit', $d->id,'/edit') }}" role="button">Update</a></th>
+            <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['darshan.destroy', $d->id]]) }}
+            {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+            {{ Form::close() }}</th>
+            @endif
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
+  </div>
+    </div>
+  </div>
+</div>
+</div>
 </div>
 </div>
 </div>

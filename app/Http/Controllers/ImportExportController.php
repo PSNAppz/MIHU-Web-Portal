@@ -140,8 +140,8 @@ class ImportExportController extends Controller
                         'isFull' => $value->isfull
                     ]);
     				}
-    					Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+    					dd('Insert Record successfully.');
+                        redirect()->route('home');
     			}
     		}
         }
@@ -162,8 +162,8 @@ class ImportExportController extends Controller
                                 'cordcontact' => $value->cordcontact
                             ]);
                         }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                     }
                 }
             }
@@ -185,8 +185,8 @@ class ImportExportController extends Controller
                         'status'=>$value->status
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }
@@ -205,8 +205,8 @@ class ImportExportController extends Controller
                         'contact' => $value->contact
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }
@@ -224,8 +224,8 @@ class ImportExportController extends Controller
                         'token_time' => $value->token_time
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }
@@ -244,7 +244,7 @@ class ImportExportController extends Controller
                     ]);
                     }
                     dd('Insert Record successfully.');
--                        redirect()->route('coordinator');
+-                        redirect()->route('home');
                 }
             }
         }
@@ -281,8 +281,8 @@ class ImportExportController extends Controller
                         'category' => $value->category
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }
@@ -304,8 +304,8 @@ class ImportExportController extends Controller
                         'contact'=> $value->contact
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }
@@ -326,8 +326,8 @@ class ImportExportController extends Controller
                         'status'=>$value->status
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }

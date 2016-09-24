@@ -179,15 +179,7 @@ img {
 
                                         <th>{{ $vol->name}}</th>
                                         <th>{{ $vol->batch}}</th>
-                                        @if($vol->campus == 1)
-                                        <th>Amritapuri</th>
-                                    @elseif($vol->campus==2)
-                                        <th>Kochi</th>
-                                    @elseif($vol->campus==3)
-                                        <th>Coimbatore</th>
-                                    @else
-                                        <th>Mysore</th>
-                                    @endif
+                                        <th>{{$vol->campus}}</th>
                                     <th>{{$vol->contact}}</th>
                                     <th>{{ $vol->seva}}</th>
                                     <th>{{ $vol->cordname}}</th>

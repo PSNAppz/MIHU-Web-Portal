@@ -26,7 +26,7 @@
                     {{ Form::label('name', 'Name:') }}
                     {{ Form::text('name',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('campus','Campus:')}}
-                    {{ Form::select('campus', array('1' => 'Amritapuri', '2' => 'Kochi','3' => 'Coimbatore','4' => 'Mysore'), null, array('class' => 'form-control'))}}
+                    {{ Form::text('campus',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('batch','Batch:')}}
                     {{ Form::text('batch',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('seva','Seva:')}}

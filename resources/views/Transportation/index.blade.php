@@ -161,7 +161,9 @@ img {
                               <div class="panel-heading"><b>From Kayankulam Towards TVM </b></div>
                               <div class="panel-body">
                                   <div style="overflow-x:auto;">
-                                      <img src="{{asset('/pdf/kayan.pdf')}}">
+                                      <img src="{{asset('/images/kayan.jpg')}}">
+                                      <img src="{{asset('/images/kayan2.jpg')}}">
+
                                   </div>
                               </div>
                           </div>
@@ -169,7 +171,7 @@ img {
                               <div class="panel-heading"><b>From Karunagapally Towards TVM </b></div>
                               <div class="panel-body">
                                   <div style="overflow-x:auto;">
-                                      <img src="{{asset('/pdf/karutvc.pdf')}}">
+                                      <img src="{{asset('/images/karutvc.jpg')}}">
                                   </div>
                               </div>
                           </div>
@@ -186,7 +188,7 @@ img {
                               <div class="panel-heading"><b>From Kayankulam Towards EKM via Alleppy </b></div>
                               <div class="panel-body">
                                   <div style="overflow-x:auto;">
-                                      <img src="{{asset('/pdf/kayanal.pdf')}}"></div>
+                                      <img src="{{asset('/images/kayanal.jpg')}}"></div>
 
                               </div>
                           </div>
@@ -194,7 +196,7 @@ img {
                               <div class="panel-heading"><b>From Karunagapally Towards EKM via Kottayam</b></div>
                               <div class="panel-body">
                                   <div style="overflow-x:auto;">
-                                      <img src="{{asset('/pdf/kayanktym.pdf')}}"></div>
+                                      <img src="{{asset('/images/kayanktym.jpg')}}"></div>
                               </div>
                           </div>
                           </div>
