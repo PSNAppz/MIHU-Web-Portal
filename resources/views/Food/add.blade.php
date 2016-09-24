@@ -24,7 +24,7 @@
             <div class="col-md-8 col-md-offset-2">
                     {!! Form::open(array('route' => 'food.store','data-parsley-validate' => '')) !!}
                     {{ Form::label('category', 'For:') }}
-                    {{ Form::select('category', array('0' => 'common', '1' => 'police','2' => 'special','3' => 'media'), null, array('class' => 'form-control'))}}
+                    {{ Form::select('category', array('0' => 'common', '1' => 'police','2' => 'special','3' => 'media','4' => 'Student/Staff'), null, array('class' => 'form-control'))}}
                     {{ Form::label('meal','Meal:')}}
                     {{ Form::text('meal',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('time','Timing:')}}
