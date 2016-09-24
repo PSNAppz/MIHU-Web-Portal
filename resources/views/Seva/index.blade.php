@@ -122,6 +122,14 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
+
+img {
+    border-radius: 4px;
+    box-shadow: 0 0 10px 3px #bbb;
+    width:100%;
+    height:auto;
+}
+
 </style>
     <div class="content">
         <div class="title m-b-md">
@@ -131,7 +139,9 @@ html, body {
 <div class="container">
     <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
+    <li><a data-toggle="tab" href="#other"><b>Other Campus Volunteers</b></a></li>
   </ul>
+
   <div class="tab-content">
   <div id="students" class="tab-pane active">
         <h3><i>While Carrying Responsibilities Never Forget to Smile.</i></h3>
@@ -186,6 +196,22 @@ html, body {
             </div>
         </div>
     </div>
+<!--paginator here-->
+</div>
+
+<div id="other" class="tab-pane fade">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <img src="{{asset('/images/other-seva.jpg')}}">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 <!--paginator here-->
 </div>
 </div>
