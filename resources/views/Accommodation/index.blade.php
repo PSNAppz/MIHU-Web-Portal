@@ -48,13 +48,11 @@
                         <div style="overflow-x:auto;">
                         <table class="table">
                             <thead>
-                                <th>From</th>
+                                <th>Place</th>
                                 <th>Accommodation At</th>
                                 <th>Near By</th>
-                                <th>Status</th>
                                 <th>Coordinator</th>
                                 <th>Phone</th>
-                                <th>Updated at</th>
                                 @if(!Auth::guest())
                                 <th></th>
                                 <th></th>
@@ -67,15 +65,8 @@
                                         <th>{{ $acc->areaName}}</th>
                                         <th>{{ $acc->locationofAcc}}</th>
                                         <th>{{ $acc->nearby}}</th>
-                                        <th>@if ($acc->isFull == 1)
-                                                <span class="label label-danger">Accommodation Full</span>
-                                            @else
-                                                <span class="label label-success">Available</span>
-                                            @endif</th>
-
                                         <th>{{ $acc->coord}}</th>
                                         <th>{{ $acc->contact}}</th>
-                                        <th>{{ $acc->updated_at}}</th>
                                         @if(!Auth::guest())
                                         <th><a class="btn btn-warning" href="{{ route('accommodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
                                         <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accommodation.destroy', $acc->id]]) }}
@@ -110,13 +101,11 @@
                             <div style="overflow-x:auto;">
                             <table class="table">
                                 <thead>
-                                    <th>From</th>
+                                    <th>Place</th>
                                     <th>Accommodation At</th>
                                     <th>Near By</th>
-                                    <th>Status</th>
                                     <th>Coordinator</th>
                                     <th>Phone</th>
-                                    <th>Updated at</th>
                                     @if(!Auth::guest())
                                     <th></th>
                                     <th></th>
@@ -129,12 +118,6 @@
                                             <th>{{ $acc->areaName}}</th>
                                             <th>{{ $acc->locationofAcc}}</th>
                                             <th>{{ $acc->nearby}}</th>
-                                            <th>@if ($acc->isFull == 1)
-                                                    <span class="label label-danger">Accommodation Full</span>
-                                                @else
-                                                    <span class="label label-success">Available</span>
-                                                @endif</th>
-
                                             <th>{{ $acc->coord}}</th>
                                             <th>{{ $acc->contact}}</th>
                                             <th>{{ $acc->updated_at}}</th>
@@ -173,13 +156,11 @@
                     <div style="overflow-x:auto;">
                     <table class="table">
                         <thead>
-                            <th>From</th>
+                            <th>Place</th>
                             <th>Accommodation At</th>
                             <th>Near By</th>
-                            <th>Status</th>
                             <th>Coordinator</th>
                             <th>Phone</th>
-                            <th>Updated at</th>
                             @if(!Auth::guest())
                             <th></th>
                             <th></th>
@@ -192,15 +173,8 @@
                                     <th>{{ $acc->areaName}}</th>
                                     <th>{{ $acc->locationofAcc}}</th>
                                     <th>{{ $acc->nearby}}</th>
-                                    <th>@if ($acc->isFull == 1)
-                                            <span class="label label-danger">Accommodation Full</span>
-                                        @else
-                                            <span class="label label-success">Available</span>
-                                        @endif</th>
-
                                     <th>{{ $acc->coord}}</th>
                                     <th>{{ $acc->contact}}</th>
-                                    <th>{{ $acc->updated_at}}</th>
                                     @if(!Auth::guest())
                                     <th><a class="btn btn-warning" href="{{ route('accommodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
                                     <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accommodation.destroy', $acc->id]]) }}
@@ -223,13 +197,11 @@
                     <div style="overflow-x:auto;">
                     <table class="table">
                         <thead>
-                            <th>From</th>
+                            <th>Place</th>
                             <th>Accommodation At</th>
                             <th>Near By</th>
                             <th>Coordinator</th>
                             <th>Phone</th>
-                            <th>Status</th>
-                            <th>Updated at</th>
                             @if(!Auth::guest())
                             <th></th>
                             <th></th>
@@ -242,15 +214,8 @@
                                     <th>{{ $acc->areaName}}</th>
                                     <th>{{ $acc->locationofAcc}}</th>
                                     <th>{{ $acc->nearby}}</th>
-                                    <th>@if ($acc->isFull == 1)
-                                            <span class="label label-danger">Accommodation Full</span>
-                                        @else
-                                            <span class="label label-success">Available</span>
-                                        @endif</th>
-
                                     <th>{{ $acc->coord}}</th>
                                     <th>{{ $acc->contact}}</th>
-                                    <th>{{ $acc->updated_at}}</th>
                                     @if(!Auth::guest())
                                     <th><a class="btn btn-warning" href="{{ route('accommodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
                                     <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accommodation.destroy', $acc->id]]) }}
@@ -286,13 +251,11 @@
                           <div style="overflow-x:auto;">
                           <table class="table">
                               <thead>
-                                  <th>From</th>
+                                  <th>Place</th>
                                   <th>Accommodation At</th>
                                   <th>Near By</th>
-                                  <th>Status</th>
                                   <th>Coordinator</th>
                                   <th>Phone</th>
-                                  <th>Updated at</th>
                                   @if(!Auth::guest())
                                   <th></th>
                                   <th></th>
@@ -305,15 +268,8 @@
                                           <th>{{ $acc->areaName}}</th>
                                           <th>{{ $acc->locationofAcc}}</th>
                                           <th>{{ $acc->nearby}}</th>
-                                          <th>@if ($acc->isFull == 1)
-                                                  <span class="label label-danger">Accommodation Full</span>
-                                              @else
-                                                  <span class="label label-success">Available</span>
-                                              @endif</th>
-
                                           <th>{{ $acc->coord}}</th>
                                           <th>{{ $acc->contact}}</th>
-                                          <th>{{ $acc->updated_at}}</th>
                                           @if(!Auth::guest())
                                           <th><a class="btn btn-warning" href="{{ route('accommodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
                                           <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accommodation.destroy', $acc->id]]) }}
