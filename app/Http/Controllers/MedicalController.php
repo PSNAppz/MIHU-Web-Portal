@@ -23,7 +23,7 @@ class MedicalController extends Controller
      }
     public function index()
     {
-      $medical = Medical::paginate(15);
+      $medical = Medical::get());
       $emergency = Emergency::paginate(15);
       return view('Medical.index')->withMedical($medical)->withEmergency($emergency);
 
