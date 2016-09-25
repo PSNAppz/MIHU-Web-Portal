@@ -56,7 +56,7 @@ img {
                           <th>Doctor</th>
                           <th>Contact</th>
                           <th>Discipline</th>
-                          <th>Shift</th>
+                          <th>Time Shift</th>
                         </thead>
                         <tbody>
                           @foreach($medical as $med)
@@ -100,7 +100,7 @@ img {
                               <th>Doctor</th>
                               <th>Contact</th>
                               <th>Discipline</th>
-                              <th>Shift</th>
+                              <th>Time Shift</th>
                             </thead>
                             <tbody>
                               @foreach($medical as $med)

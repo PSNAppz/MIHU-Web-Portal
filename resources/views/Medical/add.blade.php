@@ -32,7 +32,7 @@
                     {{ Form::label('contact','Phone:')}}
                     {{ Form::text('contact',null,array('class'=> 'form-control','required'=> ''))}}
                     {{ Form::label('shift','Shift:')}}
-                    {{ Form::select('shift', array('Day' => 'Day', 'Night' => 'Night'), null, array('class' => 'form-control'))}}
+                    {{ Form::text('shift',null,array('class'=> 'form-control','required'=> ''))}}
                     {{ Form::label('dis', 'Discipline:') }}
         			      {{ Form::select('dis', array('Allopathy' => 'Allopathy', 'Ayurveda' => 'Ayurveda'), null, array('class' => 'form-control'))}}
                     {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
