@@ -251,13 +251,13 @@
       <div class="col-sm-10 col-md-offset-1">
           @foreach($newsfeed as $news)
               @if($news->type==1)
-                  <div class="well" style="background-color:#00E5FF;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>{{$news->created_at}}</div>
+                  <div class="well" style="background-color:#00E5FF;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b></div>
           @elseif($news->type==0)
-          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>{{$news->created_at}}</div>
+          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b></div>
           @elseif($news->type==3)
-          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b>{{$news->created_at}} </div>
+          <div class="well" style="border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;">{{$news->message}}</b> </div>
           @else
-              <div class="well" style="background-color:#ff5252;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;color:white;">{{$news->message}}</b>{{$news->created_at}}</div>
+              <div class="well" style="background-color:#ff5252;border-radius:20px;"><b style="font-size:20px;word-wrap:break-word;color:white;">{{$news->message}}</b></div>
           @endif
             @if (!Auth::guest())
             <span>
