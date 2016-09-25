@@ -49,13 +49,13 @@ img {
   </div>
   <div class="container">
       <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#darshan"><b>Darshan</b></a></li>
       <li><a data-toggle="tab" href="#ins"><b>Darshan Instructions</b></a></li>
 
-      <li><a data-toggle="tab" href="#darshan"><b>Darshan</b></a></li>
     </ul>
 
   <div class="tab-content">
-      <div id="ins" class="tab-pane active">
+      <div id="ins" class="tab-pane fade">
           <h3>Darshan Instructions</h3>
           <ul class="nav nav-tabs">
               <li class="active"><a data-toggle="tab" href="#eng"><b>English</b></a></li>
@@ -117,7 +117,7 @@ img {
                   </div>
               </div>
           </div>
-<div id="darshan" class="tab-pane fade">
+<div id="darshan" class="tab-pane active">
 <h3 align='center'></h3>
 <div class="container">
 <div class="row">
