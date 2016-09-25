@@ -70,7 +70,7 @@
             <div class="panel-body">
                                 {!! Form::open(array('route' => 'welcome.store','data-parsley-validate' => '')) !!}
                                 {{ Form::label('type', 'Type:') }}
-                                {{ Form::select('type', array('0' => 'General', '1' => 'Lost & Found','2' => 'Special','3'=>'VCC'), null, array('class' => 'form-control'))}}
+                                {{ Form::select('type', array('0' => 'General', '1' => 'Lost & Found','2' => 'Special','3'=>'VCC','4' =>'Token'), null, array('class' => 'form-control'))}}
                                 {{ Form::label('message','Description:')}}
                                 {{ Form::textarea('message',null,array('class'=> 'form-control','required'=> ''))}}
                                 {{ Form::submit('Announce!',array('class'=>'btn btn-success','style' =>'margin-top:20px;'))}}
