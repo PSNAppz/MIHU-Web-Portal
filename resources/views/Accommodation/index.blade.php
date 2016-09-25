@@ -131,6 +131,7 @@ html, body {
 <div class="container">
     <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#students"><b>Accommodation</b></a></li>
+    <li><a data-toggle="tab" href="#vip"><b>VIP</b></a></li>
   </ul>
   <div class="tab-content">
   <div id="students" class="tab-pane active">
@@ -198,6 +199,26 @@ html, body {
         </div>
     </div>
 <!--paginator here-->
+</div>
+<div id="vip" class="tab-pane fade">
+    <h3 align="center"></h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="alert alert-success" role="alert">
+                      <h4>VIP Counter</h4>
+                      <h5>Vip Counter is situated at the left side of main stage.</h5>
+                      <h4>Contact</h4>
+                      <h5>Name: Br. Rayudu Ph: 9446483200</h5>
+
+                      </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
 </div>
 </div>
 </div>

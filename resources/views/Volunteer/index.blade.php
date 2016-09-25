@@ -137,7 +137,6 @@ img {
 <div class="container">
     <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
-    <li><a data-toggle="tab" href="#other"><b>Other Campus</b></a></li>
     <li><a data-toggle="tab" href="#devotee"><b>Devotee Volunteers</b></a></li>
 
   </ul>
@@ -202,20 +201,6 @@ img {
         </div>
     </div>
 <!--paginator here-->
-</div>
-<div id="other" class="tab-pane fade">
-    <h3 align="center"></h3>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <img src="{{asset('/images/26.jpg')}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 <div id="devotee" class="tab-pane fade">
     <h3 align="center"></h3>
