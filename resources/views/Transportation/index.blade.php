@@ -29,8 +29,8 @@ img {
 <div class="container">
     <ul class="nav nav-tabs">
         <li  class="active"><a data-toggle="tab" href="#train"><b>Train</b></a></li>
-    <li><a data-toggle="tab" href="#ks"><b>College</b></a></li>
-    <li><a data-toggle="tab" href="#bus"><b>KSRTC/Private Bus</b></a></li>
+    <li><a data-toggle="tab" href="#bus"><b>College</b></a></li>
+    <li><a data-toggle="tab" href="#ks"><b>KSRTC/Private Bus</b></a></li>
     <li><a data-toggle="tab" href="#other"><b>Other</b></a></li>
     <li><a data-toggle="tab" href="#parking"><b>Parking Locations</b></a></li>
   </ul>
