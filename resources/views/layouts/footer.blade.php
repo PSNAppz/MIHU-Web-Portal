@@ -15,7 +15,7 @@
                    ·
               <a href="/faq">Faq</a>
                    ·
-              <a href="/generalinfo">General info</a>
+              <a href="/volunteer">Volunteers</a>
                    ·
               <a href="/about">About</a>
        </p>

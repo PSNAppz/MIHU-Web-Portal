@@ -228,7 +228,7 @@
               <a class="btn btn-danger btn-lg btn-block" href="/coordinator" role="button"><span class="glyphicon glyphicon-star-empty"></span>&nbsp Coordinators</a>
           </div>
           <div class="col-sm-4" >
-           <a class="btn btn-primary btn-lg btn-block" href="/volunteer" role="button"><span class="glyphicon glyphicon-user"></span>&nbsp Volunteers</a>
+           <a class="btn btn-primary btn-lg btn-block" href="/generalinfo" role="button"><span class="glyphicon glyphicon-italic"></span>&nbsp General Info</a>
          </div>
        </div>
        <br>
