@@ -29,8 +29,8 @@
             {{ Form::text('areaName',$acc->areaName,array('class'=> 'form-control','required' => ''))}}
             {{ Form::label('locationofAcc','Accommodation At:')}}
             {{ Form::text('locationofAcc',$acc->locationofAcc,array('class'=> 'form-control','required'=> ''))}}
-            {{ Form::label('nearby','Near By:')}}
-            {{ Form::text('nearby',$acc->nearby,array('class'=> 'form-control','required'=> ''))}}
+            {{ Form::label('category','Category/Place:')}}
+            {{ Form::text('category',null,array('class'=> 'form-control','required'=> ''))}}
             {{ Form::label('isFull', 'Status:') }}
 			{{ Form::select('isFull', array('0' => 'Available', '1' => 'Not Available'), $acc->isFull, array('class' => 'form-control'))}}
             {{ Form::label('coord','Coordinator:')}}

@@ -23,8 +23,6 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                     {!! Form::open(array('route' => 'medical.store','data-parsley-validate' => '')) !!}
-                    {{ Form::label('side', 'Select area:') }}
-                    {{ Form::select('side', array('0' => 'Ashram', '1' => 'College'), null, array('class' => 'form-control'))}}
                     {{ Form::label('loc','Location:')}}
                     {{ Form::text('loc',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('doc','Doctor name:')}}
@@ -32,7 +30,7 @@
                     {{ Form::label('contact','Phone:')}}
                     {{ Form::text('contact',null,array('class'=> 'form-control','required'=> ''))}}
                     {{ Form::label('shift','Shift:')}}
-                    {{ Form::select('shift', array('Day' => 'Day', 'Night' => 'Night'), null, array('class' => 'form-control'))}}
+                    {{ Form::text('shift',null,array('class'=> 'form-control','required'=> ''))}}
                     {{ Form::label('dis', 'Discipline:') }}
         			      {{ Form::select('dis', array('Allopathy' => 'Allopathy', 'Ayurveda' => 'Ayurveda'), null, array('class' => 'form-control'))}}
                     {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}

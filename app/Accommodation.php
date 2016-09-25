@@ -7,5 +7,5 @@ use Illuminate\Notifications\Notifiable;
 
 class Accommodation extends Model
 {
-    protected $fillable = array('gender', 'areaName','locationofAcc','nearby','isFull');
+    protected $fillable =['gender','areaName','category','locationofAcc','coord','contact','isFull'];
 }

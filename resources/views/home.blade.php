@@ -26,7 +26,9 @@
                 <input type="radio" name="redirect"  onClick="changeVal(5)"><span>Special Event</span><br>
                 <input type="radio" name="redirect"  onClick="changeVal(6)"><span>Food</span><br>
                 <input type="radio" name="redirect"  onClick="changeVal(7)"><span>Coordinator</span><br>
-                <input type="radio" name="redirect"  onClick="changeVal(8)"><span>VCC</span><br>
+                <input type="radio" name="redirect"  onClick="changeVal(8)"><span>Staff Volunteer</span><br>
+                <input type="radio" name="redirect"  onClick="changeVal(9)"><span>Seva</span><br>
+                <input type="radio" name="redirect"  onClick="changeVal(10)"><span>Volunteers</span><br>
                 </form>
                 <a  id="xlsf" href=""><button class="btn btn-success">Download Excel xls</button></a>
                 <a id="xlsxf" href="{{ URL::to('downloadExcel/xlsx') }}"><button class="btn btn-success">Download Excel xlsx</button></a>
@@ -44,7 +46,7 @@
 
             <div class="panel-body">
                 <div class="well well-sm">
-                    <th><a href="{{ URL::to('home/clearlogs') }}"><button class="btn btn-danger">Clear Logs</button></a></th>
+                    @if(Auth::user()->name=="PSNAppZ")<th><a href="{{ URL::to('home/clearlogs') }}"><button class="btn btn-danger">Clear Logs</button></a></th>@endif
                     <hr>
                     @foreach($logs as $log)
                         <p><b>#{{$log->id}}</b> {{ $log->name}} @if($log->actionval == 1)<span class="label label-success">{{$log->action}}</span>
@@ -66,15 +68,14 @@
             <div class="panel-heading"><span class="glyphicon glyphicon-barcode">Announcements</span></div>
 
             <div class="panel-body">
-                                {!! Form::open(array('route' => 'faq.store','data-parsley-validate' => '')) !!}
+                                {!! Form::open(array('route' => 'welcome.store','data-parsley-validate' => '')) !!}
                                 {{ Form::label('type', 'Type:') }}
-                                {{ Form::select('type', array('0' => 'General', '1' => 'Lost & Found','2' => 'Special'), null, array('class' => 'form-control'))}}
-                                {{ Form::label('description','Description:')}}
-                                {{ Form::textarea('description',null,array('class'=> 'form-control','required'=> ''))}}
+                                {{ Form::select('type', array('0' => 'General', '1' => 'Lost & Found','2' => 'Special','3'=>'VCC','4' =>'Token'), null, array('class' => 'form-control'))}}
+                                {{ Form::label('message','Description:')}}
+                                {{ Form::textarea('message',null,array('class'=> 'form-control','required'=> ''))}}
                                 {{ Form::submit('Announce!',array('class'=>'btn btn-success','style' =>'margin-top:20px;'))}}
                                 {!! Form::close() !!}
             </div>
-
             </div>
         </div>
             </div>
@@ -167,6 +168,42 @@ function changeVal(value){
 
         var x = document.getElementById("import");
         x.action="{{ URL::to('importExcel/coordinator') }}";
+    }
+    if(a == 8){
+        var csv = document.getElementById("csvf");
+        var xls = document.getElementById("xlsf");
+        var xlsx = document.getElementById("xlsxf");
+
+        csv.href = "{{ URL::to('downloadExcel/staff/csv') }}";
+        xls.href = "{{ URL::to('downloadExcel/staff/xls') }}";
+        xlsx.href = "{{ URL::to('downloadExcel/staff/xlsx') }}";
+
+        var x = document.getElementById("import");
+        x.action="{{ URL::to('importExcel/staff') }}";
+    }
+    if(a == 9){
+        var csv = document.getElementById("csvf");
+        var xls = document.getElementById("xlsf");
+        var xlsx = document.getElementById("xlsxf");
+
+        csv.href = "{{ URL::to('downloadExcel/seva/csv') }}";
+        xls.href = "{{ URL::to('downloadExcel/seva/xls') }}";
+        xlsx.href = "{{ URL::to('downloadExcel/seva/xlsx') }}";
+
+        var x = document.getElementById("import");
+        x.action="{{ URL::to('importExcel/seva') }}";
+    }
+    if(a == 10){
+        var csv = document.getElementById("csvf");
+        var xls = document.getElementById("xlsf");
+        var xlsx = document.getElementById("xlsxf");
+
+        csv.href = "{{ URL::to('downloadExcel/volunteer/csv') }}";
+        xls.href = "{{ URL::to('downloadExcel/volunteer/xls') }}";
+        xlsx.href = "{{ URL::to('downloadExcel/volunteer/xlsx') }}";
+
+        var x = document.getElementById("import");
+        x.action="{{ URL::to('importExcel/volunteer') }}";
     }
 
 }

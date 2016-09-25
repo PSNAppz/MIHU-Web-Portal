@@ -13,36 +13,76 @@
 .m-b-md {
     margin-bottom: 30px;
 }
+.color {
+    color: black;
+    font-weight: bold;
+    padding: 15px;
+    border-left: 2px solid #ccc;
+}
+img {
+    border-radius: 4px;
+    box-shadow: 0 0 10px 3px #bbb;
+    width:100%;
+    height:auto;
+}
 
-.full-height2 {
-      height:130vh;
-      background-image:url(./images/general.jpg);
-      background-repeat: no-repeat;
-      //background-attachment: fixed;
-      background-position: center;
-}
-.full-height3 {
-      height:130vh;
-      background-image:url(./images/general2.jpg);
-      background-repeat: no-repeat;
-      //background-attachment: fixed;
-      background-position: center;
-}
 </style>
     <div class="content">
         <div class="title m-b-md">
-          General Info
+            General Informations
         </div>
-
-  </ul>
-  <div class ="row">
-      <div class = "flex-center position-ref full-height2">
-     </div>
-     <hr>
-     <div class = "flex-center position-ref full-height3">
     </div>
- </div>
 
+    <br>
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#gen"><b>General Info</b></a></li>
+        <li><a data-toggle="tab" href="#locate"><b>Location Information</b></a></li>
+
+    </ul>
+    <div class="tab-content">
+    <div id="gen" class="tab-pane active">
+        <h3 align="center"></h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="{{asset('/images/general.jpg')}}">
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="{{asset('/images/general2.jpg')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+    <div id="locate" class="tab-pane fade">
+        <h3 align="center"></h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="{{asset('/images/venue1.jpg')}}">
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img src="{{asset('/images/venue2.jpg')}}">
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
 </div>
 </div>
 @include('layouts.footer')

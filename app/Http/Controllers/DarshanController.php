@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 use App\Darshan as Darshu;
+use App\Newsfeed as News;
 use Session;
 use View;
 use App\Log;
@@ -26,7 +27,8 @@ class DarshanController extends Controller
     public function index()
     {
       $darshan = Darshu::paginate(15);
-      return view('Darshan.index')->withDarshan($darshan);
+      $news = News::paginate(15);
+      return view('Darshan.index')->withDarshan($darshan)->withNews($news);
     }
 
     /**
@@ -60,8 +62,6 @@ class DarshanController extends Controller
         $darshan->date = $request->date;
         $darshan->token_loc = $request->token_loc;
         $darshan->token_time = $request->token_time;
-        $darshan->contact_name = $request->contact_name;
-        $darshan->contact_no = $request->contact_no;
         $log = new Log;
         $log->user_id=Auth::user()->id;
         $log->name=Auth::user()->name;

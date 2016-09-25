@@ -31,10 +31,6 @@
                     {{ Form::text('token_loc',null,array('class'=> 'form-control','required'=> ''))}}
                     {{ Form::label('token_time','Token time:')}}
                     {{ Form::text('token_time',null,array('class'=> 'form-control','required'=> ''))}}
-                    {{ Form::label('contact_name','Contact name:')}}
-                    {{ Form::text('contact_name',null,array('class'=> 'form-control','required'=> ''))}}
-                    {{ Form::label('contact_no','Contact no:')}}
-                    {{ Form::text('contact_no',null,array('class'=> 'form-control','required'=> ''))}}
                     {{ Form::submit('Add Details',array('class'=>'btn btn-success btn-block','style' =>'margin-top:20px;'))}}
                     <a class="btn btn-danger btn-block" href="{{ url('/darshan') }}" role="button">Cancel</a>
 

@@ -11,9 +11,29 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+//welcome
+Route::resource('/','WelcomeController',
+                  ['names'=>[
+                              'index'=>'welcome.index',
+                              'create'=>'welcome.create',
+                              'store'=>'welcome.store',
+                              'destroy'=>'welcome.destroy'
+                            ]
+
+                  ]);
+                  Route::resource('welcome','WelcomeController',
+                                    ['names'=>[
+                                                'index'=>'welcome.index',
+                                                'create'=>'welcome.create',
+                                                'store'=>'welcome.store',
+                                                'destroy'=>'welcome.destroy'
+                                              ]
+
+                                    ]);
+
 
 Auth::routes();
 Route::get('/about',function() {
@@ -21,6 +41,11 @@ Route::get('/about',function() {
 });
 
 Route::get('/home', 'HomeController@index');
+//map
+Route::get('/map', function(){
+    return view('map');
+});
+
 Route::get('/home/clearlogs', 'HomeController@destroy');
 
 //Coordinator
@@ -31,6 +56,9 @@ Route::resource('volunteer','VolunteerController');
 
 //Accomodation
 Route::resource('accommodation','AccommodationController');
+
+//SevaDetails
+Route::resource('seva','SevaController');
 
 //Medical
 Route::resource('medical','MedicalController');
@@ -70,6 +98,9 @@ Route::resource('darshan','DarshanController');
 
 //Security
 Route::resource('security','SecurityController');
+
+//StaffVolunteer
+Route::resource('staffvolunteer','StaffVolunteerController');
 
 //Faq
 Route::resource('faq','FaqController');

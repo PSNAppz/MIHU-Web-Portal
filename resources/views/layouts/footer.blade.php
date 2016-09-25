@@ -5,9 +5,9 @@
 
 
         <p class="footer-links">
-              <a href="/">Home</a>
+              <a href="/map">Map</a>
                    ·
-              <a href="/vcc">VCC</a>
+              <a href="/staffvolunteer">Staff</a>
                    ·
               <a href="/coordinator">Coordinators</a>
                    ·
@@ -15,10 +15,11 @@
                    ·
               <a href="/faq">Faq</a>
                    ·
-              <a href="/generalinfo">General info</a>
+              <a href="/volunteer">Volunteers</a>
                    ·
               <a href="/about">About</a>
        </p>
+       <p class="footer-company-name">MIHU RECEPTION:0476-2806002</p>
 
        <p class="footer-company-name">MIHU &copy; 2016</p>
 

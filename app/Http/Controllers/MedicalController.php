@@ -23,8 +23,8 @@ class MedicalController extends Controller
      }
     public function index()
     {
-      $medical = Medical::paginate(15);
-      $emergency = Emergency::paginate(15);
+      $medical = Medical::orderBy('id')->get();
+      $emergency = Emergency::get();
       return view('Medical.index')->withMedical($medical)->withEmergency($emergency);
 
     }
@@ -64,7 +64,6 @@ class MedicalController extends Controller
       $medical->doc = $request->doc;
       $medical->contact = $request->contact;
       $medical->dis = $request->dis;
-      $medical->side = $request->side;
       $medical->shift = $request->shift;
       $medical->save();
       Session::flash('success', 'Medical Details successfully added!');

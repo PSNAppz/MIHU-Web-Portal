@@ -73,7 +73,6 @@
                 <!-- Authentication Links -->
                 @if (Auth::guest())
                     <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
                 @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -123,6 +122,12 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
+img {
+    border-radius: 4px;
+    box-shadow: 0 0 10px 3px #bbb;
+    width:100%;
+    height:auto;
+}
 </style>
     <div class="content">
         <div class="title m-b-md">
@@ -132,6 +137,8 @@ html, body {
 <div class="container">
     <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
+    <li><a data-toggle="tab" href="#devotee"><b>Devotee Volunteers</b></a></li>
+
   </ul>
   <div class="tab-content">
   <div id="students" class="tab-pane active">
@@ -171,15 +178,7 @@ html, body {
 
                                         <th>{{ $vol->name}}</th>
                                         <th>{{ $vol->batch}}</th>
-                                        @if($vol->campus == 1)
-                                        <th>Amritapuri</th>
-                                    @elseif($vol->campus==2)
-                                        <th>Kochi</th>
-                                    @elseif($vol->campus==3)
-                                        <th>Coimbatore</th>
-                                    @else
-                                        <th>Mysore</th>
-                                    @endif
+                                        <th>{{$vol->campus}}</th>
                                     <th>{{$vol->contact}}</th>
                                     <th>{{ $vol->seva}}</th>
                                     <th>{{ $vol->cordname}}</th>
@@ -202,6 +201,25 @@ html, body {
         </div>
     </div>
 <!--paginator here-->
+</div>
+<div id="devotee" class="tab-pane fade">
+    <h3 align="center"></h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="alert alert-success" role="alert">
+                            <h2>ID Card distribution</h2>
+                            <p>Room No : N002, Engineering College</p>
+                            <p>Contact : Br. Vivek</p>
+                            <p>Ph: 9446405900 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 </div>

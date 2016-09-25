@@ -11,7 +11,9 @@ use App\Security as Sec;
 use App\Coordinator as Cord;
 use App\SpecialEvent as SE;
 use App\Medical as Med;
+use App\Seva;
 use App\Volunteer as Vol;
+use App\StaffVolunteer;
 use App\Http\Requests;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\DB;
@@ -39,6 +41,15 @@ class ImportExportController extends Controller
             }
             if($database=="transport"){
     		$data = Trans::get()->toArray();
+    		return Excel::create('TransportationMIHU', function($excel) use ($data) {
+    			$excel->sheet('mySheet', function($sheet) use ($data)
+    	        {
+    				$sheet->fromArray($data);
+    	        });
+    		})->download($type);
+            }
+            if($database=="seva"){
+    		$data = Seva::get()->toArray();
     		return Excel::create('TransportationMIHU', function($excel) use ($data) {
     			$excel->sheet('mySheet', function($sheet) use ($data)
     	        {
@@ -100,6 +111,15 @@ class ImportExportController extends Controller
                 });
             })->download($type);
             }
+            if($database=="staff"){
+            $data = StaffVolunteer::get()->toArray();
+            return Excel::create('StaffMIHU', function($excel) use ($data) {
+                $excel->sheet('mySheet', function($sheet) use ($data)
+                {
+                    $sheet->fromArray($data);
+                });
+            })->download($type);
+            }
     	}
 
     	public function importExcel($database)
@@ -116,12 +136,14 @@ class ImportExportController extends Controller
                         'gender' => $value->gender,
                         'areaName' => $value->areaname,
                         'locationofAcc' => $value->locationofacc,
-                        'nearby' => $value->nearby,
-                        'isFull' => $value->isfull
+                        'category' => $value->category,
+                        'coord' => $value->coord,
+                        'isFull' => $value->isfull,
+                        'contact' => $value->contact
                     ]);
     				}
-    					Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+    					dd('Insert Record successfully.');
+                        redirect()->route('home');
     			}
     		}
         }
@@ -134,16 +156,16 @@ class ImportExportController extends Controller
                         foreach ($data as $key => $value) {
                             Vol::create([
                                 'name' => $value->name,
-                                'batch' => $value->areaname,
-                                'campus' => $value->locationofacc,
+                                'batch' => $value->batch,
+                                'campus' => $value->campus,
                                 'contact' => $value->contact,
                                 'seva' => $value->seva,
                                 'cordname' => $value->cordname,
                                 'cordcontact' => $value->cordcontact
                             ]);
                         }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                     }
                 }
             }
@@ -165,8 +187,28 @@ class ImportExportController extends Controller
                         'status'=>$value->status
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
+                }
+            }
+        }
+        elseif ($database == 'seva') {
+            if(Input::hasFile('import_file')){
+                $path = Input::file('import_file')->getRealPath();
+                $data = Excel::load($path, function($reader) {
+                })->get();
+                if(!empty($data) && $data->count()){
+                    foreach ($data as $key => $value) {
+                        Seva::create([
+                        'place' => $value->place,
+                        'seva' => $value->seva,
+                        'location' => $value->location,
+                        'coordinator' => $value->coordinator,
+                        'contact' => $value->contact
+                    ]);
+                    }
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }
@@ -181,13 +223,11 @@ class ImportExportController extends Controller
                         'darshan_time' => $value->darshan_time,
                         'date' => $value->date,
                         'token_loc' => $value->token_loc,
-                        'token_time' => $value->token_time,
-                        'contact_name' => $value->contact_name,
-                        'contact_no'=> $value->contact_no
+                        'token_time' => $value->token_time
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }
@@ -206,7 +246,25 @@ class ImportExportController extends Controller
                     ]);
                     }
                     dd('Insert Record successfully.');
--                        redirect()->route('coordinator');
+-                        redirect()->route('home');
+                }
+            }
+        }
+        elseif($database == 'staff'){
+            if(Input::hasFile('import_file')){
+                $path = Input::file('import_file')->getRealPath();
+                $data = Excel::load($path, function($reader) {
+                })->get();
+                if(!empty($data) && $data->count()){
+                    foreach ($data as $key => $value) {
+                        StaffVolunteer::create([
+                        'name' => $value->name,
+                        'seva' => $value->seva,
+                        'department' => $value->department,
+                    ]);
+                    }
+                    dd('Insert Record successfully.');
+-                        redirect()->route('staffvolunteer');
                 }
             }
         }
@@ -225,8 +283,8 @@ class ImportExportController extends Controller
                         'category' => $value->category
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }
@@ -248,8 +306,8 @@ class ImportExportController extends Controller
                         'contact'=> $value->contact
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }
@@ -270,8 +328,8 @@ class ImportExportController extends Controller
                         'status'=>$value->status
                     ]);
                     }
-                        Session::flash('success', 'Insert Record successfully.');
-                        return redirect()->view('home');
+                        dd('Insert Record successfully.');
+                        redirect()->route('home');
                 }
             }
         }

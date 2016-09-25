@@ -26,7 +26,7 @@ class CoordinatorController extends Controller
 
     public function index()
     {
-        $coordinators = Coordinator::paginate(15);
+        $coordinators = Coordinator::get();
         return view('Coordinator.index')->withCoordinators($coordinators);
     }
     /**
