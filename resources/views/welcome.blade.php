@@ -10,7 +10,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
 
@@ -34,7 +34,7 @@
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Yatra One', sans-serif;
                 font-weight: 500;
                 height: 100vh;
                 margin: 0;
@@ -138,7 +138,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                Amritavarsham 63
+                <b>May I Help You Portal</b>
             </a>
         </div>
 
@@ -181,8 +181,7 @@
 
        <div class="jumbotron" style="margin-bottom: 0px">
          <div class ="button">
-           <h2><b>May I Help You Portal</b></h2>
-           <p>Select the department</p>
+           <p><b>Select the department</b></p>
            <div class="container">
              <div class="row">
                <div class="col-sm-4" >
@@ -242,8 +241,13 @@
       <br>
       <br><br>
       <div>
+<<<<<<< HEAD
       <p style="font-size:40px;font-family: 'Tangerine', cursive;">
           <p style="font-size:30px;font-family: 'Tangerine', cursive;"><b>#BeInformed</b></p>
+=======
+      <p style="font-size:40px;font-family: 'Yatra One', cursive;">
+      <b>Watch out for this space for the latest announcements!</b>
+>>>>>>> master
      </p>
    </div>
     </div>
