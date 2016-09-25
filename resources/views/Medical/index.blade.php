@@ -135,7 +135,7 @@ html, body {
   </ul>
   <div class="tab-content">
   <div id="doc" class="tab-pane active">
-        <h3><i>Medical Details</i></h3>
+        <h3><i>Medical Assistance</i></h3>
         @if(!Auth::guest())
         <a class="btn btn-success" href="{{ url('/medical/create') }}" role="button">Add Medical Info</a>
         <a  id="xlsf" href="{{ URL::to('downloadExcel/medical/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
