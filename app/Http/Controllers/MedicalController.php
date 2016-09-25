@@ -64,7 +64,6 @@ class MedicalController extends Controller
       $medical->doc = $request->doc;
       $medical->contact = $request->contact;
       $medical->dis = $request->dis;
-      $medical->side = $request->side;
       $medical->shift = $request->shift;
       $medical->save();
       Session::flash('success', 'Medical Details successfully added!');
