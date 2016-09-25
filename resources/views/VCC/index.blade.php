@@ -45,7 +45,7 @@ marquee {
         <div class="panel panel-default">
           <div class="panel-body">
               <div class="alert alert-danger" role="alert">
-                  <h2>VCC Food will be available 24x7 only for Amrita University Students and Staff Volunteers.</h2>
+                  <h2>VCC Food will be available 24x7 for all Amrita Varsham Volunteers.</h2>
               </div>
               <div class="alert alert-info" role="alert">
 
