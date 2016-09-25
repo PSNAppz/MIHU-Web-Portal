@@ -46,7 +46,7 @@
 
             <div class="panel-body">
                 <div class="well well-sm">
-                    <th><a href="{{ URL::to('home/clearlogs') }}"><button class="btn btn-danger">Clear Logs</button></a></th>
+                    @if(Auth::user()->name=="PSNAppZ")<th><a href="{{ URL::to('home/clearlogs') }}"><button class="btn btn-danger">Clear Logs</button></a></th>@endif
                     <hr>
                     @foreach($logs as $log)
                         <p><b>#{{$log->id}}</b> {{ $log->name}} @if($log->actionval == 1)<span class="label label-success">{{$log->action}}</span>
