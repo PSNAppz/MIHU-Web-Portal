@@ -243,9 +243,8 @@
       <br><br>
       <div>
       <p style="font-size:40px;font-family: 'Tangerine', cursive;">
-      <b>Watch out for this space for the latest announcements!</b>
+          <p style="font-size:30px;font-family: 'Tangerine', cursive;"><b>#BeInformed</b></p>
      </p>
-     <p style="font-size:30px;font-family: 'Tangerine', cursive;"><b>#BeInformed</b></p>
    </div>
     </div>
     <div id="" style="overflow-y: scroll; height:400px; width:100%;">

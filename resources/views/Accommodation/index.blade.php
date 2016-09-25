@@ -210,7 +210,9 @@ html, body {
                         <div class="alert alert-success" role="alert">
                       <h4>VIP Counter</h4>
                       <h5>Vip Counter is situated at the left side of main stage.</h5>
-                      <h4>Contact</h4>
+                      <h4>Special Invitee Reception</h4>
+                      <h5>Name: Br. Ramesh Bhakthavatchalu Ph: 8903709909</h5>
+                      <h4>VIP Section Contact</h4>
                       <h5>Name: Br. Rayudu Ph: 9446483200</h5>
 
                       </div>
