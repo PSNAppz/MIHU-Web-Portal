@@ -171,9 +171,9 @@ html, body {
                                             <th>Men</th>
                                         @elseif($acc->gender==1)
                                             <th>Women</th>
-                                        @elseif($acc->gender==2)
-                                            <th>VIP</th>
                                         @elseif($acc->gender==4)
+                                            <th>VIP</th>
+                                        @elseif($acc->gender==2)
                                             <th>Police Men</th>
                                         @else
                                             <th>Police Women</th>
