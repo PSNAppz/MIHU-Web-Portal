@@ -19,6 +19,7 @@
                    ·
               <a href="/about">About</a>
        </p>
+       <p class="footer-company-name">MIHU RECEPTION:0476-2806002</p>
 
        <p class="footer-company-name">MIHU &copy; 2016</p>
 
