@@ -23,8 +23,6 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                     {!! Form::open(array('route' => 'medical.store','data-parsley-validate' => '')) !!}
-                    {{ Form::label('side', 'Select area:') }}
-                    {{ Form::select('side', array('0' => 'Ashram', '1' => 'College'), null, array('class' => 'form-control'))}}
                     {{ Form::label('loc','Location:')}}
                     {{ Form::text('loc',null,array('class'=> 'form-control','required' => ''))}}
                     {{ Form::label('doc','Doctor name:')}}

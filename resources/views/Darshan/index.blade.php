@@ -35,6 +35,17 @@ img {
   @endif
 
       <hr>
+      <div class="panel panel-warning">
+          <h3><div class="panel-heading"><span>DARSHAN TOKEN IN DISPLAY NOW</span></div></h3>
+
+            <marquee><h2><b>
+            @foreach($news as $news)
+            @if($news->type==4)
+                {{$news->message}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            @endif
+            @endforeach
+        </b></h2></marquee>
+        </div>
   </div>
   <div class="container">
       <ul class="nav nav-tabs">
