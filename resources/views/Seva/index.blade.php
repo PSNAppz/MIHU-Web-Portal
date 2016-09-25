@@ -166,7 +166,7 @@ img {
             <div class="container">
                 <div class="row">
                   <div class="tab-content">
-                  <div id="1" class="tab-pane active">
+                  <div id="coor" class="tab-pane active">
                   <div class="container">
                       <div class="row">
                           <div class="col-md-10 col-md-offset-1">
@@ -175,7 +175,7 @@ img {
                                   <div class="panel-heading"><b>Coordinators</b></div>
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/coordin.jpg')}}">
+                                          <img src="{{asset('/images/mihucord.png')}}">
                                       </div>
                                   </div>
                               </div>
@@ -183,7 +183,7 @@ img {
                           </div>
                       </div>
                   </div>
-                  <div id="2" class="tab-pane fade">
+                  <div id="seva" class="tab-pane fade">
                   <div class="container">
                       <div class="row">
                           <div class="col-md-10 col-md-offset-1">
@@ -200,7 +200,7 @@ img {
                           </div>
                       </div>
                   </div>
-                  <div id="3" class="tab-pane fade">
+                  <div id="shift" class="tab-pane fade">
                   <div class="container">
                       <div class="row">
                           <div class="col-md-10 col-md-offset-1">
@@ -209,7 +209,63 @@ img {
                                   <div class="panel-heading"><b>Duty Shifts</b></div>
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
+                                          <img src="{{asset('/images/mihuduty1.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty2.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty3.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty4.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty5.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty6.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty7.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty8.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty9.jpg')}}">
                                       </div>
                                   </div>
                               </div>
@@ -217,7 +273,7 @@ img {
                           </div>
                       </div>
                   </div>
-                  <div id="3" class="tab-pane fade">
+                  <div id="vol" class="tab-pane fade">
                   <div class="container">
                       <div class="row">
                           <div class="col-md-10 col-md-offset-1">
@@ -241,14 +297,14 @@ img {
           </div>
         </div>
         <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
+          <div class="panel-heading" role="tab" id="h2">
             <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                May I Help You Seva
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c2" aria-expanded="false" aria-controls="c2">
+                  Venue Maintenence
               </a>
             </h4>
           </div>
-          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div id="c2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h2">
             <div class="panel-body">
                 <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#1"><b>Coordinators</b></a></li>
@@ -335,14 +391,14 @@ img {
           </div>
         </div>
         <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
+          <div class="panel-heading" role="tab" id="h3">
             <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                May I Help You Seva
-              </a>
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c3" aria-expanded="false" aria-controls="c3">
+                  Other Seva
+            </a>
             </h4>
           </div>
-          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div id="c3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h3">
             <div class="panel-body">
                 <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#1"><b>Coordinators</b></a></li>
@@ -429,14 +485,14 @@ img {
           </div>
         </div>
         <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
+          <div class="panel-heading" role="tab" id="h4">
             <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                May I Help You Seva
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c4" aria-expanded="false" aria-controls="c4">
+                Other Seva
               </a>
             </h4>
           </div>
-          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div id="c4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h4">
             <div class="panel-body">
                 <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#1"><b>Coordinators</b></a></li>
@@ -523,14 +579,14 @@ img {
           </div>
         </div>
         <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
+          <div class="panel-heading" role="tab" id="h5">
             <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                May I Help You Seva
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c5" aria-expanded="false" aria-controls="c5">
+                Seva Other
               </a>
             </h4>
           </div>
-          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div id="c5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h5">
             <div class="panel-body">
                 <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#1"><b>Coordinators</b></a></li>
@@ -629,7 +685,7 @@ img {
 
 
 
-  <div id="students" class="tab-pane active">
+ <!-- <div id="students" class="tab-pane active">
         <h3><i>While Carrying Responsibilities Never Forget to Smile.</i></h3>
         @if(!Auth::guest())
         <a class="btn btn-success" href="{{ url('/seva/create') }}" role="button">Add a Seva</a>
@@ -682,8 +738,8 @@ img {
             </div>
         </div>
     </div>
-<!--paginator here-->
-</div>
+paginator here
+</div> -->
 
 <div id="other" class="tab-pane fade">
       <div class="container">
