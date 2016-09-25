@@ -56,7 +56,7 @@ marquee {
             </div>
             <div class="alert alert-info" role="alert">
             <h2><u>Refreshment Counter</u></h2>
-            <h3>Opposite to<em> Amritavarsham </em>Police Mess Hall.(Anugraha Mess - West of Engg. College Canteen)</h3>
+            <h3>Opposite to Annapurna Mess - West of Engg. College Canteen</h3>
         </div>
         <div class="alert alert-info" role="alert">
             <h2><u>Student Mess Food Details</u></h2>
