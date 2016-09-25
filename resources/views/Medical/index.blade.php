@@ -127,6 +127,7 @@ img {
                 </div>
             </div>
         </div>
+        {{$sec->links()}}
     </div>
     <div class="panel panel-default">
         <div class="panel-body">
