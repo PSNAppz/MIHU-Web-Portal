@@ -34,7 +34,7 @@
             <div class="col-md-8 col-md-offset-2">
                 @foreach($faqs as $faq)
                 <div class="panel panel-default">
-                    <div class="panel-heading" ><b>#{{$faq->id}} {{$faq->ques}}</b>
+                    <div class="panel-heading" ><h3><b>#{{$faq->ques}}</b></h3>
                         @if(!Auth::guest())
                         {{ Form::open(['method' => 'DELETE','style'=>'inline-block;', 'route' => ['faq.destroy', $faq->id]]) }}
                         <a style="inline-block;" class="btn btn-warning" href="{{ route('faq.edit', $faq->id,'/edit') }}" role="button">Edit</a>
@@ -43,7 +43,7 @@
                         @endif
                 </div>
                     <div class="panel-body">
-                        {{ $faq->ans }}
+                        <h4>{{ $faq->ans }}</h4>
                     </div>
                 </div>
             @endforeach

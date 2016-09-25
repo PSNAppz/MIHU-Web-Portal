@@ -244,7 +244,6 @@
       <p style="font-size:40px;font-family: 'Tangerine', cursive;">
           <p style="font-size:30px;font-family: 'Tangerine', cursive;"><b>#BeInformed</b></p>
       <p style="font-size:40px;font-family: 'Yatra One', cursive;">
-      <b>Watch out for this space for the latest announcements!</b>
      </p>
    </div>
     </div>
