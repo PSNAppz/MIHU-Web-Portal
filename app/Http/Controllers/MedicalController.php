@@ -23,7 +23,7 @@ class MedicalController extends Controller
      }
     public function index()
     {
-      $medical = Medical::orderBy('areaName')->get();
+      $medical = Medical::orderBy('id')->get();
       $emergency = Emergency::get();
       return view('Medical.index')->withMedical($medical)->withEmergency($emergency);
 
