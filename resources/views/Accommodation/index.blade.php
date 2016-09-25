@@ -155,7 +155,7 @@ html, body {
                                 <th>Place/Category</th>
                                 <th>For:</th>
                                 <th>Accommodation at</th>
-                                <th>Coordinator</th>
+                                <th>Contact Name</th>
                                 <th>Phone</th>
                                 @if(!Auth::guest())
                                 <th></th>
