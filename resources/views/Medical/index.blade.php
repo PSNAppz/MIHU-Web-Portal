@@ -127,7 +127,7 @@ img {
                 </div>
             </div>
         </div>
-        {{$sec->links()}}
+        {{$medical->links()}}
     </div>
     <div class="panel panel-default">
         <div class="panel-body">
