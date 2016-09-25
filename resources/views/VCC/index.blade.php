@@ -13,6 +13,9 @@
 .m-b-md {
     margin-bottom: 30px;
 }
+marquee {
+    white-space: nowrap;
+}
 </style>
     <div class="content">
         <div class="title m-b-md">
@@ -42,7 +45,7 @@
         <div class="panel panel-default">
           <div class="panel-body">
               <div class="alert alert-danger" role="alert">
-                  <h2>VCC Food will be available 24/7 only for Amrita University Students and Staff Volunteers.</h2>
+                  <h2>VCC Food will be available 24x7 only for Amrita University Students and Staff Volunteers.</h2>
               </div>
               <div class="alert alert-info" role="alert">
 
