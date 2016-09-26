@@ -138,19 +138,13 @@ img {
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-<<<<<<< HEAD
-    <li ><a data-toggle="tab" href="#sevadetails"><b>Seva Details</b></a></li>
-    <li class="active"><a data-toggle="tab" href="#other"><b>Other Campus Volunteers</b></a></li>
-    <li><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
-=======
-    <li class="active"><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
+    <li class="active"><a data-toggle="tab" href="#sevadetails"><b>Seva Details</b></a></li>
     <li><a data-toggle="tab" href="#samiti"><b>Samithi Seva Details</b></a></li>
     <li><a data-toggle="tab" href="#other"><b>Other Campus Volunteers</b></a></li>
->>>>>>> master
   </ul>
 
   <div class="tab-content">
-  <div id="sevadetails" class="tab-pane fade">
+  <div id="sevadetails" class="tab-pane active">
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="h1">
@@ -164,7 +158,6 @@ img {
             <div class="panel-body">
                 <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#coor"><b>Coordinators</b></a></li>
-                <li><a data-toggle="tab" href="#vol"><b>Volunteers</b></a></li>
                 <li><a data-toggle="tab" href="#seva"><b>Seva Instructions</b></a></li>
                 <li><a data-toggle="tab" href="#shift"><b>Duty Shifts</b></a></li>
 
@@ -198,7 +191,7 @@ img {
                                   <div class="panel-heading"><b>Seva Instructions</b></div>
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
+                                          <img src="{{asset('/images/mihuinst.jpg')}}">
                                       </div>
                                   </div>
                               </div>
@@ -302,382 +295,7 @@ img {
             </div>
           </div>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="h2">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c2" aria-expanded="false" aria-controls="c2">
-                  Venue Maintenence
-              </a>
-            </h4>
-          </div>
-          <div id="c2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h2">
-            <div class="panel-body">
-                <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#1"><b>Coordinators</b></a></li>
-                <li><a data-toggle="tab" href="#2"><b>Volunteers</b></a></li>
-                <li><a data-toggle="tab" href="#3"><b>Seva Instructions</b></a></li>
-                <li><a data-toggle="tab" href="#4"><b>Duty Shifts</b></a></li>
 
-              </ul>
-            <div class="container">
-                <div class="row">
-                  <div class="tab-content">
-                  <div id="1" class="tab-pane active">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Coordinators</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/coordin.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="2" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Seva Instructions</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="3" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Duty Shifts</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="3" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Volunteers</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-                        </div>
-                    </div>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="h3">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c3" aria-expanded="false" aria-controls="c3">
-                  Other Seva
-            </a>
-            </h4>
-          </div>
-          <div id="c3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h3">
-            <div class="panel-body">
-                <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#1"><b>Coordinators</b></a></li>
-                <li><a data-toggle="tab" href="#2"><b>Volunteers</b></a></li>
-                <li><a data-toggle="tab" href="#3"><b>Seva Instructions</b></a></li>
-                <li><a data-toggle="tab" href="#4"><b>Duty Shifts</b></a></li>
-
-              </ul>
-            <div class="container">
-                <div class="row">
-                  <div class="tab-content">
-                  <div id="1" class="tab-pane active">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Coordinators</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/coordin.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="2" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Seva Instructions</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="3" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Duty Shifts</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="3" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Volunteers</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-                        </div>
-                    </div>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="h4">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c4" aria-expanded="false" aria-controls="c4">
-                Other Seva
-              </a>
-            </h4>
-          </div>
-          <div id="c4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h4">
-            <div class="panel-body">
-                <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#1"><b>Coordinators</b></a></li>
-                <li><a data-toggle="tab" href="#2"><b>Volunteers</b></a></li>
-                <li><a data-toggle="tab" href="#3"><b>Seva Instructions</b></a></li>
-                <li><a data-toggle="tab" href="#4"><b>Duty Shifts</b></a></li>
-
-              </ul>
-            <div class="container">
-                <div class="row">
-                  <div class="tab-content">
-                  <div id="1" class="tab-pane active">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Coordinators</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/coordin.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="2" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Seva Instructions</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="3" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Duty Shifts</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="3" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Volunteers</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-                        </div>
-                    </div>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="h5">
-            <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c5" aria-expanded="false" aria-controls="c5">
-                Seva Other
-              </a>
-            </h4>
-          </div>
-          <div id="c5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h5">
-            <div class="panel-body">
-                <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#1"><b>Coordinators</b></a></li>
-                <li><a data-toggle="tab" href="#2"><b>Volunteers</b></a></li>
-                <li><a data-toggle="tab" href="#3"><b>Seva Instructions</b></a></li>
-                <li><a data-toggle="tab" href="#4"><b>Duty Shifts</b></a></li>
-
-              </ul>
-            <div class="container">
-                <div class="row">
-                  <div class="tab-content">
-                  <div id="1" class="tab-pane active">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Coordinators</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/coordin.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="2" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Seva Instructions</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="3" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Duty Shifts</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div id="3" class="tab-pane fade">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1">
-                              <hr>
-                              <div class="panel panel-default">
-                                  <div class="panel-heading"><b>Volunteers</b></div>
-                                  <div class="panel-body">
-                                      <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/kayanal.jpg')}}">
-                                      </div>
-                                  </div>
-                              </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-                        </div>
-                    </div>
-            </div>
-          </div>
-        </div>
         <!-- New Here-->
       </div>
   </div>
@@ -747,7 +365,7 @@ img {
 paginator here
 </div> -->
 
-<div id="other" class="tab-pane active">
+<div id="other" class="tab-pane fade">
       <div class="container">
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
