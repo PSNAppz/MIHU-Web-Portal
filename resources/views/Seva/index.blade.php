@@ -132,7 +132,7 @@ img {
 
 </style>
     <div class="content">
-        <div class="title m-b-md">
+0        <div class="title m-b-md">
             Seva Details
         </div>
     </div>
@@ -155,6 +155,156 @@ img {
             </h4>
           </div>
           <div id="c1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h1">
+            <div class="panel-body">
+                <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#coor"><b>Coordinators</b></a></li>
+                <li><a data-toggle="tab" href="#seva"><b>Seva Instructions</b></a></li>
+                <li><a data-toggle="tab" href="#shift"><b>Duty Shifts</b></a></li>
+
+              </ul>
+            <div class="container">
+                <div class="row">
+                  <div class="tab-content">
+                  <div id="coor" class="tab-pane active">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-10 col-md-offset-1">
+                              <hr>
+                              <div class="panel panel-default">
+                                  <div class="panel-heading"><b>Coordinators</b></div>
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihucord.PNG')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="seva" class="tab-pane fade">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-10 col-md-offset-1">
+                              <hr>
+                              <div class="panel panel-default">
+                                  <div class="panel-heading"><b>Seva Instructions</b></div>
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuinst.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="shift" class="tab-pane fade">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-10 col-md-offset-1">
+                              <hr>
+                              <div class="panel panel-default">
+                                  <div class="panel-heading"><b>Duty Shifts</b></div>
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty1.png')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty2.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty3.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty4.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty5.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty6.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty7.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty8.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuduty9.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="vol" class="tab-pane fade">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-10 col-md-offset-1">
+                              <hr>
+                              <div class="panel panel-default">
+                                  <div class="panel-heading"><b>Volunteers</b></div>
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/kayanal.jpg')}}">
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                        </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="h2">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c2" aria-expanded="false" aria-controls="c2">
+                Venue Maintenance
+              </a>
+            </h4>
+          </div>
+          <div id="c2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h2">
             <div class="panel-body">
                 <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#coor"><b>Coordinators</b></a></li>
