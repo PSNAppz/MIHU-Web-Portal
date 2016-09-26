@@ -208,7 +208,7 @@ img {
                                   <div class="panel-heading"><b>Duty Shifts</b></div>
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/mihuduty1.jpg')}}">
+                                          <img src="{{asset('/images/mihuduty1.png')}}">
                                       </div>
                                   </div>
                               </div>
