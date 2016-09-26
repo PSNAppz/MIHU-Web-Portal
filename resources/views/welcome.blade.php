@@ -121,6 +121,12 @@
                 margin-left: 150px;
               }
             }
+            img {
+                border-radius: 4px;
+                box-shadow: 0 0 10px 3px #bbb;
+                width:450px;
+                height:550px;
+            }
         </style>
     </head>
     <body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
@@ -268,6 +274,21 @@
             @endif
           @endforeach
       </div>
+      </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                  <div class="panel panel-default">
+                      <div class="panel-heading"><h2>MISSING!</h2></div>
+                      <div class="panel-body">
+                          <center><img src="{{asset('/images/missing1.jpg')}}">
+                          <h4><b>Missing since 6pm 25th Sept</b></h4>
+                          <h4><p>Name : Sanju Sanal
+                              From Amritavidyalayam, Kodungalloor.</p></h4></center>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
      </div>
  </div>
