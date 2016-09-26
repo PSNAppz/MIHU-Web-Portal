@@ -275,21 +275,22 @@
           @endforeach
       </div>
       </div>
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6 col-md-offset-3">
-                  <div class="panel panel-default">
-                      <div class="panel-heading"><h2>MISSING!</h2></div>
-                      <div class="panel-body">
-                          <center><img src="{{asset('/images/missing1.jpg')}}">
-                          <h4><b>Missing since 6pm 25th Sept</b></h4>
-                          <h4><p>Name : Sanju Sanal
-                              From Amritavidyalayam, Kodungalloor.</p></h4></center>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+     </div>
+     <div class="container">
+         <div class="row">
+             <div class="col-md-6 col-md-offset-3">
+                 <div class="panel panel-default">
+                     <div class="panel-heading"><h2>MISSING!</h2></div>
+                     <div class="panel-body">
+                         <center><img src="{{asset('/images/missing1.jpg')}}">
+                         <h4><b>Missing since 6pm 25th Sept</b></h4>
+                         <h4><p>Name : Sanju Sanal
+                             From Amritavidyalayam, Kodungalloor.</p>
+                         <p> If found please contact: Anil Ph: 9744443334 , 8606519234 , 9447480134</h4></center>
+                     </div>
+                 </div>
+             </div>
+         </div>
      </div>
  </div>
   @include('layouts.footer')
