@@ -108,7 +108,7 @@ class WelcomeController extends Controller
       $log = new Log;
       $log->user_id=Auth::user()->id;
       $log->name=Auth::user()->name;
-      $log->action="Deleted Darshan Timing";
+      $log->action="Deleted News Feed";
       $log->actionval = 3;
       $log->save();
       $newsfeed->delete();

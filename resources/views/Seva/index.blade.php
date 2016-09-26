@@ -138,9 +138,15 @@ img {
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
+<<<<<<< HEAD
     <li ><a data-toggle="tab" href="#sevadetails"><b>Seva Details</b></a></li>
     <li class="active"><a data-toggle="tab" href="#other"><b>Other Campus Volunteers</b></a></li>
     <li><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
+=======
+    <li class="active"><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
+    <li><a data-toggle="tab" href="#samiti"><b>Samithi Seva Details</b></a></li>
+    <li><a data-toggle="tab" href="#other"><b>Other Campus Volunteers</b></a></li>
+>>>>>>> master
   </ul>
 
   <div class="tab-content">
@@ -754,6 +760,20 @@ paginator here
           </div>
       </div>
   </div>
+
+  <div id="samiti" class="tab-pane fade">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="{{asset('/images/samiti.jpg')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <!--paginator here-->
 </div>
 </div>
