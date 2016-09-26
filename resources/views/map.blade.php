@@ -29,8 +29,15 @@ img {
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <div class="panel panel-default">
+                            <div class="panel-heading">Engineering College Map</div>
                             <div class="panel-body">
                                 <img src="{{asset('/images/map.jpeg')}}">
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Ayurveda Map</div>
+                            <div class="panel-body">
+                                <img src="{{asset('/images/ayurveda map.png')}}">
                             </div>
                         </div>
                     </div>

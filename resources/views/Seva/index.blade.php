@@ -365,15 +365,6 @@ img {
       </div>
   </div>
 
-
-
-
-
-
-
-
-
-
  <!-- <div id="students" class="tab-pane active">
         <h3><i>While Carrying Responsibilities Never Forget to Smile.</i></h3>
         @if(!Auth::guest())
