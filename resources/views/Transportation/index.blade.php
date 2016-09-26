@@ -133,24 +133,9 @@ img {
                         </thead>
                         <tbody>
                             <tr>
-                                <th>Auto</th>
-                                <th>X</th>
-                                <th>485748754</th>
-                            </tr>
-                            <tr>
-                                <th>Auto</th>
-                                <th>Y</th>
-                                <th>485748754</th>
-                            </tr>
-                            <tr>
-                                <th>Traveller</th>
-                                <th>C</th>
-                                <th>485748754</th>
-                            </tr>
-                            <tr>
-                                <th>Car</th>
-                                <th>M</th>
-                                <th>485748754</th>
+                                <th>Any</th>
+                                <th>Nahaz Etalia Tourist and Travels,Vallikkavu near Health Clinic</th>
+                                <th>94469750</th>
                             </tr>
                         </tbody>
                     </table>
