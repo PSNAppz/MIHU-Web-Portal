@@ -149,18 +149,14 @@
                   <div class="panel panel-default">
                       <div class="panel-body">
                           <div style="overflow-x:auto;">
-                          <table class="table">
-                           <thead>
-                              <th>Date</th>
-                              <th>Time</th>
-                              <th>Location</th>
-                              <th>Coordinator</th>
-                              <th>ContactNo</th>
+                            <div class="alert alert-success" role="alert">
+                            <h4><a href="#" class="alert-link">Marriage people should go to Ashram for accommodation and get their accommodation in the old international office which is ladies accommodation now. On 27th morning 5 o clock the marriage team should reach in front of kasturi ammas house which is in the Ashram premises.</a></h4>
+                            </div>
+                              
                               @if(!Auth::guest())
                               <th></th>
                               <th></th>
                           @endif
-                          </thead>
                           <tbody>
                               @foreach($se as $s)
                                   <tr>
