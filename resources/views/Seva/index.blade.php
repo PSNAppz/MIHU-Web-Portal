@@ -138,18 +138,18 @@ img {
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#sevadetails"><b>Seva Details</b></a></li>
-    <li><a data-toggle="tab" href="#other"><b>Other Campus Volunteers</b></a></li>
+    <li ><a data-toggle="tab" href="#sevadetails"><b>Seva Details</b></a></li>
+    <li class="active"><a data-toggle="tab" href="#other"><b>Other Campus Volunteers</b></a></li>
     <li><a data-toggle="tab" href="#students"><b>Volunteers</b></a></li>
   </ul>
 
   <div class="tab-content">
-  <div id="sevadetails" class="tab-pane active">
+  <div id="sevadetails" class="tab-pane fade">
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="h1">
             <h4 class="panel-title">
-              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c1" aria-expanded="true" aria-controls="c1">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c1" aria-expanded="false" aria-controls="c1">
                 May I Help You Seva
               </a>
             </h4>
@@ -741,7 +741,7 @@ img {
 paginator here
 </div> -->
 
-<div id="other" class="tab-pane fade">
+<div id="other" class="tab-pane active">
       <div class="container">
           <div class="row">
               <div class="col-md-10 col-md-offset-1">
