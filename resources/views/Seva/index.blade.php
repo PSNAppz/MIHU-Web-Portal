@@ -295,6 +295,7 @@ img {
             </div>
           </div>
         </div>
+    </div>
          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="h2">
@@ -307,13 +308,13 @@ img {
           <div id="c2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h2">
             <div class="panel-body">
                 <ul class="nav nav-tabs">
-                <li><a data-toggle="tab" href="#coo"><b>Coordinators</b></a></li>
+                <li class="active"><a data-toggle="tab" href="#coo"><b>Coordinators</b></a></li>
                 <li><a data-toggle="tab" href="#venueshift"><b>Duty Shifts</b></a></li>
               </ul>
             <div class="container">
                 <div class="row">
                   <div class="tab-content">
-                  <div id="coo" class="tab-pane fade">
+                  <div id="coo" class="tab-pane active">
                   <div class="container">
                       <div class="row">
                           <div class="col-md-10 col-md-offset-1">
@@ -360,9 +361,113 @@ img {
             </div>
           </div>
         </div>
+        <br>
 
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+         <div class="panel-heading" role="tab" id="h3">
+           <h4 class="panel-title">
+             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#c3" aria-expanded="false" aria-controls="c3">
+               Crowd Control Seva
+             </a>
+           </h4>
+         </div>
+         <div id="c3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="h3">
+           <div class="panel-body">
+               <ul class="nav nav-tabs">
+               <li class="active"><a data-toggle="tab" href="#crowdcoo"><b>Coordinators</b></a></li>
+               <li><a data-toggle="tab" href="#crowdshift"><b>Duty Shifts</b></a></li>
+               <li><a data-toggle="tab" href="#crowdvol"><b>Volunteers</b></a></li>
+
+             </ul>
+           <div class="container">
+               <div class="row">
+                 <div class="tab-content">
+                 <div id="crowdcoo" class="tab-pane active">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-md-10 col-md-offset-1">
+                             <hr>
+                             <div class="panel panel-default">
+                                 <div class="panel-heading"><b>Coordinators</b></div>
+                                 <div class="panel-body">
+                                     <div style="overflow-x:auto;">
+                                         <img src="{{asset('/images/Crowd.PNG')}}">
+                                     </div>
+                                 </div>
+                             </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div id="crowdvol" class="tab-pane fade">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-md-10 col-md-offset-1">
+                             <hr>
+                             <div class="panel panel-default">
+                                 <div class="panel-heading"><b>Volunteers</b></div>
+                                 <div class="panel-body">
+                                     <div style="overflow-x:auto;">
+                                         <img src="{{asset('/images/crowd1.jpg')}}">
+                                     </div>
+                                 </div>
+                                 <div class="panel-body">
+                                     <div style="overflow-x:auto;">
+                                         <img src="{{asset('/images/crowd2.jpg')}}">
+                                     </div>
+                                 </div>
+                                 <div class="panel-body">
+                                     <div style="overflow-x:auto;">
+                                         <img src="{{asset('/images/crowd3.jpg')}}">
+                                     </div>
+                                 </div>
+                                 <div class="panel-body">
+                                     <div style="overflow-x:auto;">
+                                         <img src="{{asset('/images/crowd4.jpg')}}">
+                                     </div>
+                                 </div>
+                                 <div class="panel-body">
+                                     <div style="overflow-x:auto;">
+                                         <img src="{{asset('/images/crowd5.jpg')}}">
+                                     </div>
+                                 </div>
+                                 <div class="panel-body">
+                                     <div style="overflow-x:auto;">
+                                         <img src="{{asset('/images/crowd6.jpg')}}">
+                                     </div>
+                                 </div>
+                             </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div id="crowdshift" class="tab-pane fade">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-md-10 col-md-offset-1">
+                             <hr>
+                             <div class="panel panel-default">
+                                 <div class="panel-heading"><b>Duty Shifts</b></div>
+                                 <div class="panel-body">
+                                     <div style="overflow-x:auto;">
+                                         <img src="{{asset('/images/crowdshift.png')}}">
+                                     </div>
+                                 </div>
+                             </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+             </div>
+                       </div>
+                   </div>
+           </div>
+         </div>
+        </div>
+        </div>
         <!-- New Here-->
-      </div>
   </div>
 
  <!-- <div id="students" class="tab-pane active">
@@ -417,9 +522,8 @@ img {
                 </div>
             </div>
         </div>
-    </div>
-paginator here
-</div> -->
+    </div>-->
+</div>
 
 <div id="other" class="tab-pane fade">
       <div class="container">
