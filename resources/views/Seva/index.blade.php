@@ -174,7 +174,7 @@ img {
                                   <div class="panel-heading"><b>Coordinators</b></div>
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/mihucord.png')}}">
+                                          <img src="{{asset('/images/mihucord.PNG')}}">
                                       </div>
                                   </div>
                               </div>
