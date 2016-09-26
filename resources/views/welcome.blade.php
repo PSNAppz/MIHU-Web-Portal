@@ -288,6 +288,15 @@
                              From Amritavidyalayam, Kodungalloor.</p>
                          <p> If found please contact: Anil Ph: 9744443334 , 8606519234 , 9447480134</h4></center>
                      </div>
+                     <div class="panel-body">
+                         <center>
+                         <h4><b>10 Year Old Kid Missing</b></h4>
+                         <h4><p>Name : Prakash
+                             <p>Missing from: Ashram Side</p>
+                             From Valayappatti Mulaiyur.
+                         Dressed in Blue Jeans with Black and White Shirt.</p>
+                         <p> If there is any info regarding him contact: Kanakasabapathy of EEE Dept or Bhoopathy PH: 7094262799</h4></center>
+                     </div>
                  </div>
              </div>
          </div>
