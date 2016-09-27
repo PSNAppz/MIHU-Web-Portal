@@ -185,7 +185,8 @@
    <div class = "flex-center position-ref full-height">
         </div>
 <marquee style="color: #990000; font-size:22px;">
-       <b> <a href="http://www.amrita.ac.in/live/">Watch Amritavarsham live click here...</a> </b>
+       <b> <a href="http://www.amrita.ac.in/live/">Watch Amritavarsham live click here..... </a> 
+       &nbsp;:: Matruvani Available at Rs 50 for 1year , Rs 125 for 3years , Rs 200 for 5 years and Rs 500 for life long... </b>
       </marquee>
        <div class="jumbotron" style="margin-bottom: 0px">
          <div class ="button">
