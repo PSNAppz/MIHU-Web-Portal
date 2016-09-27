@@ -36,21 +36,30 @@ img {
     <br>
 <div class="container">
     <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#loc"><b>Location</b></a></li>
+        <li class="active"><a data-toggle="tab" href="#loc"><b>Reception</b></a></li>
         <li><a data-toggle="tab" href="#contact"><b>Contact</b></a></li>
     </ul>
     <div class="tab-content">
     <div id="loc" class="tab-pane active">
-        <h3 align="center">Media Locations</h3>
+        <!--<h3 align="center">Reception</h3>-->
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                          <table class="table">
+                         <div class="alert alert-success" role="alert">
+                            <h4><a href="#" class="alert-link"><h2>Reception</h2><br>Till 8:40am reception will be at Engineering College canteen.<br>
+                            After 8:40am the reception will be near Amma hotel.
+                            <br>
+                            <br>
+                            <h2>Mess details</h2>
+                            <p><h4>At Engineering College Canteen</h4></p>
+                            </a></h4>
+                            </div>
+                         <!-- <table class="table">
                              <thead>
                                 <th>Media Room</th>
-                                <th>Media Enclosure</th>
+                                <th>Media Enclosure</th>-->
                                 @if(!Auth::guest())<th></th>@endif
                             </thead>
                             <tbody>
