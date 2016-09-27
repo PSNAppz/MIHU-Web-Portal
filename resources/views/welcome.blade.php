@@ -184,7 +184,9 @@
 
    <div class = "flex-center position-ref full-height">
         </div>
-
+<marquee style="color: #990000; font-size:22px;">
+       <b> <a href="http://www.amrita.ac.in/live/">Watch Amritavarsham live click here...</a> </b>
+      </marquee>
        <div class="jumbotron" style="margin-bottom: 0px">
          <div class ="button">
            <p><b>Select the department</b></p>
