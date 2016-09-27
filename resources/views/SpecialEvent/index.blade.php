@@ -42,18 +42,21 @@
                   <div class="panel panel-default">
                       <div class="panel-body">
                           <div style="overflow-x:auto;">
-                          <table class="table">
+                         <!-- <table class="table">
                           <thead>
                               <th>Date</th>
                               <th>Time</th>
                               <th>Location</th>
                               <th>Coordinator</th>
-                              <th>ContactNo</th>
+                              <th>ContactNo</th>-->
+                              <div class="alert alert-success" role="alert">
+                            <h4><a href="#" class="alert-link">There is no saree distribution for individuals, coordinators should collect with the list.</a></h4>
+                            </div>
                               @if(!Auth::guest())
                               <th></th>
                               <th></th>
                           @endif
-                          </thead>
+                          <!--</thead>-->
                           <tbody>
                               @foreach($se as $s)
                                   <tr>
@@ -95,18 +98,23 @@
                   <div class="panel panel-default">
                       <div class="panel-body">
                           <div style="overflow-x:auto;">
-                          <table class="table">
+
+                            <div class="alert alert-success" role="alert">
+                            <h4><a href="#" class="alert-link">
+Pension recipients can contact their respective coordinator for information regarding pension distribution. </a></h4>
+                            </div>
+                          <!--<table class="table">
                           <thead>
                               <th>Date</th>
                               <th>Time</th>
                               <th>Location</th>
                               <th>Coordinator</th>
-                              <th>ContactNo</th>
+                              <th>ContactNo</th>-->
                               @if(!Auth::guest())
                               <th></th>
                               <th></th>
                           @endif
-                          </thead>
+                          <!--</thead>-->
                           <tbody>
                               @foreach($se as $s)
                                   <tr>
@@ -149,18 +157,14 @@
                   <div class="panel panel-default">
                       <div class="panel-body">
                           <div style="overflow-x:auto;">
-                          <table class="table">
-                           <thead>
-                              <th>Date</th>
-                              <th>Time</th>
-                              <th>Location</th>
-                              <th>Coordinator</th>
-                              <th>ContactNo</th>
+                            <div class="alert alert-success" role="alert">
+                            <h4><a href="#" class="alert-link">Marriage people should go to Ashram for accommodation and get their accommodation in Sreepuram(old international office) which is ladies accommodation now. On 27th morning 5 o clock the marriage team should reach in front of kasturi ammas house which is in the Ashram premises.</a></h4>
+                            </div>
+                              
                               @if(!Auth::guest())
                               <th></th>
                               <th></th>
                           @endif
-                          </thead>
                           <tbody>
                               @foreach($se as $s)
                                   <tr>
