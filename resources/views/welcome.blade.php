@@ -46,7 +46,7 @@
                   height:60vh;
                   width: 100%;
                   background-size: cover;
-                  background-image:url(./images/background.jpg);
+                  background-image:url(./images/background64.jpg);
                   background-repeat: no-repeat;
                   //background-attachment: fixed;
                   background-position:center;
@@ -185,7 +185,7 @@
    <div class = "flex-center position-ref full-height">
         </div>
 <marquee style="color: #990000; font-size:22px;">
-       <b> <a href="http://www.amrita.ac.in/live/">Watch Amritavarsham live click here..... </a> 
+       <b> <a href="http://www.amrita.ac.in/live/">Watch Amritavarsham live click here..... </a>
        &nbsp;:: Matruvani Available at Rs 50 for 1year , Rs 125 for 3years , Rs 200 for 5 years and Rs 500 for life long... </b>
       </marquee>
        <div class="jumbotron" style="margin-bottom: 0px">
@@ -279,7 +279,7 @@
       </div>
       </div>
      </div>
-     <div class="container">
+<!--     <div class="container">
          <div class="row">
              <div class="col-md-6 col-md-offset-3">
                  <div class="panel panel-default">
@@ -303,7 +303,7 @@
                  </div>
              </div>
          </div>
-     </div>
+     </div>-->
  </div>
   @include('layouts.footer')
     </body>

@@ -32,7 +32,7 @@
      .crew{
          font-family:'Marck Script', sans-serif;
          font-size: 50px;
-          text-decoration: underline; 
+          text-decoration: underline;
      }
      .col-sm-4{
          font-family:'Marck Script', sans-serif;
@@ -146,7 +146,7 @@ border: 1px solid #636b6f;
 <table width="100%" border="0">
 <tr>
 <td width="54%" rowspan="3" valign="top">
-              <img src="images/16-av63.jpg"></img>
+              <img src="images/17-av64.jpg"></img>
 </td>
 <td width="46%">
 <font style="font size=100; font-align:left;">
