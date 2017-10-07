@@ -135,7 +135,7 @@ img {
                             <tr>
                                 <th>Any</th>
                                 <th>Nahaz Etalia Tourist and Travels,Vallikkavu near Health Clinic</th>
-                                <th>94469750</th>
+                                <th></th>
                             </tr>
                         </tbody>
                     </table>

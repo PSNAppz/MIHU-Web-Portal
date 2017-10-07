@@ -31,7 +31,7 @@ img {
                         <div class="panel panel-default">
                             <div class="panel-heading">Engineering College Map</div>
                             <div class="panel-body">
-                                <img src="{{asset('/images/map.jpeg')}}">
+                                <img src="{{asset('/images/map3.PNG')}}">
                             </div>
                         </div>
                         <div class="panel panel-default">
