@@ -201,6 +201,23 @@ html, body {
     </div>
 <!--paginator here-->
 </div>
+<div id="vip" class="tab-pane fade">
+    <h3 align="center"></h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="alert alert-success" role="alert">
+
+
+                      </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
 <div id="ladies" class="tab-pane fade">
       <h3><i>Accommodation Details</i></h3>
       <hr>
@@ -221,28 +238,6 @@ html, body {
       </div>
   </div>
 <!--paginator here-->
-</div>
-<div id="vip" class="tab-pane fade">
-    <h3 align="center"></h3>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="alert alert-success" role="alert">
-                      <h4>VIP Counter</h4>
-                      <h5>Vip Counter is situated at the left side of main stage.</h5>
-                      <h4>Special Invitee Reception</h4>
-                      <h5>Name: Br. Ramesh Bhakthavatchalu Ph: 8903709909</h5>
-                      <h4>VIP Section Contact</h4>
-                      <h5>Name: Br. Rayudu Ph: 9446483200</h5>
-
-                      </div>
-                    </div>
-                </div>
-        </div>
-    </div>
-</div>
 </div>
 </div>
 </div>

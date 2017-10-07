@@ -218,32 +218,32 @@ img {
                                   <div class="panel-heading"><b>Duty Shifts</b></div>
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/mihuduty1.png')}}">
+                                          <!--<img src="{{asset('/images/mihuduty1.png')}}"> -->
                                       </div>
                                   </div>
                               </div>
                               <div class="panel panel-default">
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/mihuduty2.jpg')}}">
+                                        <!--  <img src="{{asset('/images/mihuduty2.jpg')}}">-->
                                       </div>
                                   </div>
                               </div>
                               <div class="panel panel-default">
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/mihuduty3.jpg')}}">
+                                        <!--  <img src="{{asset('/images/mihuduty3.jpg')}}">-->
                                       </div>
                                   </div>
                               </div>
                               <div class="panel panel-default">
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/mihuduty4.jpg')}}">
+                                        <!--  <img src="{{asset('/images/mihuduty4.jpg')}}">-->
                                       </div>
                                   </div>
                               </div>
-                              <div class="panel panel-default">
+                    <!--          <div class="panel panel-default">
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
                                           <img src="{{asset('/images/mihuduty5.jpg')}}">
@@ -278,7 +278,7 @@ img {
                                       </div>
                                   </div>
                               </div>
-                              </div>
+                          </div> -->
                           </div>
                       </div>
                   </div>
@@ -417,7 +417,7 @@ img {
                              <hr>
                              <div class="panel panel-default">
                                  <div class="panel-heading"><b>Volunteers</b></div>
-                                 <div class="panel-body">
+                            <!--     <div class="panel-body">
                                      <div style="overflow-x:auto;">
                                          <img src="{{asset('/images/crowd1.jpg')}}">
                                      </div>
@@ -446,7 +446,7 @@ img {
                                      <div style="overflow-x:auto;">
                                          <img src="{{asset('/images/crowd6.jpg')}}">
                                      </div>
-                                 </div>
+                                 </div> -->
                              </div>
                              </div>
                          </div>
