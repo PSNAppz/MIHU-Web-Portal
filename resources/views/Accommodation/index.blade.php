@@ -210,7 +210,10 @@ html, body {
               <div class="panel panel-default">
                   <div class="panel-body">
                       <div style="overflow-x:auto;">
-                      <h6>image</h6>
+                          <div class="panel-body">
+                              <img src="{{asset('/images/ladies_acc.PNG')}}">
+                          </div>
+                      </div>
                     </div>
                   </div>
               </div>

@@ -191,7 +191,17 @@ img {
                                   <div class="panel-heading"><b>Seva Instructions</b></div>
                                   <div class="panel-body">
                                       <div style="overflow-x:auto;">
-                                          <img src="{{asset('/images/mihuinst.jpg')}}">
+                                          <img src="{{asset('/images/mihuinst64.jpg')}}">
+                                      </div>
+                                  </div>
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuinst2.PNG')}}">
+                                      </div>
+                                  </div>
+                                  <div class="panel-body">
+                                      <div style="overflow-x:auto;">
+                                          <img src="{{asset('/images/mihuinst3.PNG')}}">
                                       </div>
                                   </div>
                               </div>
