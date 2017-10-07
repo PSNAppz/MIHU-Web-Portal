@@ -81,7 +81,7 @@ img {
                     </div>
                 </div>
             </div>
-            <div id="mal" class="tab-pane active">
+            <div id="mal" class="tab-pane fade">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
@@ -97,7 +97,7 @@ img {
                     </div>
                 </div>
             </div>
-            <div id="tamil" class="tab-pane active">
+            <div id="tamil" class="tab-pane fade">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
