@@ -145,9 +145,9 @@ border: 1px solid #636b6f;
    <div class="content">
 <table width="100%" border="0">
 <tr>
-<td width="54%" rowspan="3" valign="top">
+<!--<td width="54%" rowspan="3" valign="top">
               <img src="images/17-av64.jpg"></img>
-</td>
+</td>-->
 <td width="46%">
 <font style="font size=100; font-align:left;">
 <p style="text-align:left;font-size:160%;">

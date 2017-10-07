@@ -132,6 +132,7 @@ html, body {
     <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#students"><b>Accommodation</b></a></li>
     <li><a data-toggle="tab" href="#vip"><b>VIP</b></a></li>
+    <li><a data-toggle="tab" href="#ladies"><b>Ladies</b></a></li>
   </ul>
   <div class="tab-content">
   <div id="students" class="tab-pane active">
@@ -198,6 +199,24 @@ html, body {
             </div>
         </div>
     </div>
+<!--paginator here-->
+</div>
+<div id="ladies" class="tab-pane fade">
+      <h3><i>Accommodation Details</i></h3>
+      <hr>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 col-md-offset-0">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+                      <div style="overflow-x:auto;">
+                      <h6>image</h6>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 <!--paginator here-->
 </div>
 <div id="vip" class="tab-pane fade">
