@@ -10,7 +10,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
 
@@ -34,7 +34,7 @@
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Yatra One', sans-serif;
+                font-family: 'Lato', sans-serif;
                 font-weight: 500;
                 height: 100vh;
                 margin: 0;
@@ -91,7 +91,7 @@
               margin-top:0px;
               background-image: url(./images/orangepink.jpg);
               background-position:center;
-              background-attachment: fixed;
+              --background-attachment: fixed;
               background-size:cover;
               background-repeat: no-repeat;
               text-align: center;
@@ -181,13 +181,7 @@
     </div>
 </nav>
 
-
-   <div class = "flex-center position-ref full-height">
-        </div>
-<marquee style="color: #990000; font-size:22px;">
-       <b> <a href="http://www.amrita.ac.in/live/">Watch Amritavarsham live click here..... </a>
-       &nbsp;:: Matruvani Available at Rs 50 for 1year , Rs 125 for 3years , Rs 200 for 5 years and Rs 500 for life long... </b>
-      </marquee>
+  <img src="./images/background64.jpg" class="img-responsive" style="width:100%" alt="Welcome to Amritavarsham 64">
        <div class="jumbotron" style="margin-bottom: 0px">
          <div class ="button">
            <p><b>Select the department</b></p>
@@ -246,15 +240,8 @@
     </div>
     <div class="news">
     <div class="newsbody">
-      <h1><b>News Feed</b></h1>
+      <h1><b>News Feed</b> <small><i>#BeInformed</i></small></h1>
       <br>
-      <br><br>
-      <div>
-      <p style="font-size:40px;font-family: 'Tangerine', cursive;">
-          <p style="font-size:30px;font-family: 'Tangerine', cursive;"><b>#BeInformed</b></p>
-      <p style="font-size:40px;font-family: 'Yatra One', cursive;">
-     </p>
-   </div>
     </div>
     <div id="" style="overflow-y: scroll; height:400px; width:100%;">
       <div class="col-sm-10 col-md-offset-1">
