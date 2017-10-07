@@ -48,12 +48,12 @@ img {
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="{{asset('/images/general.jpg')}}">
+                            <img src="{{asset('/images/general1.PNG')}}">
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="{{asset('/images/general2.jpg')}}">
+                            <img src="{{asset('/images/general2.PNG')}}">
                         </div>
                     </div>
                 </div>
@@ -69,14 +69,14 @@ img {
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="{{asset('/images/venue1.jpg')}}">
+                            <img src="{{asset('/images/venue.jpg')}}">
                         </div>
                     </div>
             </div>
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img src="{{asset('/images/venue2.jpg')}}">
+                        <img src="{{asset('/images/venue.jpg')}}">
                     </div>
                 </div>
         </div>
