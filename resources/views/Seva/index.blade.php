@@ -534,7 +534,19 @@ img {
         </div>
     </div>-->
 </div>
-
+<div id="samiti" class="tab-pane">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                          <img src="{{asset('/images/samiti.jpg')}}">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 <div id="other" class="tab-pane fade">
       <div class="container">
           <div class="row">
@@ -549,19 +561,7 @@ img {
       </div>
   </div>
 
-  <div id="samiti" class="tab-pane fade">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <img src="{{asset('/images/samiti.jpg')}}">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 <!--paginator here-->
 </div>
 </div>

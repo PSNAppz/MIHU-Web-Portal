@@ -130,12 +130,13 @@ html, body {
     </div>
 <div class="container">
     <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#students"><b>Accommodation</b></a></li>
+    <li class="active"><a data-toggle="tab" href="#devotees"><b>Devotees</b></a></li>
+    <li><a data-toggle="tab" href="#students"><b>Students</b></a></li>
     <li><a data-toggle="tab" href="#vip"><b>VIP</b></a></li>
     <li><a data-toggle="tab" href="#ladies"><b>Ladies</b></a></li>
   </ul>
   <div class="tab-content">
-  <div id="students" class="tab-pane active">
+  <div id="devotees" class="tab-pane active">
         <h3><i>Accommodation Details</i></h3>
         @if(!Auth::guest())
         <a class="btn btn-success" href="{{ url('/accommodation/create') }}" role="button">Add Accommodation</a>
@@ -165,6 +166,7 @@ html, body {
                             </thead>
                             <tbody>
                                 @foreach($accommodations as $acc)
+                                    @if ($acc->areaName != "Amrita University" && $acc->areaName != "Amrita Vidyalayam")
                                     <tr>
 
                                         <th>{{ $acc->areaName}}</th>
@@ -190,6 +192,7 @@ html, body {
                                         {{ Form::close() }}</th>
                                         @endif
                                     </tr>
+                                    @endif
                                 @endforeach
                             </tbody>
                           </table>
@@ -199,6 +202,75 @@ html, body {
             </div>
         </div>
     </div>
+<!--paginator here-->
+</div>
+
+<div id="students" class="tab-pane fade">
+      <h3><i>Accommodation Details</i></h3>
+      @if(!Auth::guest())
+      <a class="btn btn-success" href="{{ url('/accommodation/create') }}" role="button">Add Accommodation</a>
+      <a  id="xlsf" href="{{ URL::to('downloadExcel/accommodation/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
+      <a id="xlsxf" href="{{ URL::to('downloadExcel/accommodation/xlsx') }}"><button class="btn btn-info">Download Excel xlsx</button></a>
+      <a id="csvf" href="{{ URL::to('downloadExcel/accommodation/csv') }}"><button class="btn btn-info">Download CSV</button></a>
+  @endif
+      <hr>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 col-md-offset-0">
+              <div class="panel panel-default">
+                  <div class="panel-body">
+                      <div style="overflow-x:auto;">
+                      <table id="acc" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                          <thead>
+                              <th>State/Others</th>
+                              <th>Place/Category</th>
+                              <th>For:</th>
+                              <th>Accommodation at</th>
+                              <th>Contact Name</th>
+                              <th>Phone</th>
+                              @if(!Auth::guest())
+                              <th></th>
+                              <th></th>
+                          @endif
+                          </thead>
+                          <tbody>
+                              @foreach($accommodations as $acc)
+                                  @if ($acc->areaName == "Amrita University" || $acc->areaName == "Amrita Vidyalayam")
+                                  <tr>
+
+                                      <th>{{ $acc->areaName}}</th>
+                                      <th>{{ $acc->category}}</th>
+                                      @if($acc->gender==0)
+                                          <th>Men</th>
+                                      @elseif($acc->gender==1)
+                                          <th>Women</th>
+                                      @elseif($acc->gender==4)
+                                          <th>VIP</th>
+                                      @elseif($acc->gender==2)
+                                          <th>Police Men</th>
+                                      @else
+                                          <th>Police Women</th>
+                                      @endif
+                                      <th>{{ $acc->locationofAcc}}</th>
+                                      <th>{{ $acc->coord}}</th>
+                                      <th>{{ $acc->contact}}</th>
+                                      @if(!Auth::guest())
+                                      <th><a class="btn btn-warning" href="{{ route('accommodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
+                                      <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accommodation.destroy', $acc->id]]) }}
+                                      {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                      {{ Form::close() }}</th>
+                                      @endif
+                                  </tr>
+                                  @endif
+                              @endforeach
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 <!--paginator here-->
 </div>
 <div id="vip" class="tab-pane fade">
