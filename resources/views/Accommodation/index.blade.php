@@ -134,6 +134,7 @@ html, body {
     <li><a data-toggle="tab" href="#students"><b>Students</b></a></li>
     <li><a data-toggle="tab" href="#vip"><b>VIP</b></a></li>
     <li><a data-toggle="tab" href="#ladies"><b>Ladies Accommodation Contacts</b></a></li>
+    <li><a data-toggle="tab" href="#gents"><b>Gents Accommodation Contacts</b></a></li>
   </ul>
   <div class="tab-content">
   <div id="devotees" class="tab-pane active">
@@ -309,6 +310,25 @@ html, body {
           </div>
       </div>
   </div>
+  <div id="gents" class="tab-pane fade">
+        <h3><i>Accommodation Details</i></h3>
+        <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div style="overflow-x:auto;">
+                            <div class="panel-body">
+                                <img src="{{asset('/images/gac.PNG')}}">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <!--paginator here-->
 </div>
 </div>
