@@ -7,11 +7,12 @@
 
         <title>MIHU</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 
         <!--Bootstrap link-->
@@ -182,6 +183,7 @@
 </nav>
 
   <img src="./images/background64.jpg" class="img-responsive" style="width:100%" alt="Welcome to Amritavarsham 64">
+  <marquee style="color:#900000;font-size:28px;font-family: 'Open Sans', sans-serif;"><strong><a href="/live" style="text-decoration:none"><span style="color:#900000; "class="glyphicon glyphicon-hd-video"></span> Watch Amrita Varsham 64 Live .......Click here</a></strong></marquee>
        <div class="jumbotron" style="margin-bottom: 0px">
          <div class ="button">
            <p><b>Select the department</b></p>

@@ -119,3 +119,9 @@ Route::get('/schedules',function(){
 Route::get('/generalinfo', function () {
     return view('Generalinfo.index');
 });
+
+//live stream
+
+Route::get('/live', function () {
+    return view('live.index');
+});
