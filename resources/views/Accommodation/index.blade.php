@@ -133,11 +133,11 @@ html, body {
     <li class="active"><a data-toggle="tab" href="#devotees"><b>Devotees</b></a></li>
     <li><a data-toggle="tab" href="#students"><b>Students</b></a></li>
     <li><a data-toggle="tab" href="#vip"><b>VIP</b></a></li>
-    <li><a data-toggle="tab" href="#ladies"><b>Ladies</b></a></li>
+    <li><a data-toggle="tab" href="#ladies"><b>Ladies Accommodation Contacts</b></a></li>
   </ul>
   <div class="tab-content">
   <div id="devotees" class="tab-pane active">
-        <h3><i>Accommodation Details</i></h3>
+        <h3><i>Accommodation Details for Ladies & Gents (Devotees)</i></h3>
         @if(!Auth::guest())
         <a class="btn btn-success" href="{{ url('/accommodation/create') }}" role="button">Add Accommodation</a>
         <a  id="xlsf" href="{{ URL::to('downloadExcel/accommodation/xls') }}"><button class="btn btn-info">Download Excel xls</button></a>
