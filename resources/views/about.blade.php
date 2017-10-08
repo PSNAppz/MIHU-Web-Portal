@@ -189,7 +189,7 @@ border: 1px solid #636b6f;
 	<div class="row">
 	<br>
                <div class="col-sm-4">
-                 <img src="images/HARIKRISHNA AJ.jpg" alt="HARIKRISHNA AJ" class="img-circle" width=150 height=150>
+                 <img src="images/HARIKRISHNA AJ1.jpg" alt="HARIKRISHNA AJ" class="img-circle" width=150 height=150>
 		<br> <span style="text-align:center;">Harikrishna A J <br> Bca 2015-18
                </div>
 
