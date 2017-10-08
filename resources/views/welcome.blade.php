@@ -236,7 +236,7 @@
          </div>
          <div class="col-sm-12">
              <br>
-             <a class="btn btn-success btn-lg btn-block" href="/etw" role="button"><span class="glyphicon glyphicon-italic"></span>&nbsp Embracing the World Exhibition</a>
+             <a class="btn btn-success btn-lg btn-block" href="/etw" role="button"><span class="glyphicon glyphicon-globe"></span>&nbsp Embracing the World Exhibition</a>
          </div>
        </div>
        <br>
