@@ -69,17 +69,10 @@ img {
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="{{asset('/images/venue.jpg')}}">
+                            <img src="{{asset('/images/map3.PNG')}}">
                         </div>
                     </div>
             </div>
-            <div class="col-md-10 col-md-offset-1">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <img src="{{asset('/images/venue.jpg')}}">
-                    </div>
-                </div>
-        </div>
         </div>
     </div>
 </div>
