@@ -5,6 +5,9 @@
         <title></title>
     </head>
     <body style="background-color:#000;">
-        <iframe style="margin-top:150px;margin-left:300px;" width="854" height="480" src="https://www.youtube.com/embed/eNOx69nP78I" frameborder="0" allowfullscreen></iframe>
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" width="854" height="480" src="https://www.youtube.com/embed/eNOx69nP78I" frameborder="0" allowfullscreen></iframe>
+        </div>
     </body>
 </html>
