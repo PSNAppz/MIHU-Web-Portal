@@ -48,12 +48,12 @@ img {
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="{{asset('/images/general1.PNG')}}">
+                            <img src="{{asset('/images/general5.PNG')}}">
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="{{asset('/images/general2.PNG')}}">
+                            <img src="{{asset('/images/general6.PNG')}}">
                         </div>
                     </div>
                 </div>
