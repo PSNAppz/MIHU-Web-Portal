@@ -7,7 +7,6 @@
 
         <title>MIHU</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -235,6 +234,10 @@
           <div class="col-sm-4" >
            <a class="btn btn-primary btn-lg btn-block" href="/generalinfo" role="button"><span class="glyphicon glyphicon-italic"></span>&nbsp General Info</a>
          </div>
+         <div class="col-sm-12">
+             <br>
+             <a class="btn btn-success btn-lg btn-block" href="/etw" role="button"><span class="glyphicon glyphicon-italic"></span>&nbsp Embracing the World Exhibition</a>
+         </div>
        </div>
        <br>
         </div>
@@ -268,31 +271,7 @@
       </div>
       </div>
      </div>
-<!--     <div class="container">
-         <div class="row">
-             <div class="col-md-6 col-md-offset-3">
-                 <div class="panel panel-default">
-                     <div class="panel-heading"><h2>MISSING!</h2></div>
-                     <div class="panel-body">
-                         <center><img src="{{asset('/images/missing1.jpg')}}">
-                         <h4><b>Missing since 6pm 25th Sept</b></h4>
-                         <h4><p>Name : Sanju Sanal
-                             From Amritavidyalayam, Kodungalloor.</p>
-                         <p> If found please contact: Anil Ph: 9744443334 , 8606519234 , 9447480134</h4></center>
-                     </div>
-                     <div class="panel-body">
-                         <center>
-                         <h4><b>10 Year Old Kid Missing</b></h4>
-                         <h4><p>Name : Prakash
-                             <p>Missing from: Ashram Side</p>
-                             From Valayappatti Mulaiyur.
-                         Dressed in Blue Jeans with Black and White Shirt.</p>
-                         <p> If there is any info regarding him contact: Kanakasabapathy of EEE Dept or Bhoopathy PH: 7094262799</h4></center>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>-->
+
  </div>
   @include('layouts.footer')
     </body>
