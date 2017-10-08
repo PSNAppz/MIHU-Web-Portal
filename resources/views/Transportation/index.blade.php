@@ -207,7 +207,7 @@ img {
                               <div class="panel-heading"><b>From Karunagapally Towards EKM via Kottayam</b></div>
                               <div class="panel-body">
                                   <div style="overflow-x:auto;">
-                                      <img src="{{asset('/images/kayanktym.jpg')}}"></div>
+                                    <!--  <img src="{{asset('/images/kayanktym.jpg')}}"></div>-->
                               </div>
                           </div>
                           </div>
