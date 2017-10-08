@@ -73,7 +73,7 @@ img {
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div style="overflow-x:auto;">
-                                    <img src="{{asset('/images/eng.jpg')}}">
+                                <!--    <img src="{{asset('/images/eng.jpg')}}">-->
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@ img {
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div style="overflow-x:auto;">
-                                    <img src="{{asset('/images/mal.jpg')}}">
+                                <!--    <img src="{{asset('/images/mal.jpg')}}">-->
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ img {
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <div style="overflow-x:auto;">
-                                    <img src="{{asset('/images/tamil.jpg')}}">
+                                <!--    <img src="{{asset('/images/tamil.jpg')}}">-->
                                 </div>
                             </div>
                         </div>

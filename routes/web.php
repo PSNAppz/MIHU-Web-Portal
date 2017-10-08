@@ -123,3 +123,15 @@ Route::get('/generalinfo', function () {
 //Lost & Found
 
 Route::resource('lost', 'LostController');
+
+//live stream
+
+Route::get('/live', function () {
+    return view('live.index');
+});
+
+//etw
+
+Route::get('/etw', function () {
+    return view('etw.index');
+});

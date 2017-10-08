@@ -36,13 +36,12 @@ img {
     <br>
 <div class="container">
     <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#8"><b>8th</b></a></li>
-        <li><a data-toggle="tab" href="#9"><b>9th</b></a></li>
+        <li class="active"><a data-toggle="tab" href="#9"><b>9th</b></a></li>
     <!--    <li><a data-toggle="tab" href="#27"><b>27th</b></a></li>-->
 
     </ul>
     <div class="tab-content">
-    <div id="8" class="tab-pane active">
+    <!--<div id="8" class="tab-pane active">
         <h3 align="center"></h3>
         <div class="container">
             <div class="row">
@@ -57,15 +56,16 @@ img {
             <div>
             </div>
         </div>
-    </div>
-    <div id="9" class="tab-pane fade">
+    </div>-->
+    <div id="9" class="tab-pane active">
         <h3 align="center"></h3>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="{{asset('/images/9.jpg')}}">
+                            <img src="{{asset('/images/general1.PNG')}}">
+                            <img src="{{asset('/images/general2.PNG')}}">
                         </div>
                     </div>
             </div>
