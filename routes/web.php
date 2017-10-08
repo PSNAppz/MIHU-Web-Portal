@@ -119,3 +119,7 @@ Route::get('/schedules',function(){
 Route::get('/generalinfo', function () {
     return view('Generalinfo.index');
 });
+
+//Lost & Found
+
+Route::resource('lost', 'LostController');

@@ -235,6 +235,12 @@
          </div>
        </div>
        <br>
+       <div class="row">
+         <div class="col-sm-4 col-sm-offset-4">
+           <a class="btn btn-primary btn-lg btn-block" href="/lost" role="button"><span class="glyphicon glyphicon-briefcase"></span>&nbsp Lost &amp; Found</a>
+         </div>
+       </div>
+       <br>
         </div>
       </div>
     </div>
