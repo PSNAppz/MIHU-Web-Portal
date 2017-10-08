@@ -166,54 +166,60 @@ border: 1px solid #636b6f;
 
 </table>
 </div>
-<div class="jumbotron" style="margin-bottom: 0px">
-         <div class="button">
-           <h2 class ="crew"><b><center>The Crew</center></b></h2>
-           <div class="container">
-             <div class="row">
-               <div class="col-sm-4">
-                 <img src="images/psn.jpg" alt="psn" class="img-circle" width=150 height=150>
-		<br> <span style="text-align:center;">P S Narayanan <br> Bca 2014-17
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron" style="margin-bottom: 0px">
+                 <div class="button">
+                   <h2 class ="crew"><b><center>The Crew</center></b></h2>
+                   <div class="container">
+                     <div class="row">
+                       <div class="col-sm-4">
+                         <img src="images/psn.jpg" alt="psn" class="img-circle" width=150 height=150>
+        		<br> <span style="text-align:center;">P S Narayanan <br> Bca 2014-17
 
-               </div>
-               <div class="col-sm-4">
-                 <img src="images/sstest.jpg" alt="sooraj" class="img-circle" width=150 height=150>
-		<br> <span style="text-align:center;">Sooraj Soman <br> Bca 2014-17
-               </div>
+                       </div>
+                       <div class="col-sm-4">
+                         <img src="images/sstest.jpg" alt="sooraj" class="img-circle" width=150 height=150>
+        		<br> <span style="text-align:center;">Sooraj Soman <br> Bca 2014-17
+                       </div>
 
-		<div class="col-sm-4">
-                 <img src="images/vasudev.jpg" alt="vasudev" class="img-circle" width=150 height=150>
-		<br> <span style="text-align:center;">Vasudev R Nair  <br> Bca 2015-18
-               </div>
-		</div>
-	<div class="row">
-	<br>
-               <div class="col-sm-4">
-                 <img src="images/HARIKRISHNA AJ1.jpg" alt="HARIKRISHNA AJ" class="img-circle" width=150 height=150>
-		<br> <span style="text-align:center;">Harikrishna A J <br> Bca 2015-18
-               </div>
+        		<div class="col-sm-4">
+                         <img src="images/vasudev.jpg" alt="vasudev" class="img-circle" width=150 height=150>
+        		<br> <span style="text-align:center;">Vasudev R Nair  <br> Bca 2015-18
+                       </div>
+        		</div>
+        	<div class="row">
+        	<br>
+                       <div class="col-sm-4">
+                         <img src="images/HARIKRISHNA AJ1.jpg" alt="HARIKRISHNA AJ" class="img-circle" width=150 height=150>
+        		<br> <span style="text-align:center;">Harikrishna A J <br> Bca 2015-18
+                       </div>
 
-		<div class="col-sm-4">
-                 <img src="images/harivishnu.jpeg" alt="harivishnu" class="img-circle" width=150 height=150>
-		<br> <span style="text-align:center;">Harivishnu M Pillai <br> Bca 2015-18
-               </div>
+        		<div class="col-sm-4">
+                         <img src="images/harivishnu.jpeg" alt="harivishnu" class="img-circle" width=150 height=150>
+        		<br> <span style="text-align:center;">Harivishnu M Pillai <br> Bca 2015-18
+                       </div>
 
-		<div class="col-sm-4">
-                 <img src="images/kc.jpg" alt="kc" class="img-circle" width=150 height=150>
-		<br> <span style="text-align:center;">K S Krishnachandran <br> Bca 2014-17
-               </div>
+        		<div class="col-sm-4">
+                         <img src="images/kc.jpg" alt="kc" class="img-circle" width=150 height=150>
+        		<br> <span style="text-align:center;">K S Krishnachandran <br> Bca 2014-17
+                       </div>
 
-		<div class="col-sm-4">
-                 <img src="images/arjun.jpg" alt="arjun" class="img-circle" width=150 height=150>
-		<br> <span style="text-align:center;">Arjun N M <br> Bca 2015-18
-               </div>
+        		<div class="col-sm-4">
+                         <img src="images/arjun.jpg" alt="arjun" class="img-circle" width=150 height=150>
+        		<br> <span style="text-align:center;">Arjun N M <br> Bca 2015-18
+                       </div>
 
-             </div>
+                     </div>
 
 
-           </div>
-      </div>
+                   </div>
+              </div>
+            </div>
     </div>
+
+</div>
+
 </div>
 
 @include('layouts.footer');
