@@ -32,7 +32,8 @@
     <script>
     $(document).ready(
      function() {
-        $('#acc').dataTable();
+        $('#acc1').dataTable();
+        $('#acc2').dataTable();
      }
     )
 </script>
@@ -152,7 +153,7 @@ html, body {
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div style="overflow-x:auto;">
-                        <table id="acc" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                        <table id="acc1" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                                 <th>State/Others</th>
                                 <th>Place/Category</th>
@@ -221,51 +222,51 @@ html, body {
               <div class="panel panel-default">
                   <div class="panel-body">
                       <div style="overflow-x:auto;">
-                      <table id="acc" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                          <thead>
-                              <th>State/Others</th>
-                              <th>Place/Category</th>
-                              <th>For:</th>
-                              <th>Accommodation at</th>
-                              <th>Contact Name</th>
-                              <th>Phone</th>
-                              @if(!Auth::guest())
-                              <th></th>
-                              <th></th>
-                          @endif
-                          </thead>
-                          <tbody>
-                              @foreach($accommodations as $acc)
-                                  @if ($acc->areaName == "Amrita University" || $acc->areaName == "Amrita Vidyalayam")
-                                  <tr>
+                          <table id="acc2" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                              <thead>
+                                  <th>State/Others</th>
+                                  <th>Place/Category</th>
+                                  <th>For:</th>
+                                  <th>Accommodation at</th>
+                                  <th>Contact Name</th>
+                                  <th>Phone</th>
+                                  @if(!Auth::guest())
+                                  <th></th>
+                                  <th></th>
+                              @endif
+                              </thead>
+                              <tbody>
+                                  @foreach($accommodations as $acc)
+                                      @if ($acc->areaName == "Amrita University" || $acc->areaName == "Amrita Vidyalayam")
+                                      <tr>
 
-                                      <th>{{ $acc->areaName}}</th>
-                                      <th>{{ $acc->category}}</th>
-                                      @if($acc->gender==0)
-                                          <th>Men</th>
-                                      @elseif($acc->gender==1)
-                                          <th>Women</th>
-                                      @elseif($acc->gender==4)
-                                          <th>VIP</th>
-                                      @elseif($acc->gender==2)
-                                          <th>Police Men</th>
-                                      @else
-                                          <th>Police Women</th>
+                                          <th>{{ $acc->areaName}}</th>
+                                          <th>{{ $acc->category}}</th>
+                                          @if($acc->gender==0)
+                                              <th>Men</th>
+                                          @elseif($acc->gender==1)
+                                              <th>Women</th>
+                                          @elseif($acc->gender==4)
+                                              <th>VIP</th>
+                                          @elseif($acc->gender==2)
+                                              <th>Police Men</th>
+                                          @else
+                                              <th>Police Women</th>
+                                          @endif
+                                          <th>{{ $acc->locationofAcc}}</th>
+                                          <th>{{ $acc->coord}}</th>
+                                          <th>{{ $acc->contact}}</th>
+                                          @if(!Auth::guest())
+                                          <th><a class="btn btn-warning" href="{{ route('accommodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
+                                          <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accommodation.destroy', $acc->id]]) }}
+                                          {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                          {{ Form::close() }}</th>
+                                          @endif
+                                      </tr>
                                       @endif
-                                      <th>{{ $acc->locationofAcc}}</th>
-                                      <th>{{ $acc->coord}}</th>
-                                      <th>{{ $acc->contact}}</th>
-                                      @if(!Auth::guest())
-                                      <th><a class="btn btn-warning" href="{{ route('accommodation.edit', $acc->id,'/edit') }}" role="button">Update</a></th>
-                                      <th>  {{ Form::open(['method' => 'DELETE', 'route' => ['accommodation.destroy', $acc->id]]) }}
-                                      {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
-                                      {{ Form::close() }}</th>
-                                      @endif
-                                  </tr>
-                                  @endif
-                              @endforeach
-                          </tbody>
-                        </table>
+                                  @endforeach
+                              </tbody>
+                            </table>
                     </div>
                   </div>
               </div>

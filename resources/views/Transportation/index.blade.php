@@ -216,53 +216,50 @@ img {
               </div>
           </div>
                     </div>
+                    <div id="parking" class="tab-pane fade">
+                        <h3>Parking</h3>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <hr>
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div style="overflow-x:auto;">
+                                        <table class="table">
+                                            <thead>
+                                                <th>Vehicle</th>
+                                                <th>Location</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>General</th>
+                                                    <th>Loc</th>
+                                                </tr>
+                                                <tr>
+
+                                                    <th>Bus</th>
+                                                    <th>Loc</th>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <th>VIP</th>
+                                                    <th>Loc</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>VVIP</th>
+                                                    <th>Loc</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-<div id="parking" class="tab-pane fade">
-    <h3>Parking</h3>
-<div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <hr>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div style="overflow-x:auto;">
-                    <table class="table">
-                        <thead>
-                            <th>Vehicle</th>
-                            <th>Location</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>General</th>
-                                <th>Loc</th>
-                            </tr>
-                            <tr>
-
-                                <th>Bus</th>
-                                <th>Loc</th>
-
-                            </tr>
-                            <tr>
-
-                                <th>VIP</th>
-                                <th>Loc</th>
-                            </tr>
-                            <tr>
-                                <th>VVIP</th>
-                                <th>Loc</th>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-</div>
 </div>
 @include('layouts.footer')
 
