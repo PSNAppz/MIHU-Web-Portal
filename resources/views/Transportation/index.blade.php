@@ -165,8 +165,12 @@ img {
                               <div class="panel-heading"><b>From Kayankulam Towards TVM </b></div>
                               <div class="panel-body">
                                   <div style="overflow-x:auto;">
-                                      <img src="{{asset('/images/kayan.jpg')}}">
-                                      <img src="{{asset('/images/kayan2.jpg')}}">
+                                      <img src="{{asset('/images/tvm1.jpg')}}">
+                                      <img src="{{asset('/images/tvm2.jpg')}}">
+                                      <img src="{{asset('/images/tvm3.jpg')}}">
+                                      <img src="{{asset('/images/tvm4.jpg')}}">
+                                      <img src="{{asset('/images/tvm5.jpg')}}">
+                                      <img src="{{asset('/images/tvm6.jpg')}}">
 
                                   </div>
                               </div>
@@ -175,7 +179,7 @@ img {
                               <div class="panel-heading"><b>From Karunagapally Towards TVM </b></div>
                               <div class="panel-body">
                                   <div style="overflow-x:auto;">
-                                      <img src="{{asset('/images/karutvc.jpg')}}">
+                                    <!--  <img src="{{asset('/images/karutvc.jpg')}}">-->
                                   </div>
                               </div>
                           </div>
@@ -192,7 +196,10 @@ img {
                               <div class="panel-heading"><b>From Kayankulam Towards EKM via Alleppy </b></div>
                               <div class="panel-body">
                                   <div style="overflow-x:auto;">
-                                      <img src="{{asset('/images/kayanal.jpg')}}"></div>
+                                      <img src="{{asset('/images/ers1.jpg')}}"></div>
+                                      <img src="{{asset('/images/ers2.jpg')}}"></div>
+                                      <img src="{{asset('/images/ers3.jpg')}}"></div>
+                                      <img src="{{asset('/images/ers4.jpg')}}"></div>
 
                               </div>
                           </div>
