@@ -120,6 +120,10 @@ Route::get('/generalinfo', function () {
     return view('Generalinfo.index');
 });
 
+//Lost & Found
+
+Route::resource('lost', 'LostController');
+
 //live stream
 
 Route::get('/live', function () {
