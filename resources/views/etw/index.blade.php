@@ -331,6 +331,7 @@ img {
                               <div class="col-md-5">
                                   <a href="#" class="circle">
                                 <!--       <img src="{{asset('/images/robotics.jpeg')}}" style="border-radius:200px;">-->
+                                <p>Will update soon...</p>
                                   </a>
                               </div>
                               </div>
