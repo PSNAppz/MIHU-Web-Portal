@@ -157,7 +157,23 @@ img {
                   </div>
                   <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <p><i>
+                              <div class="row">
+
+                                  <div class="col-md-4">
+                                      <a href="#" class="circle">
+                                          <img src="{{asset('/images/etw.jpeg')}}" style="border-radius:20px;">
+                                          <p>What to take your special selfie ?? visit Embracing the world</p>
+                                      </a>
+                                  </div>
+
+                                  <div class="col-md-3">
+                                      <a href="#" class="circle">
+                                          <img src="{{asset('/images/win.jpeg')}}"style="border-radius:20px;">
+                                          <p>Win & Smile !!Visit Embracing the world</p>
+                                      </a>
+                                  </div>
+                              </div></i></p>
                       </div>
                   </div>
               </div>
@@ -171,7 +187,13 @@ img {
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                      <img src="{{asset('/images/as.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -185,7 +207,13 @@ img {
                   </div>
                   <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                      <img src="{{asset('/images/ad.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -199,7 +227,13 @@ img {
                   </div>
                   <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/iam.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -213,21 +247,33 @@ img {
                   </div>
                   <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/iam.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
               <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingFive">
+                  <div class="panel-heading" role="tab" id="headingsix1">
                       <h4 class="panel-title">
-                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsesix1" aria-expanded="false" aria-controls="collapsesix1">
                               <b class="h3">AYUDH</b>
                           </a>
                       </h4>
                   </div>
-                  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                  <div id="collapsesix1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsix1">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/ayudh.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -241,7 +287,13 @@ img {
                   </div>
                   <div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsix">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/au.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -255,7 +307,13 @@ img {
                   </div>
                   <div id="collapseseven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingseven">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+            1                           <img src="{{asset('/images/htl.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -269,7 +327,13 @@ img {
                   </div>
                   <div id="collapseeight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingeight">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/robotics.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -283,7 +347,13 @@ img {
                   </div>
                   <div id="collapsenine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingnine">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/create.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -309,7 +379,13 @@ img {
                   </div>
                   <div id="collapseeleven" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingeleven">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/ammachilabs.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -323,7 +399,13 @@ img {
                   </div>
                   <div id="collapsetwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingtwelve">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/cssn.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -337,7 +419,13 @@ img {
                   </div>
                   <div id="collapsethirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingthirteen">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/itotb.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -351,7 +439,13 @@ img {
                   </div>
                   <div id="collapsefourteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFfourteen">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/el.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -365,7 +459,13 @@ img {
                   </div>
                   <div id="collapsefifteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfifteen">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/cfwna.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -379,7 +479,13 @@ img {
                   </div>
                   <div id="collapsesixteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsixteen">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                      <img src="{{asset('/images/acsa.jpeg')}}"style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -393,7 +499,13 @@ img {
                   </div>
                   <div id="collapseseventeen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingseventeen">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                      <img src="{{asset('/images/ask.jpeg')}}"style="border-radius:500px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -407,10 +519,16 @@ img {
                   </div>
                   <div id="collapseeighteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingeighteen">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/aims.jpeg')}}" style="border-radius:500px;">
+                                  </a>
+                              </div>
+                              </div>
+                              </div>
                       </div>
                   </div>
-              </div>
               <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingnineteen">
                       <h4 class="panel-title">
@@ -421,7 +539,13 @@ img {
                   </div>
                   <div id="collapsenineteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingnineteen">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/bt.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
@@ -435,7 +559,13 @@ img {
                   </div>
                   <div id="collapsetwenty" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingtwenty">
                       <div class="panel-body" style="color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;">
-                          <p><i>will update soon</i></p>
+                          <div class="row">
+                              <div class="col-md-5">
+                                  <a href="#" class="circle">
+                                       <img src="{{asset('/images/balakendra.jpeg')}}" style="border-radius:200px;">
+                                  </a>
+                              </div>
+                              </div>
                       </div>
                   </div>
               </div>
