@@ -162,7 +162,7 @@ img {
 
                                   <div class="col-md-4">
                                       <a href="#" class="circle">
-                                          <img src="{{asset('/images/etw.jpeg')}}" style="border-radius:20px;">
+                                          <img src="{{asset('/images/itotb.jpeg')}}" style="border-radius:20px;">
                                           <p>What to take your special selfie ?? visit Embracing the world</p>
                                       </a>
                                   </div>
@@ -422,7 +422,8 @@ img {
                           <div class="row">
                               <div class="col-md-5">
                                   <a href="#" class="circle">
-                                       <img src="{{asset('/images/itotb.jpeg')}}" style="border-radius:200px;">
+                                     <!--  <img src="{{asset('/images/itotb.jpeg')}}" style="border-radius:200px;">-->
+                                     will update soon...
                                   </a>
                               </div>
                               </div>
