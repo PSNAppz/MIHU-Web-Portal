@@ -330,7 +330,7 @@ img {
                           <div class="row">
                               <div class="col-md-5">
                                   <a href="#" class="circle">
-                                       <img src="{{asset('/images/robotics.jpeg')}}" style="border-radius:200px;">
+                                <!--       <img src="{{asset('/images/robotics.jpeg')}}" style="border-radius:200px;">-->
                                   </a>
                               </div>
                               </div>
