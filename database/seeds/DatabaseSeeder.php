@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+    /*    DB::table('users')->insert([
                     'name' => 'PSN',
                     'email' => 'psnappz@gmail.com',
                     'password' => bcrypt('Elit3Hack3r'),
@@ -20,13 +20,13 @@ class DatabaseSeeder extends Seeder
                     'name' => 'Sooraj',
                     'email' => 'soorajsomans@gmail.com',
                     'password' => bcrypt('Sooraj@123'),
-                        ]);
+                ]);*/
         DB::table('users')->insert([
                     'name' => 'HariKrishna AJ',
                     'email' => 'hkk710@gmail.com',
                     'password' => bcrypt('hkk710*'),
                                 ]);
-        DB::table('users')->insert([
+    /*    DB::table('users')->insert([
                     'name' => 'HariVishnu',
                     'email' => 'hvmp2012@gmail.com',
                     'password' => bcrypt('Shillong2'),
@@ -50,6 +50,6 @@ class DatabaseSeeder extends Seeder
                     'name' => 'Krishna Chandran',
                     'email' => 'ks.krishnan1996@gmail.com',
                     'password' => bcrypt('krishnan1996'),
-                                ]);
+                ]);*/
     }
 }
