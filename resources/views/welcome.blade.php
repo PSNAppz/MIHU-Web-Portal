@@ -96,6 +96,7 @@
               background-repeat: no-repeat;
               text-align: center;
             }
+            
             div.col-sm-9 div {
               height: 250px;
               font-size: 28px;
